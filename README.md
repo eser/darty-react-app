@@ -66,4 +66,4 @@ All contributions should be filed on the [larukedi/js-boilerplate](https://githu
 
 ## License
 
-See [README](README) file.
+See [LICENSE](LICENSE) file.
