@@ -9,7 +9,9 @@
     "url": "https://github.com/eserozvataf/ts-spa-boilerplate/issues",
     "email": "eser@ozvataf.com"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "gulp live"
+  },
   "license": "Apache-2.0",
   "contributors": [
     {
