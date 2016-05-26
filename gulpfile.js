@@ -1,5 +1,5 @@
-const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
+const gulp = require('gulp'),
+    browserSync = require('browser-sync').create();
 
 const paths = {
     src: {
@@ -64,11 +64,9 @@ gulp.task('watch', function () {
 });
 
 gulp.task('serve', function () {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
+    const bsConfig = require('./bs-config.json');
+
+    browserSync.init(bsConfig);
 });
 
 gulp.task('lint', [ 'lint-typescript' ]);

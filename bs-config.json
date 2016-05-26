@@ -8,8 +8,6 @@
         "ignored": "node_modules"
     },
     "server": {
-        "baseDir": "./",
-        "middleware": [
-        ]
+        "baseDir": "./"
     }
 }
