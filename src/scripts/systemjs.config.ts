@@ -1,5 +1,5 @@
 /**
- * System configuration for Snippet Desk Client
+ * System configuration for TypeScript SPA Boilerplate
  * Adjust as necessary for your application needs.
  */
 (function (global) {

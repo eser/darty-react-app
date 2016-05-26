@@ -1,4 +1,4 @@
-# [JS Boilerplate](https://github.com/eserozvataf/js-boilerplate)
+# [TypeScript SPA Boilerplate](https://github.com/eserozvataf/ts-spa-boilerplate)
 
 JS Boilerplate is a front-end development setup for starting with a structured,
 scaleable and adaptable basecode.
@@ -7,7 +7,7 @@ This project is the product of many years of iterative development and combined
 community knowledge. It does not impose a specific development philosophy or
 framework, so you're free to architect your code in the way that you want.
 
-* Source: [https://github.com/eserozvataf/js-boilerplate](https://github.com/eserozvataf/js-boilerplate)
+* Source: [https://github.com/eserozvataf/ts-spa-boilerplate](https://github.com/eserozvataf/ts-spa-boilerplate)
 * Twitter: [@eserozvataf](http://twitter.com/eserozvataf)
 * Homepage: [http://eser.ozvataf.com/](http://eser.ozvataf.com/)
 
@@ -25,8 +25,8 @@ framework, so you're free to architect your code in the way that you want.
 ## Quick start
 
 Clone the git repo — `git clone
-   https://github.com/eserozvataf/js-boilerplate.git` - and checkout the [tagged
-   release](https://github.com/eserozvataf/js-boilerplate/releases) you'd like to
+   https://github.com/eserozvataf/ts-spa-boilerplate.git` - and checkout the [tagged
+   release](https://github.com/eserozvataf/ts-spa-boilerplate/releases) you'd like to
    use.
 
 Execute `npm install` to install gulp taskmaster and its dependencies.
@@ -58,7 +58,7 @@ Use `gulp` command in project folder to execute tasks defined in `gulpfile.js`.
 
 ### Todo List
 
-See [GitHub Issues](https://github.com/eserozvataf/js-boilerplate/issues).
+See [GitHub Issues](https://github.com/eserozvataf/ts-spa-boilerplate/issues).
 
 
 ### Requirements

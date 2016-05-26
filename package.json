@@ -1,8 +1,27 @@
 {
-  "name": "snippet-desk-client",
-  "version": "1.0.0",
+  "name": "ts-spa-boilerplate",
+  "version": "0.8.0",
+  "description": "TypeScript SPA Boilerplate",
+  "keywords": [ "typescript", "angular2", "spa", "boilerplate" ],
+  "author": "Eser Ozvataf",
+  "homepage": "https://eserozvataf.github.io/ts-spa-boilerplate",
+  "bugs": {
+    "url": "https://github.com/eserozvataf/ts-spa-boilerplate/issues",
+    "email": "eser@ozvataf.com"
+  },
   "scripts": {},
   "license": "Apache-2.0",
+  "contributors": [
+    {
+      "name": "Eser Ozvataf",
+      "email": "eser@ozvataf.com",
+      "url": "http://eser.ozvataf.com/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eserozvataf/ts-spa-boilerplate.git"
+  },
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",
     "@angular/compiler": "2.0.0-rc.1",

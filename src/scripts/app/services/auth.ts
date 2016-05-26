@@ -4,7 +4,7 @@ import { Http, Headers } from '@angular/http';
 @Injectable()
 export class authService {
 
-    private endpointUrl = 'http://web.hexajans.com/snippet-desk-server/v1/auth/'; // URL to web api
+    private endpointUrl = 'http://localhost:3000/v1/auth/'; // URL to web api
 
     constructor(private http: Http) {
     }
