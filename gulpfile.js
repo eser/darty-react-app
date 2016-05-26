@@ -1,26 +1,59 @@
-/*
-  gulpfile.js
-  ===========
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
 
-  Rather than manage one giant configuration file responsible
-  for creating multiple tasks, each task has been broken out into
-  its own file in gulp/tasks. Any files in that directory get
-  automatically required below.
+const paths = {
+    src: {
+        typescript: 'src/scripts/**/*.ts'
+    },
+    dist: {
+        clean: [ 'dist/**/*' ],
+        typescript: 'dist/scripts/'
+    }
+};
 
-  To add a new task, simply add a new task file that directory.
-  gulp/tasks/default.js specifies the default set of tasks to run
-  when you run `gulp`.
-*/
+gulp.task('clean', function () {
+    const del = require('del');
 
-(function () {
-    'use strict';
+    return del(paths.dist.clean);
+});
 
-    var gulp = require('gulp'),
-        requireDir = require('require-dir');
+gulp.task('lint-typescript', function () {
+    const tslint = require('gulp-tslint');
 
-    // Require all tasks in gulp/tasks, including subfolders
-    requireDir('./etc/tasks', { recurse: true });
+    return gulp
+        .src(paths.src.typescript)
+        .pipe(tslint())
+        .pipe(tslint.report('verbose'));
+});
 
-    gulp.task('default', ['minify', 'test']);
+gulp.task('compile-typescript', function () {
+    const typescript = require('gulp-typescript');
+    const tscConfig = require('./tsconfig.json');
 
-}());
+    return gulp
+        .src(paths.src.typescript)
+        .pipe(typescript(tscConfig.compilerOptions))
+        .pipe(gulp.dest(paths.dist.typescript))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('watch-typescript', [ 'compile-typescript' ], browserSync.reload);
+
+gulp.task('watch', function () {
+    gulp.watch(paths.src.typescript, [ 'watch-typescript' ]);
+});
+
+gulp.task('serve', function () {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+gulp.task('lint', [ 'lint-typescript' ]);
+gulp.task('build', [/* 'lint', */ 'compile-typescript' ]);
+gulp.task('rebuild', [ 'clean', 'build' ]);
+gulp.task('live', [ 'serve', 'watch' ]);
+
+gulp.task('default', [ 'live' ]);
