@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","sources":["main.scss"],"sourcesContent":["$color: red;\n\n.my-element {\n    color: $color;\n}\n"],"mappings":"AAEA,AAAA,WAAW,CAAC;EACR,KAAK,EAHD,GAAG,GAIV","names":[],"sourceRoot":"/source/"}

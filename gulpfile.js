@@ -3,11 +3,13 @@ const browserSync = require('browser-sync').create();
 
 const paths = {
     src: {
-        typescript: 'src/scripts/**/*.ts'
+        typescript: 'src/scripts/**/*.ts',
+        scss: 'src/styles/**/*.scss'
     },
     dist: {
         clean: [ 'dist/**/*' ],
-        typescript: 'dist/scripts/'
+        typescript: 'dist/scripts/',
+        scss: 'dist/styles/'
     }
 };
 
@@ -27,8 +29,8 @@ gulp.task('lint-typescript', function () {
 });
 
 gulp.task('compile-typescript', function () {
-    const typescript = require('gulp-typescript');
-    const tscConfig = require('./tsconfig.json');
+    const typescript = require('gulp-typescript'),
+        tscConfig = require('./tsconfig.json');
 
     return gulp
         .src(paths.src.typescript)
@@ -37,10 +39,28 @@ gulp.task('compile-typescript', function () {
         .pipe(browserSync.stream());
 });
 
+gulp.task('compile-sass', function () {
+    const sass = require('gulp-sass'),
+        sourcemaps = require('gulp-sourcemaps');
+
+    const sassInstance = sass()
+        .on('error', sass.logError);
+
+    return gulp
+        .src(paths.src.scss)
+        .pipe(sourcemaps.init())
+        .pipe(sassInstance)
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(paths.dist.scss))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('watch-typescript', [ 'compile-typescript' ], browserSync.reload);
+gulp.task('watch-sass', [ 'compile-sass' ], browserSync.reload);
 
 gulp.task('watch', function () {
     gulp.watch(paths.src.typescript, [ 'watch-typescript' ]);
+    gulp.watch(paths.src.scss, [ 'watch-sass' ]);
 });
 
 gulp.task('serve', function () {
@@ -52,7 +72,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('lint', [ 'lint-typescript' ]);
-gulp.task('build', [/* 'lint', */ 'compile-typescript' ]);
+gulp.task('build', [/* 'lint', */ 'compile-typescript', 'compile-sass' ]);
 gulp.task('rebuild', [ 'clean', 'build' ]);
 gulp.task('live', [ 'serve', 'watch' ]);
 
