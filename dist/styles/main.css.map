@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAEA;EACI,cAHU,EAIb","file":"main.css","sourcesContent":["$color: maroon;\n\n.my-element {\n    color: $color;\n}\n"],"sourceRoot":"/source/"}
+{"version":3,"sources":["main.css"],"names":[],"mappings":"AAIA;CAIC;AAHG;IACI,aAAwB;CAC3B","file":"main.css","sourcesContent":[":root {\n    --mainColor: maroon;\n}\n\nbody {\n    & h1 {\n        color: var(--mainColor);\n    }\n}\n"],"sourceRoot":"/source/"}

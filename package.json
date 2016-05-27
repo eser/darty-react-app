@@ -53,10 +53,10 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.1.1",
-    "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-tslint": "^5.0.0",
     "gulp-typescript": "^2.13.4",
+    "postcss-cssnext": "^2.5.2",
     "tslint": "^3.10.2",
     "typescript": "^1.8.10"
   }

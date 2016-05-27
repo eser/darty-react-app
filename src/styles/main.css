@@ -1,0 +1,9 @@
+:root {
+    --mainColor: maroon;
+}
+
+body {
+    & h1 {
+        color: var(--mainColor);
+    }
+}
