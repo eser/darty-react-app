@@ -3,13 +3,11 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { appModel } from './models/appModel';
-import { appComponent } from './components/appComponent';
+import { AppComponent } from './components/appComponent';
 
 const model = new appModel();
 
 ReactDOM.render(
-    <appComponent model={model} />,
+    <AppComponent model={model} />,
     document.getElementsByTagName('app')[0]
 );
-
-console.log(appComponent);

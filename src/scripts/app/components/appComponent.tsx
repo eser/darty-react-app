@@ -4,7 +4,7 @@ import { appPropsInterface } from '../entities/appPropsInterface';
 import { appStateInterface } from '../entities/appStateInterface';
 import * as constants from '../constants';
 
-export class appComponent extends React.Component<appPropsInterface, appStateInterface> {
+export class AppComponent extends React.Component<appPropsInterface, appStateInterface> {
 
     public state: appStateInterface;
 
@@ -23,7 +23,7 @@ export class appComponent extends React.Component<appPropsInterface, appStateInt
         return (
             <div>
                 <header className="header">
-                    <h1>ts-spa-boilerplate</h1>
+                    <h1>ts-spa-boilerplate: {this.state.nowShowing}</h1>
                 </header>
             </div>
         );

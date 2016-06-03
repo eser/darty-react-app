@@ -6,17 +6,17 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var React = require('react');
 var constants = require('../constants');
-var appComponent = (function (_super) {
-    __extends(appComponent, _super);
-    function appComponent(props) {
+var AppComponent = (function (_super) {
+    __extends(AppComponent, _super);
+    function AppComponent(props) {
         _super.call(this, props);
         this.state = {
             nowShowing: constants.APP_STATE_INITIAL
         };
     }
-    appComponent.prototype.render = function () {
-        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate"))));
+    AppComponent.prototype.render = function () {
+        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate: ", this.state.nowShowing))));
     };
-    return appComponent;
+    return AppComponent;
 }(React.Component));
-exports.appComponent = appComponent;
+exports.AppComponent = AppComponent;
