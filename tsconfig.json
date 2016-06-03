@@ -19,10 +19,8 @@
         "outDir": "dist/scripts/"
     },
     "filesGlob": [
-        "**/*.ts",
-        "**/*.tsx",
-        "!node_modules/**",
-        "!dist/**"
+        "src/scripts/**/*.ts",
+        "src/scripts/**/*.tsx"
     ],
     "exclude": [
         "node_modules",

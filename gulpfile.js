@@ -3,7 +3,7 @@ const gulp = require('gulp'),
 
 const paths = {
     src: {
-        typescript: 'src/scripts/**/*.ts',
+        typescript: [ 'src/scripts/**/*.ts', 'src/scripts/**/*.tsx' ],
         css: 'src/styles/**/*.css'
     },
     dist: {

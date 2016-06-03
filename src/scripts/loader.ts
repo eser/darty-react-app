@@ -1,6 +1,4 @@
-/// <reference path="../scripts.typings/browser.d.ts" />
-
-declare var System: any;
+/// <reference path="../scripts.typings/browser/index.d.ts" />
 
 System.import('app')
     .catch(function (err) {
