@@ -1,12 +1,8 @@
-import { Injectable }    from '@angular/core';
-import { Http, Headers } from '@angular/http';
-
-@Injectable()
 export class authService {
 
     private endpointUrl = 'http://localhost:3000/v1/auth/'; // URL to web api
 
-    constructor(private http: Http) {
+    constructor() {
     }
 
     /*
