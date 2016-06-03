@@ -2,10 +2,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { appModel } from './models/appModel';
-import { AppComponent } from './components/appComponent';
+import { AppModel } from './models/AppModel';
+import { AppComponent } from './components/AppComponent';
 
-const model = new appModel();
+const model = new AppModel();
 
 ReactDOM.render(
     <AppComponent model={model} />,

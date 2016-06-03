@@ -1,7 +1,7 @@
 "use strict";
 var React = require('react');
 var ReactDOM = require('react-dom');
-var appModel_1 = require('./models/appModel');
-var appComponent_1 = require('./components/appComponent');
-var model = new appModel_1.appModel();
-ReactDOM.render(React.createElement(appComponent_1.AppComponent, {model: model}), document.getElementsByTagName('app')[0]);
+var AppModel_1 = require('./models/AppModel');
+var AppComponent_1 = require('./components/AppComponent');
+var model = new AppModel_1.AppModel();
+ReactDOM.render(React.createElement(AppComponent_1.AppComponent, {model: model}), document.getElementsByTagName('app')[0]);

@@ -1,18 +1,18 @@
 import * as React from 'react';
 
-import { appPropsInterface } from '../entities/appPropsInterface';
-import { appStateInterface } from '../entities/appStateInterface';
-import * as constants from '../constants';
+import { AppPropsInterface } from '../entities/AppPropsInterface';
+import { AppStateInterface } from '../entities/AppStateInterface';
+import * as Constants from '../Constants';
 
-export class AppComponent extends React.Component<appPropsInterface, appStateInterface> {
+export class AppComponent extends React.Component<AppPropsInterface, AppStateInterface> {
 
-    public state: appStateInterface;
+    public state: AppStateInterface;
 
-    constructor(props: appPropsInterface) {
+    constructor(props: AppPropsInterface) {
         super(props);
 
         this.state = {
-            nowShowing: constants.APP_STATE_INITIAL
+            nowShowing: Constants.APP_STATE_INITIAL
         };
     }
 
