@@ -5,13 +5,13 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var React = require('react');
-var constants = require('../constants');
+var Constants = require('../Constants');
 var AppComponent = (function (_super) {
     __extends(AppComponent, _super);
     function AppComponent(props) {
         _super.call(this, props);
         this.state = {
-            nowShowing: constants.APP_STATE_INITIAL
+            nowShowing: Constants.APP_STATE_INITIAL
         };
     }
     AppComponent.prototype.render = function () {

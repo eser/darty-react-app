@@ -1,7 +1,7 @@
 {
     "resolution": {
         "main": "src/scripts.typings/main/",
-        "browser": "src/scripts.typings/browser"
+        "browser": "src/scripts.typings/browser/"
     },
     "dependencies": {},
     "globalDependencies": {

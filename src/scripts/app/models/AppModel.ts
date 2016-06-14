@@ -1,4 +1,4 @@
-export class appModel {
+export class AppModel {
 
     constructor() {
     }
