@@ -9,7 +9,30 @@ const paths = {
     dist: {
         clean: [ 'dist/**/*' ],
         typescript: 'dist/scripts/',
-        css: 'dist/styles/'
+        css: 'dist/styles/',
+        bundles: 'dist/bundles/'
+    }
+};
+
+const bundles = {
+    js: {
+        globalPreload: [
+            'node_modules/core-js/client/shim.min.js',
+            'node_modules/reflect-metadata/Reflect.js',
+            'node_modules/systemjs/dist/system.src.js',
+            'dist/scripts/systemjs.config.js'
+        ],
+        globalPostload: [
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'dist/scripts/loader.js'
+        ]
+    },
+    css: {
+        global: [
+            'node_modules/bootstrap/dist/css/bootstrap.min.css',
+            'dist/styles/main.css'
+        ]
     }
 };
 
@@ -64,9 +87,62 @@ gulp.task('compile-css', function () {
 gulp.task('watch-typescript', [ 'compile-typescript' ], browserSync.reload);
 gulp.task('watch-css', [ 'compile-css' ], browserSync.reload);
 
+const compileBundleKeys = [];
+const watchBundleItems = [];
+
+for (let key in bundles.js) {
+    const bundle = bundles.js[key];
+
+    gulp.task('compile-bundles-js-' + key, function () {
+        const concat = require('gulp-concat'),
+            sourcemaps = require('gulp-sourcemaps');
+
+        return gulp
+            .src(bundle)
+            .pipe(sourcemaps.init())
+            .pipe(concat(key + '.js'))
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest(paths.dist.bundles))
+            .pipe(browserSync.stream());
+    });
+    compileBundleKeys.push('compile-bundles-js-' + key);
+
+    gulp.task('watch-bundles-js-' + key, [ 'compile-bundles-js-' + key ], browserSync.reload);
+    watchBundleItems.push({ key: 'watch-bundles-js-' + key, files: bundle });
+}
+
+for (let key in bundles.css) {
+    const bundle = bundles.css[key];
+
+    gulp.task('compile-bundles-css-' + key, function () {
+        const concatCss = require('gulp-concat-css'),
+            sourcemaps = require('gulp-sourcemaps');
+
+        return gulp
+            .src(bundle)
+            .pipe(sourcemaps.init())
+            .pipe(concatCss(key + '.css'))
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest(paths.dist.bundles))
+            .pipe(browserSync.stream());
+    });
+    compileBundleKeys.push('compile-bundles-css-' + key);
+
+    gulp.task('watch-bundles-css-' + key, [ 'compile-bundles-css-' + key ], browserSync.reload);
+    watchBundleItems.push({ key: 'watch-bundles-css-' + key, files: bundle });
+}
+
+gulp.task('compile-bundles', compileBundleKeys);
+
 gulp.task('watch', function () {
     gulp.watch(paths.src.typescript, [ 'watch-typescript' ]);
     gulp.watch(paths.src.css, [ 'watch-css' ]);
+
+    for (let key in watchBundleItems) {
+        const item = watchBundleItems[key];
+
+        gulp.watch(item.files, [ item.key ]);
+    }
 });
 
 gulp.task('serve', function () {
@@ -76,7 +152,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('lint', [ 'lint-typescript' ]);
-gulp.task('build', [/* 'lint', */ 'compile-typescript', 'compile-css' ]);
+gulp.task('build', [/* 'lint', */ 'compile-typescript', 'compile-css', 'compile-bundles' ]);
 gulp.task('rebuild', [ 'clean', 'build' ]);
 gulp.task('live', [ 'serve', 'watch' ]);
 
