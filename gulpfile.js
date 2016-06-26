@@ -17,20 +17,20 @@ const paths = {
 const bundles = {
     js: {
         globalPreload: [
-            'node_modules/core-js/client/shim.min.js',
-            'node_modules/reflect-metadata/Reflect.js',
             'node_modules/systemjs/dist/system.src.js',
             'dist/scripts/systemjs.config.js'
         ],
         globalPostload: [
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            // 'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'node_modules/react/dist/react.js',
+            'node_modules/react-dom/dist/react-dom.js',
             'dist/scripts/loader.js'
         ]
     },
     css: {
         global: [
-            'node_modules/bootstrap/dist/css/bootstrap.min.css',
+            // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
             'dist/styles/main.css'
         ]
     }
@@ -156,5 +156,5 @@ gulp.task('build', [/* 'lint', */ 'compile-typescript', 'compile-css', 'compile-
 gulp.task('rebuild', [ 'clean', 'build' ]);
 gulp.task('live', [ 'serve', 'watch' ]);
 
-gulp.task('default', [ 'live' ]);
+gulp.task('default', [ 'build', 'live' ]);
 
