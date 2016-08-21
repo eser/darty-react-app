@@ -28,13 +28,37 @@ webpackJsonpvendor([0],{
 	var AppModel = (function () {
 	    function AppModel() {
 	    }
+	    AppModel.prototype.processTimelineData = function (data) {
+	        var output = {};
+	        for (var _i = 0, _a = data.entries; _i < _a.length; _i++) {
+	            var entry = _a[_i];
+	            if (output[entry.categories.year] === undefined) {
+	                output[entry.categories.year] = { _items: [] };
+	            }
+	            if (entry.categories.event === undefined) {
+	                output[entry.categories.year]._items.push(entry);
+	                continue;
+	            }
+	            if (output[entry.categories.year][entry.categories.event] === undefined) {
+	                output[entry.categories.year][entry.categories.event] = { _items: [] };
+	            }
+	            output[entry.categories.year][entry.categories.event]._items.push(entry);
+	        }
+	        return output;
+	    };
+	    AppModel.prototype.processTimelineEntryContent = function (content) {
+	    };
 	    AppModel.prototype.getEntriesByCategory = function (key, value) {
+	        var _this = this;
 	        return fetch(Constants.SERVICE_BASE_URL + "/entries/category/" + key + "/" + value + ".json")
-	            .then(function (response) { return response.json(); });
+	            .then(function (response) { return response.json(); })
+	            .then(function (response) { return _this.processTimelineData(response); });
 	    };
 	    AppModel.prototype.getEntriesByTag = function (tag) {
+	        var _this = this;
 	        return fetch(Constants.SERVICE_BASE_URL + "/entries/tag/" + tag + ".json")
-	            .then(function (response) { return response.json(); });
+	            .then(function (response) { return response.json(); })
+	            .then(function (response) { return _this.processTimelineData(response); });
 	    };
 	    return AppModel;
 	}());
@@ -133,7 +157,7 @@ webpackJsonpvendor([0],{
 	            .then(function (response) { _this.setState({ timeline: response }); });
 	    }
 	    EntriesByCategory.prototype.render = function () {
-	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(TimelineOutput_tsx_1.TimelineOutput, {input: "{this.state.timeline}"})));
+	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(TimelineOutput_tsx_1.TimelineOutput, {input: this.state.timeline})));
 	    };
 	    return EntriesByCategory;
 	}(React.Component));
@@ -158,10 +182,24 @@ webpackJsonpvendor([0],{
 	        _super.call(this, props);
 	    }
 	    TimelineOutput.prototype.render = function () {
-	        if (this.props.input === null) {
+	        var data = this.props.input;
+	        if (data === null) {
 	            return (React.createElement("div", null, "Loading..."));
 	        }
-	        return (React.createElement("div", null, "Timeline there is."));
+	        console.log(this.props.input);
+	        var output = [];
+	        for (var year in data) {
+	            output.push(React.createElement("h3", null, year));
+	            for (var event_1 in data[year]) {
+	                if (event_1 === '_items') {
+	                    continue;
+	                }
+	                output.push(React.createElement("h4", null, event_1));
+	                output.push(React.createElement("ul", null, data[year][event_1]._items.map(function (item) { return React.createElement("li", null, item.content); })));
+	            }
+	            output.push(React.createElement("ul", null, data[year]._items.map(function (item) { return React.createElement("li", null, item.content); })));
+	        }
+	        return (React.createElement("div", null, output));
 	    };
 	    return TimelineOutput;
 	}(React.Component));
@@ -195,7 +233,7 @@ webpackJsonpvendor([0],{
 	            .then(function (response) { _this.setState({ timeline: response }); });
 	    }
 	    EntriesByTag.prototype.render = function () {
-	        return (React.createElement("div", null, "Entries By Tag: ", this.props.params.tag, React.createElement(TimelineOutput_tsx_1.TimelineOutput, {input: "{this.state.timeline}"})));
+	        return (React.createElement("div", null, "Entries By Tag: ", this.props.params.tag, React.createElement(TimelineOutput_tsx_1.TimelineOutput, {input: this.state.timeline})));
 	    };
 	    return EntriesByTag;
 	}(React.Component));

@@ -27,7 +27,7 @@ export class EntriesByCategory extends React.Component<any, any> {
             <div>
                 Entries By Category: {this.props.params.key}={this.props.params.value}
 
-                <TimelineOutput input="{this.state.timeline}" />
+                <TimelineOutput input={this.state.timeline} />
             </div>
         );
     }

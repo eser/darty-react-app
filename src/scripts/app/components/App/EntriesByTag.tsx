@@ -27,7 +27,7 @@ export class EntriesByTag extends React.Component<any, any> {
             <div>
                 Entries By Tag: {this.props.params.tag}
 
-                <TimelineOutput input="{this.state.timeline}" />
+                <TimelineOutput input={this.state.timeline} />
             </div>
         );
     }
