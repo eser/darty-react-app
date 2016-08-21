@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        vendor: [ 'jquery', 'react', 'react-dom', 'react-router' ],
+        vendor: [ 'whatwg-fetch', 'jquery', 'react', 'react-dom', 'react-router' ],
         app: './src/scripts/app/index.tsx'
     },
     output: {
