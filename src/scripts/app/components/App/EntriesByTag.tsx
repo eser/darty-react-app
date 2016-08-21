@@ -3,7 +3,7 @@ import * as React from 'react';
 import { AppModel } from '../../models/AppModel.ts';
 import * as Constants from '../../Constants.ts';
 
-import { TimelineOutput } from './common/TimelineOutput.tsx';
+import { LinearTimeline } from './common/LinearTimeline.tsx';
 
 export class EntriesByTag extends React.Component<any, any> {
 
@@ -27,7 +27,7 @@ export class EntriesByTag extends React.Component<any, any> {
             <div>
                 Entries By Tag: {this.props.params.tag}
 
-                <TimelineOutput input={this.state.timeline} />
+                <LinearTimeline input={this.state.timeline} />
             </div>
         );
     }

@@ -12,8 +12,8 @@ webpackJsonpvendor([0],{
 	var App_tsx_1 = __webpack_require__(237);
 	var Home_tsx_1 = __webpack_require__(238);
 	var EntriesByCategory_tsx_1 = __webpack_require__(239);
-	var EntriesByTag_tsx_1 = __webpack_require__(241);
-	var Page_tsx_1 = __webpack_require__(242);
+	var EntriesByTag_tsx_1 = __webpack_require__(242);
+	var Page_tsx_1 = __webpack_require__(243);
 	var model = new AppModel_ts_1.AppModel();
 	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "category/:key/:value", component: EntriesByCategory_tsx_1.EntriesByCategory}), React.createElement(react_router_1.Route, {path: "tag/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "page/:page", component: Page_tsx_1.Page}))), document.getElementsByTagName('app')[0]);
 
@@ -143,7 +143,7 @@ webpackJsonpvendor([0],{
 	};
 	var React = __webpack_require__(1);
 	var AppModel_ts_1 = __webpack_require__(235);
-	var TimelineOutput_tsx_1 = __webpack_require__(240);
+	var LinearTimeline_tsx_1 = __webpack_require__(240);
 	var EntriesByCategory = (function (_super) {
 	    __extends(EntriesByCategory, _super);
 	    function EntriesByCategory(props) {
@@ -157,7 +157,7 @@ webpackJsonpvendor([0],{
 	            .then(function (response) { _this.setState({ timeline: response }); });
 	    }
 	    EntriesByCategory.prototype.render = function () {
-	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(TimelineOutput_tsx_1.TimelineOutput, {input: this.state.timeline})));
+	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {input: this.state.timeline})));
 	    };
 	    return EntriesByCategory;
 	}(React.Component));
@@ -176,13 +176,63 @@ webpackJsonpvendor([0],{
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var react_router_1 = __webpack_require__(172);
-	var TimelineOutput = (function (_super) {
-	    __extends(TimelineOutput, _super);
-	    function TimelineOutput(props) {
+	var LinearTimelineItem_tsx_1 = __webpack_require__(241);
+	var LinearTimeline = (function (_super) {
+	    __extends(LinearTimeline, _super);
+	    function LinearTimeline(props) {
 	        _super.call(this, props);
 	    }
-	    TimelineOutput.prototype.makeLinks = function (content) {
+	    LinearTimeline.prototype.render = function () {
+	        var data = this.props.input;
+	        if (data === null) {
+	            return (React.createElement("div", null, "Loading..."));
+	        }
+	        var output = [];
+	        for (var year in data) {
+	            var yearKey = "year." + encodeURIComponent(year);
+	            output.push(React.createElement("h3", {key: yearKey}, year));
+	            for (var event_1 in data[year]) {
+	                if (event_1 === '_items') {
+	                    continue;
+	                }
+	                var eventKey = "year." + year + ".event." + encodeURIComponent(event_1);
+	                output.push(React.createElement("h4", {key: eventKey}, event_1));
+	                output.push(React.createElement("ul", {key: eventKey + ".list"}, data[year][event_1]._items.map(function (item) {
+	                    var entryKey = "entry." + encodeURIComponent(item.entry);
+	                    return (React.createElement("li", {key: entryKey}, React.createElement(LinearTimelineItem_tsx_1.LinearTimelineItem, {key: entryKey + ".item", item: item})));
+	                })));
+	            }
+	            output.push(React.createElement("ul", {key: yearKey + ".list"}, data[year]._items.map(function (item) {
+	                var entryKey = "entry." + encodeURIComponent(item.entry);
+	                return (React.createElement("li", {key: entryKey}, React.createElement(LinearTimelineItem_tsx_1.LinearTimelineItem, {key: entryKey + ".item", id: entryKey + ".item", item: item})));
+	            })));
+	        }
+	        return (React.createElement("div", null, output));
+	    };
+	    return LinearTimeline;
+	}(React.Component));
+	exports.LinearTimeline = LinearTimeline;
+
+
+/***/ },
+
+/***/ 241:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
+	var react_router_1 = __webpack_require__(172);
+	var LinearTimelineItem = (function (_super) {
+	    __extends(LinearTimelineItem, _super);
+	    function LinearTimelineItem(props) {
+	        _super.call(this, props);
+	    }
+	    LinearTimelineItem.prototype.makeLinks = function (key, content) {
 	        var parts = [];
 	        var lastIndex = 0;
 	        while (true) {
@@ -198,40 +248,22 @@ webpackJsonpvendor([0],{
 	            }
 	            parts.push(content.substring(lastIndex, pos));
 	            var tag = content.substring(pos + 2, endPos);
-	            parts.push(React.createElement(react_router_1.Link, {to: "/tag/" + tag}, tag));
+	            parts.push(React.createElement(react_router_1.Link, {key: key + ".link." + pos, to: "/tag/" + encodeURIComponent(tag)}, tag));
 	            lastIndex = endPos + 2;
 	        }
 	        return parts;
 	    };
-	    TimelineOutput.prototype.render = function () {
-	        var _this = this;
-	        var data = this.props.input;
-	        if (data === null) {
-	            return (React.createElement("div", null, "Loading..."));
-	        }
-	        console.log(this.props.input);
-	        var output = [];
-	        for (var year in data) {
-	            output.push(React.createElement("h3", null, year));
-	            for (var event_1 in data[year]) {
-	                if (event_1 === '_items') {
-	                    continue;
-	                }
-	                output.push(React.createElement("h4", null, event_1));
-	                output.push(React.createElement("ul", null, data[year][event_1]._items.map(function (item) { return React.createElement("li", null, _this.makeLinks(item.content)); })));
-	            }
-	            output.push(React.createElement("ul", null, data[year]._items.map(function (item) { return React.createElement("li", null, _this.makeLinks(item.content)); })));
-	        }
-	        return (React.createElement("div", null, output));
+	    LinearTimelineItem.prototype.render = function () {
+	        return (React.createElement("span", null, this.makeLinks(this.props.id, this.props.item.content)));
 	    };
-	    return TimelineOutput;
+	    return LinearTimelineItem;
 	}(React.Component));
-	exports.TimelineOutput = TimelineOutput;
+	exports.LinearTimelineItem = LinearTimelineItem;
 
 
 /***/ },
 
-/***/ 241:
+/***/ 242:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -242,7 +274,7 @@ webpackJsonpvendor([0],{
 	};
 	var React = __webpack_require__(1);
 	var AppModel_ts_1 = __webpack_require__(235);
-	var TimelineOutput_tsx_1 = __webpack_require__(240);
+	var LinearTimeline_tsx_1 = __webpack_require__(240);
 	var EntriesByTag = (function (_super) {
 	    __extends(EntriesByTag, _super);
 	    function EntriesByTag(props) {
@@ -256,7 +288,7 @@ webpackJsonpvendor([0],{
 	            .then(function (response) { _this.setState({ timeline: response }); });
 	    }
 	    EntriesByTag.prototype.render = function () {
-	        return (React.createElement("div", null, "Entries By Tag: ", this.props.params.tag, React.createElement(TimelineOutput_tsx_1.TimelineOutput, {input: this.state.timeline})));
+	        return (React.createElement("div", null, "Entries By Tag: ", this.props.params.tag, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {input: this.state.timeline})));
 	    };
 	    return EntriesByTag;
 	}(React.Component));
@@ -265,7 +297,7 @@ webpackJsonpvendor([0],{
 
 /***/ },
 
-/***/ 242:
+/***/ 243:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
