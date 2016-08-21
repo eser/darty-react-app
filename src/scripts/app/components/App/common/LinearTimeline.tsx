@@ -24,7 +24,7 @@ export class LinearTimeline extends React.Component<any, any> {
         for (const year in data) {
             const yearKey = `year.${encodeURIComponent(year)}`;
 
-            output.push(<h3 key={yearKey}>{year}</h3>);
+            output.push(<h3 key={yearKey}><Link key={`${yearKey}.link`} to={`/category/year/${encodeURIComponent(year)}`}>{year}</Link></h3>);
 
             for (const event in data[year]) {
                 if (event === '_items') {
@@ -33,7 +33,7 @@ export class LinearTimeline extends React.Component<any, any> {
 
                 const eventKey = `year.${year}.event.${encodeURIComponent(event)}`;
 
-                output.push(<h4 key={eventKey}>{event}</h4>);
+                output.push(<h4 key={eventKey}><Link key={`${eventKey}.link`} to={`/category/event/${encodeURIComponent(event)}`}>{event}</Link></h4>);
                 output.push(<ul key={`${eventKey}.list`}>
                     {data[year][event]._items.map((item) => {
                         const entryKey = `entry.${encodeURIComponent(item.entry)}`;

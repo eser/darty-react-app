@@ -182,6 +182,7 @@ webpackJsonpvendor([0],{
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
+	var react_router_1 = __webpack_require__(172);
 	var LinearTimelineItem_tsx_1 = __webpack_require__(241);
 	var LinearTimeline = (function (_super) {
 	    __extends(LinearTimeline, _super);
@@ -196,13 +197,13 @@ webpackJsonpvendor([0],{
 	        var output = [];
 	        for (var year in data) {
 	            var yearKey = "year." + encodeURIComponent(year);
-	            output.push(React.createElement("h3", {key: yearKey}, year));
+	            output.push(React.createElement("h3", {key: yearKey}, React.createElement(react_router_1.Link, {key: yearKey + ".link", to: "/category/year/" + encodeURIComponent(year)}, year)));
 	            for (var event_1 in data[year]) {
 	                if (event_1 === '_items') {
 	                    continue;
 	                }
 	                var eventKey = "year." + year + ".event." + encodeURIComponent(event_1);
-	                output.push(React.createElement("h4", {key: eventKey}, event_1));
+	                output.push(React.createElement("h4", {key: eventKey}, React.createElement(react_router_1.Link, {key: eventKey + ".link", to: "/category/event/" + encodeURIComponent(event_1)}, event_1)));
 	                output.push(React.createElement("ul", {key: eventKey + ".list"}, data[year][event_1]._items.map(function (item) {
 	                    var entryKey = "entry." + encodeURIComponent(item.entry);
 	                    return (React.createElement("li", {key: entryKey}, React.createElement(LinearTimelineItem_tsx_1.LinearTimelineItem, {key: entryKey + ".item", item: item})));
