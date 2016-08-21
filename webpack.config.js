@@ -2,12 +2,15 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        vendor: [ 'whatwg-fetch', 'jquery', 'react', 'react-dom', 'react-router' ],
+        vendor: [ 'jquery', 'react', 'react-dom', 'react-router' ],
         app: './src/scripts/app/index.tsx'
     },
     output: {
         path: './dist/bundles/',
-        filename: '[name].js'
+        filename: '[name].js',
+
+        library: 'vendor',
+        libraryTarget: 'var'
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -26,7 +29,8 @@ module.exports = {
 
         preLoaders: [
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            { test: /\.js$/, loader: 'source-map-loader' }
+            { test: /\.js$/, loader: 'source-map-loader' } // ,
+            // { test: /\.tsx?$/, loader: 'tslint' }
         ]
     },
 

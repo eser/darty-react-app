@@ -1,4 +1,5 @@
-webpackJsonp([0],{
+var vendor =
+webpackJsonpvendor([0],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
@@ -8,11 +9,11 @@ webpackJsonp([0],{
 	var ReactDOM = __webpack_require__(34);
 	var react_router_1 = __webpack_require__(172);
 	var AppModel_ts_1 = __webpack_require__(235);
-	var App_tsx_1 = __webpack_require__(238);
-	var Home_tsx_1 = __webpack_require__(239);
-	var EntriesByCategory_tsx_1 = __webpack_require__(240);
-	var EntriesByTag_tsx_1 = __webpack_require__(241);
-	var Page_tsx_1 = __webpack_require__(242);
+	var App_tsx_1 = __webpack_require__(237);
+	var Home_tsx_1 = __webpack_require__(238);
+	var EntriesByCategory_tsx_1 = __webpack_require__(239);
+	var EntriesByTag_tsx_1 = __webpack_require__(240);
+	var Page_tsx_1 = __webpack_require__(241);
 	var model = new AppModel_ts_1.AppModel();
 	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "category/:key/:value", component: EntriesByCategory_tsx_1.EntriesByCategory}), React.createElement(react_router_1.Route, {path: "tag/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "page/:page", component: Page_tsx_1.Page}))), document.getElementsByTagName('app')[0]);
 
@@ -23,13 +24,12 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var whatwg_fetch_1 = __webpack_require__(236);
-	var Constants = __webpack_require__(237);
+	var Constants = __webpack_require__(236);
 	var AppModel = (function () {
 	    function AppModel() {
 	    }
 	    AppModel.prototype.getEntriesByCategory = function (key, value) {
-	        return whatwg_fetch_1.fetch(Constants.SERVICE_BASE_URL + "//entries/category/" + key + "/" + value + ".json")
+	        return fetch(Constants.SERVICE_BASE_URL + "/entries/category/" + key + "/" + value + ".json")
 	            .then(function (response) { return response.json(); });
 	    };
 	    return AppModel;
@@ -39,7 +39,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 237:
+/***/ 236:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -49,7 +49,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 238:
+/***/ 237:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -60,7 +60,7 @@ webpackJsonp([0],{
 	};
 	var React = __webpack_require__(1);
 	var react_router_1 = __webpack_require__(172);
-	var Constants = __webpack_require__(237);
+	var Constants = __webpack_require__(236);
 	var App = (function (_super) {
 	    __extends(App, _super);
 	    function App(props) {
@@ -79,7 +79,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 239:
+/***/ 238:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -104,7 +104,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 240:
+/***/ 239:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -137,7 +137,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 241:
+/***/ 240:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -162,7 +162,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 242:
+/***/ 241:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
