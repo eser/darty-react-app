@@ -3,6 +3,8 @@ import * as React from 'react';
 import { AppModel } from '../../models/AppModel.ts';
 import * as Constants from '../../Constants.ts';
 
+import { TimelineOutput } from './common/TimelineOutput.tsx';
+
 export class EntriesByCategory extends React.Component<any, any> {
 
     public state: any;
@@ -12,12 +14,12 @@ export class EntriesByCategory extends React.Component<any, any> {
         super(props);
 
         this.state = {
-            timeline: 'loading...'
+            timeline: null
         };
 
         this.model = new AppModel();
         this.model.getEntriesByCategory(this.props.params.key, this.props.params.value)
-            .then((response) => { this.state.timeline = response; });
+            .then((response) => { this.setState({ timeline: response }); });
     }
 
     public render() {
@@ -25,7 +27,7 @@ export class EntriesByCategory extends React.Component<any, any> {
             <div>
                 Entries By Category: {this.props.params.key}={this.props.params.value}
 
-                {this.state.timeline}
+                <TimelineOutput input="{this.state.timeline}" />
             </div>
         );
     }

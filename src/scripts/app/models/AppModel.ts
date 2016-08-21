@@ -10,4 +10,9 @@ export class AppModel {
             .then((response) => response.json());
     }
 
+    getEntriesByTag(tag: string) {
+        return fetch(`${Constants.SERVICE_BASE_URL}/entries/tag/${tag}.json`)
+            .then((response) => response.json());
+    }
+
 }

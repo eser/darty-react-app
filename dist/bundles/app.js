@@ -12,8 +12,8 @@ webpackJsonpvendor([0],{
 	var App_tsx_1 = __webpack_require__(237);
 	var Home_tsx_1 = __webpack_require__(238);
 	var EntriesByCategory_tsx_1 = __webpack_require__(239);
-	var EntriesByTag_tsx_1 = __webpack_require__(240);
-	var Page_tsx_1 = __webpack_require__(241);
+	var EntriesByTag_tsx_1 = __webpack_require__(241);
+	var Page_tsx_1 = __webpack_require__(242);
 	var model = new AppModel_ts_1.AppModel();
 	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "category/:key/:value", component: EntriesByCategory_tsx_1.EntriesByCategory}), React.createElement(react_router_1.Route, {path: "tag/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "page/:page", component: Page_tsx_1.Page}))), document.getElementsByTagName('app')[0]);
 
@@ -30,6 +30,10 @@ webpackJsonpvendor([0],{
 	    }
 	    AppModel.prototype.getEntriesByCategory = function (key, value) {
 	        return fetch(Constants.SERVICE_BASE_URL + "/entries/category/" + key + "/" + value + ".json")
+	            .then(function (response) { return response.json(); });
+	    };
+	    AppModel.prototype.getEntriesByTag = function (tag) {
+	        return fetch(Constants.SERVICE_BASE_URL + "/entries/tag/" + tag + ".json")
 	            .then(function (response) { return response.json(); });
 	    };
 	    return AppModel;
@@ -115,20 +119,21 @@ webpackJsonpvendor([0],{
 	};
 	var React = __webpack_require__(1);
 	var AppModel_ts_1 = __webpack_require__(235);
+	var TimelineOutput_tsx_1 = __webpack_require__(240);
 	var EntriesByCategory = (function (_super) {
 	    __extends(EntriesByCategory, _super);
 	    function EntriesByCategory(props) {
 	        var _this = this;
 	        _super.call(this, props);
 	        this.state = {
-	            timeline: 'loading...'
+	            timeline: null
 	        };
 	        this.model = new AppModel_ts_1.AppModel();
 	        this.model.getEntriesByCategory(this.props.params.key, this.props.params.value)
-	            .then(function (response) { _this.state.timeline = response; });
+	            .then(function (response) { _this.setState({ timeline: response }); });
 	    }
 	    EntriesByCategory.prototype.render = function () {
-	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, this.state.timeline));
+	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(TimelineOutput_tsx_1.TimelineOutput, {input: "{this.state.timeline}"})));
 	    };
 	    return EntriesByCategory;
 	}(React.Component));
@@ -147,13 +152,50 @@ webpackJsonpvendor([0],{
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
+	var TimelineOutput = (function (_super) {
+	    __extends(TimelineOutput, _super);
+	    function TimelineOutput(props) {
+	        _super.call(this, props);
+	    }
+	    TimelineOutput.prototype.render = function () {
+	        if (this.props.input === null) {
+	            return (React.createElement("div", null, "Loading..."));
+	        }
+	        return (React.createElement("div", null, "Timeline there is."));
+	    };
+	    return TimelineOutput;
+	}(React.Component));
+	exports.TimelineOutput = TimelineOutput;
+
+
+/***/ },
+
+/***/ 241:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
+	var AppModel_ts_1 = __webpack_require__(235);
+	var TimelineOutput_tsx_1 = __webpack_require__(240);
 	var EntriesByTag = (function (_super) {
 	    __extends(EntriesByTag, _super);
 	    function EntriesByTag(props) {
+	        var _this = this;
 	        _super.call(this, props);
+	        this.state = {
+	            timeline: null
+	        };
+	        this.model = new AppModel_ts_1.AppModel();
+	        this.model.getEntriesByTag(this.props.params.tag)
+	            .then(function (response) { _this.setState({ timeline: response }); });
 	    }
 	    EntriesByTag.prototype.render = function () {
-	        return (React.createElement("div", null, "Entries By Tag: ", this.props.params.tag));
+	        return (React.createElement("div", null, "Entries By Tag: ", this.props.params.tag, React.createElement(TimelineOutput_tsx_1.TimelineOutput, {input: "{this.state.timeline}"})));
 	    };
 	    return EntriesByTag;
 	}(React.Component));
@@ -162,7 +204,7 @@ webpackJsonpvendor([0],{
 
 /***/ },
 
-/***/ 241:
+/***/ 242:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
