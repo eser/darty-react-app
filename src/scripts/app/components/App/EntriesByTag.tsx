@@ -18,8 +18,11 @@ export class EntriesByTag extends React.Component<any, any> {
         };
 
         this.model = new AppModel();
-        this.model.getEntriesByTag(this.props.params.tag)
-            .then((response) => { this.setState({ timeline: response }); });
+        this.updateTimeline(this.props.params.tag);
+    }
+
+    public componentWillReceiveProps(nextProps: any) {
+        this.updateTimeline(nextProps.params.tag);
     }
 
     public render() {
@@ -30,6 +33,11 @@ export class EntriesByTag extends React.Component<any, any> {
                 <LinearTimeline input={this.state.timeline} />
             </div>
         );
+    }
+
+    private updateTimeline(tag: string) {
+        this.model.getEntriesByTag(tag)
+            .then((response) => { this.setState({ timeline: response }); });
     }
 
 }

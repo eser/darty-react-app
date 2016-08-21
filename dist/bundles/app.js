@@ -147,17 +147,23 @@ webpackJsonpvendor([0],{
 	var EntriesByCategory = (function (_super) {
 	    __extends(EntriesByCategory, _super);
 	    function EntriesByCategory(props) {
-	        var _this = this;
 	        _super.call(this, props);
 	        this.state = {
 	            timeline: null
 	        };
 	        this.model = new AppModel_ts_1.AppModel();
-	        this.model.getEntriesByCategory(this.props.params.key, this.props.params.value)
-	            .then(function (response) { _this.setState({ timeline: response }); });
+	        this.updateTimeline(this.props.params.key, this.props.params.value);
 	    }
+	    EntriesByCategory.prototype.componentWillReceiveProps = function (nextProps) {
+	        this.updateTimeline(nextProps.params.key, nextProps.params.value);
+	    };
 	    EntriesByCategory.prototype.render = function () {
 	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {input: this.state.timeline})));
+	    };
+	    EntriesByCategory.prototype.updateTimeline = function (key, value) {
+	        var _this = this;
+	        this.model.getEntriesByCategory(key, value)
+	            .then(function (response) { _this.setState({ timeline: response }); });
 	    };
 	    return EntriesByCategory;
 	}(React.Component));
@@ -278,17 +284,23 @@ webpackJsonpvendor([0],{
 	var EntriesByTag = (function (_super) {
 	    __extends(EntriesByTag, _super);
 	    function EntriesByTag(props) {
-	        var _this = this;
 	        _super.call(this, props);
 	        this.state = {
 	            timeline: null
 	        };
 	        this.model = new AppModel_ts_1.AppModel();
-	        this.model.getEntriesByTag(this.props.params.tag)
-	            .then(function (response) { _this.setState({ timeline: response }); });
+	        this.updateTimeline(this.props.params.tag);
 	    }
+	    EntriesByTag.prototype.componentWillReceiveProps = function (nextProps) {
+	        this.updateTimeline(nextProps.params.tag);
+	    };
 	    EntriesByTag.prototype.render = function () {
 	        return (React.createElement("div", null, "Entries By Tag: ", this.props.params.tag, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {input: this.state.timeline})));
+	    };
+	    EntriesByTag.prototype.updateTimeline = function (tag) {
+	        var _this = this;
+	        this.model.getEntriesByTag(tag)
+	            .then(function (response) { _this.setState({ timeline: response }); });
 	    };
 	    return EntriesByTag;
 	}(React.Component));

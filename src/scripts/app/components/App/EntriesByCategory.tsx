@@ -18,8 +18,11 @@ export class EntriesByCategory extends React.Component<any, any> {
         };
 
         this.model = new AppModel();
-        this.model.getEntriesByCategory(this.props.params.key, this.props.params.value)
-            .then((response) => { this.setState({ timeline: response }); });
+        this.updateTimeline(this.props.params.key, this.props.params.value);
+    }
+
+    public componentWillReceiveProps(nextProps: any) {
+        this.updateTimeline(nextProps.params.key, nextProps.params.value);
     }
 
     public render() {
@@ -30,6 +33,11 @@ export class EntriesByCategory extends React.Component<any, any> {
                 <LinearTimeline input={this.state.timeline} />
             </div>
         );
+    }
+
+    private updateTimeline(key: string, value: string) {
+        this.model.getEntriesByCategory(key, value)
+            .then((response) => { this.setState({ timeline: response }); });
     }
 
 }
