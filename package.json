@@ -29,20 +29,20 @@
     "type": "git",
     "url": "https://github.com/eserozvataf/ts-spa-boilerplate.git"
   },
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.1.0",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "browser-sync": "^2.14.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat-css": "^2.3.0",
     "gulp-postcss": "^6.1.1",
     "gulp-sourcemaps": "^1.6.0",
+    "jquery": "^3.1.0",
     "postcss-cssnext": "^2.7.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-router": "^2.7.0",
     "source-map-loader": "^0.1.5",
     "ts-loader": "^0.8.2",
     "tslint": "^3.14.0",
