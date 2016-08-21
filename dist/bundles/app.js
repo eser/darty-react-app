@@ -195,24 +195,25 @@ webpackJsonpvendor([0],{
 	            return (React.createElement("div", null, "Loading..."));
 	        }
 	        var output = [];
-	        for (var year in data) {
+	        var _loop_1 = function(year) {
 	            var yearKey = "year." + encodeURIComponent(year);
-	            output.push(React.createElement("h3", {key: yearKey}, React.createElement(react_router_1.Link, {key: yearKey + ".link", to: "/category/year/" + encodeURIComponent(year)}, year)));
-	            for (var event_1 in data[year]) {
-	                if (event_1 === '_items') {
-	                    continue;
+	            output.push(React.createElement("h3", {key: yearKey + ".caption"}, React.createElement(react_router_1.Link, {key: yearKey + ".link", to: "/category/year/" + encodeURIComponent(year)}, year)));
+	            output.push(React.createElement("ul", {key: yearKey + ".list"}, Object.keys(data[year]).forEach(function (event) {
+	                if (event === '_items') {
+	                    return;
 	                }
-	                var eventKey = "year." + year + ".event." + encodeURIComponent(event_1);
-	                output.push(React.createElement("h4", {key: eventKey}, React.createElement(react_router_1.Link, {key: eventKey + ".link", to: "/category/event/" + encodeURIComponent(event_1)}, event_1)));
-	                output.push(React.createElement("ul", {key: eventKey + ".list"}, data[year][event_1]._items.map(function (item) {
+	                var eventKey = "year." + year + ".event." + encodeURIComponent(event);
+	                output.push(React.createElement("li", {key: eventKey}, React.createElement("h4", {key: eventKey + ".caption"}, React.createElement(react_router_1.Link, {key: eventKey + ".caption.link", to: "/category/event/" + encodeURIComponent(event)}, event)), React.createElement("ul", {key: eventKey + ".list"}, data[year][event]._items.map(function (item) {
 	                    var entryKey = "entry." + encodeURIComponent(item.entry);
 	                    return (React.createElement("li", {key: entryKey}, React.createElement(LinearTimelineItem_tsx_1.LinearTimelineItem, {key: entryKey + ".item", item: item})));
-	                })));
-	            }
-	            output.push(React.createElement("ul", {key: yearKey + ".list"}, data[year]._items.map(function (item) {
+	                }))));
+	            }), data[year]._items.map(function (item) {
 	                var entryKey = "entry." + encodeURIComponent(item.entry);
 	                return (React.createElement("li", {key: entryKey}, React.createElement(LinearTimelineItem_tsx_1.LinearTimelineItem, {key: entryKey + ".item", id: entryKey + ".item", item: item})));
 	            })));
+	        };
+	        for (var year in data) {
+	            _loop_1(year);
 	        }
 	        return (React.createElement("div", null, output));
 	    };

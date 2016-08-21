@@ -24,32 +24,36 @@ export class LinearTimeline extends React.Component<any, any> {
         for (const year in data) {
             const yearKey = `year.${encodeURIComponent(year)}`;
 
-            output.push(<h3 key={yearKey}><Link key={`${yearKey}.link`} to={`/category/year/${encodeURIComponent(year)}`}>{year}</Link></h3>);
+            output.push(<h3 key={`${yearKey}.caption`}><Link key={`${yearKey}.link`} to={`/category/year/${encodeURIComponent(year)}`}>{year}</Link></h3>);
+            output.push(
+                <ul key={`${yearKey}.list`}>
+                    {Object.keys(data[year]).forEach((event) => {
+                        if (event === '_items') {
+                            return;
+                        }
 
-            for (const event in data[year]) {
-                if (event === '_items') {
-                    continue;
-                }
+                        const eventKey = `year.${year}.event.${encodeURIComponent(event)}`;
 
-                const eventKey = `year.${year}.event.${encodeURIComponent(event)}`;
+                        output.push(
+                            <li key={eventKey}>
+                                <h4 key={`${eventKey}.caption`}><Link key={`${eventKey}.caption.link`} to={`/category/event/${encodeURIComponent(event)}`}>{event}</Link></h4>
+                                <ul key={`${eventKey}.list`}>
+                                    {data[year][event]._items.map((item) => {
+                                        const entryKey = `entry.${encodeURIComponent(item.entry)}`;
 
-                output.push(<h4 key={eventKey}><Link key={`${eventKey}.link`} to={`/category/event/${encodeURIComponent(event)}`}>{event}</Link></h4>);
-                output.push(<ul key={`${eventKey}.list`}>
-                    {data[year][event]._items.map((item) => {
+                                        return (<li key={entryKey}><LinearTimelineItem key={`${entryKey}.item`} item={item} /></li>);
+                                    })}
+                                </ul>
+                            </li>
+                        );
+                    })}
+                    {data[year]._items.map((item) => {
                         const entryKey = `entry.${encodeURIComponent(item.entry)}`;
 
-                        return (<li key={entryKey}><LinearTimelineItem key={`${entryKey}.item`} item={item} /></li>);
+                        return (<li key={entryKey}><LinearTimelineItem key={`${entryKey}.item`} id={`${entryKey}.item`} item={item} /></li>);
                     })}
-                </ul>);
-            }
-
-            output.push(<ul key={`${yearKey}.list`}>
-                {data[year]._items.map((item) => {
-                    const entryKey = `entry.${encodeURIComponent(item.entry)}`;
-
-                    return (<li key={entryKey}><LinearTimelineItem key={`${entryKey}.item`} id={`${entryKey}.item`} item={item} /></li>);
-                })}
-            </ul>);
+                </ul>
+            );
         }
 
         return (
