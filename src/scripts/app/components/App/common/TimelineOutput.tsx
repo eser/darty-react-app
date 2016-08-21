@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router';
 
 export class TimelineOutput extends React.Component<any, any> {
 
@@ -6,6 +7,35 @@ export class TimelineOutput extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
+    }
+
+    public makeLinks(content) {
+        const parts = [];
+
+        let lastIndex = 0;
+
+        while (true) {
+            let pos = content.indexOf('[[', lastIndex);
+
+            if (pos === -1) {
+                parts.push(content.substring(lastIndex, content.length));
+                break;
+            }
+
+            let endPos = content.indexOf(']]', pos + 2);
+
+            if (endPos === -1) {
+                parts.push(content.substring(lastIndex, content.length));
+                break;
+            }
+
+            parts.push(content.substring(lastIndex, pos));
+            const tag = content.substring(pos + 2, endPos);
+            parts.push(<Link to={`/tag/${tag}`}>{tag}</Link>);
+            lastIndex = endPos + 2;
+        }
+
+        return parts;
     }
 
     public render() {
@@ -30,12 +60,12 @@ export class TimelineOutput extends React.Component<any, any> {
 
                 output.push(<h4>{event}</h4>);
                 output.push(<ul>
-                    {data[year][event]._items.map((item) => <li>{item.content}</li>)}
+                    {data[year][event]._items.map((item) => <li>{this.makeLinks(item.content)}</li>)}
                 </ul>);
             }
 
             output.push(<ul>
-                {data[year]._items.map((item) => <li>{item.content}</li>)}
+                {data[year]._items.map((item) => <li>{this.makeLinks(item.content)}</li>)}
             </ul>);
         }
 

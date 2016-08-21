@@ -176,12 +176,35 @@ webpackJsonpvendor([0],{
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
+	var react_router_1 = __webpack_require__(172);
 	var TimelineOutput = (function (_super) {
 	    __extends(TimelineOutput, _super);
 	    function TimelineOutput(props) {
 	        _super.call(this, props);
 	    }
+	    TimelineOutput.prototype.makeLinks = function (content) {
+	        var parts = [];
+	        var lastIndex = 0;
+	        while (true) {
+	            var pos = content.indexOf('[[', lastIndex);
+	            if (pos === -1) {
+	                parts.push(content.substring(lastIndex, content.length));
+	                break;
+	            }
+	            var endPos = content.indexOf(']]', pos + 2);
+	            if (endPos === -1) {
+	                parts.push(content.substring(lastIndex, content.length));
+	                break;
+	            }
+	            parts.push(content.substring(lastIndex, pos));
+	            var tag = content.substring(pos + 2, endPos);
+	            parts.push(React.createElement(react_router_1.Link, {to: "/tag/" + tag}, tag));
+	            lastIndex = endPos + 2;
+	        }
+	        return parts;
+	    };
 	    TimelineOutput.prototype.render = function () {
+	        var _this = this;
 	        var data = this.props.input;
 	        if (data === null) {
 	            return (React.createElement("div", null, "Loading..."));
@@ -195,9 +218,9 @@ webpackJsonpvendor([0],{
 	                    continue;
 	                }
 	                output.push(React.createElement("h4", null, event_1));
-	                output.push(React.createElement("ul", null, data[year][event_1]._items.map(function (item) { return React.createElement("li", null, item.content); })));
+	                output.push(React.createElement("ul", null, data[year][event_1]._items.map(function (item) { return React.createElement("li", null, _this.makeLinks(item.content)); })));
 	            }
-	            output.push(React.createElement("ul", null, data[year]._items.map(function (item) { return React.createElement("li", null, item.content); })));
+	            output.push(React.createElement("ul", null, data[year]._items.map(function (item) { return React.createElement("li", null, _this.makeLinks(item.content)); })));
 	        }
 	        return (React.createElement("div", null, output));
 	    };
