@@ -1,8 +1,15 @@
 import * as React from 'react';
 
-import { AppPropsInterface } from '../entities/AppPropsInterface';
-import { AppStateInterface } from '../entities/AppStateInterface';
-import * as Constants from '../Constants';
+import { AppModel } from '../models/AppModel.ts';
+import * as Constants from '../Constants.ts';
+
+export interface AppPropsInterface extends React.Props<any> {
+    model: AppModel
+}
+
+export interface AppStateInterface {
+    nowShowing?: string
+}
 
 export class AppComponent extends React.Component<AppPropsInterface, AppStateInterface> {
 

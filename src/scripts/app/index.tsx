@@ -2,8 +2,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { AppModel } from './models/AppModel';
-import { AppComponent } from './components/AppComponent';
+import { AppModel } from './models/AppModel.ts';
+import { AppComponent } from './components/AppComponent.tsx';
 
 const model = new AppModel();
 
