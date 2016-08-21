@@ -6,12 +6,13 @@ import * as Constants from '../../Constants.ts';
 export class EntriesByCategory extends React.Component<any, any> {
 
     public state: any;
+    public model: any;
 
     constructor(props: any) {
         super(props);
 
         this.state = {
-            timeline: 'loading...';
+            timeline: 'loading...'
         };
 
         this.model = new AppModel();
@@ -19,9 +20,6 @@ export class EntriesByCategory extends React.Component<any, any> {
             .then((response) => { this.state.timeline = response; });
     }
 
-    // the JSX syntax is quite intuitive but check out
-    // https://facebook.github.io/react/docs/jsx-in-depth.html
-    // if you need additional help
     public render() {
         return (
             <div>
