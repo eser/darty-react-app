@@ -5,8 +5,8 @@ export class AppModel {
     constructor() {
     }
 
-    public getEntriesByCategory(key: string, value: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/entries/categories/${key}/${value}.json`)
+    public getEntriesByProperty(property: string, value: string) {
+        return fetch(`${Constants.SERVICE_BASE_URL}/entries/properties/${property}/${value}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
@@ -49,20 +49,20 @@ export class AppModel {
         const output = {};
 
         for (const entry of data) {
-            if (output[entry.categories.year] === undefined) {
-                output[entry.categories.year] = { _items: [] };
+            if (output[entry.properties.year] === undefined) {
+                output[entry.properties.year] = { _items: [] };
             }
 
-            if (entry.categories.event === undefined) {
-                output[entry.categories.year]._items.push(entry);
+            if (entry.properties.event === undefined) {
+                output[entry.properties.year]._items.push(entry);
                 continue;
             }
 
-            if (output[entry.categories.year][entry.categories.event] === undefined) {
-                output[entry.categories.year][entry.categories.event] = { _items: [] };
+            if (output[entry.properties.year][entry.properties.event] === undefined) {
+                output[entry.properties.year][entry.properties.event] = { _items: [] };
             }
 
-            output[entry.categories.year][entry.categories.event]._items.push(entry);
+            output[entry.properties.year][entry.properties.event]._items.push(entry);
         }
 
         return output;

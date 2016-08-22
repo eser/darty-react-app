@@ -10,11 +10,11 @@ webpackJsonpvendor([0],{
 	var react_router_1 = __webpack_require__(172);
 	var App_tsx_1 = __webpack_require__(235);
 	var Home_tsx_1 = __webpack_require__(237);
-	var EntriesByCategory_tsx_1 = __webpack_require__(238);
+	var EntriesByProperty_tsx_1 = __webpack_require__(238);
 	var EntriesByTag_tsx_1 = __webpack_require__(242);
 	var Pages_tsx_1 = __webpack_require__(243);
 	var PageByName_tsx_1 = __webpack_require__(245);
-	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "categories/:key/:value", component: EntriesByCategory_tsx_1.EntriesByCategory}), React.createElement(react_router_1.Route, {path: "tags/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "pages", component: Pages_tsx_1.Pages}), React.createElement(react_router_1.Route, {path: "pages/:name", component: PageByName_tsx_1.PageByName}))), document.getElementsByTagName('app')[0]);
+	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "properties/:property/:value", component: EntriesByProperty_tsx_1.EntriesByProperty}), React.createElement(react_router_1.Route, {path: "tags/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "pages", component: Pages_tsx_1.Pages}), React.createElement(react_router_1.Route, {path: "pages/:name", component: PageByName_tsx_1.PageByName}))), document.getElementsByTagName('app')[0]);
 
 
 /***/ },
@@ -96,38 +96,38 @@ webpackJsonpvendor([0],{
 	var React = __webpack_require__(1);
 	var AppModel_ts_1 = __webpack_require__(239);
 	var LinearTimeline_tsx_1 = __webpack_require__(240);
-	var EntriesByCategory = (function (_super) {
-	    __extends(EntriesByCategory, _super);
-	    function EntriesByCategory(props) {
+	var EntriesByProperty = (function (_super) {
+	    __extends(EntriesByProperty, _super);
+	    function EntriesByProperty(props) {
 	        _super.call(this, props);
 	        this.state = {
 	            datasource: null,
 	            error: false
 	        };
 	        this.model = new AppModel_ts_1.AppModel();
-	        this.updateDatasource(this.props.params.key, this.props.params.value);
+	        this.updateDatasource(this.props.params.property, this.props.params.value);
 	    }
-	    EntriesByCategory.prototype.componentWillReceiveProps = function (nextProps) {
-	        this.updateDatasource(nextProps.params.key, nextProps.params.value);
+	    EntriesByProperty.prototype.componentWillReceiveProps = function (nextProps) {
+	        this.updateDatasource(nextProps.params.property, nextProps.params.value);
 	    };
-	    EntriesByCategory.prototype.render = function () {
+	    EntriesByProperty.prototype.render = function () {
 	        if (this.state.error) {
 	            return (React.createElement("div", null, "An error occurred"));
 	        }
 	        if (this.state.datasource === null) {
 	            return (React.createElement("div", null, "Loading..."));
 	        }
-	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries"})));
+	        return (React.createElement("div", null, "Entries By Property: ", this.props.params.property, "=", this.props.params.value, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries"})));
 	    };
-	    EntriesByCategory.prototype.updateDatasource = function (key, value) {
+	    EntriesByProperty.prototype.updateDatasource = function (property, value) {
 	        var _this = this;
-	        this.model.getEntriesByCategory(key, value)
+	        this.model.getEntriesByProperty(property, value)
 	            .then(function (response) { _this.setState({ datasource: response, error: false }); })
 	            .catch(function (err) { _this.setState({ error: true }); });
 	    };
-	    return EntriesByCategory;
+	    return EntriesByProperty;
 	}(React.Component));
-	exports.EntriesByCategory = EntriesByCategory;
+	exports.EntriesByProperty = EntriesByProperty;
 
 
 /***/ },
@@ -140,9 +140,9 @@ webpackJsonpvendor([0],{
 	var AppModel = (function () {
 	    function AppModel() {
 	    }
-	    AppModel.prototype.getEntriesByCategory = function (key, value) {
+	    AppModel.prototype.getEntriesByProperty = function (property, value) {
 	        var _this = this;
-	        return fetch(Constants.SERVICE_BASE_URL + "/entries/categories/" + key + "/" + value + ".json")
+	        return fetch(Constants.SERVICE_BASE_URL + "/entries/properties/" + property + "/" + value + ".json")
 	            .then(function (response) { return response.json(); })
 	            .then(function (response) {
 	            response.entries = _this.processEntriesTimelineData(response.entries);
@@ -180,17 +180,17 @@ webpackJsonpvendor([0],{
 	        var output = {};
 	        for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
 	            var entry = data_1[_i];
-	            if (output[entry.categories.year] === undefined) {
-	                output[entry.categories.year] = { _items: [] };
+	            if (output[entry.properties.year] === undefined) {
+	                output[entry.properties.year] = { _items: [] };
 	            }
-	            if (entry.categories.event === undefined) {
-	                output[entry.categories.year]._items.push(entry);
+	            if (entry.properties.event === undefined) {
+	                output[entry.properties.year]._items.push(entry);
 	                continue;
 	            }
-	            if (output[entry.categories.year][entry.categories.event] === undefined) {
-	                output[entry.categories.year][entry.categories.event] = { _items: [] };
+	            if (output[entry.properties.year][entry.properties.event] === undefined) {
+	                output[entry.properties.year][entry.properties.event] = { _items: [] };
 	            }
-	            output[entry.categories.year][entry.categories.event]._items.push(entry);
+	            output[entry.properties.year][entry.properties.event]._items.push(entry);
 	        }
 	        return output;
 	    };
@@ -233,12 +233,12 @@ webpackJsonpvendor([0],{
 	        var data = this.props.datasource[this.props.datakey];
 	        return (React.createElement("ul", null, Object.keys(data).map(function (year) {
 	            var yearKey = "year." + encodeURIComponent(year), yearData = data[year];
-	            return (React.createElement("li", {key: yearKey}, React.createElement("h3", {key: yearKey + ".caption"}, React.createElement(react_router_1.Link, {key: yearKey + ".link", to: "/categories/year/" + encodeURIComponent(year)}, year)), React.createElement("ul", {key: yearKey + ".list"}, Object.keys(yearData).map(function (event) {
+	            return (React.createElement("li", {key: yearKey}, React.createElement("h3", {key: yearKey + ".caption"}, React.createElement(react_router_1.Link, {key: yearKey + ".link", to: "/properties/year/" + encodeURIComponent(year)}, year)), React.createElement("ul", {key: yearKey + ".list"}, Object.keys(yearData).map(function (event) {
 	                if (event === '_items') {
 	                    return null;
 	                }
 	                var eventKey = "year." + year + ".event." + encodeURIComponent(event), eventData = yearData[event];
-	                return (React.createElement("li", {key: eventKey}, React.createElement("h4", {key: eventKey + ".caption"}, React.createElement(react_router_1.Link, {key: eventKey + ".caption.link", to: "/categories/event/" + encodeURIComponent(event)}, event)), React.createElement("ul", {key: eventKey + ".list"}, eventData._items.map(function (item) {
+	                return (React.createElement("li", {key: eventKey}, React.createElement("h4", {key: eventKey + ".caption"}, React.createElement(react_router_1.Link, {key: eventKey + ".caption.link", to: "/properties/event/" + encodeURIComponent(event)}, event)), React.createElement("ul", {key: eventKey + ".list"}, eventData._items.map(function (item) {
 	                    var entryKey = "entry." + encodeURIComponent(item.entry);
 	                    return (React.createElement("li", {key: entryKey}, React.createElement(LinearTimelineItem_tsx_1.LinearTimelineItem, {key: entryKey + ".item", item: item})));
 	                }))));
