@@ -140,7 +140,43 @@ webpackJsonpvendor([0],{
 	var AppModel = (function () {
 	    function AppModel() {
 	    }
-	    AppModel.prototype.processTimelineData = function (data) {
+	    AppModel.prototype.getEntriesByCategory = function (key, value) {
+	        var _this = this;
+	        return fetch(Constants.SERVICE_BASE_URL + "/entries/categories/" + key + "/" + value + ".json")
+	            .then(function (response) { return response.json(); })
+	            .then(function (response) {
+	            response.entries = _this.processEntriesTimelineData(response.entries);
+	            return response;
+	        });
+	    };
+	    AppModel.prototype.getEntriesByTag = function (tag) {
+	        var _this = this;
+	        return fetch(Constants.SERVICE_BASE_URL + "/entries/tags/" + tag + ".json")
+	            .then(function (response) { return response.json(); })
+	            .then(function (response) {
+	            response.entries = _this.processEntriesTimelineData(response.entries);
+	            return response;
+	        });
+	    };
+	    AppModel.prototype.getPages = function () {
+	        var _this = this;
+	        return fetch(Constants.SERVICE_BASE_URL + "/pages/index.json")
+	            .then(function (response) { return response.json(); })
+	            .then(function (response) {
+	            response.pages = _this.processPagesListData(response.pages);
+	            return response;
+	        });
+	    };
+	    AppModel.prototype.getPageByName = function (name) {
+	        var _this = this;
+	        return fetch(Constants.SERVICE_BASE_URL + "/pages/names/" + name + ".json")
+	            .then(function (response) { return response.json(); })
+	            .then(function (response) {
+	            response.entries = _this.processEntriesTimelineData(response.entries);
+	            return response;
+	        });
+	    };
+	    AppModel.prototype.processEntriesTimelineData = function (data) {
 	        var output = {};
 	        for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
 	            var entry = data_1[_i];
@@ -158,38 +194,16 @@ webpackJsonpvendor([0],{
 	        }
 	        return output;
 	    };
-	    AppModel.prototype.processTimelineEntryContent = function (content) {
-	    };
-	    AppModel.prototype.getEntriesByCategory = function (key, value) {
-	        var _this = this;
-	        return fetch(Constants.SERVICE_BASE_URL + "/entries/categories/" + key + "/" + value + ".json")
-	            .then(function (response) { return response.json(); })
-	            .then(function (response) {
-	            response.entries = _this.processTimelineData(response.entries);
-	            return response;
-	        });
-	    };
-	    AppModel.prototype.getEntriesByTag = function (tag) {
-	        var _this = this;
-	        return fetch(Constants.SERVICE_BASE_URL + "/entries/tags/" + tag + ".json")
-	            .then(function (response) { return response.json(); })
-	            .then(function (response) {
-	            response.entries = _this.processTimelineData(response.entries);
-	            return response;
-	        });
-	    };
-	    AppModel.prototype.getPages = function () {
-	        return fetch(Constants.SERVICE_BASE_URL + "/pages/index.json")
-	            .then(function (response) { return response.json(); });
-	    };
-	    AppModel.prototype.getPageByName = function (name) {
-	        var _this = this;
-	        return fetch(Constants.SERVICE_BASE_URL + "/pages/names/" + name + ".json")
-	            .then(function (response) { return response.json(); })
-	            .then(function (response) {
-	            response.entries = _this.processTimelineData(response.entries);
-	            return response;
-	        });
+	    AppModel.prototype.processPagesListData = function (data) {
+	        var output = {};
+	        for (var _i = 0, data_2 = data; _i < data_2.length; _i++) {
+	            var page = data_2[_i];
+	            if (output[page.type] === undefined) {
+	                output[page.type] = [];
+	            }
+	            output[page.type].push(page);
+	        }
+	        return output;
 	    };
 	    return AppModel;
 	}());
@@ -217,28 +231,22 @@ webpackJsonpvendor([0],{
 	    }
 	    LinearTimeline.prototype.render = function () {
 	        var data = this.props.datasource[this.props.datakey];
-	        var output = [];
-	        var _loop_1 = function(year) {
-	            var yearKey = "year." + encodeURIComponent(year);
-	            output.push(React.createElement("h3", {key: yearKey + ".caption"}, React.createElement(react_router_1.Link, {key: yearKey + ".link", to: "/categories/year/" + encodeURIComponent(year)}, year)));
-	            output.push(React.createElement("ul", {key: yearKey + ".list"}, Object.keys(data[year]).forEach(function (event) {
+	        return (React.createElement("ul", null, Object.keys(data).map(function (year) {
+	            var yearKey = "year." + encodeURIComponent(year), yearData = data[year];
+	            return (React.createElement("li", {key: yearKey}, React.createElement("h3", {key: yearKey + ".caption"}, React.createElement(react_router_1.Link, {key: yearKey + ".link", to: "/categories/year/" + encodeURIComponent(year)}, year)), React.createElement("ul", {key: yearKey + ".list"}, Object.keys(yearData).map(function (event) {
 	                if (event === '_items') {
-	                    return;
+	                    return null;
 	                }
-	                var eventKey = "year." + year + ".event." + encodeURIComponent(event);
-	                output.push(React.createElement("li", {key: eventKey}, React.createElement("h4", {key: eventKey + ".caption"}, React.createElement(react_router_1.Link, {key: eventKey + ".caption.link", to: "/categories/event/" + encodeURIComponent(event)}, event)), React.createElement("ul", {key: eventKey + ".list"}, data[year][event]._items.map(function (item) {
+	                var eventKey = "year." + year + ".event." + encodeURIComponent(event), eventData = yearData[event];
+	                return (React.createElement("li", {key: eventKey}, React.createElement("h4", {key: eventKey + ".caption"}, React.createElement(react_router_1.Link, {key: eventKey + ".caption.link", to: "/categories/event/" + encodeURIComponent(event)}, event)), React.createElement("ul", {key: eventKey + ".list"}, eventData._items.map(function (item) {
 	                    var entryKey = "entry." + encodeURIComponent(item.entry);
 	                    return (React.createElement("li", {key: entryKey}, React.createElement(LinearTimelineItem_tsx_1.LinearTimelineItem, {key: entryKey + ".item", item: item})));
 	                }))));
-	            }), data[year]._items.map(function (item) {
+	            }), yearData._items.map(function (item) {
 	                var entryKey = "entry." + encodeURIComponent(item.entry);
 	                return (React.createElement("li", {key: entryKey}, React.createElement(LinearTimelineItem_tsx_1.LinearTimelineItem, {key: entryKey + ".item", id: entryKey + ".item", item: item})));
-	            })));
-	        };
-	        for (var year in data) {
-	            _loop_1(year);
-	        }
-	        return (React.createElement("div", null, output));
+	            }))));
+	        })));
 	    };
 	    return LinearTimeline;
 	}(React.Component));
@@ -408,9 +416,12 @@ webpackJsonpvendor([0],{
 	    }
 	    PageList.prototype.render = function () {
 	        var data = this.props.datasource[this.props.datakey];
-	        return (React.createElement("ul", null, data.map(function (page) {
-	            var pageKey = "page." + encodeURIComponent(page.name);
-	            return React.createElement("li", {key: "" + pageKey}, React.createElement(react_router_1.Link, {key: pageKey + ".link", to: "/pages/" + encodeURIComponent(page.name)}, page.name));
+	        return (React.createElement("ul", null, Object.keys(data).map(function (type) {
+	            var typeKey = "type." + encodeURIComponent(type), typeData = data[type];
+	            return (React.createElement("li", {key: typeKey}, React.createElement("h3", {key: typeKey + ".caption"}, type), React.createElement("ul", {key: typeKey + ".list"}, typeData.map(function (page) {
+	                var pageKey = "page." + encodeURIComponent(page.name);
+	                return (React.createElement("li", {key: typeKey + ".page." + pageKey}, React.createElement(react_router_1.Link, {key: typeKey + ".page." + pageKey + ".link", to: "/pages/" + encodeURIComponent(page.name)}, page.name)));
+	            }))));
 	        })));
 	    };
 	    return PageList;

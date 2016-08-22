@@ -5,7 +5,47 @@ export class AppModel {
     constructor() {
     }
 
-    processTimelineData(data: any) {
+    public getEntriesByCategory(key: string, value: string) {
+        return fetch(`${Constants.SERVICE_BASE_URL}/entries/categories/${key}/${value}.json`)
+            .then((response) => response.json())
+            .then((response) => {
+                response.entries = this.processEntriesTimelineData(response.entries);
+
+                return response;
+            });
+    }
+
+    public getEntriesByTag(tag: string) {
+        return fetch(`${Constants.SERVICE_BASE_URL}/entries/tags/${tag}.json`)
+            .then((response) => response.json())
+            .then((response) => {
+                response.entries = this.processEntriesTimelineData(response.entries);
+
+                return response;
+            });
+    }
+
+    public getPages() {
+        return fetch(`${Constants.SERVICE_BASE_URL}/pages/index.json`)
+            .then((response) => response.json())
+            .then((response) => {
+                response.pages = this.processPagesListData(response.pages);
+
+                return response;
+            });
+    }
+
+    public getPageByName(name: string) {
+        return fetch(`${Constants.SERVICE_BASE_URL}/pages/names/${name}.json`)
+            .then((response) => response.json())
+            .then((response) => {
+                response.entries = this.processEntriesTimelineData(response.entries);
+
+                return response;
+            });
+    }
+
+    private processEntriesTimelineData(data: any) {
         const output = {};
 
         for (const entry of data) {
@@ -28,43 +68,19 @@ export class AppModel {
         return output;
     }
 
-    processTimelineEntryContent(content: string) {
 
-    }
+    private processPagesListData(data: any) {
+        const output = {};
 
-    getEntriesByCategory(key: string, value: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/entries/categories/${key}/${value}.json`)
-            .then((response) => response.json())
-            .then((response) => {
-                response.entries = this.processTimelineData(response.entries);
+        for (const page of data) {
+            if (output[page.type] === undefined) {
+                output[page.type] = [];
+            }
 
-                return response;
-            });
-    }
+            output[page.type].push(page);
+        }
 
-    getEntriesByTag(tag: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/entries/tags/${tag}.json`)
-            .then((response) => response.json())
-            .then((response) => {
-                response.entries = this.processTimelineData(response.entries);
-
-                return response;
-            });
-    }
-
-    getPages() {
-        return fetch(`${Constants.SERVICE_BASE_URL}/pages/index.json`)
-            .then((response) => response.json());
-    }
-
-    getPageByName(name: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/pages/names/${name}.json`)
-            .then((response) => response.json())
-            .then((response) => {
-                response.entries = this.processTimelineData(response.entries);
-
-                return response;
-            });
+        return output;
     }
 
 }
