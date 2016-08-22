@@ -12,9 +12,9 @@ webpackJsonpvendor([0],{
 	var Home_tsx_1 = __webpack_require__(237);
 	var EntriesByCategory_tsx_1 = __webpack_require__(238);
 	var EntriesByTag_tsx_1 = __webpack_require__(242);
-	var Page_tsx_1 = __webpack_require__(243);
+	var Pages_tsx_1 = __webpack_require__(243);
 	var PageByName_tsx_1 = __webpack_require__(245);
-	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "category/:key/:value", component: EntriesByCategory_tsx_1.EntriesByCategory}), React.createElement(react_router_1.Route, {path: "tag/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "page", component: Page_tsx_1.Page}), React.createElement(react_router_1.Route, {path: "page/:name", component: PageByName_tsx_1.PageByName}))), document.getElementsByTagName('app')[0]);
+	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "categories/:key/:value", component: EntriesByCategory_tsx_1.EntriesByCategory}), React.createElement(react_router_1.Route, {path: "tags/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "pages", component: Pages_tsx_1.Pages}), React.createElement(react_router_1.Route, {path: "pages/:name", component: PageByName_tsx_1.PageByName}))), document.getElementsByTagName('app')[0]);
 
 
 /***/ },
@@ -40,7 +40,7 @@ webpackJsonpvendor([0],{
 	        };
 	    }
 	    App.prototype.render = function () {
-	        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate: ", this.state.caption)), React.createElement("ul", null, React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/", activeClassName: "active"}, "Home")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/category/era/Ortacag", activeClassName: "active"}, "Entries By Category")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/tag/Purifiers", activeClassName: "active"}, "Entries By Tag")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/page", activeClassName: "active"}, "Page"))), React.createElement("hr", null), this.props.children));
+	        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate: ", this.state.caption)), React.createElement("ul", null, React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/", activeClassName: "active"}, "Home")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/pages", activeClassName: "active"}, "Pages"))), React.createElement("hr", null), this.props.children));
 	    };
 	    return App;
 	}(React.Component));
@@ -101,21 +101,29 @@ webpackJsonpvendor([0],{
 	    function EntriesByCategory(props) {
 	        _super.call(this, props);
 	        this.state = {
-	            timeline: null
+	            datasource: null,
+	            error: false
 	        };
 	        this.model = new AppModel_ts_1.AppModel();
-	        this.updateTimeline(this.props.params.key, this.props.params.value);
+	        this.updateDatasource(this.props.params.key, this.props.params.value);
 	    }
 	    EntriesByCategory.prototype.componentWillReceiveProps = function (nextProps) {
-	        this.updateTimeline(nextProps.params.key, nextProps.params.value);
+	        this.updateDatasource(nextProps.params.key, nextProps.params.value);
 	    };
 	    EntriesByCategory.prototype.render = function () {
-	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {input: this.state.timeline})));
+	        if (this.state.error) {
+	            return (React.createElement("div", null, "An error occurred"));
+	        }
+	        if (this.state.datasource === null) {
+	            return (React.createElement("div", null, "Loading..."));
+	        }
+	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries"})));
 	    };
-	    EntriesByCategory.prototype.updateTimeline = function (key, value) {
+	    EntriesByCategory.prototype.updateDatasource = function (key, value) {
 	        var _this = this;
 	        this.model.getEntriesByCategory(key, value)
-	            .then(function (response) { _this.setState({ timeline: response }); });
+	            .then(function (response) { _this.setState({ datasource: response, error: false }); })
+	            .catch(function (err) { _this.setState({ error: true }); });
 	    };
 	    return EntriesByCategory;
 	}(React.Component));
@@ -134,8 +142,8 @@ webpackJsonpvendor([0],{
 	    }
 	    AppModel.prototype.processTimelineData = function (data) {
 	        var output = {};
-	        for (var _i = 0, _a = data.entries; _i < _a.length; _i++) {
-	            var entry = _a[_i];
+	        for (var _i = 0, data_1 = data; _i < data_1.length; _i++) {
+	            var entry = data_1[_i];
 	            if (output[entry.categories.year] === undefined) {
 	                output[entry.categories.year] = { _items: [] };
 	            }
@@ -154,23 +162,34 @@ webpackJsonpvendor([0],{
 	    };
 	    AppModel.prototype.getEntriesByCategory = function (key, value) {
 	        var _this = this;
-	        return fetch(Constants.SERVICE_BASE_URL + "/entries/category/" + key + "/" + value + ".json")
+	        return fetch(Constants.SERVICE_BASE_URL + "/entries/categories/" + key + "/" + value + ".json")
 	            .then(function (response) { return response.json(); })
-	            .then(function (response) { return _this.processTimelineData(response); });
+	            .then(function (response) {
+	            response.entries = _this.processTimelineData(response.entries);
+	            return response;
+	        });
 	    };
 	    AppModel.prototype.getEntriesByTag = function (tag) {
 	        var _this = this;
-	        return fetch(Constants.SERVICE_BASE_URL + "/entries/tag/" + tag + ".json")
+	        return fetch(Constants.SERVICE_BASE_URL + "/entries/tags/" + tag + ".json")
 	            .then(function (response) { return response.json(); })
-	            .then(function (response) { return _this.processTimelineData(response); });
+	            .then(function (response) {
+	            response.entries = _this.processTimelineData(response.entries);
+	            return response;
+	        });
 	    };
 	    AppModel.prototype.getPages = function () {
 	        return fetch(Constants.SERVICE_BASE_URL + "/pages/index.json")
 	            .then(function (response) { return response.json(); });
 	    };
 	    AppModel.prototype.getPageByName = function (name) {
-	        return fetch(Constants.SERVICE_BASE_URL + "/pages/name/" + name + ".json")
-	            .then(function (response) { return response.json(); });
+	        var _this = this;
+	        return fetch(Constants.SERVICE_BASE_URL + "/pages/names/" + name + ".json")
+	            .then(function (response) { return response.json(); })
+	            .then(function (response) {
+	            response.entries = _this.processTimelineData(response.entries);
+	            return response;
+	        });
 	    };
 	    return AppModel;
 	}());
@@ -197,20 +216,17 @@ webpackJsonpvendor([0],{
 	        _super.call(this, props);
 	    }
 	    LinearTimeline.prototype.render = function () {
-	        var data = this.props.input;
-	        if (data === null) {
-	            return (React.createElement("div", null, "Loading..."));
-	        }
+	        var data = this.props.datasource[this.props.datakey];
 	        var output = [];
 	        var _loop_1 = function(year) {
 	            var yearKey = "year." + encodeURIComponent(year);
-	            output.push(React.createElement("h3", {key: yearKey + ".caption"}, React.createElement(react_router_1.Link, {key: yearKey + ".link", to: "/category/year/" + encodeURIComponent(year)}, year)));
+	            output.push(React.createElement("h3", {key: yearKey + ".caption"}, React.createElement(react_router_1.Link, {key: yearKey + ".link", to: "/categories/year/" + encodeURIComponent(year)}, year)));
 	            output.push(React.createElement("ul", {key: yearKey + ".list"}, Object.keys(data[year]).forEach(function (event) {
 	                if (event === '_items') {
 	                    return;
 	                }
 	                var eventKey = "year." + year + ".event." + encodeURIComponent(event);
-	                output.push(React.createElement("li", {key: eventKey}, React.createElement("h4", {key: eventKey + ".caption"}, React.createElement(react_router_1.Link, {key: eventKey + ".caption.link", to: "/category/event/" + encodeURIComponent(event)}, event)), React.createElement("ul", {key: eventKey + ".list"}, data[year][event]._items.map(function (item) {
+	                output.push(React.createElement("li", {key: eventKey}, React.createElement("h4", {key: eventKey + ".caption"}, React.createElement(react_router_1.Link, {key: eventKey + ".caption.link", to: "/categories/event/" + encodeURIComponent(event)}, event)), React.createElement("ul", {key: eventKey + ".list"}, data[year][event]._items.map(function (item) {
 	                    var entryKey = "entry." + encodeURIComponent(item.entry);
 	                    return (React.createElement("li", {key: entryKey}, React.createElement(LinearTimelineItem_tsx_1.LinearTimelineItem, {key: entryKey + ".item", item: item})));
 	                }))));
@@ -262,8 +278,8 @@ webpackJsonpvendor([0],{
 	                break;
 	            }
 	            parts.push(content.substring(lastIndex, pos));
-	            var tag = content.substring(pos + 2, endPos);
-	            parts.push(React.createElement(react_router_1.Link, {key: key + ".link." + pos, to: "/tag/" + encodeURIComponent(tag)}, tag));
+	            var link = content.substring(pos + 2, endPos);
+	            parts.push(React.createElement(react_router_1.Link, {key: key + ".link." + pos, to: "/pages/" + encodeURIComponent(link)}, link));
 	            lastIndex = endPos + 2;
 	        }
 	        return parts;
@@ -295,21 +311,29 @@ webpackJsonpvendor([0],{
 	    function EntriesByTag(props) {
 	        _super.call(this, props);
 	        this.state = {
-	            timeline: null
+	            datasource: null,
+	            error: false
 	        };
 	        this.model = new AppModel_ts_1.AppModel();
-	        this.updateTimeline(this.props.params.tag);
+	        this.updateDatasource(this.props.params.tag);
 	    }
 	    EntriesByTag.prototype.componentWillReceiveProps = function (nextProps) {
-	        this.updateTimeline(nextProps.params.tag);
+	        this.updateDatasource(nextProps.params.tag);
 	    };
 	    EntriesByTag.prototype.render = function () {
-	        return (React.createElement("div", null, "Entries By Tag: ", this.props.params.tag, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {input: this.state.timeline})));
+	        if (this.state.error) {
+	            return (React.createElement("div", null, "An error occurred"));
+	        }
+	        if (this.state.datasource === null) {
+	            return (React.createElement("div", null, "Loading..."));
+	        }
+	        return (React.createElement("div", null, "Entries By Tag: ", this.props.params.tag, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries"})));
 	    };
-	    EntriesByTag.prototype.updateTimeline = function (tag) {
+	    EntriesByTag.prototype.updateDatasource = function (tag) {
 	        var _this = this;
 	        this.model.getEntriesByTag(tag)
-	            .then(function (response) { _this.setState({ timeline: response }); });
+	            .then(function (response) { _this.setState({ datasource: response, error: false }); })
+	            .catch(function (err) { _this.setState({ error: true }); });
 	    };
 	    return EntriesByTag;
 	}(React.Component));
@@ -330,30 +354,38 @@ webpackJsonpvendor([0],{
 	var React = __webpack_require__(1);
 	var AppModel_ts_1 = __webpack_require__(239);
 	var PageList_tsx_1 = __webpack_require__(244);
-	var Page = (function (_super) {
-	    __extends(Page, _super);
-	    function Page(props) {
+	var Pages = (function (_super) {
+	    __extends(Pages, _super);
+	    function Pages(props) {
 	        _super.call(this, props);
 	        this.state = {
-	            pageList: null
+	            datasource: null,
+	            error: false
 	        };
 	        this.model = new AppModel_ts_1.AppModel();
-	        this.updatePageList();
+	        this.updateDatasource();
 	    }
-	    Page.prototype.componentWillReceiveProps = function (nextProps) {
-	        this.updatePageList();
+	    Pages.prototype.componentWillReceiveProps = function (nextProps) {
+	        this.updateDatasource();
 	    };
-	    Page.prototype.render = function () {
-	        return (React.createElement("div", null, "Page List", React.createElement(PageList_tsx_1.PageList, {input: this.state.pageList})));
+	    Pages.prototype.render = function () {
+	        if (this.state.error) {
+	            return (React.createElement("div", null, "An error occurred"));
+	        }
+	        if (this.state.datasource === null) {
+	            return (React.createElement("div", null, "Loading..."));
+	        }
+	        return (React.createElement("div", null, "Pages", React.createElement(PageList_tsx_1.PageList, {datasource: this.state.datasource, datakey: "pages"})));
 	    };
-	    Page.prototype.updatePageList = function () {
+	    Pages.prototype.updateDatasource = function () {
 	        var _this = this;
 	        this.model.getPages()
-	            .then(function (response) { _this.setState({ pageList: response }); });
+	            .then(function (response) { _this.setState({ datasource: response, error: false }); })
+	            .catch(function (err) { _this.setState({ error: true }); });
 	    };
-	    return Page;
+	    return Pages;
 	}(React.Component));
-	exports.Page = Page;
+	exports.Pages = Pages;
 
 
 /***/ },
@@ -375,13 +407,10 @@ webpackJsonpvendor([0],{
 	        _super.call(this, props);
 	    }
 	    PageList.prototype.render = function () {
-	        var data = this.props.input;
-	        if (data === null) {
-	            return (React.createElement("div", null, "Loading..."));
-	        }
-	        return (React.createElement("ul", null, data.pages.map(function (page) {
+	        var data = this.props.datasource[this.props.datakey];
+	        return (React.createElement("ul", null, data.map(function (page) {
 	            var pageKey = "page." + encodeURIComponent(page.name);
-	            return React.createElement("li", {key: "" + pageKey}, React.createElement(react_router_1.Link, {key: pageKey + ".link", to: "/page/" + encodeURIComponent(page.name)}, page.name));
+	            return React.createElement("li", {key: "" + pageKey}, React.createElement(react_router_1.Link, {key: pageKey + ".link", to: "/pages/" + encodeURIComponent(page.name)}, page.name));
 	        })));
 	    };
 	    return PageList;
@@ -403,26 +432,35 @@ webpackJsonpvendor([0],{
 	var React = __webpack_require__(1);
 	var AppModel_ts_1 = __webpack_require__(239);
 	var PageContent_tsx_1 = __webpack_require__(246);
+	var LinearTimeline_tsx_1 = __webpack_require__(240);
 	var PageByName = (function (_super) {
 	    __extends(PageByName, _super);
 	    function PageByName(props) {
 	        _super.call(this, props);
 	        this.state = {
-	            page: null
+	            datasource: null,
+	            error: false
 	        };
 	        this.model = new AppModel_ts_1.AppModel();
-	        this.updatePage(this.props.params.name);
+	        this.updateDatasource(this.props.params.name);
 	    }
 	    PageByName.prototype.componentWillReceiveProps = function (nextProps) {
-	        this.updatePage(nextProps.params.name);
+	        this.updateDatasource(nextProps.params.name);
 	    };
 	    PageByName.prototype.render = function () {
-	        return (React.createElement("div", null, "Page: ", this.props.params.name, React.createElement(PageContent_tsx_1.PageContent, {input: this.state.page})));
+	        if (this.state.error) {
+	            return (React.createElement("div", null, "An error occurred"));
+	        }
+	        if (this.state.datasource === null) {
+	            return (React.createElement("div", null, "Loading..."));
+	        }
+	        return (React.createElement("div", null, "Page: ", this.props.params.name, React.createElement(PageContent_tsx_1.PageContent, {datasource: this.state.datasource, datakey: "page"}), "History:", React.createElement(LinearTimeline_tsx_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries"})));
 	    };
-	    PageByName.prototype.updatePage = function (name) {
+	    PageByName.prototype.updateDatasource = function (name) {
 	        var _this = this;
 	        this.model.getPageByName(name)
-	            .then(function (response) { _this.setState({ page: response }); });
+	            .then(function (response) { _this.setState({ datasource: response, error: false }); })
+	            .catch(function (err) { _this.setState({ error: true }); });
 	    };
 	    return PageByName;
 	}(React.Component));
@@ -447,11 +485,8 @@ webpackJsonpvendor([0],{
 	        _super.call(this, props);
 	    }
 	    PageContent.prototype.render = function () {
-	        var data = this.props.input;
-	        if (data === null) {
-	            return (React.createElement("div", null, "Loading..."));
-	        }
-	        return (React.createElement("div", null, data.page.content));
+	        var data = this.props.datasource[this.props.datakey];
+	        return (React.createElement("div", null, data.content));
 	    };
 	    return PageContent;
 	}(React.Component));

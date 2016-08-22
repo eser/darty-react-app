@@ -10,20 +10,14 @@ export class PageList extends React.Component<any, any> {
     }
 
     public render() {
-        const data = this.props.input;
-
-        if (data === null) {
-            return (
-                <div>Loading...</div>
-            );
-        }
+        const data = this.props.datasource[this.props.datakey];
 
         return (
             <ul>
-                {data.pages.map((page) => {
+                {data.map((page) => {
                     const pageKey = `page.${encodeURIComponent(page.name)}`;
 
-                    return <li key={`${pageKey}`}><Link key={`${pageKey}.link`} to={`/page/${encodeURIComponent(page.name)}`}>{page.name}</Link></li>;
+                    return <li key={`${pageKey}`}><Link key={`${pageKey}.link`} to={`/pages/${encodeURIComponent(page.name)}`}>{page.name}</Link></li>;
                 })}
             </ul>
         );

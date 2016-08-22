@@ -14,30 +14,44 @@ export class EntriesByTag extends React.Component<any, any> {
         super(props);
 
         this.state = {
-            timeline: null
+            datasource: null,
+            error: false
         };
 
         this.model = new AppModel();
-        this.updateTimeline(this.props.params.tag);
+        this.updateDatasource(this.props.params.tag);
     }
 
     public componentWillReceiveProps(nextProps: any) {
-        this.updateTimeline(nextProps.params.tag);
+        this.updateDatasource(nextProps.params.tag);
     }
 
     public render() {
+        if (this.state.error) {
+            return (
+                <div>An error occurred</div>
+            );
+        }
+
+        if (this.state.datasource === null) {
+            return (
+                <div>Loading...</div>
+            );
+        }
+
         return (
             <div>
                 Entries By Tag: {this.props.params.tag}
 
-                <LinearTimeline input={this.state.timeline} />
+                <LinearTimeline datasource={this.state.datasource} datakey="entries" />
             </div>
         );
     }
 
-    private updateTimeline(tag: string) {
+    private updateDatasource(tag: string) {
         this.model.getEntriesByTag(tag)
-            .then((response) => { this.setState({ timeline: response }); });
+            .then((response) => { this.setState({ datasource: response, error: false }); })
+            .catch((err) => { this.setState({ error: true }); });
     }
 
 }

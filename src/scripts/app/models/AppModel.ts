@@ -8,7 +8,7 @@ export class AppModel {
     processTimelineData(data: any) {
         const output = {};
 
-        for (const entry of data.entries) {
+        for (const entry of data) {
             if (output[entry.categories.year] === undefined) {
                 output[entry.categories.year] = { _items: [] };
             }
@@ -33,15 +33,23 @@ export class AppModel {
     }
 
     getEntriesByCategory(key: string, value: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/entries/category/${key}/${value}.json`)
+        return fetch(`${Constants.SERVICE_BASE_URL}/entries/categories/${key}/${value}.json`)
             .then((response) => response.json())
-            .then((response) => this.processTimelineData(response));
+            .then((response) => {
+                response.entries = this.processTimelineData(response.entries);
+
+                return response;
+            });
     }
 
     getEntriesByTag(tag: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/entries/tag/${tag}.json`)
+        return fetch(`${Constants.SERVICE_BASE_URL}/entries/tags/${tag}.json`)
             .then((response) => response.json())
-            .then((response) => this.processTimelineData(response));
+            .then((response) => {
+                response.entries = this.processTimelineData(response.entries);
+
+                return response;
+            });
     }
 
     getPages() {
@@ -50,8 +58,13 @@ export class AppModel {
     }
 
     getPageByName(name: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/pages/name/${name}.json`)
-            .then((response) => response.json());
+        return fetch(`${Constants.SERVICE_BASE_URL}/pages/names/${name}.json`)
+            .then((response) => response.json())
+            .then((response) => {
+                response.entries = this.processTimelineData(response.entries);
+
+                return response;
+            });
     }
 
 }

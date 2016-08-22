@@ -7,17 +7,17 @@ import { App } from './components/App.tsx';
 import { Home } from './components/App/Home.tsx';
 import { EntriesByCategory } from './components/App/EntriesByCategory.tsx';
 import { EntriesByTag } from './components/App/EntriesByTag.tsx';
-import { Page } from './components/App/Page.tsx';
+import { Pages } from './components/App/Pages.tsx';
 import { PageByName } from './components/App/PageByName.tsx';
 
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Home} />
-            <Route path="category/:key/:value" component={EntriesByCategory} />
-            <Route path="tag/:tag" component={EntriesByTag} />
-            <Route path="page" component={Page} />
-            <Route path="page/:name" component={PageByName} />
+            <Route path="categories/:key/:value" component={EntriesByCategory} />
+            <Route path="tags/:tag" component={EntriesByTag} />
+            <Route path="pages" component={Pages} />
+            <Route path="pages/:name" component={PageByName} />
         </Route>
     </Router>,
     document.getElementsByTagName('app')[0]

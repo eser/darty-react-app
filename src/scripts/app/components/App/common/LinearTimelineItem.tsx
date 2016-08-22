@@ -30,8 +30,8 @@ export class LinearTimelineItem extends React.Component<any, any> {
             }
 
             parts.push(content.substring(lastIndex, pos));
-            const tag = content.substring(pos + 2, endPos);
-            parts.push(<Link key={`${key}.link.${pos}`} to={`/tag/${encodeURIComponent(tag)}`}>{tag}</Link>);
+            const link = content.substring(pos + 2, endPos);
+            parts.push(<Link key={`${key}.link.${pos}`} to={`/pages/${encodeURIComponent(link)}`}>{link}</Link>);
             lastIndex = endPos + 2;
         }
 

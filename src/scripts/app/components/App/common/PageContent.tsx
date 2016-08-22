@@ -9,17 +9,11 @@ export class PageContent extends React.Component<any, any> {
     }
 
     public render() {
-        const data = this.props.input;
-
-        if (data === null) {
-            return (
-                <div>Loading...</div>
-            );
-        }
+        const data = this.props.datasource[this.props.datakey];
 
         return (
             <div>
-                {data.page.content}
+                {data.content}
             </div>
         );
     }
