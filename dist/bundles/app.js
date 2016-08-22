@@ -8,19 +8,123 @@ webpackJsonpvendor([0],{
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
 	var react_router_1 = __webpack_require__(172);
-	var AppModel_ts_1 = __webpack_require__(235);
-	var App_tsx_1 = __webpack_require__(237);
-	var Home_tsx_1 = __webpack_require__(238);
-	var EntriesByCategory_tsx_1 = __webpack_require__(239);
+	var App_tsx_1 = __webpack_require__(235);
+	var Home_tsx_1 = __webpack_require__(237);
+	var EntriesByCategory_tsx_1 = __webpack_require__(238);
 	var EntriesByTag_tsx_1 = __webpack_require__(242);
 	var Page_tsx_1 = __webpack_require__(243);
-	var model = new AppModel_ts_1.AppModel();
-	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "category/:key/:value", component: EntriesByCategory_tsx_1.EntriesByCategory}), React.createElement(react_router_1.Route, {path: "tag/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "page/:page", component: Page_tsx_1.Page}))), document.getElementsByTagName('app')[0]);
+	var PageByName_tsx_1 = __webpack_require__(245);
+	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "category/:key/:value", component: EntriesByCategory_tsx_1.EntriesByCategory}), React.createElement(react_router_1.Route, {path: "tag/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "page", component: Page_tsx_1.Page}), React.createElement(react_router_1.Route, {path: "page/:name", component: PageByName_tsx_1.PageByName}))), document.getElementsByTagName('app')[0]);
 
 
 /***/ },
 
 /***/ 235:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
+	var react_router_1 = __webpack_require__(172);
+	var Constants = __webpack_require__(236);
+	var App = (function (_super) {
+	    __extends(App, _super);
+	    function App(props) {
+	        _super.call(this, props);
+	        this.state = {
+	            caption: Constants.APP_STATE_INITIAL
+	        };
+	    }
+	    App.prototype.render = function () {
+	        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate: ", this.state.caption)), React.createElement("ul", null, React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/", activeClassName: "active"}, "Home")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/category/era/Ortacag", activeClassName: "active"}, "Entries By Category")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/tag/Purifiers", activeClassName: "active"}, "Entries By Tag")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/page", activeClassName: "active"}, "Page"))), React.createElement("hr", null), this.props.children));
+	    };
+	    return App;
+	}(React.Component));
+	exports.App = App;
+
+
+/***/ },
+
+/***/ 236:
+/***/ function(module, exports) {
+
+	"use strict";
+	exports.SERVICE_BASE_URL = 'http://web.hexajans.com:3012';
+	exports.APP_STATE_INITIAL = 'initial';
+
+
+/***/ },
+
+/***/ 237:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
+	var Home = (function (_super) {
+	    __extends(Home, _super);
+	    function Home(props) {
+	        _super.call(this, props);
+	    }
+	    Home.prototype.render = function () {
+	        return (React.createElement("div", null, "Home"));
+	    };
+	    return Home;
+	}(React.Component));
+	exports.Home = Home;
+
+
+/***/ },
+
+/***/ 238:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
+	var AppModel_ts_1 = __webpack_require__(239);
+	var LinearTimeline_tsx_1 = __webpack_require__(240);
+	var EntriesByCategory = (function (_super) {
+	    __extends(EntriesByCategory, _super);
+	    function EntriesByCategory(props) {
+	        _super.call(this, props);
+	        this.state = {
+	            timeline: null
+	        };
+	        this.model = new AppModel_ts_1.AppModel();
+	        this.updateTimeline(this.props.params.key, this.props.params.value);
+	    }
+	    EntriesByCategory.prototype.componentWillReceiveProps = function (nextProps) {
+	        this.updateTimeline(nextProps.params.key, nextProps.params.value);
+	    };
+	    EntriesByCategory.prototype.render = function () {
+	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {input: this.state.timeline})));
+	    };
+	    EntriesByCategory.prototype.updateTimeline = function (key, value) {
+	        var _this = this;
+	        this.model.getEntriesByCategory(key, value)
+	            .then(function (response) { _this.setState({ timeline: response }); });
+	    };
+	    return EntriesByCategory;
+	}(React.Component));
+	exports.EntriesByCategory = EntriesByCategory;
+
+
+/***/ },
+
+/***/ 239:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -60,114 +164,17 @@ webpackJsonpvendor([0],{
 	            .then(function (response) { return response.json(); })
 	            .then(function (response) { return _this.processTimelineData(response); });
 	    };
+	    AppModel.prototype.getPages = function () {
+	        return fetch(Constants.SERVICE_BASE_URL + "/pages/index.json")
+	            .then(function (response) { return response.json(); });
+	    };
+	    AppModel.prototype.getPageByName = function (name) {
+	        return fetch(Constants.SERVICE_BASE_URL + "/pages/name/" + name + ".json")
+	            .then(function (response) { return response.json(); });
+	    };
 	    return AppModel;
 	}());
 	exports.AppModel = AppModel;
-
-
-/***/ },
-
-/***/ 236:
-/***/ function(module, exports) {
-
-	"use strict";
-	exports.SERVICE_BASE_URL = 'http://web.hexajans.com:3012';
-	exports.APP_STATE_INITIAL = 'initial';
-
-
-/***/ },
-
-/***/ 237:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var React = __webpack_require__(1);
-	var react_router_1 = __webpack_require__(172);
-	var Constants = __webpack_require__(236);
-	var App = (function (_super) {
-	    __extends(App, _super);
-	    function App(props) {
-	        _super.call(this, props);
-	        this.state = {
-	            caption: Constants.APP_STATE_INITIAL
-	        };
-	    }
-	    App.prototype.render = function () {
-	        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate: ", this.state.caption)), React.createElement("ul", null, React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/", activeClassName: "active"}, "Home")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/category/era/Ortacag", activeClassName: "active"}, "Entries By Category")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/tag/Purifiers", activeClassName: "active"}, "Entries By Tag")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/page/X-Factor", activeClassName: "active"}, "Page"))), React.createElement("hr", null), this.props.children));
-	    };
-	    return App;
-	}(React.Component));
-	exports.App = App;
-
-
-/***/ },
-
-/***/ 238:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var React = __webpack_require__(1);
-	var Home = (function (_super) {
-	    __extends(Home, _super);
-	    function Home(props) {
-	        _super.call(this, props);
-	    }
-	    Home.prototype.render = function () {
-	        return (React.createElement("div", null, "Home"));
-	    };
-	    return Home;
-	}(React.Component));
-	exports.Home = Home;
-
-
-/***/ },
-
-/***/ 239:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var React = __webpack_require__(1);
-	var AppModel_ts_1 = __webpack_require__(235);
-	var LinearTimeline_tsx_1 = __webpack_require__(240);
-	var EntriesByCategory = (function (_super) {
-	    __extends(EntriesByCategory, _super);
-	    function EntriesByCategory(props) {
-	        _super.call(this, props);
-	        this.state = {
-	            timeline: null
-	        };
-	        this.model = new AppModel_ts_1.AppModel();
-	        this.updateTimeline(this.props.params.key, this.props.params.value);
-	    }
-	    EntriesByCategory.prototype.componentWillReceiveProps = function (nextProps) {
-	        this.updateTimeline(nextProps.params.key, nextProps.params.value);
-	    };
-	    EntriesByCategory.prototype.render = function () {
-	        return (React.createElement("div", null, "Entries By Category: ", this.props.params.key, "=", this.props.params.value, React.createElement(LinearTimeline_tsx_1.LinearTimeline, {input: this.state.timeline})));
-	    };
-	    EntriesByCategory.prototype.updateTimeline = function (key, value) {
-	        var _this = this;
-	        this.model.getEntriesByCategory(key, value)
-	            .then(function (response) { _this.setState({ timeline: response }); });
-	    };
-	    return EntriesByCategory;
-	}(React.Component));
-	exports.EntriesByCategory = EntriesByCategory;
 
 
 /***/ },
@@ -281,7 +288,7 @@ webpackJsonpvendor([0],{
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var AppModel_ts_1 = __webpack_require__(235);
+	var AppModel_ts_1 = __webpack_require__(239);
 	var LinearTimeline_tsx_1 = __webpack_require__(240);
 	var EntriesByTag = (function (_super) {
 	    __extends(EntriesByTag, _super);
@@ -321,17 +328,134 @@ webpackJsonpvendor([0],{
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
+	var AppModel_ts_1 = __webpack_require__(239);
+	var PageList_tsx_1 = __webpack_require__(244);
 	var Page = (function (_super) {
 	    __extends(Page, _super);
 	    function Page(props) {
 	        _super.call(this, props);
+	        this.state = {
+	            pageList: null
+	        };
+	        this.model = new AppModel_ts_1.AppModel();
+	        this.updatePageList();
 	    }
+	    Page.prototype.componentWillReceiveProps = function (nextProps) {
+	        this.updatePageList();
+	    };
 	    Page.prototype.render = function () {
-	        return (React.createElement("div", null, "Page: ", this.props.params.page));
+	        return (React.createElement("div", null, "Page List", React.createElement(PageList_tsx_1.PageList, {input: this.state.pageList})));
+	    };
+	    Page.prototype.updatePageList = function () {
+	        var _this = this;
+	        this.model.getPages()
+	            .then(function (response) { _this.setState({ pageList: response }); });
 	    };
 	    return Page;
 	}(React.Component));
 	exports.Page = Page;
+
+
+/***/ },
+
+/***/ 244:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
+	var react_router_1 = __webpack_require__(172);
+	var PageList = (function (_super) {
+	    __extends(PageList, _super);
+	    function PageList(props) {
+	        _super.call(this, props);
+	    }
+	    PageList.prototype.render = function () {
+	        var data = this.props.input;
+	        if (data === null) {
+	            return (React.createElement("div", null, "Loading..."));
+	        }
+	        return (React.createElement("ul", null, data.pages.map(function (page) {
+	            var pageKey = "page." + encodeURIComponent(page.name);
+	            return React.createElement("li", {key: "" + pageKey}, React.createElement(react_router_1.Link, {key: pageKey + ".link", to: "/page/" + encodeURIComponent(page.name)}, page.name));
+	        })));
+	    };
+	    return PageList;
+	}(React.Component));
+	exports.PageList = PageList;
+
+
+/***/ },
+
+/***/ 245:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
+	var AppModel_ts_1 = __webpack_require__(239);
+	var PageContent_tsx_1 = __webpack_require__(246);
+	var PageByName = (function (_super) {
+	    __extends(PageByName, _super);
+	    function PageByName(props) {
+	        _super.call(this, props);
+	        this.state = {
+	            page: null
+	        };
+	        this.model = new AppModel_ts_1.AppModel();
+	        this.updatePage(this.props.params.name);
+	    }
+	    PageByName.prototype.componentWillReceiveProps = function (nextProps) {
+	        this.updatePage(nextProps.params.name);
+	    };
+	    PageByName.prototype.render = function () {
+	        return (React.createElement("div", null, "Page: ", this.props.params.name, React.createElement(PageContent_tsx_1.PageContent, {input: this.state.page})));
+	    };
+	    PageByName.prototype.updatePage = function (name) {
+	        var _this = this;
+	        this.model.getPageByName(name)
+	            .then(function (response) { _this.setState({ page: response }); });
+	    };
+	    return PageByName;
+	}(React.Component));
+	exports.PageByName = PageByName;
+
+
+/***/ },
+
+/***/ 246:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
+	var PageContent = (function (_super) {
+	    __extends(PageContent, _super);
+	    function PageContent(props) {
+	        _super.call(this, props);
+	    }
+	    PageContent.prototype.render = function () {
+	        var data = this.props.input;
+	        if (data === null) {
+	            return (React.createElement("div", null, "Loading..."));
+	        }
+	        return (React.createElement("div", null, data.page.content));
+	    };
+	    return PageContent;
+	}(React.Component));
+	exports.PageContent = PageContent;
 
 
 /***/ }

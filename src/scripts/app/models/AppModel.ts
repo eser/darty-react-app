@@ -44,4 +44,14 @@ export class AppModel {
             .then((response) => this.processTimelineData(response));
     }
 
+    getPages() {
+        return fetch(`${Constants.SERVICE_BASE_URL}/pages/index.json`)
+            .then((response) => response.json());
+    }
+
+    getPageByName(name: string) {
+        return fetch(`${Constants.SERVICE_BASE_URL}/pages/name/${name}.json`)
+            .then((response) => response.json());
+    }
+
 }

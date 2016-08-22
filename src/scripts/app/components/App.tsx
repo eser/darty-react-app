@@ -30,7 +30,7 @@ export class App extends React.Component<any, any> {
                     <li><Link to="/" activeClassName="active">Home</Link></li>
                     <li><Link to="/category/era/Ortacag" activeClassName="active">Entries By Category</Link></li>
                     <li><Link to="/tag/Purifiers" activeClassName="active">Entries By Tag</Link></li>
-                    <li><Link to="/page/X-Factor" activeClassName="active">Page</Link></li>
+                    <li><Link to="/page" activeClassName="active">Page</Link></li>
                 </ul>
 
                 <hr />
