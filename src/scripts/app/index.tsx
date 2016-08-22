@@ -5,7 +5,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import { App } from './components/App.tsx';
 import { Home } from './components/App/Home.tsx';
-import { EntriesByCategory } from './components/App/EntriesByCategory.tsx';
+import { EntriesByProperty } from './components/App/EntriesByProperty.tsx';
 import { EntriesByTag } from './components/App/EntriesByTag.tsx';
 import { Pages } from './components/App/Pages.tsx';
 import { PageByName } from './components/App/PageByName.tsx';
@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Home} />
-            <Route path="categories/:key/:value" component={EntriesByCategory} />
+            <Route path="properties/:property/:value" component={EntriesByProperty} />
             <Route path="tags/:tag" component={EntriesByTag} />
             <Route path="pages" component={Pages} />
             <Route path="pages/:name" component={PageByName} />
