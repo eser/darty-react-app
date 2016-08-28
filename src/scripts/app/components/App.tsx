@@ -1,18 +1,30 @@
 import * as React from 'react';
 import { Link } from 'react-router';
 
-import { AppModel } from '../models/AppModel.ts';
 import * as Constants from '../Constants.ts';
+import { AppModel } from '../models/AppModel.ts';
 
 export class App extends React.Component<any, any> {
 
     public state: any;
 
+    static childContextTypes = {
+        session: React.PropTypes.object.isRequired
+    };
+
     constructor(props: any) {
         super(props);
 
         this.state = {
-            caption: Constants.APP_STATE_INITIAL
+            session: {
+                userLevel: Constants.USER_LEVEL_EDITOR
+            }
+        };
+    }
+
+    public getChildContext() {
+        return {
+            session: this.state.session
         };
     }
 
@@ -23,7 +35,7 @@ export class App extends React.Component<any, any> {
         return (
             <div>
                 <header className="header">
-                    <h1>ts-spa-boilerplate: {this.state.caption}</h1>
+                    <h1>ts-spa-boilerplate</h1>
                 </header>
 
                 <ul>

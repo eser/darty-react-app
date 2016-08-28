@@ -37168,11 +37168,21 @@
 	    function App(props) {
 	        _super.call(this, props);
 	        this.state = {
-	            caption: Constants.APP_STATE_INITIAL
+	            session: {
+	                userLevel: Constants.USER_LEVEL_EDITOR
+	            }
 	        };
 	    }
+	    App.prototype.getChildContext = function () {
+	        return {
+	            session: this.state.session
+	        };
+	    };
 	    App.prototype.render = function () {
-	        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate: ", this.state.caption)), React.createElement("ul", null, React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/", activeClassName: "active"}, "Home")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/pages", activeClassName: "active"}, "Pages"))), React.createElement("hr", null), this.props.children));
+	        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate")), React.createElement("ul", null, React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/", activeClassName: "active"}, "Home")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/pages", activeClassName: "active"}, "Pages"))), React.createElement("hr", null), this.props.children));
+	    };
+	    App.childContextTypes = {
+	        session: React.PropTypes.object.isRequired
 	    };
 	    return App;
 	}(React.Component));
@@ -37185,7 +37195,8 @@
 
 	"use strict";
 	exports.SERVICE_BASE_URL = 'http://web.hexajans.com:3012';
-	exports.APP_STATE_INITIAL = 'initial';
+	exports.USER_LEVEL_VISITOR = 0;
+	exports.USER_LEVEL_EDITOR = 1;
 
 
 /***/ },
@@ -37392,6 +37403,7 @@
 	};
 	var React = __webpack_require__(2);
 	var ReactMarkdown = __webpack_require__(243);
+	var Constants = __webpack_require__(237);
 	var LinearTimelineItem = (function (_super) {
 	    __extends(LinearTimelineItem, _super);
 	    function LinearTimelineItem(props) {
@@ -37421,9 +37433,13 @@
 	    };
 	    LinearTimelineItem.prototype.render = function () {
 	        if (this.state.editable) {
-	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {ref: "textarea"}, this.props.item.content)), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
+	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {ref: "textarea", defaultValue: this.props.item.content})), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
 	        }
-	        return (React.createElement("div", null, React.createElement(ReactMarkdown, {source: this.makeLinks(this.props.item.content), className: "md"}), React.createElement("button", {onClick: this.toggleEditing.bind(this)}, "edit")));
+	        var disabled = (this.context.session.userLevel < Constants.USER_LEVEL_EDITOR);
+	        return (React.createElement("div", null, React.createElement(ReactMarkdown, {source: this.makeLinks(this.props.item.content), className: "md"}), React.createElement("button", {onClick: this.toggleEditing.bind(this), disabled: disabled}, "edit")));
+	    };
+	    LinearTimelineItem.contextTypes = {
+	        session: React.PropTypes.object.isRequired
 	    };
 	    return LinearTimelineItem;
 	}(React.Component));

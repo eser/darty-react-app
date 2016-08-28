@@ -1,9 +1,15 @@
 import * as React from 'react';
 import * as ReactMarkdown from 'react-markdown';
 
+import * as Constants from '../../../Constants.ts';
+
 export class LinearTimelineItem extends React.Component<any, any> {
 
     public state: any;
+
+    static contextTypes = {
+        session: React.PropTypes.object.isRequired
+    };
 
     constructor(props: any) {
         super(props);
@@ -42,7 +48,7 @@ export class LinearTimelineItem extends React.Component<any, any> {
             return (
                 <div>
                     <div>
-                        <textarea ref="textarea">{this.props.item.content}</textarea>
+                        <textarea ref="textarea" defaultValue={this.props.item.content} />
                     </div>
                     <button onClick={this.saveChanges.bind(this)}>save</button>
                     <button onClick={this.discardChanges.bind(this)}>cancel</button>
@@ -50,10 +56,12 @@ export class LinearTimelineItem extends React.Component<any, any> {
             );
         }
 
+        const disabled = (this.context.session.userLevel < Constants.USER_LEVEL_EDITOR);
+
         return (
             <div>
                 <ReactMarkdown source={this.makeLinks(this.props.item.content)} className="md" />
-                <button onClick={this.toggleEditing.bind(this)}>edit</button>
+                <button onClick={this.toggleEditing.bind(this)} disabled={disabled}>edit</button>
             </div>
         );
     }
