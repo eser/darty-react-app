@@ -37168,11 +37168,13 @@
 	    function App(props) {
 	        _super.call(this, props);
 	        this.state = {
-	            caption: Constants.APP_STATE_INITIAL
+	            session: {
+	                userLevel: Constants.USER_LEVEL_VISITOR
+	            }
 	        };
 	    }
 	    App.prototype.render = function () {
-	        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate: ", this.state.caption)), React.createElement("ul", null, React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/", activeClassName: "active"}, "Home")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/pages", activeClassName: "active"}, "Pages"))), React.createElement("hr", null), this.props.children));
+	        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate")), React.createElement("ul", null, React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/", activeClassName: "active"}, "Home")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/pages", activeClassName: "active"}, "Pages"))), React.createElement("hr", null), this.props.children));
 	    };
 	    return App;
 	}(React.Component));
@@ -37185,7 +37187,8 @@
 
 	"use strict";
 	exports.SERVICE_BASE_URL = 'http://web.hexajans.com:3012';
-	exports.APP_STATE_INITIAL = 'initial';
+	exports.USER_LEVEL_VISITOR = 0;
+	exports.USER_LEVEL_EDITOR = 1;
 
 
 /***/ },

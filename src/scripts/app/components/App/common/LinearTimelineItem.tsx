@@ -11,6 +11,10 @@ export class LinearTimelineItem extends React.Component<any, any> {
         this.state = {
             editable: false
         };
+
+        // this.contextTypes = {
+        //     session: React.PropTypes.object.isRequried
+        // };
     }
 
     public makeLinks(content) {
@@ -50,6 +54,7 @@ export class LinearTimelineItem extends React.Component<any, any> {
             );
         }
 
+        // {this.context.session.userLevel}
         return (
             <div>
                 <ReactMarkdown source={this.makeLinks(this.props.item.content)} className="md" />
