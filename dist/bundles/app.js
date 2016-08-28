@@ -37409,8 +37409,7 @@
 	        });
 	    };
 	    LinearTimelineItem.prototype.saveChanges = function () {
-	        var editContentId = "edit-content-" + this.props.item._id, editContentValue = document.getElementById(editContentId).value;
-	        this.props.item.content = editContentValue;
+	        this.props.item.content = this.refs.textarea.value;
 	        this.setState({
 	            editable: false
 	        });
@@ -37422,7 +37421,7 @@
 	    };
 	    LinearTimelineItem.prototype.render = function () {
 	        if (this.state.editable) {
-	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {id: "edit-content-" + this.props.item._id}, this.props.item.content)), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
+	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {ref: "textarea"}, this.props.item.content)), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
 	        }
 	        return (React.createElement("div", null, React.createElement(ReactMarkdown, {source: this.makeLinks(this.props.item.content), className: "md"}), React.createElement("button", {onClick: this.toggleEditing.bind(this)}, "edit")));
 	    };

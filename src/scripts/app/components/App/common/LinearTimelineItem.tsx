@@ -24,10 +24,7 @@ export class LinearTimelineItem extends React.Component<any, any> {
     }
 
     public saveChanges() {
-        const editContentId = `edit-content-${this.props.item._id}`,
-            editContentValue = document.getElementById(editContentId).value;
-
-        this.props.item.content = editContentValue;
+        this.props.item.content = this.refs.textarea.value;
 
         this.setState({
             editable: false
@@ -45,7 +42,7 @@ export class LinearTimelineItem extends React.Component<any, any> {
             return (
                 <div>
                     <div>
-                        <textarea id={`edit-content-${this.props.item._id}`}>{this.props.item.content}</textarea>
+                        <textarea ref="textarea">{this.props.item.content}</textarea>
                     </div>
                     <button onClick={this.saveChanges.bind(this)}>save</button>
                     <button onClick={this.discardChanges.bind(this)}>cancel</button>
