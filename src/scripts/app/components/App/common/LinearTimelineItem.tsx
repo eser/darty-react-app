@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as ReactMarkdown from 'react-markdown';
 
+import * as Constants from '../../../Constants.ts';
+
 export class LinearTimelineItem extends React.Component<any, any> {
 
     public state: any;
@@ -54,10 +56,12 @@ export class LinearTimelineItem extends React.Component<any, any> {
             );
         }
 
+        const disabled = (this.context.session.userLevel < Constants.USER_LEVEL_EDITOR);
+
         return (
             <div>
                 <ReactMarkdown source={this.makeLinks(this.props.item.content)} className="md" />
-                {this.context.session.userLevel} <button onClick={this.toggleEditing.bind(this)}>edit</button>
+                <button onClick={this.toggleEditing.bind(this)} disabled={disabled}>edit</button>
             </div>
         );
     }

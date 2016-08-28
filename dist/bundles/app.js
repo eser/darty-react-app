@@ -37403,6 +37403,7 @@
 	};
 	var React = __webpack_require__(2);
 	var ReactMarkdown = __webpack_require__(243);
+	var Constants = __webpack_require__(237);
 	var LinearTimelineItem = (function (_super) {
 	    __extends(LinearTimelineItem, _super);
 	    function LinearTimelineItem(props) {
@@ -37434,7 +37435,8 @@
 	        if (this.state.editable) {
 	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {ref: "textarea", defaultValue: this.props.item.content})), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
 	        }
-	        return (React.createElement("div", null, React.createElement(ReactMarkdown, {source: this.makeLinks(this.props.item.content), className: "md"}), this.context.session.userLevel, " ", React.createElement("button", {onClick: this.toggleEditing.bind(this)}, "edit")));
+	        var disabled = (this.context.session.userLevel < Constants.USER_LEVEL_EDITOR);
+	        return (React.createElement("div", null, React.createElement(ReactMarkdown, {source: this.makeLinks(this.props.item.content), className: "md"}), React.createElement("button", {onClick: this.toggleEditing.bind(this), disabled: disabled}, "edit")));
 	    };
 	    LinearTimelineItem.contextTypes = {
 	        session: React.PropTypes.object.isRequired
