@@ -1,61 +1,43 @@
 const gulp = require('gulp'),
-    gutil = require('gulp-util'),
     browserSync = require('browser-sync').create();
 
-const paths = {
-    src: {
-        js: './src/scripts/**/*',
-        css: './src/styles/**/*.css'
-    },
-    dist: {
-        clean: [ './dist/**/*' ],
-        bundles: './dist/bundles/'
-    }
-};
-
 const bundles = {
+    js: {
+        app: {
+            file: './src/scripts/app/index.tsx',
+            watch: [
+                './src/scripts/app/**/*'
+            ],
+            clean: [
+                './dist/bundles/app.js'
+            ],
+            dist: './dist/bundles/'
+        }
+    },
     css: {
         // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
-        app: [
-            './src/styles/app.css'
-        ]
+        app: {
+            files: [
+                './src/styles/app.css'
+            ],
+            watch: [
+                './src/styles/**/*'
+            ],
+            clean: [
+                './dist/bundles/app.css'
+            ],
+            dist: './dist/bundles/'
+        }
     }
 };
 
-gulp.task('clean', function () {
-    const del = require('del');
-
-    return del(paths.dist.clean);
-});
-
-gulp.task('compile-js', function (callback) {
-    const webpack = require('webpack'),
-        webpackConfig = require('./webpack.config.js');
-
-    webpack(
-        webpackConfig,
-        function (err, stats) {
-            if (err) {
-                throw new gutil.PluginError('webpack', err);
-            }
-
-            gutil.log('[webpack]', stats.toString({
-                // output options
-            }));
-            callback();
-        }
-    );
-});
-
-gulp.task('watch-js', [ 'compile-js' ], browserSync.reload);
-
-const compileBundleKeys = [];
+const buildBundleKeys = [];
 const watchBundleItems = [];
 
 for (let key in bundles.css) {
     const bundle = bundles.css[key];
 
-    gulp.task('compile-bundles-css-' + key, function () {
+    gulp.task('build-bundles-css-' + key, function () {
         const postcss = require('gulp-postcss'),
             cssnext = require('postcss-cssnext'),
             concatCss = require('gulp-concat-css'),
@@ -69,30 +51,95 @@ for (let key in bundles.css) {
         ];
 
         return gulp
-            .src(bundle)
+            .src(bundle.files)
             .pipe(sourcemaps.init())
             .pipe(postcss(processors))
             .pipe(concatCss(key + '.css'))
-            .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest(paths.dist.bundles))
+            .pipe(gulp.dest(bundle.dist))
+            .pipe(sourcemaps.write())
             .pipe(browserSync.stream());
     });
-    compileBundleKeys.push('compile-bundles-css-' + key);
+    buildBundleKeys.push('build-bundles-css-' + key);
 
-    gulp.task('watch-bundles-css-' + key, [ 'compile-bundles-css-' + key ], browserSync.reload);
-    watchBundleItems.push({ key: 'watch-bundles-css-' + key, files: bundle });
+    gulp.task('watch-bundles-css-' + key, [ 'build-bundles-css-' + key ], browserSync.reload);
+    watchBundleItems.push({ key: 'watch-bundles-css-' + key, files: bundle.watch });
 }
 
-gulp.task('compile-bundles', compileBundleKeys);
+for (let key in bundles.js) {
+    const bundle = bundles.js[key];
+
+    gulp.task('build-bundles-js-' + key, function () {
+        const rollup = require('gulp-rollup-stream'),
+            env = require('rollup-plugin-env'),
+            nodeResolve = require('rollup-plugin-node-resolve'),
+            commonjs = require('rollup-plugin-commonjs'),
+            typescript = require('rollup-plugin-typescript'),
+            // sourcemaps = require('gulp-sourcemaps'),
+            rename = require('gulp-rename');
+
+        return gulp
+            .src(bundle.file)
+            // .pipe(sourcemaps.init())
+            .pipe(rollup({
+                sourceMap: true,
+                dest: key + '.js',
+                format: 'cjs',
+                exports: 'none',
+
+                globals: {
+                    React: 'React'
+                },
+
+                plugins: [
+                    env({ NODE_ENV: 'production' }),
+                    nodeResolve({
+                        jsnext: true,
+                        main: true,
+                        extensions: [
+                            '.js', '.jsx', '.ts', '.tsx', '.json'
+                        ],
+                        preferBuiltins: true
+                    }),
+                    commonjs({
+                        include: 'node_modules/**',
+                        namedExports: {
+                            'node_modules/react/react.js': [ 'PropTypes', 'Component', 'createElement' ],
+                            'node_modules/react-dom/index.js': [ 'render' ]
+                        }
+                    }),
+                    typescript()
+                ]
+            }))
+            .pipe(rename(key + '.js'))
+            // .pipe(sourcemaps.write())
+            .pipe(gulp.dest(bundle.dist))
+            .pipe(browserSync.stream());
+    });
+    buildBundleKeys.push('build-bundles-js-' + key);
+
+    gulp.task('watch-bundles-js-' + key, [ 'build-bundles-js-' + key ], browserSync.reload);
+    watchBundleItems.push({ key: 'watch-bundles-js-' + key, files: bundle.watch });
+}
 
 gulp.task('watch', function () {
-    gulp.watch(paths.src.js, [ 'watch-js' ]);
-
-    for (let key in watchBundleItems) {
-        const item = watchBundleItems[key];
-
+    for (let item of watchBundleItems) {
         gulp.watch(item.files, [ item.key ]);
     }
+});
+
+gulp.task('clean', function () {
+    const del = require('del');
+
+    const cleanFiles = [];
+    for (let bundleCategory of bundles) {
+        for (let bundle of bundleCategory) {
+            for (let item of bundle.clean) {
+                cleanFiles.push(item);
+            }
+        }
+    }
+
+    return del(cleanFiles);
 });
 
 gulp.task('serve', function () {
@@ -102,7 +149,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('lint', [ ]);
-gulp.task('build', [/* 'lint', */ 'compile-js', 'compile-bundles' ]);
+gulp.task('build', buildBundleKeys);
 gulp.task('rebuild', [ 'clean', 'build' ]);
 gulp.task('live', [ 'serve', 'watch' ]);
 
