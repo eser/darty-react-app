@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'react-router';
 import * as ReactMarkdown from 'react-markdown';
 
 export class LinearTimelineItem extends React.Component<any, any> {
