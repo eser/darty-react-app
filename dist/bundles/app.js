@@ -37396,12 +37396,35 @@
 	    __extends(LinearTimelineItem, _super);
 	    function LinearTimelineItem(props) {
 	        _super.call(this, props);
+	        this.state = {
+	            editable: false
+	        };
 	    }
 	    LinearTimelineItem.prototype.makeLinks = function (content) {
 	        return content.replace(/\[\[([^\]]*)\]\]/g, function (all, first) { return ("[" + first + "](#/pages/" + encodeURIComponent(first) + ")"); });
 	    };
+	    LinearTimelineItem.prototype.toggleEditing = function () {
+	        this.setState({
+	            editable: !this.state.editable
+	        });
+	    };
+	    LinearTimelineItem.prototype.saveChanges = function () {
+	        var editContentId = "edit-content-" + this.props.item._id, editContentValue = document.getElementById(editContentId).value;
+	        this.props.item.content = editContentValue;
+	        this.setState({
+	            editable: false
+	        });
+	    };
+	    LinearTimelineItem.prototype.discardChanges = function () {
+	        this.setState({
+	            editable: false
+	        });
+	    };
 	    LinearTimelineItem.prototype.render = function () {
-	        return (React.createElement(ReactMarkdown, {source: this.makeLinks(this.props.item.content), className: "md"}));
+	        if (this.state.editable) {
+	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {id: "edit-content-" + this.props.item._id}, this.props.item.content)), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
+	        }
+	        return (React.createElement("div", null, React.createElement(ReactMarkdown, {source: this.makeLinks(this.props.item.content), className: "md"}), React.createElement("button", {onClick: this.toggleEditing.bind(this)}, "edit")));
 	    };
 	    return LinearTimelineItem;
 	}(React.Component));
