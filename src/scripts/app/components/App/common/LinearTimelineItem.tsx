@@ -5,16 +5,16 @@ export class LinearTimelineItem extends React.Component<any, any> {
 
     public state: any;
 
+    static contextTypes = {
+        session: React.PropTypes.object.isRequired
+    };
+
     constructor(props: any) {
         super(props);
 
         this.state = {
             editable: false
         };
-
-        // this.contextTypes = {
-        //     session: React.PropTypes.object.isRequried
-        // };
     }
 
     public makeLinks(content) {
@@ -46,7 +46,7 @@ export class LinearTimelineItem extends React.Component<any, any> {
             return (
                 <div>
                     <div>
-                        <textarea ref="textarea">{this.props.item.content}</textarea>
+                        <textarea ref="textarea" defaultValue={this.props.item.content} />
                     </div>
                     <button onClick={this.saveChanges.bind(this)}>save</button>
                     <button onClick={this.discardChanges.bind(this)}>cancel</button>
@@ -54,11 +54,10 @@ export class LinearTimelineItem extends React.Component<any, any> {
             );
         }
 
-        // {this.context.session.userLevel}
         return (
             <div>
                 <ReactMarkdown source={this.makeLinks(this.props.item.content)} className="md" />
-                <button onClick={this.toggleEditing.bind(this)}>edit</button>
+                {this.context.session.userLevel} <button onClick={this.toggleEditing.bind(this)}>edit</button>
             </div>
         );
     }

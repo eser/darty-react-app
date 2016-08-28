@@ -37169,12 +37169,20 @@
 	        _super.call(this, props);
 	        this.state = {
 	            session: {
-	                userLevel: Constants.USER_LEVEL_VISITOR
+	                userLevel: Constants.USER_LEVEL_EDITOR
 	            }
 	        };
 	    }
+	    App.prototype.getChildContext = function () {
+	        return {
+	            session: this.state.session
+	        };
+	    };
 	    App.prototype.render = function () {
 	        return (React.createElement("div", null, React.createElement("header", {className: "header"}, React.createElement("h1", null, "ts-spa-boilerplate")), React.createElement("ul", null, React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/", activeClassName: "active"}, "Home")), React.createElement("li", null, React.createElement(react_router_1.Link, {to: "/pages", activeClassName: "active"}, "Pages"))), React.createElement("hr", null), this.props.children));
+	    };
+	    App.childContextTypes = {
+	        session: React.PropTypes.object.isRequired
 	    };
 	    return App;
 	}(React.Component));
@@ -37424,9 +37432,12 @@
 	    };
 	    LinearTimelineItem.prototype.render = function () {
 	        if (this.state.editable) {
-	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {ref: "textarea"}, this.props.item.content)), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
+	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {ref: "textarea", defaultValue: this.props.item.content})), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
 	        }
-	        return (React.createElement("div", null, React.createElement(ReactMarkdown, {source: this.makeLinks(this.props.item.content), className: "md"}), React.createElement("button", {onClick: this.toggleEditing.bind(this)}, "edit")));
+	        return (React.createElement("div", null, React.createElement(ReactMarkdown, {source: this.makeLinks(this.props.item.content), className: "md"}), this.context.session.userLevel, " ", React.createElement("button", {onClick: this.toggleEditing.bind(this)}, "edit")));
+	    };
+	    LinearTimelineItem.contextTypes = {
+	        session: React.PropTypes.object.isRequired
 	    };
 	    return LinearTimelineItem;
 	}(React.Component));

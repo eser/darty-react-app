@@ -8,25 +8,25 @@ export class App extends React.Component<any, any> {
 
     public state: any;
 
+    static childContextTypes = {
+        session: React.PropTypes.object.isRequired
+    };
+
     constructor(props: any) {
         super(props);
 
         this.state = {
             session: {
-                userLevel: Constants.USER_LEVEL_VISITOR
+                userLevel: Constants.USER_LEVEL_EDITOR
             }
         };
-
-        // this.childContextTypes = {
-        //     session: React.PropTypes.object.isRequired
-        // };
     }
 
-    // public getChildContext() {
-    //     return {
-    //         session: this.state.session
-    //     };
-    // }
+    public getChildContext() {
+        return {
+            session: this.state.session
+        };
+    }
 
     // the JSX syntax is quite intuitive but check out
     // https://facebook.github.io/react/docs/jsx-in-depth.html
