@@ -1,5 +1,4 @@
 /// <reference path="../../scripts.typings/browser/index.d.ts" />
-import * as $ from 'jQuery';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
@@ -24,19 +23,3 @@ ReactDOM.render(
     </Router>,
     document.getElementsByTagName('app')[0]
 );
-
-// events
-$(document.body).on('click', '.md a', (ev) => {
-    const linkUrl = $(ev.target).attr('href');
-
-    if (linkUrl.substring(0, 8) == '#/pages/') {
-        const url = `/pages/${linkUrl.substring(8)}`;
-
-        hashHistory.push(url);
-
-        return false;
-    }
-});
-
-// exports
-global.$ = $;

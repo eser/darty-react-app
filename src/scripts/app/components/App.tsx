@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Link } from 'react-router';
 
 import * as Constants from '../Constants.ts';
-import { AppModel } from '../models/AppModel.ts';
 
 export class App extends React.Component<any, any> {
 
@@ -20,6 +19,10 @@ export class App extends React.Component<any, any> {
                 userLevel: Constants.USER_LEVEL_EDITOR
             }
         };
+
+        if (global.app === undefined) {
+            global.app = this;
+        }
     }
 
     public getChildContext() {
