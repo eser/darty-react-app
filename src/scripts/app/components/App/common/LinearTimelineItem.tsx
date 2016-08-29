@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { hashHistory } from 'react-router';
 import * as ReactMarkdown from 'react-markdown';
 
 import * as Constants from '../../../Constants.ts';
