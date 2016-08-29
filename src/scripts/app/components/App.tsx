@@ -16,7 +16,7 @@ export class App extends React.Component<any, any> {
 
         this.state = {
             session: {
-                userLevel: Constants.USER_LEVEL_EDITOR
+                userLevel: Constants.USER_LEVEL_VISITOR
             }
         };
 

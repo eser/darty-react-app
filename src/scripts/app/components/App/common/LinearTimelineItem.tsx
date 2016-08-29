@@ -2,6 +2,8 @@ import * as React from 'react';
 import { hashHistory } from 'react-router';
 import * as ReactMarkdown from 'react-markdown';
 
+import { Conditional } from './Conditional.tsx';
+
 import * as Constants from '../../../Constants.ts';
 
 export class LinearTimelineItem extends React.Component<any, any> {
@@ -76,12 +78,14 @@ export class LinearTimelineItem extends React.Component<any, any> {
             );
         }
 
-        const disabled = (this.context.session.userLevel < Constants.USER_LEVEL_EDITOR);
+        const isPrivileged = (this.context.session.userLevel >= Constants.USER_LEVEL_EDITOR);
 
         return (
             <div ref="markdown" onClick={this.clickHandler}>
                 <ReactMarkdown source={this.getContent()} />
-                <button onClick={this.toggleEditing.bind(this)} disabled={disabled}>edit</button>
+                <Conditional test={isPrivileged}>
+                    <button onClick={this.toggleEditing.bind(this)}>edit</button>
+                </Conditional>
             </div>
         );
     }

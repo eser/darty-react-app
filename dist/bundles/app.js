@@ -51,9 +51,9 @@
 	var App_tsx_1 = __webpack_require__(235);
 	var Home_tsx_1 = __webpack_require__(237);
 	var EntriesByProperty_tsx_1 = __webpack_require__(238);
-	var EntriesByTag_tsx_1 = __webpack_require__(268);
-	var Pages_tsx_1 = __webpack_require__(269);
-	var PageByName_tsx_1 = __webpack_require__(271);
+	var EntriesByTag_tsx_1 = __webpack_require__(269);
+	var Pages_tsx_1 = __webpack_require__(270);
+	var PageByName_tsx_1 = __webpack_require__(272);
 	ReactDOM.render(React.createElement(react_router_1.Router, {history: react_router_1.hashHistory}, React.createElement(react_router_1.Route, {path: "/", component: App_tsx_1.App}, React.createElement(react_router_1.IndexRoute, {component: Home_tsx_1.Home}), React.createElement(react_router_1.Route, {path: "properties/:property/:value", component: EntriesByProperty_tsx_1.EntriesByProperty}), React.createElement(react_router_1.Route, {path: "tags/:tag", component: EntriesByTag_tsx_1.EntriesByTag}), React.createElement(react_router_1.Route, {path: "pages", component: Pages_tsx_1.Pages}), React.createElement(react_router_1.Route, {path: "pages/:name", component: PageByName_tsx_1.PageByName}))), document.getElementsByTagName('app')[0]);
 
 
@@ -27078,7 +27078,7 @@
 	        _super.call(this, props);
 	        this.state = {
 	            session: {
-	                userLevel: Constants.USER_LEVEL_EDITOR
+	                userLevel: Constants.USER_LEVEL_VISITOR
 	            }
 	        };
 	        if (global.app === undefined) {
@@ -27317,6 +27317,7 @@
 	var React = __webpack_require__(1);
 	var react_router_1 = __webpack_require__(172);
 	var ReactMarkdown = __webpack_require__(242);
+	var Conditional_tsx_1 = __webpack_require__(268);
 	var Constants = __webpack_require__(236);
 	var LinearTimelineItem = (function (_super) {
 	    __extends(LinearTimelineItem, _super);
@@ -27360,8 +27361,8 @@
 	        if (this.state.editable) {
 	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {ref: "textarea", defaultValue: this.props.item.content})), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
 	        }
-	        var disabled = (this.context.session.userLevel < Constants.USER_LEVEL_EDITOR);
-	        return (React.createElement("div", {ref: "markdown", onClick: this.clickHandler}, React.createElement(ReactMarkdown, {source: this.getContent()}), React.createElement("button", {onClick: this.toggleEditing.bind(this), disabled: disabled}, "edit")));
+	        var isPrivileged = (this.context.session.userLevel >= Constants.USER_LEVEL_EDITOR);
+	        return (React.createElement("div", {ref: "markdown", onClick: this.clickHandler}, React.createElement(ReactMarkdown, {source: this.getContent()}), React.createElement(Conditional_tsx_1.Conditional, {test: isPrivileged}, React.createElement("button", {onClick: this.toggleEditing.bind(this)}, "edit"))));
 	    };
 	    LinearTimelineItem.contextTypes = {
 	        session: React.PropTypes.object.isRequired
@@ -35400,6 +35401,33 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
+	var Conditional = (function (_super) {
+	    __extends(Conditional, _super);
+	    function Conditional(props) {
+	        _super.call(this, props);
+	    }
+	    Conditional.prototype.render = function () {
+	        if (!this.props.test) {
+	            return null;
+	        }
+	        return this.props.children;
+	    };
+	    return Conditional;
+	}(React.Component));
+	exports.Conditional = Conditional;
+
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
 	var AppModel_ts_1 = __webpack_require__(239);
 	var LinearTimeline_tsx_1 = __webpack_require__(240);
 	var EntriesByTag = (function (_super) {
@@ -35437,7 +35465,7 @@
 
 
 /***/ },
-/* 269 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -35448,7 +35476,7 @@
 	};
 	var React = __webpack_require__(1);
 	var AppModel_ts_1 = __webpack_require__(239);
-	var PageList_tsx_1 = __webpack_require__(270);
+	var PageList_tsx_1 = __webpack_require__(271);
 	var Pages = (function (_super) {
 	    __extends(Pages, _super);
 	    function Pages(props) {
@@ -35484,7 +35512,7 @@
 
 
 /***/ },
-/* 270 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -35516,7 +35544,7 @@
 
 
 /***/ },
-/* 271 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -35527,7 +35555,7 @@
 	};
 	var React = __webpack_require__(1);
 	var AppModel_ts_1 = __webpack_require__(239);
-	var PageContent_tsx_1 = __webpack_require__(272);
+	var PageContent_tsx_1 = __webpack_require__(273);
 	var LinearTimeline_tsx_1 = __webpack_require__(240);
 	var PageByName = (function (_super) {
 	    __extends(PageByName, _super);
@@ -35564,7 +35592,7 @@
 
 
 /***/ },
-/* 272 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
