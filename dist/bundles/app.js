@@ -27315,6 +27315,7 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
+	var react_router_1 = __webpack_require__(172);
 	var ReactMarkdown = __webpack_require__(242);
 	var Constants = __webpack_require__(236);
 	var LinearTimelineItem = (function (_super) {
@@ -27352,7 +27353,7 @@
 	                    var linkUrl = element.getAttribute('href');
 	                    if (linkUrl.substring(0, 8) == '#/pages/') {
 	                        var url = "/pages/" + linkUrl.substring(8);
-	                        hashHistory.push(url);
+	                        react_router_1.hashHistory.push(url);
 	                        ev.preventDefault();
 	                    }
 	                });
