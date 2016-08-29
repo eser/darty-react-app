@@ -19,8 +19,11 @@ export class LinearTimelineItem extends React.Component<any, any> {
         };
     }
 
-    public makeLinks(content) {
-        return content.replace(/\[\[([^\]]*)\]\]/g, (all, first) => `[${first}](#/pages/${encodeURIComponent(first)})`);
+    public getContent() {
+        return this.props.item.content.replace(
+            /\[\[([^\]]*)\]\]/g,
+            (all, first) => `[${first}](#/pages/${encodeURIComponent(first)})`
+        );
     }
 
     public toggleEditing() {
@@ -43,6 +46,37 @@ export class LinearTimelineItem extends React.Component<any, any> {
         });
     }
 
+    public bindEvents() {
+        if (!this.state.editable) {
+            const elements = this.refs.markdown.querySelectorAll('a');
+
+            for (let element of elements) {
+                element.addEventListener(
+                    'click',
+                    (ev) => {
+                        const linkUrl = element.getAttribute('href');
+
+                        if (linkUrl.substring(0, 8) == '#/pages/') {
+                            const url = `/pages/${linkUrl.substring(8)}`;
+
+                            hashHistory.push(url);
+
+                            ev.preventDefault();
+                        }
+                    }
+                );
+            }
+        }
+    }
+
+    public componentDidMount() {
+        this.bindEvents();
+    }
+
+    public componentDidUpdate() {
+        this.bindEvents();
+    }
+
     public render() {
         if (this.state.editable) {
             return (
@@ -59,8 +93,8 @@ export class LinearTimelineItem extends React.Component<any, any> {
         const disabled = (this.context.session.userLevel < Constants.USER_LEVEL_EDITOR);
 
         return (
-            <div>
-                <ReactMarkdown source={this.makeLinks(this.props.item.content)} className="md" />
+            <div ref="markdown">
+                <ReactMarkdown source={this.getContent()} className="md" />
                 <button onClick={this.toggleEditing.bind(this)} disabled={disabled}>edit</button>
             </div>
         );

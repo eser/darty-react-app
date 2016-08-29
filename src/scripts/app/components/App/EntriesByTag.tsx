@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import { AppModel } from '../../models/AppModel.ts';
-import * as Constants from '../../Constants.ts';
 
 import { LinearTimeline } from './common/LinearTimeline.tsx';
 
