@@ -27345,37 +27345,23 @@
 	            editable: false
 	        });
 	    };
-	    LinearTimelineItem.prototype.bindEvents = function () {
-	        if (!this.state.editable) {
-	            var elements = this.refs.markdown.querySelectorAll('a');
-	            var _loop_1 = function(element) {
-	                element.addEventListener('click', function (ev) {
-	                    var linkUrl = element.getAttribute('href');
-	                    if (linkUrl.substring(0, 8) == '#/pages/') {
-	                        var url = "/pages/" + linkUrl.substring(8);
-	                        react_router_1.hashHistory.push(url);
-	                        ev.preventDefault();
-	                    }
-	                });
-	            };
-	            for (var _i = 0, elements_1 = elements; _i < elements_1.length; _i++) {
-	                var element = elements_1[_i];
-	                _loop_1(element);
+	    LinearTimelineItem.prototype.clickHandler = function (ev) {
+	        var target = ev.target;
+	        if (target.tagName === 'A') {
+	            var linkUrl = target.getAttribute('href');
+	            if (linkUrl.substring(0, 8) == '#/pages/') {
+	                var url = "/pages/" + linkUrl.substring(8);
+	                react_router_1.hashHistory.push(url);
+	                ev.preventDefault();
 	            }
 	        }
-	    };
-	    LinearTimelineItem.prototype.componentDidMount = function () {
-	        this.bindEvents();
-	    };
-	    LinearTimelineItem.prototype.componentDidUpdate = function () {
-	        this.bindEvents();
 	    };
 	    LinearTimelineItem.prototype.render = function () {
 	        if (this.state.editable) {
 	            return (React.createElement("div", null, React.createElement("div", null, React.createElement("textarea", {ref: "textarea", defaultValue: this.props.item.content})), React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
 	        }
 	        var disabled = (this.context.session.userLevel < Constants.USER_LEVEL_EDITOR);
-	        return (React.createElement("div", {ref: "markdown"}, React.createElement(ReactMarkdown, {source: this.getContent(), className: "md"}), React.createElement("button", {onClick: this.toggleEditing.bind(this), disabled: disabled}, "edit")));
+	        return (React.createElement("div", {ref: "markdown", onClick: this.clickHandler}, React.createElement(ReactMarkdown, {source: this.getContent()}), React.createElement("button", {onClick: this.toggleEditing.bind(this), disabled: disabled}, "edit")));
 	    };
 	    LinearTimelineItem.contextTypes = {
 	        session: React.PropTypes.object.isRequired
