@@ -27107,7 +27107,7 @@
 /***/ function(module, exports) {
 
 	"use strict";
-	exports.SERVICE_BASE_URL = 'http://web.hexajans.com:3012';
+	exports.SERVICE_BASE_URL = 'http://kaamos.hexdanismanlik.com:3012';
 	exports.USER_LEVEL_VISITOR = 0;
 	exports.USER_LEVEL_EDITOR = 1;
 
