@@ -6,8 +6,8 @@ import { PageList } from './common/PageList.tsx';
 
 export class Pages extends React.Component<any, any> {
 
-    public state: any;
-    public model: any;
+    state: any;
+    model: AppModel;
 
     constructor(props: any) {
         super(props);

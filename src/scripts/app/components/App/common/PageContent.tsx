@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export class PageContent extends React.Component<any, any> {
 
-    public state: any;
+    state: any;
 
     constructor(props: any) {
         super(props);

@@ -6,8 +6,8 @@ import { LinearTimeline } from './common/LinearTimeline.tsx';
 
 export class EntriesByTag extends React.Component<any, any> {
 
-    public state: any;
-    public model: any;
+    state: any;
+    model: AppModel;
 
     constructor(props: any) {
         super(props);

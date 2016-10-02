@@ -2,13 +2,18 @@ declare var fetch: Function;
 
 import * as Constants from '../Constants.ts';
 
+import { Cache } from './utils/Cache.ts';
+
 export class AppModel {
 
+    cache: Cache;
+
     constructor() {
+        this.cache = new Cache();
     }
 
     public getEntriesByProperty(property: string, value: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/entries/properties/${property}/${value}.json`)
+        return fetch(`${Constants.SERVICE_BASE_URL}/entries/properties/${encodeURIComponent(property)}/${encodeURIComponent(value)}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
@@ -20,7 +25,7 @@ export class AppModel {
     }
 
     public getEntriesByTag(tag: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/entries/tags/${tag}.json`)
+        return fetch(`${Constants.SERVICE_BASE_URL}/entries/tags/${encodeURIComponent(tag)}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
@@ -43,8 +48,8 @@ export class AppModel {
             });
     }
 
-    public getPageByName(name: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/pages/names/${name}.json`)
+    public getPageByNamePrefetch(name: string) {
+        const promise = fetch(`${Constants.SERVICE_BASE_URL}/pages/names/${encodeURIComponent(name)}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
@@ -53,6 +58,14 @@ export class AppModel {
             })
             .catch((ex) => {
             });
+
+        this.cache.set(name, promise);
+
+        return promise;
+    }
+
+    public getPageByName(name: string) {
+        return this.cache.get(name) || this.getPageByNamePrefetch(name);
     }
 
     private processEntriesTimelineData(data: any) {

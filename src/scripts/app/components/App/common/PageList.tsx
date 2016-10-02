@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 export class PageList extends React.Component<any, any> {
 
-    public state: any;
+    state: any;
 
     constructor(props: any) {
         super(props);

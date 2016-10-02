@@ -1,13 +1,16 @@
 declare var global: any;
 
 import * as React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
+
+import { AppModel } from '../models/AppModel.ts';
 
 import * as Constants from '../Constants.ts';
 
 export class App extends React.Component<any, any> {
 
-    public state: any;
+    state: any;
+    model: AppModel;
 
     static childContextTypes = {
         session: React.PropTypes.object.isRequired
@@ -22,6 +25,8 @@ export class App extends React.Component<any, any> {
             }
         };
 
+        this.model = new AppModel();
+
         if (global.app === undefined) {
             global.app = this;
         }
@@ -31,6 +36,29 @@ export class App extends React.Component<any, any> {
         return {
             session: this.state.session
         };
+    }
+
+    public navigateToPage(name: string) {
+        const url = `/pages/${name}`;
+
+        this.model.getPageByNamePrefetch(name);
+        hashHistory.push(url);
+    }
+
+    public clickHandler(ev) {
+        const target = ev.target;
+
+        if (target.tagName === 'A') {
+            const linkUrl = target.getAttribute('href');
+
+            if (linkUrl.substring(0, 8) == '#/pages/') {
+                const pagename = decodeURIComponent(linkUrl.substring(8));
+
+                global.app.navigateToPage(pagename);
+
+                ev.preventDefault();
+            }
+        }
     }
 
     // the JSX syntax is quite intuitive but check out
@@ -50,7 +78,9 @@ export class App extends React.Component<any, any> {
 
                 <hr />
 
-                {this.props.children}
+                <div onClick={this.clickHandler}>
+                    {this.props.children}
+                </div>
             </div>
         );
     }

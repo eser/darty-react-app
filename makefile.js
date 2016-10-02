@@ -2,13 +2,12 @@ const fs = require('fs'),
     path = require('path'),
     browserSync = require('browser-sync').create();
 
+const isProduction = (process.env.PROD === '1');
+
 const bundles = {
     js: {
         app: {
             file: './src/scripts/app/index.tsx',
-            watch: [
-                './src/scripts/app/**/*'
-            ],
             clean: [
                 './dist/bundles/app.js'
             ],
@@ -19,9 +18,6 @@ const bundles = {
         // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
         app: {
             file: './src/styles/app.css',
-            watch: [
-                './src/styles/**/*'
-            ],
             clean: [
                 './dist/bundles/app.css'
             ],
@@ -30,13 +26,13 @@ const bundles = {
     }
 };
 
-const buildBundleKeys = [];
-const watchBundleItems = [];
+const buildBundleKeysJs = [],
+    buildBundleKeysCss = [];
 
 for (const key in bundles.css) {
     const bundle = bundles.css[key];
 
-    jsmake.task('build-bundles-css-' + key, function () {
+    jsmake.task('build-bundles-css-' + key, function (argv) {
         return new Promise(function (resolve, reject) {
             const postcss = require('postcss'),
                 cssnext = require('postcss-cssnext'),
@@ -46,9 +42,12 @@ for (const key in bundles.css) {
                 cssnext({
                     browsers: ['last 1 version'] // ,
                     // warnForDuplicates: false
-                }),
-                cssnano()
+                })
             ];
+
+            if (isProduction || argv.prod === true) {
+                processors.push(cssnano());
+            }
 
             const destFile = bundle.dist + key + '.css';
 
@@ -78,16 +77,13 @@ for (const key in bundles.css) {
                 });
         });
     });
-    buildBundleKeys.push('build-bundles-css-' + key);
-
-    jsmake.task('watch-bundles-css-' + key, [ 'build-bundles-css-' + key ], browserSync.reload);
-    watchBundleItems.push({ key: 'watch-bundles-css-' + key, files: bundle.watch });
+    buildBundleKeysCss.push('build-bundles-css-' + key);
 }
 
 for (const key in bundles.js) {
     const bundle = bundles.js[key];
 
-    jsmake.task('build-bundles-js-' + key, function () {
+    jsmake.task('build-bundles-js-' + key, function (argv) {
         return new Promise(function (resolve, reject) {
             const webpack = require('webpack');
 
@@ -95,7 +91,7 @@ for (const key in bundles.js) {
 
             entries[key] = bundle.file;
 
-            const compiler = webpack({
+            const compilerOptions = {
                 entry: entries,
                 output: {
                     path: bundle.dist,
@@ -127,7 +123,12 @@ for (const key in bundles.js) {
                 plugins: [
                     new webpack.EnvironmentPlugin([
                         'NODE_ENV'
-                    ]),
+                    ])
+                ]
+            };
+
+            if (isProduction || argv.prod === true) {
+                compilerOptions.plugins.push(
                     new webpack.optimize.UglifyJsPlugin({
                         compress: {
                             warnings: false
@@ -135,8 +136,10 @@ for (const key in bundles.js) {
                         comments: false,
                         sourceMap: true
                     })
-                ]
-            });
+                );
+            }
+
+            const compiler = webpack(compilerOptions);
 
             compiler.run(function (err, result) {
                 if (err) {
@@ -152,19 +155,10 @@ for (const key in bundles.js) {
             });
         });
     });
-    buildBundleKeys.push('build-bundles-js-' + key);
-
-    jsmake.task('watch-bundles-js-' + key, [ 'build-bundles-js-' + key ], browserSync.reload);
-    watchBundleItems.push({ key: 'watch-bundles-js-' + key, files: bundle.watch });
+    buildBundleKeysJs.push('build-bundles-js-' + key);
 }
 
-jsmake.task('watch', function () {
-    // for (const item of watchBundleItems) {
-    //     gulp.watch(item.files, [ item.key ]);
-    // }
-});
-
-jsmake.task('clean', function () {
+jsmake.task('clean', function (argv) {
     for (const bundleCategory of bundles) {
         for (const bundle of bundleCategory) {
             for (const item of bundle.clean) {
@@ -174,15 +168,16 @@ jsmake.task('clean', function () {
     }
 });
 
-jsmake.task('serve', function () {
+jsmake.task('serve', function (argv) {
     const bsConfig = require('./bs-config.json');
 
     browserSync.init(bsConfig);
 });
 
 jsmake.task('lint', [ ]);
-jsmake.task('build', buildBundleKeys);
+jsmake.task('build.js', buildBundleKeysJs);
+jsmake.task('build.css', buildBundleKeysCss);
+jsmake.task('build', [ 'build.js', 'build.css' ]);
 jsmake.task('rebuild', [ 'clean', 'build' ]);
-jsmake.task('live', [ 'serve', 'watch' ]);
 
-jsmake.task('default', [ 'build', 'live' ]);
+jsmake.task('default', [ 'build', 'serve' ]);
