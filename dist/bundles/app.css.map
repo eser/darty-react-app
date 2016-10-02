@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../src/styles/app.css"],"names":[],"mappings":"AAIA;CAIC;AAHG;IACI,aAAwB;CAC3B","file":"app.css","sourcesContent":[":root {\n    --mainColor: maroon;\n}\n\nbody {\n    & h1 {\n        color: var(--mainColor);\n    }\n}\n"]}
+{"version":3,"sources":["../../src/styles/app.css"],"names":[],"mappings":"AAKI,QACI,YAAwB,CAC3B","file":"app.css","sourcesContent":[":root {\n    --mainColor: maroon;\n}\n\nbody {\n    & h1 {\n        color: var(--mainColor);\n    }\n}\n"]}

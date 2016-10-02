@@ -39,10 +39,8 @@ export class App extends React.Component<any, any> {
     }
 
     public navigateToPage(name: string) {
-        const url = `/pages/${name}`;
-
-        this.model.getPageByNamePrefetch(name);
-        hashHistory.push(url);
+        this.model.getPageByName(name);
+        hashHistory.push(`/pages/${encodeURIComponent(name)}`);
     }
 
     public clickHandler(ev) {
@@ -54,7 +52,7 @@ export class App extends React.Component<any, any> {
             if (linkUrl.substring(0, 8) == '#/pages/') {
                 const pagename = decodeURIComponent(linkUrl.substring(8));
 
-                global.app.navigateToPage(pagename);
+                this.navigateToPage(pagename);
 
                 ev.preventDefault();
             }
@@ -78,7 +76,7 @@ export class App extends React.Component<any, any> {
 
                 <hr />
 
-                <div onClick={this.clickHandler}>
+                <div onClick={this.clickHandler.bind(this)}>
                     {this.props.children}
                 </div>
             </div>

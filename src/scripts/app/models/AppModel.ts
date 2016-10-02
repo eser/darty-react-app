@@ -48,7 +48,8 @@ export class AppModel {
             });
     }
 
-    public getPageByNamePrefetch(name: string) {
+    public getPageByNameFetch(name: string) {
+        // console.log('fetch', name);
         const promise = fetch(`${Constants.SERVICE_BASE_URL}/pages/names/${encodeURIComponent(name)}.json`)
             .then((response) => response.json())
             .then((response) => {
@@ -59,13 +60,14 @@ export class AppModel {
             .catch((ex) => {
             });
 
-        this.cache.set(name, promise);
+        this.cache.set([ 'pageByName', name ], promise);
 
         return promise;
     }
 
     public getPageByName(name: string) {
-        return this.cache.get(name) || this.getPageByNamePrefetch(name);
+        // console.log('get', name);
+        return this.cache.get([ 'pageByName', name ]) || this.getPageByNameFetch(name);
     }
 
     private processEntriesTimelineData(data: any) {

@@ -1,17 +1,27 @@
+declare var global: any;
+
 export class Cache {
 
-    items: any;
-
     constructor() {
-        this.items = {};
+        if (global.cacheItems === undefined) {
+            global.cacheItems = {};
+        }
     }
 
-    set(key, promise) {
-        this.items[key] = promise;
+    public serializeKey(key) {
+        if (key.constructor === Array) {
+            return key.join('_');
+        }
+
+        return key;
     }
 
-    get(key) {
-        return this.items[key];
+    public set(key, promise) {
+        global.cacheItems[this.serializeKey(key)] = promise;
+    }
+
+    public get(key) {
+        return global.cacheItems[this.serializeKey(key)];
     }
 
 }
