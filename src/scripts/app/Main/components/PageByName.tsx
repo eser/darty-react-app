@@ -1,13 +1,14 @@
 import * as React from 'react';
 
-import { AppModel } from '../../models/AppModel.ts';
+import { PageModel } from '../models/PageModel.ts';
 
-import { LinearTimeline } from './common/LinearTimeline.tsx';
+import { PageContent } from '../controls/PageContent.tsx';
+import { LinearTimeline } from '../controls/LinearTimeline.tsx';
 
-export class EntriesByProperty extends React.Component<any, any> {
+export class PageByName extends React.Component<any, any> {
 
     state: any;
-    model: AppModel;
+    model: PageModel;
 
     constructor(props: any) {
         super(props);
@@ -17,12 +18,12 @@ export class EntriesByProperty extends React.Component<any, any> {
             error: false
         };
 
-        this.model = new AppModel();
-        this.updateDatasource(this.props.params.property, this.props.params.value);
+        this.model = new PageModel();
+        this.updateDatasource(this.props.params.name);
     }
 
     public componentWillReceiveProps(nextProps: any) {
-        this.updateDatasource(nextProps.params.property, nextProps.params.value);
+        this.updateDatasource(nextProps.params.name);
     }
 
     public render() {
@@ -42,15 +43,19 @@ export class EntriesByProperty extends React.Component<any, any> {
 
         return (
             <div>
-                Entries By Property: {this.props.params.property}={this.props.params.value}
+                Page: {this.props.params.name}
+
+                <PageContent datasource={this.state.datasource} datakey="page" />
+
+                History:
 
                 <LinearTimeline datasource={this.state.datasource} datakey="entries" />
             </div>
         );
     }
 
-    private updateDatasource(property: string, value: string) {
-        this.model.getEntriesByProperty(property, value)
+    private updateDatasource(name: string) {
+        this.model.getPageByName(name)
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ error: err }); });
     }

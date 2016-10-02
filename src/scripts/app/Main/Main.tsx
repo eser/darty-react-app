@@ -3,14 +3,15 @@ declare var global: any;
 import * as React from 'react';
 import { Link, hashHistory } from 'react-router';
 
-import { AppModel } from '../models/AppModel.ts';
+import { PageModel } from './models/PageModel.ts';
+import { PageTypes, Page, PageManager } from './utils/PageManager.ts';
 
 import * as Constants from '../Constants.ts';
 
-export class App extends React.Component<any, any> {
+export class Main extends React.Component<any, any> {
 
     state: any;
-    model: AppModel;
+    model: PageModel;
 
     static childContextTypes = {
         session: React.PropTypes.object.isRequired
@@ -25,7 +26,7 @@ export class App extends React.Component<any, any> {
             }
         };
 
-        this.model = new AppModel();
+        this.model = new PageModel();
 
         if (global.app === undefined) {
             global.app = this;
@@ -38,21 +39,22 @@ export class App extends React.Component<any, any> {
         };
     }
 
-    public navigateToPage(name: string) {
-        this.model.getPageByName(name);
-        hashHistory.push(`/pages/${encodeURIComponent(name)}`);
+    public prefetchPage(page: Page) {
+        if (page.type === PageTypes.Page) {
+            this.model.getPageByName(page.parameters.page);
+        }
     }
 
     public clickHandler(ev) {
         const target = ev.target;
 
         if (target.tagName === 'A') {
-            const linkUrl = target.getAttribute('href');
+            const url = target.getAttribute('href'),
+                page = PageManager.identify(url);
 
-            if (linkUrl.substring(0, 8) == '#/pages/') {
-                const pagename = decodeURIComponent(linkUrl.substring(8));
-
-                this.navigateToPage(pagename);
+            if (page.type !== PageTypes.None) {
+                this.prefetchPage(page);
+                hashHistory.push(PageManager.getUrl(page));
 
                 ev.preventDefault();
             }

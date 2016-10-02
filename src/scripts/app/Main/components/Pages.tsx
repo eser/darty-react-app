@@ -1,14 +1,13 @@
 import * as React from 'react';
 
-import { AppModel } from '../../models/AppModel.ts';
+import { PageModel } from '../models/PageModel.ts';
 
-import { PageContent } from './common/PageContent.tsx';
-import { LinearTimeline } from './common/LinearTimeline.tsx';
+import { PageList } from '../controls/PageList.tsx';
 
-export class PageByName extends React.Component<any, any> {
+export class Pages extends React.Component<any, any> {
 
     state: any;
-    model: AppModel;
+    model: PageModel;
 
     constructor(props: any) {
         super(props);
@@ -18,12 +17,12 @@ export class PageByName extends React.Component<any, any> {
             error: false
         };
 
-        this.model = new AppModel();
-        this.updateDatasource(this.props.params.name);
+        this.model = new PageModel();
+        this.updateDatasource();
     }
 
     public componentWillReceiveProps(nextProps: any) {
-        this.updateDatasource(nextProps.params.name);
+        this.updateDatasource();
     }
 
     public render() {
@@ -43,19 +42,15 @@ export class PageByName extends React.Component<any, any> {
 
         return (
             <div>
-                Page: {this.props.params.name}
+                Pages
 
-                <PageContent datasource={this.state.datasource} datakey="page" />
-
-                History:
-
-                <LinearTimeline datasource={this.state.datasource} datakey="entries" />
+                <PageList datasource={this.state.datasource} datakey="pages" />
             </div>
         );
     }
 
-    private updateDatasource(name: string) {
-        this.model.getPageByName(name)
+    private updateDatasource() {
+        this.model.getPages()
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ error: err }); });
     }

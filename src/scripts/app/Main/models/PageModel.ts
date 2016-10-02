@@ -1,15 +1,15 @@
 declare var fetch: Function;
 
-import * as Constants from '../Constants.ts';
+import * as Constants from '../../Constants.ts';
 
-import { Cache } from './utils/Cache.ts';
+import { Cache } from '../utils/Cache.ts';
 
-export class AppModel {
+export class PageModel {
 
     cache: Cache;
 
     constructor() {
-        this.cache = new Cache();
+        this.cache = Cache.assign();
     }
 
     public getEntriesByProperty(property: string, value: string) {

@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import { AppModel } from '../../models/AppModel.ts';
+import { PageModel } from '../models/PageModel.ts';
 
-import { PageList } from './common/PageList.tsx';
+import { LinearTimeline } from '../controls/LinearTimeline.tsx';
 
-export class Pages extends React.Component<any, any> {
+export class EntriesByTag extends React.Component<any, any> {
 
     state: any;
-    model: AppModel;
+    model: PageModel;
 
     constructor(props: any) {
         super(props);
@@ -17,12 +17,12 @@ export class Pages extends React.Component<any, any> {
             error: false
         };
 
-        this.model = new AppModel();
-        this.updateDatasource();
+        this.model = new PageModel();
+        this.updateDatasource(this.props.params.tag);
     }
 
     public componentWillReceiveProps(nextProps: any) {
-        this.updateDatasource();
+        this.updateDatasource(nextProps.params.tag);
     }
 
     public render() {
@@ -42,15 +42,15 @@ export class Pages extends React.Component<any, any> {
 
         return (
             <div>
-                Pages
+                Entries By Tag: {this.props.params.tag}
 
-                <PageList datasource={this.state.datasource} datakey="pages" />
+                <LinearTimeline datasource={this.state.datasource} datakey="entries" />
             </div>
         );
     }
 
-    private updateDatasource() {
-        this.model.getPages()
+    private updateDatasource(tag: string) {
+        this.model.getEntriesByTag(tag)
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ error: err }); });
     }

@@ -5,7 +5,7 @@ import * as ReactMarkdown from 'react-markdown';
 
 import { Conditional } from './Conditional.tsx';
 
-import * as Constants from '../../../Constants.ts';
+import * as Constants from '../../Constants.ts';
 
 export class LinearTimelineItem extends React.Component<any, any> {
 

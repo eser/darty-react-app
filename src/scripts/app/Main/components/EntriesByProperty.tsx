@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import { AppModel } from '../../models/AppModel.ts';
+import { PageModel } from '../models/PageModel.ts';
 
-import { LinearTimeline } from './common/LinearTimeline.tsx';
+import { LinearTimeline } from '../controls/LinearTimeline.tsx';
 
-export class EntriesByTag extends React.Component<any, any> {
+export class EntriesByProperty extends React.Component<any, any> {
 
     state: any;
-    model: AppModel;
+    model: PageModel;
 
     constructor(props: any) {
         super(props);
@@ -17,12 +17,12 @@ export class EntriesByTag extends React.Component<any, any> {
             error: false
         };
 
-        this.model = new AppModel();
-        this.updateDatasource(this.props.params.tag);
+        this.model = new PageModel();
+        this.updateDatasource(this.props.params.property, this.props.params.value);
     }
 
     public componentWillReceiveProps(nextProps: any) {
-        this.updateDatasource(nextProps.params.tag);
+        this.updateDatasource(nextProps.params.property, nextProps.params.value);
     }
 
     public render() {
@@ -42,15 +42,15 @@ export class EntriesByTag extends React.Component<any, any> {
 
         return (
             <div>
-                Entries By Tag: {this.props.params.tag}
+                Entries By Property: {this.props.params.property}={this.props.params.value}
 
                 <LinearTimeline datasource={this.state.datasource} datakey="entries" />
             </div>
         );
     }
 
-    private updateDatasource(tag: string) {
-        this.model.getEntriesByTag(tag)
+    private updateDatasource(property: string, value: string) {
+        this.model.getEntriesByProperty(property, value)
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ error: err }); });
     }

@@ -3,17 +3,17 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-import { App } from './components/App.tsx';
-import { Home } from './components/App/Home.tsx';
-import { EntriesByProperty } from './components/App/EntriesByProperty.tsx';
-import { EntriesByTag } from './components/App/EntriesByTag.tsx';
-import { Pages } from './components/App/Pages.tsx';
-import { PageByName } from './components/App/PageByName.tsx';
+import { Main } from './Main/Main.tsx';
+import { Home } from './Main/components/Home.tsx';
+import { EntriesByProperty } from './Main/components/EntriesByProperty.tsx';
+import { EntriesByTag } from './Main/components/EntriesByTag.tsx';
+import { Pages } from './Main/components/Pages.tsx';
+import { PageByName } from './Main/components/PageByName.tsx';
 
 // render app node
 ReactDOM.render(
     <Router history={hashHistory}>
-        <Route path="/" component={App}>
+        <Route path="/" component={Main}>
             <IndexRoute component={Home} />
             <Route path="properties/:property/:value" component={EntriesByProperty} />
             <Route path="tags/:tag" component={EntriesByTag} />
