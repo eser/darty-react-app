@@ -1,3 +1,5 @@
+declare var fetch: Function;
+
 import * as Constants from '../Constants.ts';
 
 export class AppModel {

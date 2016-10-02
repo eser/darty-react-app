@@ -10,6 +10,10 @@ export class LinearTimelineItem extends React.Component<any, any> {
 
     public state: any;
 
+    public refs: any;
+
+    public context: any;
+
     static contextTypes = {
         session: React.PropTypes.object.isRequired
     };

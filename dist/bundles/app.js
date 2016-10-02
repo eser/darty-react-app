@@ -27067,7 +27067,7 @@
 /* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
 	var __extends = (this && this.__extends) || function (d, b) {
 	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
 	    function __() { this.constructor = d; }
@@ -27085,8 +27085,8 @@
 	                userLevel: Constants.USER_LEVEL_VISITOR
 	            }
 	        };
-	        if (window.app === undefined) {
-	            window.app = this;
+	        if (global.app === undefined) {
+	            global.app = this;
 	        }
 	    }
 	    App.prototype.getChildContext = function () {
@@ -27115,7 +27115,8 @@
 	    return App;
 	}(React.Component));
 	exports.App = App;
-
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 236 */
