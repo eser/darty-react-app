@@ -12,6 +12,8 @@ export class AppModel {
                 response.entries = this.processEntriesTimelineData(response.entries);
 
                 return response;
+            })
+            .catch((ex) => {
             });
     }
 
@@ -22,6 +24,8 @@ export class AppModel {
                 response.entries = this.processEntriesTimelineData(response.entries);
 
                 return response;
+            })
+            .catch((ex) => {
             });
     }
 
@@ -32,6 +36,8 @@ export class AppModel {
                 response.pages = this.processPagesListData(response.pages);
 
                 return response;
+            })
+            .catch((ex) => {
             });
     }
 
@@ -42,6 +48,8 @@ export class AppModel {
                 response.entries = this.processEntriesTimelineData(response.entries);
 
                 return response;
+            })
+            .catch((ex) => {
             });
     }
 

@@ -27199,6 +27199,8 @@
 	            .then(function (response) {
 	            response.entries = _this.processEntriesTimelineData(response.entries);
 	            return response;
+	        })
+	            .catch(function (ex) {
 	        });
 	    };
 	    AppModel.prototype.getEntriesByTag = function (tag) {
@@ -27208,6 +27210,8 @@
 	            .then(function (response) {
 	            response.entries = _this.processEntriesTimelineData(response.entries);
 	            return response;
+	        })
+	            .catch(function (ex) {
 	        });
 	    };
 	    AppModel.prototype.getPages = function () {
@@ -27217,6 +27221,8 @@
 	            .then(function (response) {
 	            response.pages = _this.processPagesListData(response.pages);
 	            return response;
+	        })
+	            .catch(function (ex) {
 	        });
 	    };
 	    AppModel.prototype.getPageByName = function (name) {
@@ -27226,6 +27232,8 @@
 	            .then(function (response) {
 	            response.entries = _this.processEntriesTimelineData(response.entries);
 	            return response;
+	        })
+	            .catch(function (ex) {
 	        });
 	    };
 	    AppModel.prototype.processEntriesTimelineData = function (data) {

@@ -5,10 +5,8 @@
     },
     "dependencies": {},
     "globalDependencies": {
-        "core-js": "registry:dt/core-js#0.0.0+20160602141332",
         "jquery": "registry:dt/jquery#1.10.0+20160417213236",
         "react": "registry:dt/react#0.14.0+20160602151522",
-        "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
-        "systemjs": "registry:dt/systemjs#0.18.4+20160417155658"
+        "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
     }
 }
