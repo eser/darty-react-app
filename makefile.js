@@ -125,6 +125,16 @@ for (const key in bundles.js) {
                 },
 
                 plugins: [
+                    new webpack.EnvironmentPlugin([
+                        'NODE_ENV'
+                    ]),
+                    new webpack.optimize.UglifyJsPlugin({
+                        compress: {
+                            warnings: false
+                        },
+                        comments: false,
+                        sourceMap: true
+                    })
                 ]
             });
 
