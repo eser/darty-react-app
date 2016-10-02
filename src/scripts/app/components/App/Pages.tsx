@@ -27,6 +27,8 @@ export class Pages extends React.Component<any, any> {
 
     public render() {
         if (this.state.error) {
+            console.error(this.state.error);
+
             return (
                 <div>An error occurred</div>
             );
@@ -50,7 +52,7 @@ export class Pages extends React.Component<any, any> {
     private updateDatasource() {
         this.model.getPages()
             .then((response) => { this.setState({ datasource: response, error: false }); })
-            .catch((err) => { this.setState({ error: true }); });
+            .catch((err) => { this.setState({ error: err }); });
     }
 
 }

@@ -20,8 +20,8 @@ export class App extends React.Component<any, any> {
             }
         };
 
-        if (global.app === undefined) {
-            global.app = this;
+        if (window.app === undefined) {
+            window.app = this;
         }
     }
 

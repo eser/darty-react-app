@@ -89,76 +89,57 @@ for (const key in bundles.js) {
 
     jsmake.task('build-bundles-js-' + key, function () {
         return new Promise(function (resolve, reject) {
-            const rollup = require('rollup'),
-                commonjs = require('rollup-plugin-commonjs'),
-                env = require('rollup-plugin-env'),
-                json = require('rollup-plugin-json'),
-                nodeResolve = require('rollup-plugin-node-resolve'),
-                uglify = require('rollup-plugin-uglify'),
-                typescript = require('rollup-plugin-typescript');
+            const webpack = require('webpack');
 
-            const destFile = bundle.dist + key + '.js';
+            const entries = {};
 
-            rollup.rollup({
-                entry: bundle.file,
-                sourceMap: true,
-                dest: destFile,
-                format: 'cjs',
-                exports: 'none',
+            entries[key] = bundle.file;
 
-                globals: {
-                    React: 'React'
+            const compiler = webpack({
+                entry: entries,
+                output: {
+                    path: bundle.dist,
+                    filename: '[name].js'
+                },
+
+                // Enable sourcemaps for debugging webpack's output.
+                devtool: 'source-map',
+
+                resolve: {
+                    // Add '.ts' and '.tsx' as resolvable extensions.
+                    extensions: [ '', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json', 'index.json' ]
+                },
+
+                module: {
+                    loaders: [
+                        // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
+                        { test: /\.tsx?$/, loader: 'ts-loader' },
+                        { test: /\.json$/, loader: 'json-loader' }
+                    ],
+
+                    preLoaders: [
+                        // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+                        { test: /\.js$/, loader: 'source-map-loader' } // ,
+                        // { test: /\.tsx?$/, loader: 'tslint' }
+                    ]
                 },
 
                 plugins: [
-                    typescript(),
-                    env({ NODE_ENV: 'production' }),
-                    json(),
-                    nodeResolve({
-                        jsnext: true,
-                        main: true,
-                        extensions: [
-                            '.js',
-                            '.jsx',
-                            '.ts',
-                            '.tsx'
-                            // '.json'
-                        ],
-                        preferBuiltins: true
-                    }),
-                    commonjs({
-                        include: 'node_modules/**',
-                        namedExports: {
-                            'node_modules/react/react.js': [ 'PropTypes', 'Component', 'createElement' ],
-                            'node_modules/react-dom/index.js': [ 'render' ]
-                        }
-                    }),
-                    uglify({
-                        compress: {
-                            screw_ie8: true,
-                            warnings: false
-                        },
-                        output: {
-                            comments: false
-                        },
-                        sourceMap: true
-                    })
                 ]
-            })
-                .then(function (bundle) {
-                    bundle.write({
-                        dest: destFile,
-                        format: 'cjs',
-                        sourceMap: true
-                    });
+            });
 
-                    browserSync.reload();
-                    resolve();
-                })
-                .catch(function (ex) {
-                    console.error(ex);
-                    reject(ex);
-                });
+            compiler.run(function (err, result) {
+                if (err) {
+                    console.error(err);
+                    reject(err);
+
+                    return;
+                }
+
+                resolve(result);
+                console.log(result.toString({ chunks: false, colors: true }));
+                browserSync.reload();
+            });
         });
     });
     buildBundleKeys.push('build-bundles-js-' + key);

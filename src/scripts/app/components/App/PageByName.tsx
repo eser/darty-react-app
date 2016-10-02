@@ -28,6 +28,8 @@ export class PageByName extends React.Component<any, any> {
 
     public render() {
         if (this.state.error) {
+            console.error(this.state.error);
+
             return (
                 <div>An error occurred</div>
             );
@@ -55,7 +57,7 @@ export class PageByName extends React.Component<any, any> {
     private updateDatasource(name: string) {
         this.model.getPageByName(name)
             .then((response) => { this.setState({ datasource: response, error: false }); })
-            .catch((err) => { this.setState({ error: true }); });
+            .catch((err) => { this.setState({ error: err }); });
     }
 
 }
