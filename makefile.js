@@ -2,32 +2,38 @@ const fs = require('fs'),
     path = require('path'),
     browserSync = require('browser-sync').create();
 
-const isProduction = (process.env.PROD === '1');
+const
+    isProduction = (process.env.PROD === '1'),
+    distFolder = './dist/bundles/';
 
 const bundles = {
     js: {
         app: {
-            file: './src/scripts/app/index.tsx',
+            source: './src/scripts/app/index.tsx',
             clean: [
                 './dist/bundles/app.js'
-            ],
-            dist: './dist/bundles/'
+            ]
+        },
+        vendor: {
+            source: [ 'es6-promise', 'whatwg-fetch', 'jquery', 'react', 'react-dom', 'react-router' ],
+            clean: [
+                './dist/bundles/vendor.js'
+            ]
         }
     },
     css: {
         // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
         app: {
-            file: './src/styles/app.css',
+            source: './src/styles/app.css',
             clean: [
                 './dist/bundles/app.css'
-            ],
-            dist: './dist/bundles/'
+            ]
         }
     }
 };
 
-const buildBundleKeysJs = [],
-    buildBundleKeysCss = [];
+// CSS Tasks
+const buildBundleKeysCss = [];
 
 for (const key in bundles.css) {
     const bundle = bundles.css[key];
@@ -49,13 +55,13 @@ for (const key in bundles.css) {
                 processors.push(cssnano());
             }
 
-            const destFile = bundle.dist + key + '.css';
+            const destFile = distFolder + key + '.css';
 
             postcss(processors)
                 .process(
-                    fs.readFileSync(bundle.file),
+                    fs.readFileSync(bundle.source),
                     {
-                        from: bundle.file,
+                        from: bundle.source,
                         to: destFile,
                         map: {
                             inline: false
@@ -80,84 +86,91 @@ for (const key in bundles.css) {
     buildBundleKeysCss.push('build-bundles-css-' + key);
 }
 
+jsmake.task('build.css', buildBundleKeysCss);
+
+// JavaScript Tasks
+const buildBundleEntriesJs = {};
+
 for (const key in bundles.js) {
     const bundle = bundles.js[key];
 
-    jsmake.task('build-bundles-js-' + key, function (argv) {
-        return new Promise(function (resolve, reject) {
-            const webpack = require('webpack');
-
-            const entries = {};
-
-            entries[key] = bundle.file;
-
-            const compilerOptions = {
-                entry: entries,
-                output: {
-                    path: bundle.dist,
-                    filename: '[name].js'
-                },
-
-                // Enable sourcemaps for debugging webpack's output.
-                devtool: 'source-map',
-
-                resolve: {
-                    // Add '.ts' and '.tsx' as resolvable extensions.
-                    extensions: [ '', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json', 'index.json' ]
-                },
-
-                module: {
-                    loaders: [
-                        // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-                        { test: /\.tsx?$/, loader: 'ts-loader' },
-                        { test: /\.json$/, loader: 'json-loader' }
-                    ],
-
-                    preLoaders: [
-                        // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-                        { test: /\.js$/, loader: 'source-map-loader' } // ,
-                        // { test: /\.tsx?$/, loader: 'tslint' }
-                    ]
-                },
-
-                plugins: [
-                    new webpack.EnvironmentPlugin([
-                        'NODE_ENV'
-                    ])
-                ]
-            };
-
-            if (isProduction || argv.prod === true) {
-                compilerOptions.plugins.push(
-                    new webpack.optimize.UglifyJsPlugin({
-                        compress: {
-                            warnings: false
-                        },
-                        comments: false,
-                        sourceMap: true
-                    })
-                );
-            }
-
-            const compiler = webpack(compilerOptions);
-
-            compiler.run(function (err, result) {
-                if (err) {
-                    console.error(err);
-                    reject(err);
-
-                    return;
-                }
-
-                resolve(result);
-                console.log(result.toString({ chunks: false, colors: true }));
-                browserSync.reload();
-            });
-        });
-    });
-    buildBundleKeysJs.push('build-bundles-js-' + key);
+    buildBundleEntriesJs[key] = bundle.source;
 }
 
+jsmake.task('build.js', function (argv) {
+    return new Promise(function (resolve, reject) {
+        const webpack = require('webpack');
+
+        const compilerOptions = {
+            entry: buildBundleEntriesJs,
+            output: {
+                path: distFolder,
+                filename: '[name].js'
+            },
+
+            // Enable sourcemaps for debugging webpack's output.
+            devtool: '#source-map',
+
+            resolve: {
+                // Add '.ts' and '.tsx' as resolvable extensions.
+                extensions: [ '', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json', 'index.json' ]
+            },
+
+            module: {
+                loaders: [
+                    // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
+                    { test: /\.tsx?$/, loader: 'ts-loader' },
+                    { test: /\.json$/, loader: 'json-loader' }
+                ],
+
+                preLoaders: [
+                    // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+                    { test: /\.js$/, loader: 'source-map-loader' } // ,
+                    // { test: /\.tsx?$/, loader: 'tslint' }
+                ]
+            },
+
+            plugins: [
+                new webpack.EnvironmentPlugin([
+                    'NODE_ENV'
+                ]),
+                new webpack.optimize.CommonsChunkPlugin({
+                    name: 'vendor',
+                    filename: 'vendor.js'
+                })
+            ]
+        };
+
+        if (isProduction || argv.prod === true) {
+            compilerOptions.plugins.push(
+                new webpack.optimize.UglifyJsPlugin({
+                    compress: {
+                        warnings: false
+                    },
+                    comments: false,
+                    sourceMap: true
+                })
+            );
+        }
+
+        const compiler = webpack(compilerOptions);
+
+        compiler.run(function (err, result) {
+            if (err) {
+                console.error(err);
+                reject(err);
+
+                return;
+            }
+
+            resolve(result);
+            console.log(result.toString({ chunks: false, colors: true }));
+            browserSync.reload();
+        });
+    });
+});
+
+// Other Tasks
 jsmake.task('clean', function (argv) {
     for (const bundleCategory of bundles) {
         for (const bundle of bundleCategory) {
@@ -175,8 +188,6 @@ jsmake.task('serve', function (argv) {
 });
 
 jsmake.task('lint', [ ]);
-jsmake.task('build.js', buildBundleKeysJs);
-jsmake.task('build.css', buildBundleKeysCss);
 jsmake.task('build', [ 'build.js', 'build.css' ]);
 jsmake.task('rebuild', [ 'clean', 'build' ]);
 
