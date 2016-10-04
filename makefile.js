@@ -15,7 +15,7 @@ const bundles = {
             ]
         },
         vendor: {
-            source: [ 'es6-promise', 'whatwg-fetch', 'jquery', 'react', 'react-dom', 'react-router' ],
+            source: [ 'es6-promise', 'whatwg-fetch', 'jquery', 'react', 'react-dom', 'react-router', 'history' ],
             clean: [
                 './dist/bundles/vendor.js'
             ]

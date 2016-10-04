@@ -1,7 +1,8 @@
 declare var global: any;
 
 import * as React from 'react';
-import { IndexLink, Link, hashHistory } from 'react-router';
+import { IndexLink, Link } from 'react-router';
+import customHistory from '../History.ts';
 
 import { PageModel } from './models/PageModel.ts';
 import { PageTypes, Page, PageManager } from './utils/PageManager.ts';
@@ -54,7 +55,7 @@ export class Main extends React.Component<any, any> {
 
             if (page.type !== PageTypes.None) {
                 this.prefetchPage(page);
-                hashHistory.push(PageManager.getUrl(page));
+                customHistory.push(PageManager.getUrl(page));
 
                 ev.preventDefault();
             }

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute } from 'react-router';
+import customHistory from './History.ts';
 
 import { Main } from './Main/Main.tsx';
 import { NotFound } from './Main/components/NotFound.tsx';
@@ -12,7 +13,7 @@ import { PageByName } from './Main/components/PageByName.tsx';
 
 export function render() {
     ReactDOM.render(
-        <Router history={hashHistory}>
+        <Router history={customHistory}>
             <Route path="/" component={Main}>
                 <IndexRoute component={Home} />
                 <Route path="properties/:property/:value" component={EntriesByProperty} />
