@@ -9,7 +9,7 @@ const
 const bundles = {
     js: {
         app: {
-            source: './src/scripts/app/index.tsx',
+            source: './src/scripts/index.ts',
             clean: [
                 './dist/bundles/app.js'
             ]

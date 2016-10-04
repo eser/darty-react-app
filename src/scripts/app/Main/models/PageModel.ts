@@ -1,5 +1,7 @@
 declare var fetch: Function;
 
+import 'whatwg-fetch';
+
 import * as Constants from '../../Constants.ts';
 
 import { Cache } from '../utils/Cache.ts';
