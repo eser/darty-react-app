@@ -42,7 +42,7 @@ export class EntriesByProperty extends React.Component<any, any> {
 
         return (
             <div>
-                Entries By Property: {this.props.params.property}={this.props.params.value}
+                <h1>Entries By Property: {this.props.params.property}={this.props.params.value}</h1>
 
                 <LinearTimeline datasource={this.state.datasource} datakey="entries" />
             </div>

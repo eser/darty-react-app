@@ -42,7 +42,7 @@ export class Pages extends React.Component<any, any> {
 
         return (
             <div>
-                Pages
+                <h1>Pages</h1>
 
                 <PageList datasource={this.state.datasource} datakey="pages" />
             </div>

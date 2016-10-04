@@ -1,7 +1,7 @@
 declare var global: any;
 
 import * as React from 'react';
-import { Link, hashHistory } from 'react-router';
+import { IndexLink, Link, hashHistory } from 'react-router';
 
 import { PageModel } from './models/PageModel.ts';
 import { PageTypes, Page, PageManager } from './utils/PageManager.ts';
@@ -67,19 +67,20 @@ export class Main extends React.Component<any, any> {
     public render() {
         return (
             <div>
-                <header className="header">
-                    <h1>ts-spa-boilerplate</h1>
-                </header>
+                <div className="header">
+                    <ul className="inner">
+                        <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
+                        <li><Link to="/pages" activeClassName="active">Pages</Link></li>
+                        <li className="github">
+                            <a href="https://github.com/eserozvataf/ts-spa-boilerplate">ts-spa-boilerplate</a>
+                        </li>
+                    </ul>
+                </div>
 
-                <ul>
-                    <li><Link to="/" activeClassName="active">Home</Link></li>
-                    <li><Link to="/pages" activeClassName="active">Pages</Link></li>
-                </ul>
-
-                <hr />
-
-                <div onClick={this.clickHandler.bind(this)}>
-                    {this.props.children}
+                <div className="content">
+                    <div className="inner" onClick={this.clickHandler.bind(this)}>
+                        {this.props.children}
+                    </div>
                 </div>
             </div>
         );

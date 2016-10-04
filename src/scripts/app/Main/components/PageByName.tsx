@@ -43,11 +43,11 @@ export class PageByName extends React.Component<any, any> {
 
         return (
             <div>
-                Page: {this.props.params.name}
+                <h1>Page: {this.props.params.name}</h1>
 
                 <PageContent datasource={this.state.datasource} datakey="page" />
 
-                History:
+                <h2>History:</h2>
 
                 <LinearTimeline datasource={this.state.datasource} datakey="entries" />
             </div>

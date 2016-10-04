@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export class Home extends React.Component<any, any> {
+export class NotFound extends React.Component<any, any> {
 
     state: any;
 
@@ -11,9 +11,9 @@ export class Home extends React.Component<any, any> {
     public render() {
         return (
             <div>
-                <h1>Home</h1>
+                <h1>Not Found</h1>
 
-                ...and there is a dummy content
+                Page not found
             </div>
         );
     }

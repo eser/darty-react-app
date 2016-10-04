@@ -1,9 +1,98 @@
 :root {
-    --mainColor: maroon;
+    --mainColor: #34495e;
 }
 
 body {
-    & h1 {
-        color: var(--mainColor);
+	font-family: Roboto, Helvetica, sans-serif;
+	font-size: 15px;
+	background-color: #f2f3f5;
+	margin: 0;
+	color: var(--mainColor);
+}
+
+.inner {
+    display: block;
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.header {
+	background-color: #f60;
+
+    & .inner {
+        list-style-type: none;
+        padding: 0;
+
+        & li {
+            display: inline-block;
+            vertical-align: middle;
+
+            &.github {
+                float: right;
+
+                & a {
+                    margin-right: 0;
+                }
+            }
+
+            & a {
+                color: rgba(255,255,255,0.8);
+            	text-decoration: none;
+                line-height: 24px;
+                transition: color 0.15s ease;
+                font-weight: 300;
+                letter-spacing: 0.075em;
+                margin-right: 1.8em;
+                padding: 15px 5px;
+                display: block;
+
+                &:hover {
+                    color: #fff;
+                }
+
+                &.active {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
+}
+
+.content {
+    padding: 25px 0;
+
+    & a {
+        color: #000;
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: all 0.2s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+	opacity: 0;
+}
+
+@media (max-width: 860px) {
+	body {
+		font-size: 14px;
+	}
+
+	.header {
+        & .inner li {
+            &.github {
+		        display: none;
+	        }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+	body {
+		font-size: 12px;
+	}
 }

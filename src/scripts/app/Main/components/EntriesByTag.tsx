@@ -42,7 +42,7 @@ export class EntriesByTag extends React.Component<any, any> {
 
         return (
             <div>
-                Entries By Tag: {this.props.params.tag}
+                <h1>Entries By Tag: {this.props.params.tag}</h1>
 
                 <LinearTimeline datasource={this.state.datasource} datakey="entries" />
             </div>
