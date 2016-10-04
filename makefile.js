@@ -3,7 +3,11 @@ const fs = require('fs'),
     browserSync = require('browser-sync').create();
 
 const
-    isProduction = (process.env.PROD === '1'),
+    isProduction = (
+        process.env.NODE_ENV === 'production' ||
+        process.env.PROD === '1'
+    ),
+    npmBinFolder = './node_modules/.bin/',
     distFolder = './dist/bundles/';
 
 const bundles = {
@@ -11,13 +15,23 @@ const bundles = {
         app: {
             source: './src/scripts/index.ts',
             clean: [
-                './dist/bundles/app.js'
+                './dist/bundles/app.js',
+                './dist/bundles/app.js.map'
             ]
         },
         vendor: {
-            source: [ 'es6-promise', 'whatwg-fetch', 'jquery', 'react', 'react-dom', 'react-router', 'history' ],
+            source: [
+                'es6-promise',
+                'whatwg-fetch',
+                'jquery',
+                'react',
+                'react-dom',
+                'react-router',
+                'history'
+            ],
             clean: [
-                './dist/bundles/vendor.js'
+                './dist/bundles/vendor.js',
+                './dist/bundles/vendor.js.map'
             ]
         }
     },
@@ -26,11 +40,31 @@ const bundles = {
         app: {
             source: './src/styles/app.css',
             clean: [
-                './dist/bundles/app.css'
+                './dist/bundles/app.css',
+                './dist/bundles/app.css.map'
             ]
         }
     }
 };
+
+const watchFolders = [
+    {
+        match: './*.{html,htm}',
+        tasks: []
+    },
+    {
+        match: './src/scripts/**',
+        tasks: [
+            'build.js'
+        ]
+    },
+    {
+        match: './src/styles/**',
+        tasks: [
+            'build.css'
+        ]
+    }
+];
 
 // CSS Tasks
 const buildBundleKeysCss = [];
@@ -38,7 +72,7 @@ const buildBundleKeysCss = [];
 for (const key in bundles.css) {
     const bundle = bundles.css[key];
 
-    jsmake.task('build-bundles-css-' + key, function (argv) {
+    jsmake.task('build.css.bundles.' + key, function (argv) {
         return new Promise(function (resolve, reject) {
             const postcss = require('postcss'),
                 cssnext = require('postcss-cssnext'),
@@ -83,7 +117,7 @@ for (const key in bundles.css) {
                 });
         });
     });
-    buildBundleKeysCss.push('build-bundles-css-' + key);
+    buildBundleKeysCss.push('build.css.bundles.' + key);
 }
 
 jsmake.task('build.css', buildBundleKeysCss);
@@ -108,25 +142,17 @@ jsmake.task('build.js', function (argv) {
                 filename: '[name].js'
             },
 
-            // Enable sourcemaps for debugging webpack's output.
-            devtool: '#source-map',
-
             resolve: {
-                // Add '.ts' and '.tsx' as resolvable extensions.
                 extensions: [ '', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json', 'index.json' ]
             },
 
             module: {
                 loaders: [
-                    // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
                     { test: /\.tsx?$/, loader: 'ts-loader' },
                     { test: /\.json$/, loader: 'json-loader' }
                 ],
 
                 preLoaders: [
-                    // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-                    { test: /\.js$/, loader: 'source-map-loader' } // ,
-                    // { test: /\.tsx?$/, loader: 'tslint' }
                 ]
             },
 
@@ -142,6 +168,14 @@ jsmake.task('build.js', function (argv) {
         };
 
         if (isProduction || argv.prod === true) {
+            // Enable sourcemaps for debugging webpack's output.
+            compilerOptions.devtool = 'source-map';
+
+            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+            compilerOptions.module.preLoaders.push(
+                { test: /\.js$/, loader: 'source-map-loader' }
+            );
+
             compilerOptions.plugins.push(
                 new webpack.optimize.UglifyJsPlugin({
                     compress: {
@@ -151,6 +185,9 @@ jsmake.task('build.js', function (argv) {
                     sourceMap: true
                 })
             );
+        }
+        else {
+            compilerOptions.devTool = 'eval-source-map';
         }
 
         const compiler = webpack(compilerOptions);
@@ -170,25 +207,75 @@ jsmake.task('build.js', function (argv) {
     });
 });
 
+jsmake.task('lint.js', function (argv) {
+    jsmake.utils.shell(npmBinFolder + 'eslint ./src/scripts/ --ext .js,.jsx');
+});
+
 // Other Tasks
 jsmake.task('clean', function (argv) {
-    for (const bundleCategory of bundles) {
-        for (const bundle of bundleCategory) {
-            for (const item of bundle.clean) {
-                jsmake.utils.rmdir(item);
+    for (const bundleCategoryKey in bundles) {
+        const bundleCategory = bundles[bundleCategoryKey];
+
+        for (const bundleKey in bundleCategory) {
+            const bundle = bundleCategory[bundleKey];
+
+            for (const item in bundle.clean) {
+                jsmake.utils.rmdir(bundle.clean[item]);
             }
         }
     }
 });
 
 jsmake.task('serve', function (argv) {
-    const bsConfig = require('./bs-config.json');
+    for (const watchFolderKey in watchFolders) {
+        const watchFolder = watchFolders[watchFolderKey];
 
-    browserSync.init(bsConfig);
+        browserSync.watch(
+            watchFolder.match,
+            function (event, file) {
+                if (event !== 'change') {
+                    return;
+                }
+
+                const runContext = jsmake.createRunContext();
+
+                runContext.setArgv({
+                    match: watchFolder.match,
+                    file: file
+                });
+
+                for (taskKey in watchFolder.tasks) {
+                    const task = watchFolder.tasks[taskKey];
+
+                    runContext.addTask(jsmake.tasks[task]);
+                }
+
+                runContext.runExecutionQueue()
+                    .then(function () {
+                        browserSync.reload(watchFolder.match);
+                    })
+                    .catch(function (ex) {
+                        console.error(ex);
+                    });
+            }
+        );
+    }
+
+    browserSync.init({
+        injectChanges: false,
+        watchOptions: {
+            ignored: 'node_modules'
+        },
+        server: {
+            baseDir: './',
+            // directory: true,
+            index: 'index.html'
+        }
+    });
 });
 
-jsmake.task('lint', [ ]);
+jsmake.task('lint', [ 'lint.js' ]);
 jsmake.task('build', [ 'build.js', 'build.css' ]);
 jsmake.task('rebuild', [ 'clean', 'build' ]);
 
-jsmake.task('default', [ 'build', 'serve' ]);
+// jsmake.task('default', [ 'lint', 'build', 'serve' ]);
