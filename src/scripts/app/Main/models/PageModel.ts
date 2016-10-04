@@ -4,14 +4,14 @@ import 'whatwg-fetch';
 
 import * as Constants from '../../Constants.ts';
 
-import { Cache } from '../utils/Cache.ts';
+import { Cache } from '../../utils/Cache.ts';
 
 export class PageModel {
 
     cache: Cache;
 
     constructor() {
-        this.cache = Cache.assign();
+        this.cache = new Cache();
     }
 
     public getEntriesByProperty(property: string, value: string) {

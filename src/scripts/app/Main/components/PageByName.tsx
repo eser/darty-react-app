@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import { PageModel } from '../models/PageModel.ts';
+import { Services } from '../../utils/Services.ts';
 
+import { PageModel } from '../models/PageModel.ts';
 import { PageContent } from '../controls/PageContent.tsx';
 import { LinearTimeline } from '../controls/LinearTimeline.tsx';
 
@@ -18,7 +19,7 @@ export class PageByName extends React.Component<any, any> {
             error: false
         };
 
-        this.model = new PageModel();
+        this.model = Services.get(PageModel);
         this.updateDatasource(this.props.params.name);
     }
 

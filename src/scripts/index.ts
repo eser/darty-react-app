@@ -9,4 +9,4 @@ if (global.Promise === undefined) {
     es6promise.polyfill();
 }
 
-app.render();
+app.init();

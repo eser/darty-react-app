@@ -1,3 +1,7 @@
+import { Services } from './utils/Services.ts';
+
+import { PageModel } from './Main/models/PageModel.ts';
+
 export enum PageTypes {
     None,
     Page
@@ -36,6 +40,21 @@ export class PageManager {
         }
 
         return null;
+    }
+
+    static prefetch(page: Page) {
+        if (page.type === PageTypes.Page) {
+            const model = Services.get(PageModel);
+
+            model.getPageByName(page.parameters.page);
+        }
+    }
+
+    static prefetchUrl() {
+        const url = location.hash,
+            page = this.identify(url);
+
+        this.prefetch(page);
     }
 
 }

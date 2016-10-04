@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import { PageModel } from '../models/PageModel.ts';
+import { Services } from '../../utils/Services.ts';
 
+import { PageModel } from '../models/PageModel.ts';
 import { PageList } from '../controls/PageList.tsx';
 
 export class Pages extends React.Component<any, any> {
@@ -17,7 +18,7 @@ export class Pages extends React.Component<any, any> {
             error: false
         };
 
-        this.model = new PageModel();
+        this.model = Services.get(PageModel);
         this.updateDatasource();
     }
 

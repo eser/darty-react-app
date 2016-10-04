@@ -1,14 +1,4 @@
-declare var global: any;
-
 export class Cache {
-
-    static assign() {
-        if (global.appCache === undefined) {
-            global.appCache = new Cache();
-        }
-
-        return global.appCache;
-    }
 
     items: any;
 

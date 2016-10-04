@@ -4,10 +4,11 @@ import * as React from 'react';
 import { IndexLink, Link } from 'react-router';
 import customHistory from '../History.ts';
 
-import { PageModel } from './models/PageModel.ts';
-import { PageTypes, Page, PageManager } from './utils/PageManager.ts';
-
+import { Services } from '../utils/Services.ts';
+import { PageTypes, Page, PageManager } from '../PageManager.ts';
 import * as Constants from '../Constants.ts';
+
+import { PageModel } from './models/PageModel.ts';
 
 export class Main extends React.Component<any, any> {
 
@@ -27,7 +28,8 @@ export class Main extends React.Component<any, any> {
             }
         };
 
-        this.model = new PageModel();
+        console.log('c', Date.now());
+        this.model = Services.get(PageModel);
 
         if (global.app === undefined) {
             global.app = this;
@@ -40,12 +42,6 @@ export class Main extends React.Component<any, any> {
         };
     }
 
-    public prefetchPage(page: Page) {
-        if (page.type === PageTypes.Page) {
-            this.model.getPageByName(page.parameters.page);
-        }
-    }
-
     public clickHandler(ev) {
         const target = ev.target;
 
@@ -54,7 +50,7 @@ export class Main extends React.Component<any, any> {
                 page = PageManager.identify(url);
 
             if (page.type !== PageTypes.None) {
-                this.prefetchPage(page);
+                // PageManager.prefetch(page);
                 customHistory.push(PageManager.getUrl(page));
 
                 ev.preventDefault();
