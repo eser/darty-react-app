@@ -1,19 +1,24 @@
 const fs = require('fs'),
     path = require('path'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    webpack = require('webpack');
 
+// package definitions
 const
     isProduction = (
         process.env.NODE_ENV === 'production' ||
         process.env.PROD === '1'
     ),
     npmBinFolder = './node_modules/.bin/',
-    distFolder = './dist/bundles/';
+    distFolder = './dist/bundles/',
+    distPublicFolder = '/dist/bundles/';
 
 const bundles = {
     js: {
         app: {
-            source: './src/scripts/index.ts',
+            source: [
+                './src/scripts/index.ts'
+            ],
             clean: [
                 './dist/bundles/app.js',
                 './dist/bundles/app.js.map'
@@ -65,6 +70,81 @@ const watchFolders = [
         ]
     }
 ];
+
+// webpack definitions
+const buildBundleEntriesJs = {};
+
+for (const key in bundles.js) {
+    const bundle = bundles.js[key];
+
+    if (isProduction) {
+        buildBundleEntriesJs[key] = bundle.source;
+    }
+    else {
+        buildBundleEntriesJs[key] = [ 'webpack/hot/dev-server', 'webpack-hot-middleware/client' ].concat(bundle.source);
+    }
+}
+
+const bundlerOptions = {
+    entry: buildBundleEntriesJs,
+    output: {
+        path: path.resolve(distFolder),
+        publicPath: distPublicFolder,
+        filename: '[name].js'
+    },
+
+    resolve: {
+        extensions: [ '', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json', 'index.json' ]
+    },
+
+    module: {
+        loaders: [
+            { test: /\.tsx?$/, exclude: /node_modules/, loaders: [ 'react-hot-loader/webpack', 'ts-loader' ] },
+            { test: /\.json$/, loaders: [ 'json-loader' ] }
+        ],
+
+        preLoaders: [
+        ]
+    },
+
+    plugins: [
+        new webpack.EnvironmentPlugin([
+            'NODE_ENV'
+        ]),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'vendor.js'
+        }),
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
+    ]
+};
+
+if (isProduction) {
+    // Enable sourcemaps for debugging webpack's output.
+    bundlerOptions.devtool = 'source-map';
+
+    // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+    bundlerOptions.module.preLoaders.push(
+        { test: /\.js$/, loader: 'source-map-loader' }
+    );
+
+    bundlerOptions.plugins.push(
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            },
+            comments: false,
+            sourceMap: true
+        })
+    );
+}
+else {
+    bundlerOptions.devTool = 'eval-source-map';
+}
+
+const bundler = webpack(bundlerOptions);
 
 // CSS Tasks
 const buildBundleKeysCss = [];
@@ -123,76 +203,9 @@ for (const key in bundles.css) {
 jsmake.task('build.css', buildBundleKeysCss);
 
 // JavaScript Tasks
-const buildBundleEntriesJs = {};
-
-for (const key in bundles.js) {
-    const bundle = bundles.js[key];
-
-    buildBundleEntriesJs[key] = bundle.source;
-}
-
 jsmake.task('build.js', function (argv) {
     return new Promise(function (resolve, reject) {
-        const webpack = require('webpack');
-
-        const compilerOptions = {
-            entry: buildBundleEntriesJs,
-            output: {
-                path: distFolder,
-                filename: '[name].js'
-            },
-
-            resolve: {
-                extensions: [ '', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json', 'index.json' ]
-            },
-
-            module: {
-                loaders: [
-                    { test: /\.tsx?$/, loader: 'ts-loader' },
-                    { test: /\.json$/, loader: 'json-loader' }
-                ],
-
-                preLoaders: [
-                ]
-            },
-
-            plugins: [
-                new webpack.EnvironmentPlugin([
-                    'NODE_ENV'
-                ]),
-                new webpack.optimize.CommonsChunkPlugin({
-                    name: 'vendor',
-                    filename: 'vendor.js'
-                })
-            ]
-        };
-
-        if (isProduction || argv.prod === true) {
-            // Enable sourcemaps for debugging webpack's output.
-            compilerOptions.devtool = 'source-map';
-
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            compilerOptions.module.preLoaders.push(
-                { test: /\.js$/, loader: 'source-map-loader' }
-            );
-
-            compilerOptions.plugins.push(
-                new webpack.optimize.UglifyJsPlugin({
-                    compress: {
-                        warnings: false
-                    },
-                    comments: false,
-                    sourceMap: true
-                })
-            );
-        }
-        else {
-            compilerOptions.devTool = 'eval-source-map';
-        }
-
-        const compiler = webpack(compilerOptions);
-
-        compiler.run(function (err, result) {
+        bundler.run(function (err, result) {
             if (err) {
                 console.error(err);
                 reject(err);
@@ -261,6 +274,9 @@ jsmake.task('serve', function (argv) {
         );
     }
 
+    const webpackDevMiddleware = require('webpack-dev-middleware'),
+        webpackHotMiddleware = require('webpack-hot-middleware');
+
     browserSync.init({
         injectChanges: false,
         watchOptions: {
@@ -269,7 +285,17 @@ jsmake.task('serve', function (argv) {
         server: {
             baseDir: './',
             // directory: true,
-            index: 'index.html'
+            index: 'index.html',
+            middleware: [
+                webpackDevMiddleware(
+                    bundler,
+                    {
+                        publicPath: bundlerOptions.output.publicPath,
+                        stats: { colors: true }
+                    }
+                ),
+                webpackHotMiddleware(bundler)
+            ]
         }
     });
 });

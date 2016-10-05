@@ -28,7 +28,6 @@ export class Main extends React.Component<any, any> {
             }
         };
 
-        console.log('c', Date.now());
         this.model = Services.get(PageModel);
 
         if (global.app === undefined) {
