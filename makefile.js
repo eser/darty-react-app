@@ -15,16 +15,8 @@ const
 
 const bundles = {
     js: {
-        app: {
-            source: [
-                './src/scripts/index.ts'
-            ],
-            clean: [
-                './dist/bundles/app.js',
-                './dist/bundles/app.js.map'
-            ]
-        },
         vendor: {
+            target: 'web',
             source: [
                 'es6-promise',
                 'whatwg-fetch',
@@ -37,6 +29,16 @@ const bundles = {
             clean: [
                 './dist/bundles/vendor.js',
                 './dist/bundles/vendor.js.map'
+            ]
+        },
+        app: {
+            target: 'web',
+            source: [
+                './src/scripts/index.ts'
+            ],
+            clean: [
+                './dist/bundles/app.js',
+                './dist/bundles/app.js.map'
             ]
         }
     },
@@ -81,70 +83,16 @@ for (const key in bundles.js) {
         buildBundleEntriesJs[key] = bundle.source;
     }
     else {
-        buildBundleEntriesJs[key] = [ 'webpack/hot/dev-server', 'webpack-hot-middleware/client' ].concat(bundle.source);
+        buildBundleEntriesJs[key] = [ 'webpack/hot/dev-server', 'webpack-hot-middleware/client', ...bundle.source ];
     }
 }
 
-const bundlerOptions = {
-    entry: buildBundleEntriesJs,
-    output: {
-        path: path.resolve(distFolder),
-        publicPath: distPublicFolder,
-        filename: '[name].js'
-    },
+const webpackTemplateFile = (isProduction) ? './webpack.prod.config.js' : './webpack.dev.config.js',
+    webpackTemplate = require(webpackTemplateFile);
 
-    resolve: {
-        extensions: [ '', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json', 'index.json' ]
-    },
+webpackTemplate.entry = buildBundleEntriesJs;
 
-    module: {
-        loaders: [
-            { test: /\.tsx?$/, exclude: /node_modules/, loaders: [ 'react-hot-loader/webpack', 'ts-loader' ] },
-            { test: /\.json$/, loaders: [ 'json-loader' ] }
-        ],
-
-        preLoaders: [
-        ]
-    },
-
-    plugins: [
-        new webpack.EnvironmentPlugin([
-            'NODE_ENV'
-        ]),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: 'vendor.js'
-        }),
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-    ]
-};
-
-if (isProduction) {
-    // Enable sourcemaps for debugging webpack's output.
-    bundlerOptions.devtool = 'source-map';
-
-    // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-    bundlerOptions.module.preLoaders.push(
-        { test: /\.js$/, loader: 'source-map-loader' }
-    );
-
-    bundlerOptions.plugins.push(
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            comments: false,
-            sourceMap: true
-        })
-    );
-}
-else {
-    bundlerOptions.devTool = 'eval-source-map';
-}
-
-const bundler = webpack(bundlerOptions);
+const bundler = webpack(webpackTemplate);
 
 // CSS Tasks
 const buildBundleKeysCss = [];
@@ -224,6 +172,11 @@ jsmake.task('lint.js', function (argv) {
     jsmake.utils.shell(npmBinFolder + 'eslint ./src/scripts/ --ext .js,.jsx');
 });
 
+// Test Tasks
+jsmake.task('test', function (argv) {
+    jsmake.utils.shell(npmBinFolder + 'mocha --compilers ts:typescript-require --recursive ./test/');
+});
+
 // Other Tasks
 jsmake.task('clean', function (argv) {
     for (const bundleCategoryKey in bundles) {
@@ -290,7 +243,7 @@ jsmake.task('serve', function (argv) {
                 webpackDevMiddleware(
                     bundler,
                     {
-                        publicPath: bundlerOptions.output.publicPath,
+                        publicPath: webpackTemplate.output.publicPath,
                         stats: { colors: true }
                     }
                 ),

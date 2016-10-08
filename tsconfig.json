@@ -15,7 +15,10 @@
         "preserveConstEnums": true,
         "suppressImplicitAnyIndexErrors": true,
         "newLine": "LF",
-        "rootDir": "src/scripts/",
+        "rootDirs": [
+            "src/scripts/",
+            "test/"
+        ],
         "outDir": "dist/scripts/"
     },
     "filesGlob": [

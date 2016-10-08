@@ -4,7 +4,7 @@ import { Router, Route, IndexRoute } from 'react-router';
 import customHistory from './History.ts';
 
 import { Services } from './utils/Services.ts';
-import { PageManager } from './PageManager.ts';
+import { NavigationManager } from './NavigationManager.ts';
 
 import { Main } from './Main/Main.tsx';
 import { NotFound } from './Main/components/NotFound.tsx';
@@ -31,7 +31,6 @@ function render() {
 }
 
 export function init() {
-    console.log('p', Date.now());
-    PageManager.prefetchUrl();
+    NavigationManager.prefetchUrl();
     render();
 }

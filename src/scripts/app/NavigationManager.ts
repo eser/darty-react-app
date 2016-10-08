@@ -19,7 +19,7 @@ export class Page {
 
 }
 
-export class PageManager {
+export class NavigationManager {
 
     static identify(url: string) {
         if (url.substring(0, 8) == '#/pages/') {

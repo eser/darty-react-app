@@ -5,7 +5,7 @@ import { IndexLink, Link } from 'react-router';
 import customHistory from '../History.ts';
 
 import { Services } from '../utils/Services.ts';
-import { PageTypes, Page, PageManager } from '../PageManager.ts';
+import { PageTypes, Page, NavigationManager } from '../NavigationManager.ts';
 import * as Constants from '../Constants.ts';
 
 import { PageModel } from './models/PageModel.ts';
@@ -46,11 +46,11 @@ export class Main extends React.Component<any, any> {
 
         if (target.tagName === 'A') {
             const url = target.getAttribute('href'),
-                page = PageManager.identify(url);
+                page = NavigationManager.identify(url);
 
             if (page.type !== PageTypes.None) {
-                // PageManager.prefetch(page);
-                customHistory.push(PageManager.getUrl(page));
+                // NavigationManager.prefetch(page);
+                customHistory.push(NavigationManager.getUrl(page));
 
                 ev.preventDefault();
             }
