@@ -3,9 +3,9 @@ declare var global: any;
 import * as React from 'react';
 import * as ReactMarkdown from 'react-markdown';
 
-import { Conditional } from './Conditional.tsx';
+import { Conditional } from './Conditional';
 
-import * as Constants from '../../Constants.ts';
+import * as Constants from '../../Constants';
 
 export class LinearTimelineItem extends React.Component<any, any> {
 

@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { Services } from '../../utils/Services.ts';
+import { Services } from '../../utils/Services';
 
-import { PageModel } from '../models/PageModel.ts';
-import { PageList } from '../controls/PageList.tsx';
+import { PageModel } from '../models/PageModel';
+import { PageList } from '../controls/PageList';
 
 export class Pages extends React.Component<any, any> {
 

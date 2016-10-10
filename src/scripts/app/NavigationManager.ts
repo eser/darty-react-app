@@ -1,6 +1,6 @@
-import { Services } from './utils/Services.ts';
+import { Services } from './utils/Services';
 
-import { PageModel } from './Main/models/PageModel.ts';
+import { PageModel } from './Main/models/PageModel';
 
 export enum PageTypes {
     None,

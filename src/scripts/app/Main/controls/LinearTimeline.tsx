@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router';
 
-import { LinearTimelineItem } from './LinearTimelineItem.tsx';
+import { LinearTimelineItem } from './LinearTimelineItem';
 
 export class LinearTimeline extends React.Component<any, any> {
 

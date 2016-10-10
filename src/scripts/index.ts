@@ -3,10 +3,16 @@ declare var global: any;
 
 import * as es6promise from 'es6-promise';
 
-import * as app from './app/index.tsx';
+import { app } from './app/index';
 
+// polyfills
 if (global.Promise === undefined) {
     es6promise.polyfill();
+}
+
+// app
+if (global.app === undefined) {
+    global.app = app;
 }
 
 app.init();

@@ -6,8 +6,7 @@ const fs = require('fs'),
 // package definitions
 const
     isProduction = (
-        process.env.NODE_ENV === 'production' ||
-        process.env.PROD === '1'
+        process.env.NODE_ENV === 'production'
     ),
     npmBinFolder = './node_modules/.bin/',
     distFolder = './dist/bundles/',
@@ -113,7 +112,7 @@ for (const key in bundles.css) {
                 })
             ];
 
-            if (isProduction || argv.prod === true) {
+            if (isProduction) {
                 processors.push(cssnano());
             }
 

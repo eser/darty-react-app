@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import { Services } from '../../utils/Services.ts';
+import { Services } from '../../utils/Services';
 
-import { PageModel } from '../models/PageModel.ts';
-import { PageContent } from '../controls/PageContent.tsx';
-import { LinearTimeline } from '../controls/LinearTimeline.tsx';
+import { PageModel } from '../models/PageModel';
+import { PageContent } from '../controls/PageContent';
+import { LinearTimeline } from '../controls/LinearTimeline';
 
 export class PageByName extends React.Component<any, any> {
 

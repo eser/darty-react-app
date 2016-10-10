@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { Services } from '../../utils/Services.ts';
+import { Services } from '../../utils/Services';
 
-import { PageModel } from '../models/PageModel.ts';
-import { LinearTimeline } from '../controls/LinearTimeline.tsx';
+import { PageModel } from '../models/PageModel';
+import { LinearTimeline } from '../controls/LinearTimeline';
 
 export class EntriesByProperty extends React.Component<any, any> {
 
