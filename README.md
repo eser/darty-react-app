@@ -19,8 +19,8 @@ framework, so you're free to architect your code in the way that you want.
 * Upcoming CSSNext standards ready for today (see [cssnext.io](http://cssnext.io/)).
 * Minification for CSS and JavaScript.
 * Hot module reloading watching React JSX, Typescript and CSS sources.
+* Unit-testing-ready environment.
 * ~~JavaScript and CSS hinter and coding style checker.~~ (not ready yet)
-* ~~Unit-testing-ready environment.~~ (not ready yet)
 
 
 ## Quick start
