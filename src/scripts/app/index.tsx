@@ -1,23 +1,33 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router } from 'react-router';
-import customHistory from './History';
+import { customHistory } from './History';
 
-import { NavigationManager } from './NavigationManager';
+import { NavigationManager } from './utils/NavigationManager';
 
-import { MainRoutes } from './Main/';
+import { main } from './Main/';
 
 export class App {
 
+    navigationManager: NavigationManager;
+    history: any;
+
+    constructor() {
+        this.navigationManager = new NavigationManager();
+        this.history = customHistory;
+    }
+
     public init() {
-        NavigationManager.prefetchUrl();
+        this.navigationManager.addRange(main.navigationItems);
+        this.navigationManager.prefetchUrl(location.hash);
+
         this.render();
     }
 
     private render() {
         ReactDOM.render(
-            <Router history={customHistory}>
-                {MainRoutes}
+            <Router history={this.history}>
+                {main.routes}
             </Router>,
             document.getElementsByTagName('app')[0]
         );

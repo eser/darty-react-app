@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Services } from '../../utils/Services';
+import { services } from '../../utils/services';
 
 import { PageModel } from '../models/PageModel';
 import { PageContent } from '../controls/PageContent';
@@ -19,7 +19,7 @@ export class PageByName extends React.Component<any, any> {
             error: false
         };
 
-        this.model = Services.get(PageModel);
+        this.model = services.get(PageModel);
         this.updateDatasource(this.props.params.name);
     }
 

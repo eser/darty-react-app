@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
+import { services } from '../utils/services';
+
+import { PageModel } from './models/PageModel';
+
 import { Layout } from './Layout';
 import { NotFound } from './components/NotFound';
 import { Home } from './components/Home';
@@ -9,7 +13,7 @@ import { EntriesByTag } from './components/EntriesByTag';
 import { Pages } from './components/Pages';
 import { PageByName } from './components/PageByName';
 
-export const MainRoutes = (
+const routes = (
     <Route path="/" component={Layout}>
         <IndexRoute component={Home} />
         <Route path="properties/:property/:value" component={EntriesByProperty} />
@@ -19,3 +23,28 @@ export const MainRoutes = (
         <Route path="*" component={NotFound} status={404} />
     </Route>
 );
+
+export const main = {
+    routes: routes,
+    navigationItems: {
+        page: {
+            resolver: (url: string) => {
+                if (url.substring(0, 8) != '#/pages/') {
+                    return null;
+                }
+
+                return {
+                    page: decodeURIComponent(url.substring(8))
+                };
+            },
+            builder: (parameters: { page: string }) => {
+                return `/pages/${encodeURIComponent(parameters.page)}`
+            },
+            prefetcher: (parameters: { page: string }) => {
+                const model = services.get(PageModel);
+
+                model.getPageByName(parameters.page);
+            }
+        }
+    }
+};

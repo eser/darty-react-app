@@ -2,23 +2,19 @@ declare var global: any;
 
 import * as React from 'react';
 import { IndexLink, Link } from 'react-router';
-import customHistory from '../History';
+import { app } from '../';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers/';
 
-import { Services } from '../utils/Services';
-import { PageTypes, Page, NavigationManager } from '../NavigationManager';
+import { services } from '../utils/services';
 import * as Constants from '../Constants';
-
-import { PageModel } from './models/PageModel';
 
 export class Layout extends React.Component<any, any> {
 
     store: any;
     state: any;
-    model: PageModel;
 
     static childContextTypes = {
         session: React.PropTypes.object.isRequired
@@ -34,8 +30,6 @@ export class Layout extends React.Component<any, any> {
                 userLevel: Constants.USER_LEVEL_VISITOR
             }
         };
-
-        this.model = Services.get(PageModel);
     }
 
     public getChildContext() {
@@ -49,11 +43,10 @@ export class Layout extends React.Component<any, any> {
 
         if (target.tagName === 'A') {
             const url = target.getAttribute('href'),
-                page = NavigationManager.identify(url);
+                navigationItem = app.navigationManager.identify(url);
 
-            if (page.type !== PageTypes.None) {
-                // NavigationManager.prefetch(page);
-                customHistory.push(NavigationManager.getUrl(page));
+            if (navigationItem !== null) {
+                app.history.push(navigationItem.getUrl());
 
                 ev.preventDefault();
             }

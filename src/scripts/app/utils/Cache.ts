@@ -1,12 +1,12 @@
 export class Cache {
 
-    items: any;
+    items: { [key: string]: any };
 
     constructor() {
         this.items = {};
     }
 
-    public serializeKey(key) {
+    serializeKey(key): string {
         if (key.constructor === Array) {
             return key.join('_');
         }
@@ -14,11 +14,11 @@ export class Cache {
         return key;
     }
 
-    public set(key, promise) {
+    set(key, promise): void {
         this.items[this.serializeKey(key)] = promise;
     }
 
-    public get(key) {
+    get(key): any {
         return this.items[this.serializeKey(key)];
     }
 

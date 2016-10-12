@@ -1,12 +1,12 @@
 class ServicesContainer {
 
-    items: any;
+    items: { [key: string]: any };
 
     constructor() {
         this.items = {};
     }
 
-    get(type) {
+    get(type: any): any {
         if (this.items[type] === undefined) {
             this.items[type] = new type();
         }
@@ -16,4 +16,4 @@ class ServicesContainer {
 
 }
 
-export const Services = new ServicesContainer();
+export const services = new ServicesContainer();
