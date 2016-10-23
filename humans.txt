@@ -12,5 +12,6 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5, JavaScript
-    TypeScript, Gulp
+    TypeScript, jsmake
     React, jQuery, Bootstrap
+    Redux
