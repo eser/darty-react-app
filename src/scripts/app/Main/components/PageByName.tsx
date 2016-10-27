@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { services } from '../../utils/services';
+import services from '../../utils/services';
 
 import { PageModel } from '../models/PageModel';
 import { PageContent } from '../controls/PageContent';

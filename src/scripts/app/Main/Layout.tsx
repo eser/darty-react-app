@@ -8,7 +8,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers/';
 
-import { services } from '../utils/services';
+import services from '../utils/services';
 import * as Constants from '../Constants';
 
 export class Layout extends React.Component<any, any> {

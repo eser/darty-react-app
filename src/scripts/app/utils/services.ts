@@ -1,4 +1,4 @@
-class ServicesContainer {
+export class Services {
 
     items: { [key: string]: any };
 
@@ -16,4 +16,6 @@ class ServicesContainer {
 
 }
 
-export const services = new ServicesContainer();
+const services = new Services();
+
+export default services;

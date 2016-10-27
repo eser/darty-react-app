@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import { services } from '../utils/services';
+import services from '../utils/services';
 
 import { PageModel } from './models/PageModel';
 
