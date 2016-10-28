@@ -1,17 +1,17 @@
-export class NavigationItem {
+export interface NavigationItem {
 
-    resolver: (url: string) => { [key: string]: string };
-    builder: (parameters: { [key: string]: string }) => string;
-    prefetcher: (parameters: { [key: string]: string }) => void;
+    resolver: (url: string) => any;
+    builder: (parameters: any) => string;
+    prefetcher: (parameters: any) => void;
 
 }
 
 export class NavigationResult {
 
     navigationItem: NavigationItem;
-    parameters: { [key: string]: string };
+    parameters: any;
 
-    constructor(navigationItem: NavigationItem, parameters: { [key: string]: string }) {
+    constructor(navigationItem: NavigationItem, parameters: any) {
         this.navigationItem = navigationItem;
         this.parameters = parameters;
     }
@@ -28,36 +28,35 @@ export class NavigationResult {
 
 export class NavigationManager {
 
-    items: { [key: string]: NavigationItem };
+    items: Map<string, NavigationItem>;
 
     constructor() {
-        this.items = {};
+        this.items = new Map<string, NavigationItem>();
     }
 
     add(key: string, navigationItem: NavigationItem): void {
         this.items[key] = navigationItem;
     }
 
-    addRange(navigationItems: { [key: string]: NavigationItem }): void {
-        for (const navigationItemKey in navigationItems) {
-            this.add(navigationItemKey, navigationItems[navigationItemKey]);
+    addRange(navigationItems: Map<string, NavigationItem>): void {
+        for (const [ key, value ] of navigationItems) {
+            this.add(key, value);
         }
     }
 
-    identify(url: string): NavigationResult {
-        for (const itemKey in this.items) {
-            const item = this.items[itemKey],
-                result = item.resolver(url);
+    identify(url: string): NavigationResult | null {
+        for (const [ key, value ] of this.items) {
+            const result = value.resolver(url);
 
             if (result !== null) {
-                return new NavigationResult(item, result);
+                return new NavigationResult(value, result);
             }
         }
 
         return null;
     }
 
-    getUrl(name: string, parameters: { [key: string]: string }): string {
+    getUrl(name: string, parameters: any): string {
         return this.items[name].builder(parameters);
     }
 
@@ -70,3 +69,5 @@ export class NavigationManager {
     }
 
 }
+
+export default NavigationManager;

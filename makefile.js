@@ -202,9 +202,7 @@ jsmake.task('serve', function (argv) {
                     return;
                 }
 
-                const runContext = jsmake.createRunContext();
-
-                runContext.setArgv({
+                const runContext = jsmake.createRunContext({
                     match: watchFolder.match,
                     file: file
                 });

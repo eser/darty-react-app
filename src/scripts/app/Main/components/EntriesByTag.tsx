@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import services from '../../utils/services';
+import { app } from '../../';
 
 import { PageModel } from '../models/PageModel';
 import { LinearTimeline } from '../controls/LinearTimeline';
@@ -18,15 +18,15 @@ export class EntriesByTag extends React.Component<any, any> {
             error: false
         };
 
-        this.model = services.get(PageModel);
+        this.model = app.services.get(PageModel);
         this.updateDatasource(this.props.params.tag);
     }
 
-    public componentWillReceiveProps(nextProps: any) {
+    componentWillReceiveProps(nextProps: any): void {
         this.updateDatasource(nextProps.params.tag);
     }
 
-    public render() {
+    render(): any {
         if (this.state.error) {
             console.error(this.state.error);
 
@@ -50,10 +50,12 @@ export class EntriesByTag extends React.Component<any, any> {
         );
     }
 
-    private updateDatasource(tag: string) {
+    updateDatasource(tag: string): void {
         this.model.getEntriesByTag(tag)
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ error: err }); });
     }
 
 }
+
+export default EntriesByTag;

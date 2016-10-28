@@ -8,7 +8,7 @@ export class Home extends React.Component<any, any> {
         super(props);
     }
 
-    public render() {
+    render(): any {
         return (
             <div>
                 <h1>Home</h1>
@@ -19,3 +19,5 @@ export class Home extends React.Component<any, any> {
     }
 
 }
+
+export default Home;

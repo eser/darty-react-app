@@ -2,21 +2,22 @@ declare var global: any;
 
 import * as React from 'react';
 import { IndexLink, Link } from 'react-router';
+
 import { app } from '../';
+import { NavigationResult } from '../utils/NavigationManager';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers/';
 
-import services from '../utils/services';
-import * as Constants from '../Constants';
+import * as constants from '../constants';
 
 export class Layout extends React.Component<any, any> {
 
     store: any;
     state: any;
 
-    static childContextTypes = {
+    static childContextTypes: { [key: string]: any } = {
         session: React.PropTypes.object.isRequired
     };
 
@@ -27,28 +28,31 @@ export class Layout extends React.Component<any, any> {
 
         this.state = {
             session: {
-                userLevel: Constants.USER_LEVEL_VISITOR
+                userLevel: constants.USER_LEVEL_VISITOR
             }
         };
     }
 
-    public getChildContext() {
+    getChildContext(): { [key: string]: any } {
         return {
             session: this.state.session
         };
     }
 
-    public clickHandler(ev) {
-        const target = ev.target;
+    clickHandler(ev): void {
+        const target: Element = ev.target;
 
         if (target.tagName === 'A') {
-            const url = target.getAttribute('href'),
-                navigationItem = app.navigationManager.identify(url);
+            const url = target.getAttribute('href');
 
-            if (navigationItem !== null) {
-                app.history.push(navigationItem.getUrl());
+            if (url !== null) {
+                const navigationItem = app.navigationManager.identify(url);
 
-                ev.preventDefault();
+                if (navigationItem !== null) {
+                    app.history.push(navigationItem.getUrl());
+
+                    ev.preventDefault();
+                }
             }
         }
     }
@@ -56,7 +60,7 @@ export class Layout extends React.Component<any, any> {
     // the JSX syntax is quite intuitive but check out
     // https://facebook.github.io/react/docs/jsx-in-depth.html
     // if you need additional help
-    public render() {
+    render(): any {
         return (
             <Provider store={this.store}>
                 <div>
@@ -81,3 +85,5 @@ export class Layout extends React.Component<any, any> {
     }
 
 }
+
+export default Layout;

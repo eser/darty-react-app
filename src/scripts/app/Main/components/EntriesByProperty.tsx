@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import services from '../../utils/services';
+import { app } from '../../';
 
 import { PageModel } from '../models/PageModel';
 import { LinearTimeline } from '../controls/LinearTimeline';
@@ -18,15 +18,15 @@ export class EntriesByProperty extends React.Component<any, any> {
             error: false
         };
 
-        this.model = services.get(PageModel);
+        this.model = app.services.get(PageModel);
         this.updateDatasource(this.props.params.property, this.props.params.value);
     }
 
-    public componentWillReceiveProps(nextProps: any) {
+    componentWillReceiveProps(nextProps: any): void {
         this.updateDatasource(nextProps.params.property, nextProps.params.value);
     }
 
-    public render() {
+    render(): any {
         if (this.state.error) {
             console.error(this.state.error);
 
@@ -50,10 +50,12 @@ export class EntriesByProperty extends React.Component<any, any> {
         );
     }
 
-    private updateDatasource(property: string, value: string) {
+    updateDatasource(property: string, value: string): void {
         this.model.getEntriesByProperty(property, value)
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ error: err }); });
     }
 
 }
+
+export default EntriesByProperty;

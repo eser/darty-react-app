@@ -8,7 +8,7 @@ export class NotFound extends React.Component<any, any> {
         super(props);
     }
 
-    public render() {
+    render(): any {
         return (
             <div>
                 <h1>Not Found</h1>
@@ -19,3 +19,5 @@ export class NotFound extends React.Component<any, any> {
     }
 
 }
+
+export default NotFound;

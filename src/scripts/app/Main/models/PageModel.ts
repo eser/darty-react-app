@@ -2,78 +2,70 @@ declare var fetch: Function;
 
 import 'whatwg-fetch';
 
-import * as Constants from '../../Constants';
+import * as constants from '../../constants';
 
-import { Cache } from '../../utils/Cache';
+import { CacheContainer } from '../../utils/CacheContainer';
 
 export class PageModel {
 
-    cache: Cache;
+    cache: CacheContainer;
 
     constructor() {
-        this.cache = new Cache();
+        this.cache = new CacheContainer();
     }
 
-    public getEntriesByProperty(property: string, value: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/entries/properties/${encodeURIComponent(property)}/${encodeURIComponent(value)}.json`)
+    async getEntriesByProperty(property: string, value: string): Promise<any> {
+        return await fetch(`${constants.SERVICE_BASE_URL}/entries/properties/${encodeURIComponent(property)}/${encodeURIComponent(value)}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
 
                 return response;
-            })
-            .catch((ex) => {
             });
     }
 
-    public getEntriesByTag(tag: string) {
-        return fetch(`${Constants.SERVICE_BASE_URL}/entries/tags/${encodeURIComponent(tag)}.json`)
+    async getEntriesByTag(tag: string): Promise<any> {
+        return await fetch(`${constants.SERVICE_BASE_URL}/entries/tags/${encodeURIComponent(tag)}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
 
                 return response;
-            })
-            .catch((ex) => {
             });
     }
 
-    public getPages() {
-        return fetch(`${Constants.SERVICE_BASE_URL}/pages/index.json`)
+    async getPages(): Promise<any> {
+        return await fetch(`${constants.SERVICE_BASE_URL}/pages/index.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.pages = this.processPagesListData(response.pages);
 
                 return response;
-            })
-            .catch((ex) => {
             });
     }
 
-    public getPageByNameFetch(name: string) {
+    async getPageByNameFetch(name: string): Promise<any> {
         // console.log('fetch', name);
-        const promise = fetch(`${Constants.SERVICE_BASE_URL}/pages/names/${encodeURIComponent(name)}.json`)
+        const promise: Promise<any> = fetch(`${constants.SERVICE_BASE_URL}/pages/names/${encodeURIComponent(name)}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
 
                 return response;
-            })
-            .catch((ex) => {
             });
 
         this.cache.set([ 'pageByName', name ], promise);
 
-        return promise;
+        return await promise;
     }
 
-    public getPageByName(name: string) {
+    async getPageByName(name: string): Promise<any> {
         // console.log('get', name);
-        return this.cache.get([ 'pageByName', name ]) || this.getPageByNameFetch(name);
+        return await (this.cache.get([ 'pageByName', name ]) || this.getPageByNameFetch(name));
     }
 
-    private processEntriesTimelineData(data: any) {
-        const output = {};
+    processEntriesTimelineData(data: any): { [key: string]: any } {
+        const output: { [key: string]: any } = {};
 
         for (const entry of data) {
             if (output[entry.properties.year] === undefined) {
@@ -95,9 +87,8 @@ export class PageModel {
         return output;
     }
 
-
-    private processPagesListData(data: any) {
-        const output = {};
+    processPagesListData(data: any): { [key: string]: any } {
+        const output: { [key: string]: any } = {};
 
         for (const page of data) {
             if (output[page.type] === undefined) {
@@ -111,3 +102,5 @@ export class PageModel {
     }
 
 }
+
+export default PageModel;

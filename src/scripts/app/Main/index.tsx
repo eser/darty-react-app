@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import services from '../utils/services';
+import { app, App, AppModule } from '../';
+import { NavigationItem } from '../utils/NavigationManager';
 
 import { PageModel } from './models/PageModel';
 
@@ -13,38 +14,58 @@ import { EntriesByTag } from './components/EntriesByTag';
 import { Pages } from './components/Pages';
 import { PageByName } from './components/PageByName';
 
-const routes = (
-    <Route path="/" component={Layout}>
-        <IndexRoute component={Home} />
-        <Route path="properties/:property/:value" component={EntriesByProperty} />
-        <Route path="tags/:tag" component={EntriesByTag} />
-        <Route path="pages" component={Pages} />
-        <Route path="pages/:name" component={PageByName} />
-        <Route path="*" component={NotFound} status={404} />
-    </Route>
-);
+export interface Page {
+    page: string;
+}
 
-export const main = {
-    routes: routes,
-    navigationItems: {
-        page: {
-            resolver: (url: string) => {
-                if (url.substring(0, 8) != '#/pages/') {
-                    return null;
-                }
+export class Main implements AppModule {
 
-                return {
-                    page: decodeURIComponent(url.substring(8))
-                };
-            },
-            builder: (parameters: { page: string }) => {
-                return `/pages/${encodeURIComponent(parameters.page)}`
-            },
-            prefetcher: (parameters: { page: string }) => {
-                const model = services.get(PageModel);
+    owner: App;
 
-                model.getPageByName(parameters.page);
-            }
-        }
+    constructor(owner: App) {
+        this.owner = owner;
     }
-};
+
+    getRoutes(): any {
+        return (
+            <Route path="/" component={Layout}>
+                <IndexRoute component={Home} />
+                <Route path="properties/:property/:value" component={EntriesByProperty} />
+                <Route path="tags/:tag" component={EntriesByTag} />
+                <Route path="pages" component={Pages} />
+                <Route path="pages/:name" component={PageByName} />
+                <Route path="*" component={NotFound} status={404} />
+            </Route>
+        );
+    }
+
+    getNavigationItems(): Map<string, NavigationItem> {
+        return new Map<string, NavigationItem>([
+            [
+                'page',
+                {
+                    resolver: (url: string): Page | null => {
+                        if (url.substring(0, 8) != '#/pages/') {
+                            return null;
+                        }
+
+                        return {
+                            page: decodeURIComponent(url.substring(8))
+                        };
+                    },
+                    builder: (parameters: Page): string => {
+                        return `/pages/${encodeURIComponent(parameters.page)}`
+                    },
+                    prefetcher: (parameters: Page): void => {
+                        const model: PageModel = app.services.get(PageModel);
+
+                        model.getPageByName(parameters.page);
+                    }
+                }
+            ]
+        ]);
+    }
+
+}
+
+export default Main;

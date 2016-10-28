@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import services from '../../utils/services';
+import { app } from '../../';
 
 import { PageModel } from '../models/PageModel';
 import { PageList } from '../controls/PageList';
@@ -18,15 +18,15 @@ export class Pages extends React.Component<any, any> {
             error: false
         };
 
-        this.model = services.get(PageModel);
+        this.model = app.services.get(PageModel);
         this.updateDatasource();
     }
 
-    public componentWillReceiveProps(nextProps: any) {
+    componentWillReceiveProps(nextProps: any): void {
         this.updateDatasource();
     }
 
-    public render() {
+    render(): any {
         if (this.state.error) {
             console.error(this.state.error);
 
@@ -50,10 +50,12 @@ export class Pages extends React.Component<any, any> {
         );
     }
 
-    private updateDatasource() {
+    updateDatasource(): void {
         this.model.getPages()
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ error: err }); });
     }
 
 }
+
+export default Pages;

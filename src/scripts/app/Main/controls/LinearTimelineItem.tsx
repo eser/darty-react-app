@@ -5,7 +5,7 @@ import * as ReactMarkdown from 'react-markdown';
 
 import { Conditional } from './Conditional';
 
-import * as Constants from '../../Constants';
+import * as constants from '../../constants';
 
 export class LinearTimelineItem extends React.Component<any, any> {
 
@@ -13,7 +13,7 @@ export class LinearTimelineItem extends React.Component<any, any> {
     refs: any;
     context: any;
 
-    static contextTypes = {
+    static contextTypes: { [key: string]: any } = {
         session: React.PropTypes.object.isRequired
     };
 
@@ -25,20 +25,20 @@ export class LinearTimelineItem extends React.Component<any, any> {
         };
     }
 
-    public getContent() {
+    getContent(): string {
         return this.props.item.content.replace(
             /\[\[([^\]]*)\]\]/g,
             (all, first) => `[${first}](#/pages/${encodeURIComponent(first)})`
         );
     }
 
-    public toggleEditing() {
+    toggleEditing(): void {
         this.setState({
             editable: !this.state.editable
         });
     }
 
-    public saveChanges() {
+    saveChanges(): void {
         this.props.item.content = this.refs.textarea.value;
 
         this.setState({
@@ -46,13 +46,13 @@ export class LinearTimelineItem extends React.Component<any, any> {
         });
     }
 
-    public discardChanges() {
+    discardChanges(): void {
         this.setState({
             editable: false
         });
     }
 
-    public render() {
+    render(): any {
         if (this.state.editable) {
             return (
                 <div>
@@ -65,7 +65,7 @@ export class LinearTimelineItem extends React.Component<any, any> {
             );
         }
 
-        const isPrivileged = (this.context.session.userLevel >= Constants.USER_LEVEL_EDITOR);
+        const isPrivileged = (this.context.session.userLevel >= constants.USER_LEVEL_EDITOR);
 
         return (
             <div ref="markdown">
@@ -78,3 +78,5 @@ export class LinearTimelineItem extends React.Component<any, any> {
     }
 
 }
+
+export default LinearTimelineItem;

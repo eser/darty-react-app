@@ -8,7 +8,7 @@ export class Conditional extends React.Component<any, any> {
         super(props);
     }
 
-    public render() {
+    render(): any {
         if (!this.props.test) {
             return null;
         }
@@ -17,3 +17,5 @@ export class Conditional extends React.Component<any, any> {
     }
 
 }
+
+export default Conditional;

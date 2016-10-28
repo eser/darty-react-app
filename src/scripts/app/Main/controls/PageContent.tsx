@@ -8,7 +8,7 @@ export class PageContent extends React.Component<any, any> {
         super(props);
     }
 
-    public render() {
+    render(): any {
         const data = this.props.datasource[this.props.datakey];
 
         return (
@@ -19,3 +19,5 @@ export class PageContent extends React.Component<any, any> {
     }
 
 }
+
+export default PageContent;

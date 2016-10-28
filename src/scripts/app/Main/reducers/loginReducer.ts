@@ -1,9 +1,11 @@
-import * as Constants from '../../Constants';
+import * as constants from '../../constants';
 
 const initialState = {
-    userLevel: Constants.USER_LEVEL_VISITOR
+    userLevel: constants.USER_LEVEL_VISITOR
 };
 
-export default (state = initialState, action) => {
+export const loginReducer = (state = initialState, action) => {
     return state;
 };
+
+export default loginReducer;

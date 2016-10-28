@@ -1,38 +1,59 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router } from 'react-router';
-import { customHistory } from './History';
 
-import { NavigationManager } from './utils/NavigationManager';
+import { ServiceContainer } from './utils/ServiceContainer';
+import { NavigationItem, NavigationManager } from './utils/NavigationManager';
+import { history } from './history';
 
-import { main } from './Main/';
+export interface AppModule {
+
+    getRoutes(): void;
+    getNavigationItems(): Map<string, NavigationItem>;
+
+}
 
 export class App {
 
+    services: ServiceContainer;
     navigationManager: NavigationManager;
     history: any;
 
+    appModules: Array<AppModule>;
+
     constructor() {
+        this.services = new ServiceContainer();
         this.navigationManager = new NavigationManager();
-        this.history = customHistory;
+        this.history = history;
+
+        this.appModules = new Array<AppModule>();
     }
 
-    public init() {
-        this.navigationManager.addRange(main.navigationItems);
+    addModule(appModuleType): void {
+        const appModule: AppModule = new appModuleType(this);
+
+        this.appModules.push(appModule);
+    }
+
+    init(): void {
+        for (const appModule of this.appModules) {
+            this.navigationManager.addRange(appModule.getNavigationItems());
+        }
+
         this.navigationManager.prefetchUrl(location.hash);
-
-        this.render();
     }
 
-    private render() {
+    render(targetElement: Element): void {
         ReactDOM.render(
             <Router history={this.history}>
-                {main.routes}
+                {this.appModules.map((appModule) => appModule.getRoutes())}
             </Router>,
-            document.getElementsByTagName('app')[0]
+            targetElement
         );
     }
 
 }
 
 export const app = new App();
+
+export default app;
