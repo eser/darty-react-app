@@ -1,16 +1,29 @@
 import * as React from 'react';
+import * as ReactRedux from 'react-redux';
 
-import { app } from '../../';
+import { app } from '../../../';
 
-import { PageModel } from '../models/PageModel';
-import { LinearTimeline } from '../controls/LinearTimeline';
+import { PageModel } from '../../models/PageModel';
+import { LinearTimeline } from '../dumb/LinearTimeline';
 
-export class EntriesByProperty extends React.Component<any, any> {
+import * as constants from '../../../constants';
 
-    state: any;
+export interface EntriesByPropertyPropsInterface {
+    store: any;
+    params: any;
+}
+
+export interface EntriesByPropertyStateInterface {
+    datasource: any;
+    error: any;
+}
+
+export class EntriesByProperty_ extends React.Component<EntriesByPropertyPropsInterface, EntriesByPropertyStateInterface> {
+
+    state: EntriesByPropertyStateInterface;
     model: PageModel;
 
-    constructor(props: any) {
+    constructor(props: EntriesByPropertyPropsInterface) {
         super(props);
 
         this.state = {
@@ -22,7 +35,7 @@ export class EntriesByProperty extends React.Component<any, any> {
         this.updateDatasource(this.props.params.property, this.props.params.value);
     }
 
-    componentWillReceiveProps(nextProps: any): void {
+    componentWillReceiveProps(nextProps: EntriesByPropertyPropsInterface): void {
         this.updateDatasource(nextProps.params.property, nextProps.params.value);
     }
 
@@ -41,11 +54,13 @@ export class EntriesByProperty extends React.Component<any, any> {
             );
         }
 
+        const isEditable = (this.props.store.login.userLevel >= constants.UserLevels.Editor);
+
         return (
             <div>
                 <h1>Entries By Property: {this.props.params.property}={this.props.params.value}</h1>
 
-                <LinearTimeline datasource={this.state.datasource} datakey="entries" />
+                <LinearTimeline datasource={this.state.datasource} datakey="entries" editable={isEditable} />
             </div>
         );
     }
@@ -53,9 +68,13 @@ export class EntriesByProperty extends React.Component<any, any> {
     updateDatasource(property: string, value: string): void {
         this.model.getEntriesByProperty(property, value)
             .then((response) => { this.setState({ datasource: response, error: false }); })
-            .catch((err) => { this.setState({ error: err }); });
+            .catch((err) => { this.setState({ datasource: null, error: err }); });
     }
 
 }
+
+export const EntriesByProperty = ReactRedux.connect
+    ((store) => ({ store: store }))
+    (EntriesByProperty_);
 
 export default EntriesByProperty;

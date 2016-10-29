@@ -1,11 +1,19 @@
 import * as React from 'react';
 import { Link } from 'react-router';
 
-export class PageList extends React.Component<any, any> {
+export interface PageListPropsInterface {
+    datasource: any;
+    datakey: any;
+}
 
-    state: any;
+export interface PageListStateInterface {
+}
 
-    constructor(props: any) {
+export class PageList extends React.Component<PageListPropsInterface, PageListStateInterface> {
+
+    state: PageListStateInterface;
+
+    constructor(props: PageListPropsInterface) {
         super(props);
     }
 

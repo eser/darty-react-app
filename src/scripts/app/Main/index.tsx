@@ -7,12 +7,12 @@ import { NavigationItemInterface } from '../utils/NavigationManager';
 import { PageModel } from './models/PageModel';
 
 import { Layout } from './Layout';
-import { NotFound } from './components/NotFound';
-import { Home } from './components/Home';
-import { EntriesByProperty } from './components/EntriesByProperty';
-import { EntriesByTag } from './components/EntriesByTag';
-import { Pages } from './components/Pages';
-import { PageByName } from './components/PageByName';
+import { NotFound } from './components/smart/NotFound';
+import { Home } from './components/smart/Home';
+import { EntriesByProperty } from './components/smart/EntriesByProperty';
+import { EntriesByTag } from './components/smart/EntriesByTag';
+import { Pages } from './components/smart/Pages';
+import { PageByName } from './components/smart/PageByName';
 
 export interface PageInterface {
     page: string;

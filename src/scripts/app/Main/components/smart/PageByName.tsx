@@ -1,17 +1,30 @@
 import * as React from 'react';
+import * as ReactRedux from 'react-redux';
 
-import { app } from '../../';
+import { app } from '../../../';
 
-import { PageModel } from '../models/PageModel';
-import { PageContent } from '../controls/PageContent';
-import { LinearTimeline } from '../controls/LinearTimeline';
+import { PageModel } from '../../models/PageModel';
+import { PageContent } from '../dumb/PageContent';
+import { LinearTimeline } from '../dumb/LinearTimeline';
 
-export class PageByName extends React.Component<any, any> {
+import * as constants from '../../../constants';
 
-    state: any;
+export interface PageByNamePropsInterface {
+    store: any;
+    params: any;
+}
+
+export interface PageByNameStateInterface {
+    datasource: any;
+    error: any;
+}
+
+export class PageByName_ extends React.Component<PageByNamePropsInterface, PageByNameStateInterface> {
+
+    state: PageByNameStateInterface;
     model: PageModel;
 
-    constructor(props: any) {
+    constructor(props: PageByNamePropsInterface) {
         super(props);
 
         this.state = {
@@ -23,7 +36,7 @@ export class PageByName extends React.Component<any, any> {
         this.updateDatasource(this.props.params.name);
     }
 
-    componentWillReceiveProps(nextProps: any): void {
+    componentWillReceiveProps(nextProps: PageByNamePropsInterface): void {
         this.updateDatasource(nextProps.params.name);
     }
 
@@ -42,6 +55,8 @@ export class PageByName extends React.Component<any, any> {
             );
         }
 
+        const isEditable = (this.props.store.login.userLevel >= constants.UserLevels.Editor);
+
         return (
             <div>
                 <h1>Page: {this.props.params.name}</h1>
@@ -50,7 +65,7 @@ export class PageByName extends React.Component<any, any> {
 
                 <h2>History:</h2>
 
-                <LinearTimeline datasource={this.state.datasource} datakey="entries" />
+                <LinearTimeline datasource={this.state.datasource} datakey="entries" editable={isEditable} />
             </div>
         );
     }
@@ -58,9 +73,13 @@ export class PageByName extends React.Component<any, any> {
     updateDatasource(name: string): void {
         this.model.getPageByName(name)
             .then((response) => { this.setState({ datasource: response, error: false }); })
-            .catch((err) => { this.setState({ error: err }); });
+            .catch((err) => { this.setState({ datasource: null, error: err }); });
     }
 
 }
+
+export const PageByName = ReactRedux.connect
+    ((store) => ({ store: store }))
+    (PageByName_);
 
 export default PageByName;

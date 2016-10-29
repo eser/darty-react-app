@@ -1,27 +1,27 @@
-declare var global: any;
-
 import * as React from 'react';
 import * as ReactMarkdown from 'react-markdown';
 
 import { Conditional } from './Conditional';
 
-import * as constants from '../../constants';
+export interface LinearTimelineItemPropsInterface {
+    item: any;
+    editable: boolean;
+}
 
-export class LinearTimelineItem extends React.Component<any, any> {
+export interface LinearTimelineItemStateInterface {
+    editMode: boolean;
+}
 
-    state: any;
+export class LinearTimelineItem extends React.Component<LinearTimelineItemPropsInterface, LinearTimelineItemStateInterface> {
+
+    state: LinearTimelineItemStateInterface;
     refs: any;
-    context: any;
 
-    static contextTypes: { [key: string]: any } = {
-        store: React.PropTypes.object.isRequired
-    };
-
-    constructor(props: any) {
+    constructor(props: LinearTimelineItemPropsInterface) {
         super(props);
 
         this.state = {
-            editable: false
+            editMode: false
         };
     }
 
@@ -32,9 +32,9 @@ export class LinearTimelineItem extends React.Component<any, any> {
         );
     }
 
-    toggleEditing(): void {
+    toggleEditMode(): void {
         this.setState({
-            editable: !this.state.editable
+            editMode: !this.state.editMode
         });
     }
 
@@ -42,18 +42,18 @@ export class LinearTimelineItem extends React.Component<any, any> {
         this.props.item.content = this.refs.textarea.value;
 
         this.setState({
-            editable: false
+            editMode: false
         });
     }
 
     discardChanges(): void {
         this.setState({
-            editable: false
+            editMode: false
         });
     }
 
     render(): any {
-        if (this.state.editable) {
+        if (this.state.editMode) {
             return (
                 <div>
                     <div>
@@ -65,13 +65,11 @@ export class LinearTimelineItem extends React.Component<any, any> {
             );
         }
 
-        const isPrivileged = (this.context.store.getState().login.userLevel >= constants.UserLevels.Editor);
-
         return (
             <div ref="markdown">
                 <ReactMarkdown source={this.getContent()} />
-                <Conditional test={isPrivileged}>
-                    <button onClick={this.toggleEditing.bind(this)}>edit</button>
+                <Conditional test={this.props.editable}>
+                    <button onClick={this.toggleEditMode.bind(this)}>edit</button>
                 </Conditional>
             </div>
         );

@@ -3,11 +3,20 @@ import { Link } from 'react-router';
 
 import { LinearTimelineItem } from './LinearTimelineItem';
 
-export class LinearTimeline extends React.Component<any, any> {
+export interface LinearTimelinePropsInterface {
+    datasource: any;
+    datakey: any;
+    editable: boolean;
+}
 
-    state: any;
+export interface LinearTimelineStateInterface {
+}
 
-    constructor(props: any) {
+export class LinearTimeline extends React.Component<LinearTimelinePropsInterface, LinearTimelineStateInterface> {
+
+    state: LinearTimelineStateInterface;
+
+    constructor(props: LinearTimelinePropsInterface) {
         super(props);
     }
 
@@ -41,7 +50,7 @@ export class LinearTimeline extends React.Component<any, any> {
                                                     const entryKey = `entry.${encodeURIComponent(item.entry)}`;
 
                                                     return (
-                                                        <li key={entryKey}><LinearTimelineItem key={`${entryKey}.item`} item={item} /></li>
+                                                        <li key={entryKey}><LinearTimelineItem key={`${entryKey}.item`} item={item} editable={this.props.editable} /></li>
                                                     );
                                                 })}
                                             </ul>

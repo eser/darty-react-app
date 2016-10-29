@@ -1,10 +1,16 @@
 import * as React from 'react';
 
-export class Home extends React.Component<any, any> {
+export interface HomePropsInterface {
+}
 
-    state: any;
+export interface HomeStateInterface {
+}
 
-    constructor(props: any) {
+export class Home extends React.Component<HomePropsInterface, HomeStateInterface> {
+
+    state: HomeStateInterface;
+
+    constructor(props: HomePropsInterface) {
         super(props);
     }
 

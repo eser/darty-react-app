@@ -1,16 +1,25 @@
 import * as React from 'react';
 
-import { app } from '../../';
+import { app } from '../../../';
 
-import { PageModel } from '../models/PageModel';
-import { PageList } from '../controls/PageList';
+import { PageModel } from '../../models/PageModel';
+import { PageList } from '../dumb/PageList';
 
-export class Pages extends React.Component<any, any> {
+export interface PagesPropsInterface {
+    params: any;
+}
 
-    state: any;
+export interface PagesStateInterface {
+    datasource: any;
+    error: any;
+}
+
+export class Pages extends React.Component<PagesPropsInterface, PagesStateInterface> {
+
+    state: PagesStateInterface;
     model: PageModel;
 
-    constructor(props: any) {
+    constructor(props: PagesPropsInterface) {
         super(props);
 
         this.state = {
@@ -22,7 +31,7 @@ export class Pages extends React.Component<any, any> {
         this.updateDatasource();
     }
 
-    componentWillReceiveProps(nextProps: any): void {
+    componentWillReceiveProps(nextProps: PagesPropsInterface): void {
         this.updateDatasource();
     }
 
@@ -53,7 +62,7 @@ export class Pages extends React.Component<any, any> {
     updateDatasource(): void {
         this.model.getPages()
             .then((response) => { this.setState({ datasource: response, error: false }); })
-            .catch((err) => { this.setState({ error: err }); });
+            .catch((err) => { this.setState({ datasource: null, error: err }); });
     }
 
 }

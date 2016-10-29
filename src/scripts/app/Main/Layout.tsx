@@ -7,20 +7,27 @@ import { app } from '../';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import combinedReducers from './flow/combinedReducers';
+import { combinedReducers } from './flow/';
 
 import * as constants from '../constants';
 
-export class Layout extends React.Component<any, any> {
+export interface LayoutPropsInterface {
+    children: any;
+}
+
+export interface LayoutStateInterface {
+}
+
+export class Layout extends React.Component<LayoutPropsInterface, LayoutStateInterface> {
 
     store: any;
-    state: any;
+    state: LayoutStateInterface;
 
     static childContextTypes: { [key: string]: any } = {
         store: React.PropTypes.object.isRequired
     };
 
-    constructor(props: any) {
+    constructor(props: LayoutPropsInterface) {
         super(props);
 
         this.store = createStore(combinedReducers);
