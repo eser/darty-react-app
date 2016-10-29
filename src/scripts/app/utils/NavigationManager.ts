@@ -1,4 +1,4 @@
-export interface NavigationItem {
+export interface NavigationItemInterface {
 
     resolver: (url: string) => any;
     builder: (parameters: any) => string;
@@ -8,10 +8,10 @@ export interface NavigationItem {
 
 export class NavigationResult {
 
-    navigationItem: NavigationItem;
+    navigationItem: NavigationItemInterface;
     parameters: any;
 
-    constructor(navigationItem: NavigationItem, parameters: any) {
+    constructor(navigationItem: NavigationItemInterface, parameters: any) {
         this.navigationItem = navigationItem;
         this.parameters = parameters;
     }
@@ -28,17 +28,17 @@ export class NavigationResult {
 
 export class NavigationManager {
 
-    items: Map<string, NavigationItem>;
+    items: Map<string, NavigationItemInterface>;
 
     constructor() {
-        this.items = new Map<string, NavigationItem>();
+        this.items = new Map<string, NavigationItemInterface>();
     }
 
-    add(key: string, navigationItem: NavigationItem): void {
+    add(key: string, navigationItem: NavigationItemInterface): void {
         this.items[key] = navigationItem;
     }
 
-    addRange(navigationItems: Map<string, NavigationItem>): void {
+    addRange(navigationItems: Map<string, NavigationItemInterface>): void {
         for (const [ key, value ] of navigationItems) {
             this.add(key, value);
         }

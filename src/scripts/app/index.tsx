@@ -3,13 +3,13 @@ import * as ReactDOM from 'react-dom';
 import { Router } from 'react-router';
 
 import { ServiceContainer } from './utils/ServiceContainer';
-import { NavigationItem, NavigationManager } from './utils/NavigationManager';
+import { NavigationItemInterface, NavigationManager } from './utils/NavigationManager';
 import { history } from './history';
 
-export interface AppModule {
+export interface AppModuleInterface {
 
     getRoutes(): void;
-    getNavigationItems(): Map<string, NavigationItem>;
+    getNavigationItems(): Map<string, NavigationItemInterface>;
 
 }
 
@@ -19,18 +19,18 @@ export class App {
     navigationManager: NavigationManager;
     history: any;
 
-    appModules: Array<AppModule>;
+    appModules: Array<AppModuleInterface>;
 
     constructor() {
         this.services = new ServiceContainer();
         this.navigationManager = new NavigationManager();
         this.history = history;
 
-        this.appModules = new Array<AppModule>();
+        this.appModules = new Array<AppModuleInterface>();
     }
 
     addModule(appModuleType): void {
-        const appModule: AppModule = new appModuleType(this);
+        const appModule: AppModuleInterface = new appModuleType(this);
 
         this.appModules.push(appModule);
     }

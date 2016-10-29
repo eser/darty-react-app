@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import { app, App, AppModule } from '../';
-import { NavigationItem } from '../utils/NavigationManager';
+import { app, App, AppModuleInterface } from '../';
+import { NavigationItemInterface } from '../utils/NavigationManager';
 
 import { PageModel } from './models/PageModel';
 
@@ -14,11 +14,11 @@ import { EntriesByTag } from './components/EntriesByTag';
 import { Pages } from './components/Pages';
 import { PageByName } from './components/PageByName';
 
-export interface Page {
+export interface PageInterface {
     page: string;
 }
 
-export class Main implements AppModule {
+export class Main implements AppModuleInterface {
 
     owner: App;
 
@@ -39,13 +39,13 @@ export class Main implements AppModule {
         );
     }
 
-    getNavigationItems(): Map<string, NavigationItem> {
-        return new Map<string, NavigationItem>([
+    getNavigationItems(): Map<string, NavigationItemInterface> {
+        return new Map<string, NavigationItemInterface>([
             [
                 'page',
                 {
-                    resolver: (url: string): Page | null => {
-                        if (url.substring(0, 8) != '#/pages/') {
+                    resolver: (url: string): PageInterface | null => {
+                        if (url.substring(0, 8) !== '#/pages/') {
                             return null;
                         }
 
@@ -53,10 +53,10 @@ export class Main implements AppModule {
                             page: decodeURIComponent(url.substring(8))
                         };
                     },
-                    builder: (parameters: Page): string => {
+                    builder: (parameters: PageInterface): string => {
                         return `/pages/${encodeURIComponent(parameters.page)}`
                     },
-                    prefetcher: (parameters: Page): void => {
+                    prefetcher: (parameters: PageInterface): void => {
                         const model: PageModel = app.services.get(PageModel);
 
                         model.getPageByName(parameters.page);

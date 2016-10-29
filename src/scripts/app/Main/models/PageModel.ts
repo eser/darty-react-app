@@ -15,7 +15,7 @@ export class PageModel {
     }
 
     async getEntriesByProperty(property: string, value: string): Promise<any> {
-        return await fetch(`${constants.SERVICE_BASE_URL}/entries/properties/${encodeURIComponent(property)}/${encodeURIComponent(value)}.json`)
+        return await fetch(`${constants.ServiceBaseUrl}/entries/properties/${encodeURIComponent(property)}/${encodeURIComponent(value)}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
@@ -25,7 +25,7 @@ export class PageModel {
     }
 
     async getEntriesByTag(tag: string): Promise<any> {
-        return await fetch(`${constants.SERVICE_BASE_URL}/entries/tags/${encodeURIComponent(tag)}.json`)
+        return await fetch(`${constants.ServiceBaseUrl}/entries/tags/${encodeURIComponent(tag)}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
@@ -35,7 +35,7 @@ export class PageModel {
     }
 
     async getPages(): Promise<any> {
-        return await fetch(`${constants.SERVICE_BASE_URL}/pages/index.json`)
+        return await fetch(`${constants.ServiceBaseUrl}/pages/index.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.pages = this.processPagesListData(response.pages);
@@ -46,7 +46,7 @@ export class PageModel {
 
     async getPageByNameFetch(name: string): Promise<any> {
         // console.log('fetch', name);
-        const promise: Promise<any> = fetch(`${constants.SERVICE_BASE_URL}/pages/names/${encodeURIComponent(name)}.json`)
+        const promise: Promise<any> = fetch(`${constants.ServiceBaseUrl}/pages/names/${encodeURIComponent(name)}.json`)
             .then((response) => response.json())
             .then((response) => {
                 response.entries = this.processEntriesTimelineData(response.entries);
@@ -64,8 +64,8 @@ export class PageModel {
         return await (this.cache.get([ 'pageByName', name ]) || this.getPageByNameFetch(name));
     }
 
-    processEntriesTimelineData(data: any): { [key: string]: any } {
-        const output: { [key: string]: any } = {};
+    processEntriesTimelineData(data: any): Map<string, any> {
+        const output = new Map<string, any>();
 
         for (const entry of data) {
             if (output[entry.properties.year] === undefined) {
@@ -87,8 +87,8 @@ export class PageModel {
         return output;
     }
 
-    processPagesListData(data: any): { [key: string]: any } {
-        const output: { [key: string]: any } = {};
+    processPagesListData(data: any): Map<string, any> {
+        const output = new Map<string, any>();
 
         for (const page of data) {
             if (output[page.type] === undefined) {

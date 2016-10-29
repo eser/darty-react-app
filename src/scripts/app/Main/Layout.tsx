@@ -4,11 +4,10 @@ import * as React from 'react';
 import { IndexLink, Link } from 'react-router';
 
 import { app } from '../';
-import { NavigationResult } from '../utils/NavigationManager';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import reducer from './reducers/';
+import combinedReducers from './flow/combinedReducers';
 
 import * as constants from '../constants';
 
@@ -18,24 +17,20 @@ export class Layout extends React.Component<any, any> {
     state: any;
 
     static childContextTypes: { [key: string]: any } = {
-        session: React.PropTypes.object.isRequired
+        store: React.PropTypes.object.isRequired
     };
 
     constructor(props: any) {
         super(props);
 
-        this.store = createStore(reducer);
-
-        this.state = {
-            session: {
-                userLevel: constants.USER_LEVEL_VISITOR
-            }
-        };
+        this.store = createStore(combinedReducers);
+        global.store = this.store;
+        this.state = {};
     }
 
     getChildContext(): { [key: string]: any } {
         return {
-            session: this.state.session
+            store: this.store
         };
     }
 

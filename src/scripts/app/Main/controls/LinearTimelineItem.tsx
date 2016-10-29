@@ -14,7 +14,7 @@ export class LinearTimelineItem extends React.Component<any, any> {
     context: any;
 
     static contextTypes: { [key: string]: any } = {
-        session: React.PropTypes.object.isRequired
+        store: React.PropTypes.object.isRequired
     };
 
     constructor(props: any) {
@@ -65,7 +65,7 @@ export class LinearTimelineItem extends React.Component<any, any> {
             );
         }
 
-        const isPrivileged = (this.context.session.userLevel >= constants.USER_LEVEL_EDITOR);
+        const isPrivileged = (this.context.store.getState().login.userLevel >= constants.UserLevels.Editor);
 
         return (
             <div ref="markdown">
