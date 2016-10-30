@@ -60,11 +60,21 @@ Use `jsmake` command in project folder to execute tasks defined in `makefile.js`
 
 ## Directory Structure
 
-| Directory                | Description                                                                            |
-|--------------------------|----------------------------------------------------------------------------------------|
-| `/src/styles/`           | CSS sources                                                                            |
-| `/src/scripts/`          | TypeScript sources                                                                     |
-| `/dist/bundles/`         | Output directory for stylesheet and javascript bundles                                 |
+| Directory                                          | Description                                                  |
+|----------------------------------------------------|--------------------------------------------------------------|
+| `/src/fonts/`                                      | Font assets                                                  |
+| `/src/images/`                                     | Image assets                                                 |
+| `/src/styles/`                                     | CSS sources                                                  |
+| `/src/scripts/`                                    | TypeScript sources                                           |
+| `/src/scripts/app/`                                | - Application                                                |
+| `/src/scripts/app/Main/`                           | -- Main Application Module                                   |
+| `/src/scripts/app/Main/components/dumb/`           | --- Dumb React Components                                    |
+| `/src/scripts/app/Main/components/smart/`          | --- Smart React Components                                   |
+| `/src/scripts/app/Main/flow/`                      | -- Redux Actions and Reducers                                |
+| `/src/scripts/app/Main/models/`                    | -- Models and services                                       |
+| `/src/scripts/utils/`                              | - Utility class and functions                                |
+| `/src/scripts.typings/`                            | TypeScript definition files                                  |
+| `/dist/bundles/`                                   | Output directory for stylesheet and javascript bundles       |
 
 
 ## Todo List
