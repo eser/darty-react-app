@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Router } from 'react-router';
+import * as ReactDOMServer from 'react-dom/server';
+import { Router, RouterContext, match } from 'react-router';
 
 import { ServiceContainer } from './utils/ServiceContainer';
 import { NavigationItemInterface, NavigationManager } from './utils/NavigationManager';
@@ -48,13 +49,43 @@ export class App {
         this.navigationManager.prefetchUrl(location.hash);
     }
 
-    render(targetElement: Element): void {
-        ReactDOM.render(
+    compile(): any {
+        return (
             <Router history={this.history}>
                 {Object.keys(this.modules).map((moduleKey) => this.modules[moduleKey].getRoutes())}
-            </Router>,
+            </Router>
+        );
+    }
+
+    renderToDOM(targetElement: Element): void {
+        ReactDOM.render(
+            this.compile(),
             targetElement
         );
+    }
+
+    renderToString(url: Location): Promise<string> {
+        return new Promise((resolve, reject) => {
+            match(
+                {
+                    routes: this.compile(),
+                    location: url
+                },
+                (err, redirect, props) => {
+                    if (err) {
+                        reject(err);
+
+                        return;
+                    }
+
+                    const result = ReactDOMServer.renderToString(
+                        <RouterContext {...props} />
+                    );
+
+                    resolve(result);
+                }
+            );
+        });
     }
 
 }

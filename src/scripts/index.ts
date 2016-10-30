@@ -21,4 +21,4 @@ if (global.app === undefined) {
 
 app.addModule(Main);
 app.init();
-app.render(appTargetElement);
+app.renderToDOM(appTargetElement);
