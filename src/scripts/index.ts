@@ -22,3 +22,4 @@ if (global.app === undefined) {
 app.addModule(Main);
 app.init();
 app.renderToDOM(appTargetElement);
+// app.renderToString('/').then(x => console.log(x));

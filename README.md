@@ -18,9 +18,18 @@ framework, so you're free to architect your code in the way that you want.
 * Module bundling with webpack to enable modularity.
 * Upcoming CSSNext standards ready for today (see [cssnext.io](http://cssnext.io/)).
 * Minification for CSS and JavaScript.
-* Hot module reloading watching React JSX, Typescript and CSS sources.
+* Hot module reloading on React JSX, Typescript and CSS sources.
+* Isomorphic between server and client.
 * Unit-testing-ready environment.
+* IntelliSense support on TypeScript.
 * ~~JavaScript and CSS hinter and coding style checker.~~ (not ready yet)
+
+
+## Architecture
+
+* React for rendering components.
+* React Router for SPA routing.
+* Redux for state management.
 
 
 ## Quick start
@@ -30,7 +39,7 @@ Clone the git repo `git clone
    release](https://github.com/eserozvataf/ts-spa-boilerplate/releases) you'd like to
    use.
 
-Execute `npm install` to install dependencies for development environment.
+Execute `npm install` and `typings install` to install dependencies for development environment.
 
 
 ## Jsmake Tasks
@@ -43,14 +52,19 @@ $ npm install jsmake -g
 
 Use `jsmake` command in project folder to execute tasks defined in `makefile.js`.
 
+| Task                     | Description                                                                            |
+|--------------------------|----------------------------------------------------------------------------------------|
+| `build`                  | Builds the project                                                                     |
+| `serve`                  | Enables live development environment powered by hot module reloading and browser-sync  |
+
 
 ## Directory Structure
 
-| Directory                | Description                                                                         |
-|--------------------------|-------------------------------------------------------------------------------------|
-| `/src/styles/`           | CSS sources                                                                         |
-| `/src/scripts/`          | TypeScript sources                                                                  |
-| `/dist/bundles/`         | Output directory for stylesheet and javascript bundles                              |
+| Directory                | Description                                                                            |
+|--------------------------|----------------------------------------------------------------------------------------|
+| `/src/styles/`           | CSS sources                                                                            |
+| `/src/scripts/`          | TypeScript sources                                                                     |
+| `/dist/bundles/`         | Output directory for stylesheet and javascript bundles                                 |
 
 
 ## Todo List
@@ -61,6 +75,8 @@ See [GitHub Projects](https://github.com/eserozvataf/ts-spa-boilerplate/projects
 ## Requirements
 
 * node.js (https://nodejs.org/)
+* TypeScript (https://www.typescriptlang.org/)
+* Typings (https://github.com/typings/typings)
 * jsmake (https://github.com/eserozvataf/jsmake)
 
 

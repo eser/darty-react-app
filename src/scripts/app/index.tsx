@@ -64,12 +64,12 @@ export class App {
         );
     }
 
-    renderToString(url: Location): Promise<string> {
+    renderToString(url: string): Promise<string> {
         return new Promise((resolve, reject) => {
             match(
                 {
                     routes: this.compile(),
-                    location: url
+                    location: this.history.createLocation(url)
                 },
                 (err, redirect, props) => {
                     if (err) {
