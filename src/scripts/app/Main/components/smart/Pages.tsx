@@ -4,6 +4,8 @@ import { app } from '../../../';
 
 import { PageModel } from '../../models/PageModel';
 import { PageList } from '../dumb/PageList';
+import { Loading } from '../dumb/Loading';
+import { Error } from '../dumb/Error';
 
 export interface PagesPropsInterface {
     params: any;
@@ -40,13 +42,13 @@ export class Pages extends React.Component<PagesPropsInterface, PagesStateInterf
             console.error(this.state.error);
 
             return (
-                <div>An error occurred</div>
+                <Error message="An error occurred" />
             );
         }
 
         if (this.state.datasource === null) {
             return (
-                <div>Loading...</div>
+                <Loading />
             );
         }
 

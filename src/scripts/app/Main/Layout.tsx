@@ -20,25 +20,21 @@ export interface LayoutStateInterface {
 
 export class Layout extends React.Component<LayoutPropsInterface, LayoutStateInterface> {
 
+    static instance: Layout;
+
     store: any;
     state: LayoutStateInterface;
-
-    static childContextTypes: { [key: string]: any } = {
-        store: React.PropTypes.object.isRequired
-    };
 
     constructor(props: LayoutPropsInterface) {
         super(props);
 
-        this.store = createStore(combinedReducers);
-        global.store = this.store;
-        this.state = {};
-    }
+        const constructor_: any = this.constructor;
+        if (constructor_.instance === undefined) {
+            constructor_.instance = this;
+        }
 
-    getChildContext(): { [key: string]: any } {
-        return {
-            store: this.store
-        };
+        this.store = createStore(combinedReducers);
+        this.state = {};
     }
 
     clickHandler(ev): void {

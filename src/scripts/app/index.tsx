@@ -4,9 +4,12 @@ import { Router } from 'react-router';
 
 import { ServiceContainer } from './utils/ServiceContainer';
 import { NavigationItemInterface, NavigationManager } from './utils/NavigationManager';
+import { camelize } from './utils/camelize';
 import { history } from './history';
 
 export interface AppModuleInterface {
+
+    readonly root: any;
 
     getRoutes(): void;
     getNavigationItems(): Map<string, NavigationItemInterface>;
@@ -19,25 +22,27 @@ export class App {
     navigationManager: NavigationManager;
     history: any;
 
-    appModules: Array<AppModuleInterface>;
+    modules: { [key: string]: AppModuleInterface };
 
     constructor() {
         this.services = new ServiceContainer();
         this.navigationManager = new NavigationManager();
         this.history = history;
 
-        this.appModules = new Array<AppModuleInterface>();
+        this.modules = {};
     }
 
     addModule(appModuleType): void {
-        const appModule: AppModuleInterface = new appModuleType(this);
+        const appModule: AppModuleInterface = new appModuleType(); // this?
 
-        this.appModules.push(appModule);
+        this.modules[camelize(appModuleType.name)] = appModule;
     }
 
     init(): void {
-        for (const appModule of this.appModules) {
-            this.navigationManager.addRange(appModule.getNavigationItems());
+        for (const moduleKey of Object.keys(this.modules)) {
+            const module = this.modules[moduleKey];
+
+            this.navigationManager.addRange(module.getNavigationItems());
         }
 
         this.navigationManager.prefetchUrl(location.hash);
@@ -46,7 +51,7 @@ export class App {
     render(targetElement: Element): void {
         ReactDOM.render(
             <Router history={this.history}>
-                {this.appModules.map((appModule) => appModule.getRoutes())}
+                {Object.keys(this.modules).map((moduleKey) => this.modules[moduleKey].getRoutes())}
             </Router>,
             targetElement
         );

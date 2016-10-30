@@ -20,10 +20,8 @@ export interface PageInterface {
 
 export class Main implements AppModuleInterface {
 
-    owner: App;
-
-    constructor(owner: App) {
-        this.owner = owner;
+    get root(): any {
+        return Layout.instance;
     }
 
     getRoutes(): any {

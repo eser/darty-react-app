@@ -61,7 +61,7 @@ export class LinearTimeline extends React.Component<LinearTimelinePropsInterface
                                     const entryKey = `entry.${encodeURIComponent(item.entry)}`;
 
                                     return (
-                                        <li key={entryKey}><LinearTimelineItem key={`${entryKey}.item`} id={`${entryKey}.item`} item={item} /></li>
+                                        <li key={entryKey}><LinearTimelineItem key={`${entryKey}.item`} id={`${entryKey}.item`} item={item} editable={this.props.editable} /></li>
                                     );
                                 })}
                             </ul>

@@ -5,6 +5,8 @@ import { app } from '../../../';
 
 import { PageModel } from '../../models/PageModel';
 import { LinearTimeline } from '../dumb/LinearTimeline';
+import { Loading } from '../dumb/Loading';
+import { Error } from '../dumb/Error';
 
 import * as constants from '../../../constants';
 
@@ -44,13 +46,13 @@ export class EntriesByTag_ extends React.Component<EntriesByTagPropsInterface, E
             console.error(this.state.error);
 
             return (
-                <div>An error occurred</div>
+                <Error message="An error occurred" />
             );
         }
 
         if (this.state.datasource === null) {
             return (
-                <div>Loading...</div>
+                <Loading />
             );
         }
 
