@@ -1,5 +1,6 @@
 const path = require('path'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
@@ -14,10 +15,16 @@ module.exports = {
             'react-router',
             'history'
         ],
+        'vendor.css': [
+            './src/styles/vendor.css'
+        ],
         app: [
             'webpack/hot/dev-server',
             'webpack-hot-middleware/client',
             './src/scripts/index.ts'
+        ],
+        'app.css': [
+            './src/styles/app.css'
         ]
     },
 
@@ -28,13 +35,14 @@ module.exports = {
     },
 
     resolve: {
-        extensions: [ '', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json', 'index.json' ]
+        extensions: [ '', '.js', '.jsx', '.ts', '.tsx', '.js' ]
     },
 
     module: {
         loaders: [
             { test: /\.tsx?$/, exclude: /node_modules/, loaders: [ 'react-hot-loader/webpack', 'ts-loader' ] },
-            { test: /\.json$/, loaders: [ 'json-loader' ] }
+            { test: /\.json$/, loaders: [ 'json-loader' ] },
+            { test: /\.css$/, loader: ExtractTextPlugin.extract('style', [ 'css-loader?sourceMap&importLoaders=1', 'postcss-loader' ]) }
         ],
 
         preLoaders: [
@@ -50,8 +58,20 @@ module.exports = {
             filename: '[name].js',
             minChunks: Infinity
         }),
+        new ExtractTextPlugin('[name]'),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
-    ]
+    ],
+
+    postcss: function () {
+        const cssnext = require('postcss-cssnext');
+
+        return [
+            cssnext({
+                browsers: ['last 1 version'] // ,
+                // warnForDuplicates: false
+            })
+        ];
+    }
 };

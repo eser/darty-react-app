@@ -16,15 +16,6 @@ const bundles = {
     js: {
         vendor: {
             target: 'web',
-            source: [
-                'es6-promise',
-                'whatwg-fetch',
-                'jquery',
-                'react',
-                'react-dom',
-                'react-router',
-                'history'
-            ],
             clean: [
                 './dist/bundles/vendor.js',
                 './dist/bundles/vendor.js.map'
@@ -32,9 +23,6 @@ const bundles = {
         },
         app: {
             target: 'web',
-            source: [
-                './src/scripts/index.ts'
-            ],
             clean: [
                 './dist/bundles/app.js',
                 './dist/bundles/app.js.map'
@@ -42,9 +30,8 @@ const bundles = {
         }
     },
     css: {
-        // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
         app: {
-            source: './src/styles/app.css',
+            target: 'web',
             clean: [
                 './dist/bundles/app.css',
                 './dist/bundles/app.css.map'
@@ -61,96 +48,23 @@ const watchFolders = [
     {
         match: './src/scripts/**',
         tasks: [
-            'build.js'
+            'build'
         ]
     },
     {
         match: './src/styles/**',
         tasks: [
-            'build.css'
+            'build'
         ]
     }
 ];
 
 // webpack definitions
-const buildBundleEntriesJs = {};
-
-for (const key in bundles.js) {
-    const bundle = bundles.js[key];
-
-    if (isProduction) {
-        buildBundleEntriesJs[key] = bundle.source;
-    }
-    else {
-        buildBundleEntriesJs[key] = [ 'webpack/hot/dev-server', 'webpack-hot-middleware/client', ...bundle.source ];
-    }
-}
-
 const webpackTemplateFile = (isProduction) ? './webpack.prod.config.js' : './webpack.dev.config.js',
-    webpackTemplate = require(webpackTemplateFile);
+    webpackTemplate = require(webpackTemplateFile),
+    bundler = webpack(webpackTemplate);
 
-webpackTemplate.entry = buildBundleEntriesJs;
-
-const bundler = webpack(webpackTemplate);
-
-// CSS Tasks
-const buildBundleKeysCss = [];
-
-for (const key in bundles.css) {
-    const bundle = bundles.css[key];
-
-    jsmake.task('build.css.bundles.' + key, function (argv) {
-        return new Promise(function (resolve, reject) {
-            const postcss = require('postcss'),
-                cssnext = require('postcss-cssnext'),
-                cssnano = require('cssnano');
-
-            const processors = [
-                cssnext({
-                    browsers: ['last 1 version'] // ,
-                    // warnForDuplicates: false
-                })
-            ];
-
-            if (isProduction) {
-                processors.push(cssnano());
-            }
-
-            const destFile = distFolder + key + '.css';
-
-            postcss(processors)
-                .process(
-                    fs.readFileSync(bundle.source),
-                    {
-                        from: bundle.source,
-                        to: destFile,
-                        map: {
-                            inline: false
-                        }
-                    }
-                )
-                .then(function (result) {
-                    fs.writeFileSync(destFile, result.css);
-                    if (result.map) {
-                        fs.writeFileSync(destFile + '.map', result.map);
-                    }
-
-                    browserSync.reload();
-                    resolve();
-                })
-                .catch(function (ex) {
-                    console.error(ex);
-                    reject(ex);
-                });
-        });
-    });
-    buildBundleKeysCss.push('build.css.bundles.' + key);
-}
-
-jsmake.task('build.css', buildBundleKeysCss);
-
-// JavaScript Tasks
-jsmake.task('build.js', function (argv) {
+jsmake.task('build', function (argv) {
     return new Promise(function (resolve, reject) {
         bundler.run(function (err, result) {
             if (err) {
@@ -251,7 +165,6 @@ jsmake.task('serve', function (argv) {
 });
 
 jsmake.task('lint', [ 'lint.js' ]);
-jsmake.task('build', [ 'build.js', 'build.css' ]);
 jsmake.task('rebuild', [ 'clean', 'build' ]);
 
 // jsmake.task('default', [ 'lint', 'build', 'serve' ]);

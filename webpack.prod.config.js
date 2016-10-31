@@ -1,5 +1,6 @@
 const path = require('path'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
@@ -14,8 +15,14 @@ module.exports = {
             'react-router',
             'history'
         ],
+        'vendor.css': [
+            './src/styles/vendor.css'
+        ],
         app: [
             './src/scripts/index.ts'
+        ],
+        'app.css': [
+            './src/styles/app.css'
         ]
     },
 
@@ -26,13 +33,14 @@ module.exports = {
     },
 
     resolve: {
-        extensions: [ '', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.json', 'index.json' ]
+        extensions: [ '', '.js', '.jsx', '.ts', '.tsx', '.js' ]
     },
 
     module: {
         loaders: [
             { test: /\.tsx?$/, exclude: /node_modules/, loaders: [ 'react-hot-loader/webpack', 'ts-loader' ] },
-            { test: /\.json$/, loaders: [ 'json-loader' ] }
+            { test: /\.json$/, loaders: [ 'json-loader' ] },
+            { test: /\.css$/, loader: ExtractTextPlugin.extract('style', [ 'css-loader?sourceMap&importLoaders=1', 'postcss-loader' ]) }
         ],
 
         preLoaders: [
@@ -49,7 +57,8 @@ module.exports = {
             filename: '[name].js',
             minChunks: Infinity
         }),
-        new webpack.optimize.OccurenceOrderPlugin(),
+        new ExtractTextPlugin('[name]'),
+        new webpack.optimize.OccurenceOrderPlugin() /* ,
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
@@ -57,5 +66,19 @@ module.exports = {
             comments: false,
             sourceMap: true
         })
-    ]
+        */
+    ],
+
+    postcss: function () {
+        const cssnext = require('postcss-cssnext'),
+            cssnano = require('cssnano');
+
+        return [
+            cssnext({
+                browsers: ['last 1 version'] // ,
+                // warnForDuplicates: false
+            }),
+            cssnano()
+        ];
+    }
 };
