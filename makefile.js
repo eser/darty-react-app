@@ -82,12 +82,17 @@ jsmake.task('build', function (argv) {
 });
 
 jsmake.task('lint.js', function (argv) {
-    jsmake.utils.shell(npmBinFolder + 'eslint ./src/scripts/ --ext .js,.jsx');
+    jsmake.utils.shell(path.join(npmBinFolder, 'eslint') + ' ./src/scripts/ --ext .js,.jsx');
 });
 
 // Test Tasks
 jsmake.task('test', function (argv) {
-    jsmake.utils.shell(npmBinFolder + 'mocha --compilers ts:typescript-require --recursive ./test/');
+    jsmake.utils.shell(path.join(npmBinFolder, 'mocha') + ' --compilers ts:typescript-require --recursive ./test/');
+});
+
+// Stats Tasks
+jsmake.task('stats', function (argv) {
+    jsmake.utils.shell(path.join(npmBinFolder, 'webpack-bundle-analyzer') + ' ' + path.join(distFolder, 'stats.json'));
 });
 
 // Other Tasks
