@@ -3,6 +3,9 @@ const path = require('path'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
     BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+const extractTextSASS = new ExtractTextPlugin('[name]'),
+    extractTextCSS = new ExtractTextPlugin('[name]');
+
 module.exports = {
     devtool: 'source-map',
 
@@ -11,13 +14,14 @@ module.exports = {
             'es6-promise',
             'whatwg-fetch',
             'jquery',
+            'bootstrap',
             'react',
             'react-dom',
             'react-router',
             'history'
         ],
         'vendor.css': [
-            './src/styles/vendor.css'
+            'bootstrap-sass/assets/stylesheets/_bootstrap.scss'
         ],
         app: [
             './src/scripts/index.ts'
@@ -41,7 +45,9 @@ module.exports = {
         loaders: [
             { test: /\.tsx?$/, exclude: /node_modules/, loaders: [ 'react-hot-loader/webpack', 'ts-loader' ] },
             { test: /\.json$/, loaders: [ 'json-loader' ] },
-            { test: /\.css$/, loader: ExtractTextPlugin.extract('style', [ 'css-loader?sourceMap&importLoaders=1', 'postcss-loader' ]) }
+            { test: /\.scss$/, loader: extractTextSASS.extract('style', [ 'css-loader?sourceMap&importLoaders=1', 'postcss-loader?parser=postcss-scss', 'sass-loader?sourceMap' ]) },
+            { test: /\.css$/, loader: extractTextCSS.extract('style', [ 'css-loader?sourceMap&importLoaders=1', 'postcss-loader' ]) },
+            { test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/, loader: 'file-loader?prefix=font' }
         ],
 
         preLoaders: [
@@ -53,12 +59,17 @@ module.exports = {
         new webpack.EnvironmentPlugin([
             'NODE_ENV'
         ]),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             names: [ 'vendor' ],
             filename: '[name].js',
             minChunks: Infinity
         }),
-        new ExtractTextPlugin('[name]'),
+        extractTextSASS,
+        extractTextCSS,
         new webpack.optimize.OccurenceOrderPlugin(),
         /*
         new webpack.optimize.UglifyJsPlugin({
