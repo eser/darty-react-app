@@ -24,8 +24,8 @@ module.exports = {
             'bootstrap-sass/assets/stylesheets/_bootstrap.scss'
         ],
         app: [
+            'webpack-dev-server/client?http://localhost:8080/',
             'webpack/hot/dev-server',
-            'webpack-hot-middleware/client',
             './src/scripts/index.ts'
         ],
         'app.css': [
@@ -37,6 +37,10 @@ module.exports = {
         path: path.resolve('./dist/bundles/'),
         publicPath: '/dist/bundles/',
         filename: '[name].js'
+    },
+
+    devServer: {
+        inline: true
     },
 
     resolve: {

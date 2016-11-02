@@ -1,6 +1,5 @@
 const fs = require('fs'),
     path = require('path'),
-    browserSync = require('browser-sync').create(),
     webpack = require('webpack');
 
 // package definitions
@@ -60,9 +59,9 @@ const watchFolders = [
 ];
 
 // webpack definitions
-const webpackTemplateFile = (isProduction) ? './webpack.prod.config.js' : './webpack.dev.config.js',
-    webpackTemplate = require(webpackTemplateFile),
-    bundler = webpack(webpackTemplate);
+const webpackConfigFile = (isProduction) ? './webpack.prod.config.js' : './webpack.dev.config.js',
+    webpackConfig = require(webpackConfigFile),
+    bundler = webpack(webpackConfig);
 
 jsmake.task('build', function (argv) {
     return new Promise(function (resolve, reject) {
@@ -76,23 +75,48 @@ jsmake.task('build', function (argv) {
 
             resolve(result);
             console.log(result.toString({ chunks: false, colors: true }));
-            browserSync.reload();
         });
     });
 });
 
 jsmake.task('lint.js', function (argv) {
-    jsmake.utils.shell(path.join(npmBinFolder, 'eslint') + ' ./src/scripts/ --ext .js,.jsx');
+    jsmake.utils.os.shell(path.join(npmBinFolder, 'eslint') + ' ./src/scripts/ --ext .js,.jsx');
 });
 
 // Test Tasks
 jsmake.task('test', function (argv) {
-    jsmake.utils.shell(path.join(npmBinFolder, 'mocha') + ' --compilers ts:typescript-require --recursive ./test/');
+    jsmake.utils.os.shell(path.join(npmBinFolder, 'mocha') + ' --compilers ts:typescript-require --recursive ./test/');
 });
 
 // Stats Tasks
 jsmake.task('stats', function (argv) {
-    jsmake.utils.shell(path.join(npmBinFolder, 'webpack-bundle-analyzer') + ' ' + path.join(distFolder, 'stats.json'));
+    jsmake.utils.os.shell(path.join(npmBinFolder, 'webpack-bundle-analyzer') + ' ' + path.join(distFolder, 'stats.json'));
+});
+
+// Serve Tasks
+jsmake.task('serve', function (argv) {
+    const webpackDevServer = require('webpack-dev-server');
+
+    new webpackDevServer(
+        bundler,
+        {
+            publicPath: webpackConfig.output.publicPath,
+            historyApiFallback: true,
+            hot: true
+        }
+    ).listen(
+        8080,
+        'localhost',
+        function (err, result) {
+            if (err) {
+                console.error(err);
+
+                return;
+            }
+
+            console.log('Listening at http://localhost:8080/');
+        }
+    );
 });
 
 // Other Tasks
@@ -108,65 +132,6 @@ jsmake.task('clean', function (argv) {
             }
         }
     }
-});
-
-jsmake.task('serve', function (argv) {
-    for (const watchFolderKey in watchFolders) {
-        const watchFolder = watchFolders[watchFolderKey];
-
-        browserSync.watch(
-            watchFolder.match,
-            function (event, file) {
-                if (event !== 'change') {
-                    return;
-                }
-
-                const runContext = jsmake.createRunContext({
-                    match: watchFolder.match,
-                    file: file
-                });
-
-                for (taskKey in watchFolder.tasks) {
-                    const task = watchFolder.tasks[taskKey];
-
-                    runContext.addTask(jsmake.tasks[task]);
-                }
-
-                runContext.runExecutionQueue()
-                    .then(function () {
-                        browserSync.reload(watchFolder.match);
-                    })
-                    .catch(function (ex) {
-                        console.error(ex);
-                    });
-            }
-        );
-    }
-
-    const webpackDevMiddleware = require('webpack-dev-middleware'),
-        webpackHotMiddleware = require('webpack-hot-middleware');
-
-    browserSync.init({
-        injectChanges: false,
-        watchOptions: {
-            ignored: 'node_modules'
-        },
-        server: {
-            baseDir: './',
-            // directory: true,
-            index: 'index.html',
-            middleware: [
-                webpackDevMiddleware(
-                    bundler,
-                    {
-                        publicPath: webpackTemplate.output.publicPath,
-                        stats: { colors: true }
-                    }
-                ),
-                webpackHotMiddleware(bundler)
-            ]
-        }
-    });
 });
 
 jsmake.task('lint', [ 'lint.js' ]);

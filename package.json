@@ -33,7 +33,6 @@
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
-    "browser-sync": "^2.17.5",
     "css-loader": "^0.25.0",
     "cssnano": "^3.8.0",
     "es6-promise": "^4.0.5",
@@ -66,8 +65,7 @@
     "typings": "^1.5.0",
     "webpack": "^1.13.3",
     "webpack-bundle-analyzer": "^1.3.0",
-    "webpack-dev-middleware": "^1.8.4",
-    "webpack-hot-middleware": "^2.13.1",
+    "webpack-dev-server": "^1.16.2",
     "whatwg-fetch": "^1.0.0"
   }
 }

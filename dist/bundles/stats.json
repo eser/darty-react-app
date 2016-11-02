@@ -402,7 +402,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponentTree.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -1140,7 +1140,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponentTree.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -1478,7 +1478,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOM.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -2407,7 +2407,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-router\\lib\\Router.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createHashHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -2574,7 +2574,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ChangeEventPlugin.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\BeforeInputEventPlugin.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3359,7 +3359,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\deprecate.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createLocation.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3481,7 +3481,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ChangeEventPlugin.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\BeforeInputEventPlugin.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3879,7 +3879,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactUpdates.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactChildren.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3974,7 +3974,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactMount.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactElement.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4670,7 +4670,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\commonmark\\lib\\blocks.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\commonmark\\lib\\html.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4747,7 +4747,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactMount.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5404,7 +5404,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ChangeEventPlugin.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\BeforeInputEventPlugin.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -6752,7 +6752,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-router\\lib\\TransitionUtils.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-router\\lib\\getComponents.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7652,7 +7652,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOM.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\React.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8202,7 +8202,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\decode.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\encode.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8243,7 +8243,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\decode.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\encode.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8284,7 +8284,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\commonmark\\lib\\common.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\commonmark\\lib\\inlines.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8856,7 +8856,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-redux\\lib\\components\\connect.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-redux\\lib\\components\\Provider.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8897,7 +8897,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-redux\\lib\\components\\connect.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-redux\\lib\\components\\Provider.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9102,7 +9102,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-router\\lib\\hashHistory.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-router\\lib\\browserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
