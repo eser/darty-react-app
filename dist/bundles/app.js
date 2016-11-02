@@ -2,7 +2,7 @@ webpackJsonp([1],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(173);
+	module.exports = __webpack_require__(328);
 
 
 /***/ },
@@ -27,7 +27,13 @@ webpackJsonp([1],[
 /* 19 */,
 /* 20 */,
 /* 21 */,
-/* 22 */
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -41,12 +47,12 @@ webpackJsonp([1],[
 	};
 	const React = __webpack_require__(2);
 	const ReactDOM = __webpack_require__(106);
-	const ReactDOMServer = __webpack_require__(223);
-	const react_router_1 = __webpack_require__(27);
-	const ServiceContainer_1 = __webpack_require__(171);
-	const NavigationManager_1 = __webpack_require__(170);
-	const camelize_1 = __webpack_require__(172);
-	const history_1 = __webpack_require__(168);
+	const ReactDOMServer = __webpack_require__(203);
+	const react_router_1 = __webpack_require__(26);
+	const ServiceContainer_1 = __webpack_require__(326);
+	const NavigationManager_1 = __webpack_require__(325);
+	const camelize_1 = __webpack_require__(327);
+	const history_1 = __webpack_require__(323);
 	class App {
 	    constructor() {
 	        this.services = new ServiceContainer_1.ServiceContainer();
@@ -91,24 +97,16 @@ webpackJsonp([1],[
 	exports.app = new App();
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = exports.app;
-	
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\index.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\index.tsx"); } } })();
 
 /***/ },
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
 /* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var encode = __webpack_require__(221);
-	var decode = __webpack_require__(220);
+	var encode = __webpack_require__(201);
+	var decode = __webpack_require__(200);
 	
 	var C_BACKSLASH = 92;
 	
@@ -216,7 +214,13 @@ webpackJsonp([1],[
 /* 32 */,
 /* 33 */,
 /* 34 */,
-/* 35 */
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -229,8 +233,8 @@ webpackJsonp([1],[
 	    });
 	};
 	__webpack_require__(149);
-	const constants = __webpack_require__(36);
-	const CacheContainer_1 = __webpack_require__(169);
+	const constants = __webpack_require__(42);
+	const CacheContainer_1 = __webpack_require__(324);
 	class PageModel {
 	    constructor() {
 	        this.cache = new CacheContainer_1.CacheContainer();
@@ -313,13 +317,11 @@ webpackJsonp([1],[
 	exports.PageModel = PageModel;
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = PageModel;
-	
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\models\\PageModel.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\models\\PageModel.ts"); } } })();
 
 /***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
+/* 42 */
+/***/ function(module, exports) {
 
 	"use strict";
 	exports.ServiceBaseUrl = 'http://hexdanismanlik.com/leaves';
@@ -329,18 +331,43 @@ webpackJsonp([1],[
 	})(exports.UserLevels || (exports.UserLevels = {}));
 	var UserLevels = exports.UserLevels;
 	;
-	
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\constants.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\constants.ts"); } } })();
 
 /***/ },
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	exports.__esModule = true;
+	exports.connect = exports.Provider = undefined;
+	
+	var _Provider = __webpack_require__(205);
+	
+	var _Provider2 = _interopRequireDefault(_Provider);
+	
+	var _connect = __webpack_require__(206);
+	
+	var _connect2 = _interopRequireDefault(_connect);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	exports.Provider = _Provider2["default"];
+	exports.connect = _connect2["default"];
+
+/***/ },
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -358,12 +385,10 @@ webpackJsonp([1],[
 	exports.Error = Error;
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = Error;
-	
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\Error.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\Error.tsx"); } } })();
 
 /***/ },
-/* 44 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -379,98 +404,10 @@ webpackJsonp([1],[
 	exports.Loading = Loading;
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = Loading;
-	
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\Loading.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\Loading.tsx"); } } })();
 
 /***/ },
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	exports.__esModule = true;
-	exports.connect = exports.Provider = undefined;
-	
-	var _Provider = __webpack_require__(225);
-	
-	var _Provider2 = _interopRequireDefault(_Provider);
-	
-	var _connect = __webpack_require__(226);
-	
-	var _connect2 = _interopRequireDefault(_connect);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	exports.Provider = _Provider2["default"];
-	exports.connect = _connect2["default"];
-
-/***/ },
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
 /* 57 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const react_router_1 = __webpack_require__(27);
-	const LinearTimelineItem_1 = __webpack_require__(156);
-	class LinearTimeline extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        const data = this.props.datasource[this.props.datakey];
-	        return (React.createElement("ul", null, Object.keys(data).map((year) => {
-	            const yearKey = `year.${encodeURIComponent(year)}`, yearData = data[year];
-	            return (React.createElement("li", {key: yearKey}, 
-	                React.createElement("h3", {key: `${yearKey}.caption`}, 
-	                    React.createElement(react_router_1.Link, {key: `${yearKey}.link`, to: `/properties/year/${encodeURIComponent(year)}`}, year)
-	                ), 
-	                React.createElement("ul", {key: `${yearKey}.list`}, 
-	                    Object.keys(yearData).map((event) => {
-	                        if (event === '_items') {
-	                            return null;
-	                        }
-	                        const eventKey = `year.${year}.event.${encodeURIComponent(event)}`, eventData = yearData[event];
-	                        return (React.createElement("li", {key: eventKey}, 
-	                            React.createElement("h4", {key: `${eventKey}.caption`}, 
-	                                React.createElement(react_router_1.Link, {key: `${eventKey}.caption.link`, to: `/properties/event/${encodeURIComponent(event)}`}, event)
-	                            ), 
-	                            React.createElement("ul", {key: `${eventKey}.list`}, eventData._items.map((item) => {
-	                                const entryKey = `entry.${encodeURIComponent(item.entry)}`;
-	                                return (React.createElement("li", {key: entryKey}, 
-	                                    React.createElement(LinearTimelineItem_1.LinearTimelineItem, {key: `${entryKey}.item`, item: item, editable: this.props.editable})
-	                                ));
-	                            }))));
-	                    }), 
-	                    yearData._items.map((item) => {
-	                        const entryKey = `entry.${encodeURIComponent(item.entry)}`;
-	                        return (React.createElement("li", {key: entryKey}, 
-	                            React.createElement(LinearTimelineItem_1.LinearTimelineItem, {key: `${entryKey}.item`, id: `${entryKey}.item`, item: item, editable: this.props.editable})
-	                        ));
-	                    }))));
-	        })));
-	    }
-	}
-	exports.LinearTimeline = LinearTimeline;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = LinearTimeline;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\LinearTimeline.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\LinearTimeline.tsx"); } } })();
-
-/***/ },
-/* 58 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -747,6 +684,7 @@ webpackJsonp([1],[
 
 
 /***/ },
+/* 58 */,
 /* 59 */,
 /* 60 */,
 /* 61 */,
@@ -777,8 +715,7 @@ webpackJsonp([1],[
 /* 86 */,
 /* 87 */,
 /* 88 */,
-/* 89 */,
-/* 90 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -790,15 +727,15 @@ webpackJsonp([1],[
 	
 	var _createStore2 = _interopRequireDefault(_createStore);
 	
-	var _combineReducers = __webpack_require__(319);
+	var _combineReducers = __webpack_require__(299);
 	
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 	
-	var _bindActionCreators = __webpack_require__(318);
+	var _bindActionCreators = __webpack_require__(298);
 	
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 	
-	var _applyMiddleware = __webpack_require__(317);
+	var _applyMiddleware = __webpack_require__(297);
 	
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 	
@@ -827,6 +764,57 @@ webpackJsonp([1],[
 	exports.bindActionCreators = _bindActionCreators2['default'];
 	exports.applyMiddleware = _applyMiddleware2['default'];
 	exports.compose = _compose2['default'];
+
+/***/ },
+/* 90 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const react_router_1 = __webpack_require__(26);
+	const LinearTimelineItem_1 = __webpack_require__(311);
+	class LinearTimeline extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        const data = this.props.datasource[this.props.datakey];
+	        return (React.createElement("ul", null, Object.keys(data).map((year) => {
+	            const yearKey = `year.${encodeURIComponent(year)}`, yearData = data[year];
+	            return (React.createElement("li", {key: yearKey}, 
+	                React.createElement("h3", {key: `${yearKey}.caption`}, 
+	                    React.createElement(react_router_1.Link, {key: `${yearKey}.link`, to: `/properties/year/${encodeURIComponent(year)}`}, year)
+	                ), 
+	                React.createElement("ul", {key: `${yearKey}.list`}, 
+	                    Object.keys(yearData).map((event) => {
+	                        if (event === '_items') {
+	                            return null;
+	                        }
+	                        const eventKey = `year.${year}.event.${encodeURIComponent(event)}`, eventData = yearData[event];
+	                        return (React.createElement("li", {key: eventKey}, 
+	                            React.createElement("h4", {key: `${eventKey}.caption`}, 
+	                                React.createElement(react_router_1.Link, {key: `${eventKey}.caption.link`, to: `/properties/event/${encodeURIComponent(event)}`}, event)
+	                            ), 
+	                            React.createElement("ul", {key: `${eventKey}.list`}, eventData._items.map((item) => {
+	                                const entryKey = `entry.${encodeURIComponent(item.entry)}`;
+	                                return (React.createElement("li", {key: entryKey}, 
+	                                    React.createElement(LinearTimelineItem_1.LinearTimelineItem, {key: `${entryKey}.item`, item: item, editable: this.props.editable})
+	                                ));
+	                            }))));
+	                    }), 
+	                    yearData._items.map((item) => {
+	                        const entryKey = `entry.${encodeURIComponent(item.entry)}`;
+	                        return (React.createElement("li", {key: entryKey}, 
+	                            React.createElement(LinearTimelineItem_1.LinearTimelineItem, {key: `${entryKey}.item`, id: `${entryKey}.item`, item: item, editable: this.props.editable})
+	                        ));
+	                    }))));
+	        })));
+	    }
+	}
+	exports.LinearTimeline = LinearTimeline;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = LinearTimeline;
+
 
 /***/ },
 /* 91 */
@@ -2976,8 +2964,8 @@ webpackJsonp([1],[
 /* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var encode = __webpack_require__(200),
-	    decode = __webpack_require__(198);
+	var encode = __webpack_require__(180),
+	    decode = __webpack_require__(178);
 	
 	exports.decode = function(data, level){
 		return (!level || level <= 0 ? decode.XML : decode.HTML)(data);
@@ -3162,7 +3150,7 @@ webpackJsonp([1],[
 	
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 	
-	var _symbolObservable = __webpack_require__(325);
+	var _symbolObservable = __webpack_require__(305);
 	
 	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 	
@@ -3448,8 +3436,8 @@ webpackJsonp([1],[
 /* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(320),
-	    isObjectLike = __webpack_require__(322);
+	var getPrototype = __webpack_require__(300),
+	    isObjectLike = __webpack_require__(302);
 	
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -3670,757 +3658,29 @@ webpackJsonp([1],[
 	};
 
 /***/ },
-/* 154 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const react_router_1 = __webpack_require__(27);
-	const _1 = __webpack_require__(22);
-	const redux_1 = __webpack_require__(90);
-	const react_redux_1 = __webpack_require__(49);
-	const _2 = __webpack_require__(165);
-	class Layout extends React.Component {
-	    constructor(props) {
-	        super(props);
-	        const constructor_ = this.constructor;
-	        if (constructor_.instance === undefined) {
-	            constructor_.instance = this;
-	        }
-	        this.store = redux_1.createStore(_2.combinedReducers);
-	        this.state = {};
-	    }
-	    clickHandler(ev) {
-	        const target = ev.target;
-	        if (target.tagName === 'A') {
-	            const url = target.getAttribute('href');
-	            if (url !== null) {
-	                const navigationItem = _1.app.navigationManager.identify(url);
-	                if (navigationItem !== null) {
-	                    _1.app.history.push(navigationItem.getUrl());
-	                    ev.preventDefault();
-	                }
-	            }
-	        }
-	    }
-	    render() {
-	        return (React.createElement(react_redux_1.Provider, {store: this.store}, 
-	            React.createElement("div", null, 
-	                React.createElement("div", {className: "header"}, 
-	                    React.createElement("ul", {className: "inner"}, 
-	                        React.createElement("li", null, 
-	                            React.createElement(react_router_1.IndexLink, {to: "/", activeClassName: "active"}, "Home")
-	                        ), 
-	                        React.createElement("li", null, 
-	                            React.createElement(react_router_1.Link, {to: "/pages", activeClassName: "active"}, "Pages")
-	                        ), 
-	                        React.createElement("li", {className: "github"}, 
-	                            React.createElement("a", {href: "https://github.com/eserozvataf/ts-spa-boilerplate"}, "ts-spa-boilerplate")
-	                        ))
-	                ), 
-	                React.createElement("div", {className: "content"}, 
-	                    React.createElement("div", {className: "inner", onClick: this.clickHandler.bind(this)}, this.props.children)
-	                ))
-	        ));
-	    }
-	}
-	exports.Layout = Layout;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = Layout;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\Layout.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\Layout.tsx"); } } })();
-
-/***/ },
-/* 155 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	class Conditional extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        if (!this.props.test) {
-	            return null;
-	        }
-	        return this.props.children;
-	    }
-	}
-	exports.Conditional = Conditional;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = Conditional;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\Conditional.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\Conditional.tsx"); } } })();
-
-/***/ },
-/* 156 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const ReactMarkdown = __webpack_require__(224);
-	const Conditional_1 = __webpack_require__(155);
-	class LinearTimelineItem extends React.Component {
-	    constructor(props) {
-	        super(props);
-	        this.state = {
-	            editMode: false
-	        };
-	    }
-	    getContent() {
-	        return this.props.item.content.replace(/\[\[([^\]]*)\]\]/g, (all, first) => `[${first}](#/pages/${encodeURIComponent(first)})`);
-	    }
-	    toggleEditMode() {
-	        this.setState({
-	            editMode: !this.state.editMode
-	        });
-	    }
-	    saveChanges() {
-	        this.props.item.content = this.refs.textarea.value;
-	        this.setState({
-	            editMode: false
-	        });
-	    }
-	    discardChanges() {
-	        this.setState({
-	            editMode: false
-	        });
-	    }
-	    render() {
-	        if (this.state.editMode) {
-	            return (React.createElement("div", null, 
-	                React.createElement("div", null, 
-	                    React.createElement("textarea", {ref: "textarea", defaultValue: this.props.item.content})
-	                ), 
-	                React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), 
-	                React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
-	        }
-	        return (React.createElement("div", {ref: "markdown"}, 
-	            React.createElement(ReactMarkdown, {source: this.getContent()}), 
-	            React.createElement(Conditional_1.Conditional, {test: this.props.editable}, 
-	                React.createElement("button", {onClick: this.toggleEditMode.bind(this)}, "edit")
-	            )));
-	    }
-	}
-	exports.LinearTimelineItem = LinearTimelineItem;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = LinearTimelineItem;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\LinearTimelineItem.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\LinearTimelineItem.tsx"); } } })();
-
-/***/ },
-/* 157 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	class PageContent extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        const data = this.props.datasource[this.props.datakey];
-	        return (React.createElement("div", null, data.content));
-	    }
-	}
-	exports.PageContent = PageContent;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = PageContent;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\PageContent.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\PageContent.tsx"); } } })();
-
-/***/ },
-/* 158 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const react_router_1 = __webpack_require__(27);
-	class PageList extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        const data = this.props.datasource[this.props.datakey];
-	        return (React.createElement("ul", null, Object.keys(data).map((type) => {
-	            const typeKey = `type.${encodeURIComponent(type)}`, typeData = data[type];
-	            return (React.createElement("li", {key: typeKey}, 
-	                React.createElement("h3", {key: `${typeKey}.caption`}, type), 
-	                React.createElement("ul", {key: `${typeKey}.list`}, typeData.map((page) => {
-	                    const pageKey = `page.${encodeURIComponent(page.name)}`;
-	                    return (React.createElement("li", {key: `${typeKey}.page.${pageKey}`}, 
-	                        React.createElement(react_router_1.Link, {key: `${typeKey}.page.${pageKey}.link`, to: `/pages/${encodeURIComponent(page.name)}`}, page.name)
-	                    ));
-	                }))));
-	        })));
-	    }
-	}
-	exports.PageList = PageList;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = PageList;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\PageList.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\dumb\\PageList.tsx"); } } })();
-
-/***/ },
-/* 159 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const ReactRedux = __webpack_require__(49);
-	const _1 = __webpack_require__(22);
-	const PageModel_1 = __webpack_require__(35);
-	const LinearTimeline_1 = __webpack_require__(57);
-	const Loading_1 = __webpack_require__(44);
-	const Error_1 = __webpack_require__(43);
-	const constants = __webpack_require__(36);
-	class EntriesByProperty_ extends React.Component {
-	    constructor(props) {
-	        super(props);
-	        this.state = {
-	            datasource: null,
-	            error: false
-	        };
-	        this.model = _1.app.services.get(PageModel_1.PageModel);
-	        this.updateDatasource(this.props.params.property, this.props.params.value);
-	    }
-	    componentWillReceiveProps(nextProps) {
-	        this.updateDatasource(nextProps.params.property, nextProps.params.value);
-	    }
-	    render() {
-	        if (this.state.error) {
-	            console.error(this.state.error);
-	            return (React.createElement(Error_1.Error, {message: "An error occurred"}));
-	        }
-	        if (this.state.datasource === null) {
-	            return (React.createElement(Loading_1.Loading, null));
-	        }
-	        const isEditable = (this.props.store.login.userLevel >= constants.UserLevels.Editor);
-	        return (React.createElement("div", null, 
-	            React.createElement("h1", null, 
-	                "Entries By Property: ", 
-	                this.props.params.property, 
-	                "=", 
-	                this.props.params.value), 
-	            React.createElement(LinearTimeline_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries", editable: isEditable})));
-	    }
-	    updateDatasource(property, value) {
-	        this.model.getEntriesByProperty(property, value)
-	            .then((response) => { this.setState({ datasource: response, error: false }); })
-	            .catch((err) => { this.setState({ datasource: null, error: err }); });
-	    }
-	}
-	exports.EntriesByProperty_ = EntriesByProperty_;
-	exports.EntriesByProperty = ReactRedux.connect((store) => ({ store: store }))(EntriesByProperty_);
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = exports.EntriesByProperty;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByProperty.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByProperty.tsx"); } } })();
-
-/***/ },
-/* 160 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const ReactRedux = __webpack_require__(49);
-	const _1 = __webpack_require__(22);
-	const PageModel_1 = __webpack_require__(35);
-	const LinearTimeline_1 = __webpack_require__(57);
-	const Loading_1 = __webpack_require__(44);
-	const Error_1 = __webpack_require__(43);
-	const constants = __webpack_require__(36);
-	class EntriesByTag_ extends React.Component {
-	    constructor(props) {
-	        super(props);
-	        this.state = {
-	            datasource: null,
-	            error: false
-	        };
-	        this.model = _1.app.services.get(PageModel_1.PageModel);
-	        this.updateDatasource(this.props.params.tag);
-	    }
-	    componentWillReceiveProps(nextProps) {
-	        this.updateDatasource(nextProps.params.tag);
-	    }
-	    render() {
-	        if (this.state.error) {
-	            console.error(this.state.error);
-	            return (React.createElement(Error_1.Error, {message: "An error occurred"}));
-	        }
-	        if (this.state.datasource === null) {
-	            return (React.createElement(Loading_1.Loading, null));
-	        }
-	        const isEditable = (this.props.store.login.userLevel >= constants.UserLevels.Editor);
-	        return (React.createElement("div", null, 
-	            React.createElement("h1", null, 
-	                "Entries By Tag: ", 
-	                this.props.params.tag), 
-	            React.createElement(LinearTimeline_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries", editable: isEditable})));
-	    }
-	    updateDatasource(tag) {
-	        this.model.getEntriesByTag(tag)
-	            .then((response) => { this.setState({ datasource: response, error: false }); })
-	            .catch((err) => { this.setState({ datasource: null, error: err }); });
-	    }
-	}
-	exports.EntriesByTag_ = EntriesByTag_;
-	exports.EntriesByTag = ReactRedux.connect((store) => ({ store: store }))(EntriesByTag_);
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = exports.EntriesByTag;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByTag.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByTag.tsx"); } } })();
-
-/***/ },
-/* 161 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	class Home extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        return (React.createElement("div", null, 
-	            React.createElement("h1", null, "Home"), 
-	            "...and there is a dummy content"));
-	    }
-	}
-	exports.Home = Home;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = Home;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\Home.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\Home.tsx"); } } })();
-
-/***/ },
-/* 162 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	class NotFound extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        return (React.createElement("div", null, 
-	            React.createElement("h1", null, "Not Found"), 
-	            "Page not found"));
-	    }
-	}
-	exports.NotFound = NotFound;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = NotFound;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\NotFound.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\NotFound.tsx"); } } })();
-
-/***/ },
-/* 163 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const ReactRedux = __webpack_require__(49);
-	const _1 = __webpack_require__(22);
-	const PageModel_1 = __webpack_require__(35);
-	const PageContent_1 = __webpack_require__(157);
-	const LinearTimeline_1 = __webpack_require__(57);
-	const Loading_1 = __webpack_require__(44);
-	const Error_1 = __webpack_require__(43);
-	const constants = __webpack_require__(36);
-	class PageByName_ extends React.Component {
-	    constructor(props) {
-	        super(props);
-	        this.state = {
-	            datasource: null,
-	            error: false
-	        };
-	        this.model = _1.app.services.get(PageModel_1.PageModel);
-	        this.updateDatasource(this.props.params.name);
-	    }
-	    componentWillReceiveProps(nextProps) {
-	        this.updateDatasource(nextProps.params.name);
-	    }
-	    render() {
-	        if (this.state.error) {
-	            console.error(this.state.error);
-	            return (React.createElement(Error_1.Error, {message: "An error occurred"}));
-	        }
-	        if (this.state.datasource === null) {
-	            return (React.createElement(Loading_1.Loading, null));
-	        }
-	        const isEditable = (this.props.store.login.userLevel >= constants.UserLevels.Editor);
-	        return (React.createElement("div", null, 
-	            React.createElement("h1", null, 
-	                "Page: ", 
-	                this.props.params.name), 
-	            React.createElement(PageContent_1.PageContent, {datasource: this.state.datasource, datakey: "page"}), 
-	            React.createElement("h2", null, "History:"), 
-	            React.createElement(LinearTimeline_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries", editable: isEditable})));
-	    }
-	    updateDatasource(name) {
-	        this.model.getPageByName(name)
-	            .then((response) => { this.setState({ datasource: response, error: false }); })
-	            .catch((err) => { this.setState({ datasource: null, error: err }); });
-	    }
-	}
-	exports.PageByName_ = PageByName_;
-	exports.PageByName = ReactRedux.connect((store) => ({ store: store }))(PageByName_);
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = exports.PageByName;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\PageByName.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\PageByName.tsx"); } } })();
-
-/***/ },
-/* 164 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const _1 = __webpack_require__(22);
-	const PageModel_1 = __webpack_require__(35);
-	const PageList_1 = __webpack_require__(158);
-	const Loading_1 = __webpack_require__(44);
-	const Error_1 = __webpack_require__(43);
-	class Pages extends React.Component {
-	    constructor(props) {
-	        super(props);
-	        this.state = {
-	            datasource: null,
-	            error: false
-	        };
-	        this.model = _1.app.services.get(PageModel_1.PageModel);
-	        this.updateDatasource();
-	    }
-	    componentWillReceiveProps(nextProps) {
-	        this.updateDatasource();
-	    }
-	    render() {
-	        if (this.state.error) {
-	            console.error(this.state.error);
-	            return (React.createElement(Error_1.Error, {message: "An error occurred"}));
-	        }
-	        if (this.state.datasource === null) {
-	            return (React.createElement(Loading_1.Loading, null));
-	        }
-	        return (React.createElement("div", null, 
-	            React.createElement("h1", null, "Pages"), 
-	            React.createElement(PageList_1.PageList, {datasource: this.state.datasource, datakey: "pages"})));
-	    }
-	    updateDatasource() {
-	        this.model.getPages()
-	            .then((response) => { this.setState({ datasource: response, error: false }); })
-	            .catch((err) => { this.setState({ datasource: null, error: err }); });
-	    }
-	}
-	exports.Pages = Pages;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = Pages;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\Pages.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\Pages.tsx"); } } })();
-
-/***/ },
-/* 165 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const redux_1 = __webpack_require__(90);
-	const login_1 = __webpack_require__(166);
-	exports.combinedReducers = redux_1.combineReducers({
-	    login: login_1.loginReducer
-	});
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\flow\\index.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\flow\\index.ts"); } } })();
-
-/***/ },
-/* 166 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const constants = __webpack_require__(36);
-	const initialState = {
-	    userLevel: constants.UserLevels.Visitor
-	};
-	exports.loginReducer = (state = initialState, action) => {
-	    switch (action.type) {
-	        case 'LOGIN':
-	            return Object.assign({}, state, { userLevel: constants.UserLevels.Editor });
-	        case 'LOGOUT':
-	            return Object.assign({}, state, { userLevel: constants.UserLevels.Visitor });
-	        default:
-	            return state;
-	    }
-	};
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\flow\\login.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\flow\\login.ts"); } } })();
-
-/***/ },
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
 /* 167 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const react_router_1 = __webpack_require__(27);
-	const _1 = __webpack_require__(22);
-	const PageModel_1 = __webpack_require__(35);
-	const Layout_1 = __webpack_require__(154);
-	const NotFound_1 = __webpack_require__(162);
-	const Home_1 = __webpack_require__(161);
-	const EntriesByProperty_1 = __webpack_require__(159);
-	const EntriesByTag_1 = __webpack_require__(160);
-	const Pages_1 = __webpack_require__(164);
-	const PageByName_1 = __webpack_require__(163);
-	class Main {
-	    get root() {
-	        return Layout_1.Layout.instance;
-	    }
-	    getRoutes() {
-	        return (React.createElement(react_router_1.Route, {path: "/", component: Layout_1.Layout}, 
-	            React.createElement(react_router_1.IndexRoute, {component: Home_1.Home}), 
-	            React.createElement(react_router_1.Route, {path: "properties/:property/:value", component: EntriesByProperty_1.EntriesByProperty}), 
-	            React.createElement(react_router_1.Route, {path: "tags/:tag", component: EntriesByTag_1.EntriesByTag}), 
-	            React.createElement(react_router_1.Route, {path: "pages", component: Pages_1.Pages}), 
-	            React.createElement(react_router_1.Route, {path: "pages/:name", component: PageByName_1.PageByName}), 
-	            React.createElement(react_router_1.Route, {path: "*", component: NotFound_1.NotFound, status: 404})));
-	    }
-	    getNavigationItems() {
-	        return new Map([
-	            [
-	                'page',
-	                {
-	                    resolver: (url) => {
-	                        if (url.substring(0, 8) !== '#/pages/') {
-	                            return null;
-	                        }
-	                        return {
-	                            page: decodeURIComponent(url.substring(8))
-	                        };
-	                    },
-	                    builder: (parameters) => {
-	                        return `/pages/${encodeURIComponent(parameters.page)}`;
-	                    },
-	                    prefetcher: (parameters) => {
-	                        const model = _1.app.services.get(PageModel_1.PageModel);
-	                        model.getPageByName(parameters.page);
-	                    }
-	                }
-	            ]
-	        ]);
-	    }
-	}
-	exports.Main = Main;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = Main;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\index.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\index.tsx"); } } })();
-
-/***/ },
-/* 168 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const react_router_1 = __webpack_require__(27);
-	const createHashHistory = __webpack_require__(47);
-	exports.history = react_router_1.useRouterHistory(createHashHistory)({
-	    queryKey: false
-	});
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = exports.history;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\history.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\history.ts"); } } })();
-
-/***/ },
-/* 169 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	class CacheContainer {
-	    constructor() {
-	        this.items = new Map();
-	    }
-	    serializeKey(key) {
-	        if (Array.isArray(key)) {
-	            return key.join('_');
-	        }
-	        return key;
-	    }
-	    set(key, value) {
-	        this.items[this.serializeKey(key)] = value;
-	    }
-	    get(key) {
-	        return this.items[this.serializeKey(key)];
-	    }
-	}
-	exports.CacheContainer = CacheContainer;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = CacheContainer;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\utils\\CacheContainer.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\utils\\CacheContainer.ts"); } } })();
-
-/***/ },
-/* 170 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	class NavigationResult {
-	    constructor(navigationItem, parameters) {
-	        this.navigationItem = navigationItem;
-	        this.parameters = parameters;
-	    }
-	    getUrl() {
-	        return this.navigationItem.builder(this.parameters);
-	    }
-	    prefetch() {
-	        this.navigationItem.prefetcher(this.parameters);
-	    }
-	}
-	exports.NavigationResult = NavigationResult;
-	class NavigationManager {
-	    constructor() {
-	        this.items = new Map();
-	    }
-	    add(key, navigationItem) {
-	        this.items[key] = navigationItem;
-	    }
-	    addRange(navigationItems) {
-	        for (const [key, value] of navigationItems) {
-	            this.add(key, value);
-	        }
-	    }
-	    identify(url) {
-	        for (const [key, value] of this.items) {
-	            const result = value.resolver(url);
-	            if (result !== null) {
-	                return new NavigationResult(value, result);
-	            }
-	        }
-	        return null;
-	    }
-	    getUrl(name, parameters) {
-	        return this.items[name].builder(parameters);
-	    }
-	    prefetchUrl(url) {
-	        const item = this.identify(url);
-	        if (item !== null) {
-	            item.prefetch();
-	        }
-	    }
-	}
-	exports.NavigationManager = NavigationManager;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = NavigationManager;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\utils\\NavigationManager.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\utils\\NavigationManager.ts"); } } })();
-
-/***/ },
-/* 171 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	class ServiceContainer {
-	    constructor() {
-	        this.items = new Map();
-	    }
-	    get(type) {
-	        if (!this.items.has(type)) {
-	            this.items[type] = new type();
-	        }
-	        return this.items[type];
-	    }
-	}
-	exports.ServiceContainer = ServiceContainer;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = ServiceContainer;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\utils\\ServiceContainer.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\utils\\ServiceContainer.ts"); } } })();
-
-/***/ },
-/* 172 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function camelize(str) {
-	    return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, (match, index) => {
-	        if (+match === 0) {
-	            return '';
-	        }
-	        return (index === 0) ? match.toLowerCase() : match.toUpperCase();
-	    });
-	}
-	exports.camelize = camelize;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = camelize;
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\utils\\camelize.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\utils\\camelize.ts"); } } })();
-
-/***/ },
-/* 173 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
-	const es6promise = __webpack_require__(94);
-	const _1 = __webpack_require__(22);
-	const Main_1 = __webpack_require__(167);
-	if (global.Promise === undefined) {
-	    es6promise.polyfill();
-	}
-	const appTargetElement = document.getElementsByTagName('app')[0];
-	if (global.app === undefined) {
-	    global.app = _1.app;
-	}
-	_1.app.addModule(Main_1.Main);
-	_1.app.init();
-	_1.app.renderToDOM(appTargetElement);
-	
-
-	 ;(function register() { /* react-hot-loader/webpack */ if (false) { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\index.ts"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\index.ts"); } } })();
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(2);
-	var assign = __webpack_require__(218);
-	var isPlainObject = __webpack_require__(219);
-	var xssFilters = __webpack_require__(328);
-	var pascalCase = __webpack_require__(222);
+	var assign = __webpack_require__(198);
+	var isPlainObject = __webpack_require__(199);
+	var xssFilters = __webpack_require__(308);
+	var pascalCase = __webpack_require__(202);
 	
 	var typeAliases = {
 	    blockquote: 'block_quote',
@@ -4816,12 +4076,12 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 188 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var Node = __webpack_require__(58);
+	var Node = __webpack_require__(57);
 	var unescapeString = __webpack_require__(29).unescapeString;
 	var OPENTAG = __webpack_require__(29).OPENTAG;
 	var CLOSETAG = __webpack_require__(29).CLOSETAG;
@@ -4835,7 +4095,7 @@ webpackJsonp([1],[
 	var C_SPACE = 32;
 	var C_OPEN_BRACKET = 91;
 	
-	var InlineParser = __webpack_require__(192);
+	var InlineParser = __webpack_require__(172);
 	
 	var reHtmlBlockOpen = [
 	   /./, // dummy for 0
@@ -5692,7 +4952,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 189 */
+/* 169 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5757,7 +5017,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 190 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -6049,7 +5309,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 191 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -6066,27 +5326,27 @@ webpackJsonp([1],[
 	// console.log(renderer.render(parser.parse('Hello *world*')));
 	
 	module.exports.version = '0.24.0'
-	module.exports.Node = __webpack_require__(58);
-	module.exports.Parser = __webpack_require__(188);
-	module.exports.HtmlRenderer = __webpack_require__(190);
-	module.exports.XmlRenderer = __webpack_require__(194);
+	module.exports.Node = __webpack_require__(57);
+	module.exports.Parser = __webpack_require__(168);
+	module.exports.HtmlRenderer = __webpack_require__(170);
+	module.exports.XmlRenderer = __webpack_require__(174);
 
 
 /***/ },
-/* 192 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var Node = __webpack_require__(58);
+	var Node = __webpack_require__(57);
 	var common = __webpack_require__(29);
-	var normalizeReference = __webpack_require__(193);
+	var normalizeReference = __webpack_require__(173);
 	
 	var normalizeURI = common.normalizeURI;
 	var unescapeString = common.unescapeString;
-	var fromCodePoint = __webpack_require__(189);
+	var fromCodePoint = __webpack_require__(169);
 	var decodeHTML = __webpack_require__(93).decodeHTML;
-	__webpack_require__(324); // Polyfill for String.prototype.repeat
+	__webpack_require__(304); // Polyfill for String.prototype.repeat
 	
 	// Constants for character codes:
 	
@@ -7010,7 +6270,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 193 */
+/* 173 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -7058,7 +6318,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 194 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7241,16 +6501,16 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var entityMap = __webpack_require__(91),
 	    legacyMap = __webpack_require__(153),
 	    xmlMap    = __webpack_require__(92),
-	    decodeCodePoint = __webpack_require__(199);
+	    decodeCodePoint = __webpack_require__(179);
 	
 	var decodeXMLStrict  = getStrictDecoder(xmlMap),
 	    decodeHTMLStrict = getStrictDecoder(entityMap);
@@ -7321,7 +6581,7 @@ webpackJsonp([1],[
 	};
 
 /***/ },
-/* 199 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var decodeMap = __webpack_require__(152);
@@ -7353,7 +6613,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 200 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var inverseXML = getInverseObj(__webpack_require__(92)),
@@ -7432,24 +6692,24 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */
 /***/ function(module, exports) {
 
 	/**
@@ -8092,7 +7352,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 219 */
+/* 199 */
 /***/ function(module, exports) {
 
 	/**
@@ -8237,7 +7497,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 220 */
+/* 200 */
 /***/ function(module, exports) {
 
 	
@@ -8365,7 +7625,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 221 */
+/* 201 */
 /***/ function(module, exports) {
 
 	
@@ -8469,7 +7729,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 222 */
+/* 202 */
 /***/ function(module, exports) {
 
 	/*!
@@ -8496,23 +7756,23 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 223 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	module.exports = __webpack_require__(278);
+	module.exports = __webpack_require__(258);
 
 
 /***/ },
-/* 224 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(2);
-	var Parser = __webpack_require__(191).Parser;
-	var ReactRenderer = __webpack_require__(187);
+	var Parser = __webpack_require__(171).Parser;
+	var ReactRenderer = __webpack_require__(167);
 	
 	var parser = new Parser();
 	var propTypes = React.PropTypes;
@@ -8582,7 +7842,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 225 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8665,7 +7925,7 @@ webpackJsonp([1],[
 	};
 
 /***/ },
-/* 226 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8681,11 +7941,11 @@ webpackJsonp([1],[
 	
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 	
-	var _shallowEqual = __webpack_require__(227);
+	var _shallowEqual = __webpack_require__(207);
 	
 	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 	
-	var _wrapActionCreators = __webpack_require__(228);
+	var _wrapActionCreators = __webpack_require__(208);
 	
 	var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
 	
@@ -8693,7 +7953,7 @@ webpackJsonp([1],[
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _isPlainObject = __webpack_require__(232);
+	var _isPlainObject = __webpack_require__(212);
 	
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 	
@@ -9063,7 +8323,7 @@ webpackJsonp([1],[
 	}
 
 /***/ },
-/* 227 */
+/* 207 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -9094,7 +8354,7 @@ webpackJsonp([1],[
 	}
 
 /***/ },
-/* 228 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9102,7 +8362,7 @@ webpackJsonp([1],[
 	exports.__esModule = true;
 	exports["default"] = wrapActionCreators;
 	
-	var _redux = __webpack_require__(90);
+	var _redux = __webpack_require__(89);
 	
 	function wrapActionCreators(actionCreators) {
 	  return function (dispatch) {
@@ -9111,10 +8371,10 @@ webpackJsonp([1],[
 	}
 
 /***/ },
-/* 229 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var overArg = __webpack_require__(230);
+	var overArg = __webpack_require__(210);
 	
 	/** Built-in value references. */
 	var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -9123,7 +8383,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 230 */
+/* 210 */
 /***/ function(module, exports) {
 
 	/**
@@ -9144,7 +8404,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 231 */
+/* 211 */
 /***/ function(module, exports) {
 
 	/**
@@ -9179,11 +8439,11 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 232 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(229),
-	    isObjectLike = __webpack_require__(231);
+	var getPrototype = __webpack_require__(209),
+	    isObjectLike = __webpack_require__(211);
 	
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -9253,6 +8513,26 @@ webpackJsonp([1],[
 
 
 /***/ },
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
 /* 233 */,
 /* 234 */,
 /* 235 */,
@@ -9278,27 +8558,7 @@ webpackJsonp([1],[
 /* 255 */,
 /* 256 */,
 /* 257 */,
-/* 258 */,
-/* 259 */,
-/* 260 */,
-/* 261 */,
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */,
-/* 268 */,
-/* 269 */,
-/* 270 */,
-/* 271 */,
-/* 272 */,
-/* 273 */,
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */,
-/* 278 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9315,8 +8575,8 @@ webpackJsonp([1],[
 	'use strict';
 	
 	var ReactDefaultInjection = __webpack_require__(125);
-	var ReactServerRendering = __webpack_require__(291);
-	var ReactVersion = __webpack_require__(80);
+	var ReactServerRendering = __webpack_require__(271);
+	var ReactVersion = __webpack_require__(79);
 	
 	ReactDefaultInjection.inject();
 	
@@ -9329,18 +8589,18 @@ webpackJsonp([1],[
 	module.exports = ReactDOMServer;
 
 /***/ },
-/* 279 */,
-/* 280 */,
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */,
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */
 /***/ function(module, exports) {
 
 	/**
@@ -9367,7 +8627,7 @@ webpackJsonp([1],[
 	module.exports = ReactServerBatchingStrategy;
 
 /***/ },
-/* 291 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9389,13 +8649,13 @@ webpackJsonp([1],[
 	var ReactElement = __webpack_require__(13);
 	var ReactInstrumentation = __webpack_require__(11);
 	var ReactMarkupChecksum = __webpack_require__(130);
-	var ReactReconciler = __webpack_require__(28);
-	var ReactServerBatchingStrategy = __webpack_require__(290);
+	var ReactReconciler = __webpack_require__(27);
+	var ReactServerBatchingStrategy = __webpack_require__(270);
 	var ReactServerRenderingTransaction = __webpack_require__(135);
 	var ReactUpdates = __webpack_require__(14);
 	
 	var emptyObject = __webpack_require__(30);
-	var instantiateReactComponent = __webpack_require__(85);
+	var instantiateReactComponent = __webpack_require__(84);
 	var invariant = __webpack_require__(1);
 	
 	var pendingTransactions = 0;
@@ -9462,32 +8722,32 @@ webpackJsonp([1],[
 	};
 
 /***/ },
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
 /* 292 */,
 /* 293 */,
 /* 294 */,
 /* 295 */,
 /* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */,
-/* 302 */,
-/* 303 */,
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */,
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9550,7 +8810,7 @@ webpackJsonp([1],[
 	}
 
 /***/ },
-/* 318 */
+/* 298 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9606,7 +8866,7 @@ webpackJsonp([1],[
 	}
 
 /***/ },
-/* 319 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9753,10 +9013,10 @@ webpackJsonp([1],[
 	}
 
 /***/ },
-/* 320 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var overArg = __webpack_require__(321);
+	var overArg = __webpack_require__(301);
 	
 	/** Built-in value references. */
 	var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -9765,7 +9025,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 321 */
+/* 301 */
 /***/ function(module, exports) {
 
 	/**
@@ -9786,7 +9046,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 322 */
+/* 302 */
 /***/ function(module, exports) {
 
 	/**
@@ -9821,8 +9081,8 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 323 */,
-/* 324 */
+/* 303 */,
+/* 304 */
 /***/ function(module, exports) {
 
 	/*! http://mths.be/repeat v0.2.0 by @mathias */
@@ -9878,14 +9138,14 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 325 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(326);
+	module.exports = __webpack_require__(306);
 
 
 /***/ },
-/* 326 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -9894,7 +9154,7 @@ webpackJsonp([1],[
 		value: true
 	});
 	
-	var _ponyfill = __webpack_require__(327);
+	var _ponyfill = __webpack_require__(307);
 	
 	var _ponyfill2 = _interopRequireDefault(_ponyfill);
 	
@@ -9913,7 +9173,7 @@ webpackJsonp([1],[
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 327 */
+/* 307 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9941,7 +9201,7 @@ webpackJsonp([1],[
 	};
 
 /***/ },
-/* 328 */
+/* 308 */
 /***/ function(module, exports) {
 
 	/*
@@ -11044,6 +10304,694 @@ webpackJsonp([1],[
 	*/
 	exports.uriFragmentInHTMLComment = exports.uriComponentInHTMLComment;
 
+
+/***/ },
+/* 309 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const react_router_1 = __webpack_require__(26);
+	const _1 = __webpack_require__(28);
+	const redux_1 = __webpack_require__(89);
+	const react_redux_1 = __webpack_require__(47);
+	const _2 = __webpack_require__(320);
+	class Layout extends React.Component {
+	    constructor(props) {
+	        super(props);
+	        const constructor_ = this.constructor;
+	        if (constructor_.instance === undefined) {
+	            constructor_.instance = this;
+	        }
+	        this.store = redux_1.createStore(_2.combinedReducers);
+	        this.state = {};
+	    }
+	    clickHandler(ev) {
+	        const target = ev.target;
+	        if (target.tagName === 'A') {
+	            const url = target.getAttribute('href');
+	            if (url !== null) {
+	                const navigationItem = _1.app.navigationManager.identify(url);
+	                if (navigationItem !== null) {
+	                    _1.app.history.push(navigationItem.getUrl());
+	                    ev.preventDefault();
+	                }
+	            }
+	        }
+	    }
+	    render() {
+	        return (React.createElement(react_redux_1.Provider, {store: this.store}, 
+	            React.createElement("div", null, 
+	                React.createElement("div", {className: "header"}, 
+	                    React.createElement("ul", {className: "inner"}, 
+	                        React.createElement("li", null, 
+	                            React.createElement(react_router_1.IndexLink, {to: "/", activeClassName: "active"}, "Home")
+	                        ), 
+	                        React.createElement("li", null, 
+	                            React.createElement(react_router_1.Link, {to: "/pages", activeClassName: "active"}, "Pages")
+	                        ), 
+	                        React.createElement("li", {className: "github"}, 
+	                            React.createElement("a", {href: "https://github.com/eserozvataf/ts-spa-boilerplate"}, "ts-spa-boilerplate")
+	                        ))
+	                ), 
+	                React.createElement("div", {className: "content"}, 
+	                    React.createElement("div", {className: "inner", onClick: this.clickHandler.bind(this)}, this.props.children)
+	                ))
+	        ));
+	    }
+	}
+	exports.Layout = Layout;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = Layout;
+
+
+/***/ },
+/* 310 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	class Conditional extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        if (!this.props.test) {
+	            return null;
+	        }
+	        return this.props.children;
+	    }
+	}
+	exports.Conditional = Conditional;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = Conditional;
+
+
+/***/ },
+/* 311 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const ReactMarkdown = __webpack_require__(204);
+	const Conditional_1 = __webpack_require__(310);
+	class LinearTimelineItem extends React.Component {
+	    constructor(props) {
+	        super(props);
+	        this.state = {
+	            editMode: false
+	        };
+	    }
+	    getContent() {
+	        return this.props.item.content.replace(/\[\[([^\]]*)\]\]/g, (all, first) => `[${first}](#/pages/${encodeURIComponent(first)})`);
+	    }
+	    toggleEditMode() {
+	        this.setState({
+	            editMode: !this.state.editMode
+	        });
+	    }
+	    saveChanges() {
+	        this.props.item.content = this.refs.textarea.value;
+	        this.setState({
+	            editMode: false
+	        });
+	    }
+	    discardChanges() {
+	        this.setState({
+	            editMode: false
+	        });
+	    }
+	    render() {
+	        if (this.state.editMode) {
+	            return (React.createElement("div", null, 
+	                React.createElement("div", null, 
+	                    React.createElement("textarea", {ref: "textarea", defaultValue: this.props.item.content})
+	                ), 
+	                React.createElement("button", {onClick: this.saveChanges.bind(this)}, "save"), 
+	                React.createElement("button", {onClick: this.discardChanges.bind(this)}, "cancel")));
+	        }
+	        return (React.createElement("div", {ref: "markdown"}, 
+	            React.createElement(ReactMarkdown, {source: this.getContent()}), 
+	            React.createElement(Conditional_1.Conditional, {test: this.props.editable}, 
+	                React.createElement("button", {onClick: this.toggleEditMode.bind(this)}, "edit")
+	            )));
+	    }
+	}
+	exports.LinearTimelineItem = LinearTimelineItem;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = LinearTimelineItem;
+
+
+/***/ },
+/* 312 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	class PageContent extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        const data = this.props.datasource[this.props.datakey];
+	        return (React.createElement("div", null, data.content));
+	    }
+	}
+	exports.PageContent = PageContent;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = PageContent;
+
+
+/***/ },
+/* 313 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const react_router_1 = __webpack_require__(26);
+	class PageList extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        const data = this.props.datasource[this.props.datakey];
+	        return (React.createElement("ul", null, Object.keys(data).map((type) => {
+	            const typeKey = `type.${encodeURIComponent(type)}`, typeData = data[type];
+	            return (React.createElement("li", {key: typeKey}, 
+	                React.createElement("h3", {key: `${typeKey}.caption`}, type), 
+	                React.createElement("ul", {key: `${typeKey}.list`}, typeData.map((page) => {
+	                    const pageKey = `page.${encodeURIComponent(page.name)}`;
+	                    return (React.createElement("li", {key: `${typeKey}.page.${pageKey}`}, 
+	                        React.createElement(react_router_1.Link, {key: `${typeKey}.page.${pageKey}.link`, to: `/pages/${encodeURIComponent(page.name)}`}, page.name)
+	                    ));
+	                }))));
+	        })));
+	    }
+	}
+	exports.PageList = PageList;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = PageList;
+
+
+/***/ },
+/* 314 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const ReactRedux = __webpack_require__(47);
+	const _1 = __webpack_require__(28);
+	const PageModel_1 = __webpack_require__(41);
+	const LinearTimeline_1 = __webpack_require__(90);
+	const Loading_1 = __webpack_require__(56);
+	const Error_1 = __webpack_require__(55);
+	const constants = __webpack_require__(42);
+	class EntriesByProperty_ extends React.Component {
+	    constructor(props) {
+	        super(props);
+	        this.state = {
+	            datasource: null,
+	            error: false
+	        };
+	        this.model = _1.app.services.get(PageModel_1.PageModel);
+	        this.updateDatasource(this.props.params.property, this.props.params.value);
+	    }
+	    componentWillReceiveProps(nextProps) {
+	        this.updateDatasource(nextProps.params.property, nextProps.params.value);
+	    }
+	    render() {
+	        if (this.state.error) {
+	            console.error(this.state.error);
+	            return (React.createElement(Error_1.Error, {message: "An error occurred"}));
+	        }
+	        if (this.state.datasource === null) {
+	            return (React.createElement(Loading_1.Loading, null));
+	        }
+	        const isEditable = (this.props.store.login.userLevel >= constants.UserLevels.Editor);
+	        return (React.createElement("div", null, 
+	            React.createElement("h1", null, 
+	                "Entries By Property: ", 
+	                this.props.params.property, 
+	                "=", 
+	                this.props.params.value), 
+	            React.createElement(LinearTimeline_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries", editable: isEditable})));
+	    }
+	    updateDatasource(property, value) {
+	        this.model.getEntriesByProperty(property, value)
+	            .then((response) => { this.setState({ datasource: response, error: false }); })
+	            .catch((err) => { this.setState({ datasource: null, error: err }); });
+	    }
+	}
+	exports.EntriesByProperty_ = EntriesByProperty_;
+	exports.EntriesByProperty = ReactRedux.connect((store) => ({ store: store }))(EntriesByProperty_);
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = exports.EntriesByProperty;
+
+
+/***/ },
+/* 315 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const ReactRedux = __webpack_require__(47);
+	const _1 = __webpack_require__(28);
+	const PageModel_1 = __webpack_require__(41);
+	const LinearTimeline_1 = __webpack_require__(90);
+	const Loading_1 = __webpack_require__(56);
+	const Error_1 = __webpack_require__(55);
+	const constants = __webpack_require__(42);
+	class EntriesByTag_ extends React.Component {
+	    constructor(props) {
+	        super(props);
+	        this.state = {
+	            datasource: null,
+	            error: false
+	        };
+	        this.model = _1.app.services.get(PageModel_1.PageModel);
+	        this.updateDatasource(this.props.params.tag);
+	    }
+	    componentWillReceiveProps(nextProps) {
+	        this.updateDatasource(nextProps.params.tag);
+	    }
+	    render() {
+	        if (this.state.error) {
+	            console.error(this.state.error);
+	            return (React.createElement(Error_1.Error, {message: "An error occurred"}));
+	        }
+	        if (this.state.datasource === null) {
+	            return (React.createElement(Loading_1.Loading, null));
+	        }
+	        const isEditable = (this.props.store.login.userLevel >= constants.UserLevels.Editor);
+	        return (React.createElement("div", null, 
+	            React.createElement("h1", null, 
+	                "Entries By Tag: ", 
+	                this.props.params.tag), 
+	            React.createElement(LinearTimeline_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries", editable: isEditable})));
+	    }
+	    updateDatasource(tag) {
+	        this.model.getEntriesByTag(tag)
+	            .then((response) => { this.setState({ datasource: response, error: false }); })
+	            .catch((err) => { this.setState({ datasource: null, error: err }); });
+	    }
+	}
+	exports.EntriesByTag_ = EntriesByTag_;
+	exports.EntriesByTag = ReactRedux.connect((store) => ({ store: store }))(EntriesByTag_);
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = exports.EntriesByTag;
+
+
+/***/ },
+/* 316 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	class Home extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        return (React.createElement("div", null, 
+	            React.createElement("h1", null, "Home"), 
+	            "...and there is a dummy content"));
+	    }
+	}
+	exports.Home = Home;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = Home;
+
+
+/***/ },
+/* 317 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	class NotFound extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        return (React.createElement("div", null, 
+	            React.createElement("h1", null, "Not Found"), 
+	            "Page not found"));
+	    }
+	}
+	exports.NotFound = NotFound;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = NotFound;
+
+
+/***/ },
+/* 318 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const ReactRedux = __webpack_require__(47);
+	const _1 = __webpack_require__(28);
+	const PageModel_1 = __webpack_require__(41);
+	const PageContent_1 = __webpack_require__(312);
+	const LinearTimeline_1 = __webpack_require__(90);
+	const Loading_1 = __webpack_require__(56);
+	const Error_1 = __webpack_require__(55);
+	const constants = __webpack_require__(42);
+	class PageByName_ extends React.Component {
+	    constructor(props) {
+	        super(props);
+	        this.state = {
+	            datasource: null,
+	            error: false
+	        };
+	        this.model = _1.app.services.get(PageModel_1.PageModel);
+	        this.updateDatasource(this.props.params.name);
+	    }
+	    componentWillReceiveProps(nextProps) {
+	        this.updateDatasource(nextProps.params.name);
+	    }
+	    render() {
+	        if (this.state.error) {
+	            console.error(this.state.error);
+	            return (React.createElement(Error_1.Error, {message: "An error occurred"}));
+	        }
+	        if (this.state.datasource === null) {
+	            return (React.createElement(Loading_1.Loading, null));
+	        }
+	        const isEditable = (this.props.store.login.userLevel >= constants.UserLevels.Editor);
+	        return (React.createElement("div", null, 
+	            React.createElement("h1", null, 
+	                "Page: ", 
+	                this.props.params.name), 
+	            React.createElement(PageContent_1.PageContent, {datasource: this.state.datasource, datakey: "page"}), 
+	            React.createElement("h2", null, "History:"), 
+	            React.createElement(LinearTimeline_1.LinearTimeline, {datasource: this.state.datasource, datakey: "entries", editable: isEditable})));
+	    }
+	    updateDatasource(name) {
+	        this.model.getPageByName(name)
+	            .then((response) => { this.setState({ datasource: response, error: false }); })
+	            .catch((err) => { this.setState({ datasource: null, error: err }); });
+	    }
+	}
+	exports.PageByName_ = PageByName_;
+	exports.PageByName = ReactRedux.connect((store) => ({ store: store }))(PageByName_);
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = exports.PageByName;
+
+
+/***/ },
+/* 319 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const _1 = __webpack_require__(28);
+	const PageModel_1 = __webpack_require__(41);
+	const PageList_1 = __webpack_require__(313);
+	const Loading_1 = __webpack_require__(56);
+	const Error_1 = __webpack_require__(55);
+	class Pages extends React.Component {
+	    constructor(props) {
+	        super(props);
+	        this.state = {
+	            datasource: null,
+	            error: false
+	        };
+	        this.model = _1.app.services.get(PageModel_1.PageModel);
+	        this.updateDatasource();
+	    }
+	    componentWillReceiveProps(nextProps) {
+	        this.updateDatasource();
+	    }
+	    render() {
+	        if (this.state.error) {
+	            console.error(this.state.error);
+	            return (React.createElement(Error_1.Error, {message: "An error occurred"}));
+	        }
+	        if (this.state.datasource === null) {
+	            return (React.createElement(Loading_1.Loading, null));
+	        }
+	        return (React.createElement("div", null, 
+	            React.createElement("h1", null, "Pages"), 
+	            React.createElement(PageList_1.PageList, {datasource: this.state.datasource, datakey: "pages"})));
+	    }
+	    updateDatasource() {
+	        this.model.getPages()
+	            .then((response) => { this.setState({ datasource: response, error: false }); })
+	            .catch((err) => { this.setState({ datasource: null, error: err }); });
+	    }
+	}
+	exports.Pages = Pages;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = Pages;
+
+
+/***/ },
+/* 320 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const redux_1 = __webpack_require__(89);
+	const login_1 = __webpack_require__(321);
+	exports.combinedReducers = redux_1.combineReducers({
+	    login: login_1.loginReducer
+	});
+
+
+/***/ },
+/* 321 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const constants = __webpack_require__(42);
+	const initialState = {
+	    userLevel: constants.UserLevels.Visitor
+	};
+	exports.loginReducer = (state = initialState, action) => {
+	    switch (action.type) {
+	        case 'LOGIN':
+	            return Object.assign({}, state, { userLevel: constants.UserLevels.Editor });
+	        case 'LOGOUT':
+	            return Object.assign({}, state, { userLevel: constants.UserLevels.Visitor });
+	        default:
+	            return state;
+	    }
+	};
+
+
+/***/ },
+/* 322 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const react_router_1 = __webpack_require__(26);
+	const _1 = __webpack_require__(28);
+	const PageModel_1 = __webpack_require__(41);
+	const Layout_1 = __webpack_require__(309);
+	const NotFound_1 = __webpack_require__(317);
+	const Home_1 = __webpack_require__(316);
+	const EntriesByProperty_1 = __webpack_require__(314);
+	const EntriesByTag_1 = __webpack_require__(315);
+	const Pages_1 = __webpack_require__(319);
+	const PageByName_1 = __webpack_require__(318);
+	class Main {
+	    get root() {
+	        return Layout_1.Layout.instance;
+	    }
+	    getRoutes() {
+	        return (React.createElement(react_router_1.Route, {path: "/", component: Layout_1.Layout}, 
+	            React.createElement(react_router_1.IndexRoute, {component: Home_1.Home}), 
+	            React.createElement(react_router_1.Route, {path: "properties/:property/:value", component: EntriesByProperty_1.EntriesByProperty}), 
+	            React.createElement(react_router_1.Route, {path: "tags/:tag", component: EntriesByTag_1.EntriesByTag}), 
+	            React.createElement(react_router_1.Route, {path: "pages", component: Pages_1.Pages}), 
+	            React.createElement(react_router_1.Route, {path: "pages/:name", component: PageByName_1.PageByName}), 
+	            React.createElement(react_router_1.Route, {path: "*", component: NotFound_1.NotFound, status: 404})));
+	    }
+	    getNavigationItems() {
+	        return new Map([
+	            [
+	                'page',
+	                {
+	                    resolver: (url) => {
+	                        if (url.substring(0, 8) !== '#/pages/') {
+	                            return null;
+	                        }
+	                        return {
+	                            page: decodeURIComponent(url.substring(8))
+	                        };
+	                    },
+	                    builder: (parameters) => {
+	                        return `/pages/${encodeURIComponent(parameters.page)}`;
+	                    },
+	                    prefetcher: (parameters) => {
+	                        const model = _1.app.services.get(PageModel_1.PageModel);
+	                        model.getPageByName(parameters.page);
+	                    }
+	                }
+	            ]
+	        ]);
+	    }
+	}
+	exports.Main = Main;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = Main;
+
+
+/***/ },
+/* 323 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const react_router_1 = __webpack_require__(26);
+	const createHashHistory = __webpack_require__(45);
+	exports.history = react_router_1.useRouterHistory(createHashHistory)({
+	    queryKey: false
+	});
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = exports.history;
+
+
+/***/ },
+/* 324 */
+/***/ function(module, exports) {
+
+	"use strict";
+	class CacheContainer {
+	    constructor() {
+	        this.items = new Map();
+	    }
+	    serializeKey(key) {
+	        if (Array.isArray(key)) {
+	            return key.join('_');
+	        }
+	        return key;
+	    }
+	    set(key, value) {
+	        this.items[this.serializeKey(key)] = value;
+	    }
+	    get(key) {
+	        return this.items[this.serializeKey(key)];
+	    }
+	}
+	exports.CacheContainer = CacheContainer;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = CacheContainer;
+
+
+/***/ },
+/* 325 */
+/***/ function(module, exports) {
+
+	"use strict";
+	class NavigationResult {
+	    constructor(navigationItem, parameters) {
+	        this.navigationItem = navigationItem;
+	        this.parameters = parameters;
+	    }
+	    getUrl() {
+	        return this.navigationItem.builder(this.parameters);
+	    }
+	    prefetch() {
+	        this.navigationItem.prefetcher(this.parameters);
+	    }
+	}
+	exports.NavigationResult = NavigationResult;
+	class NavigationManager {
+	    constructor() {
+	        this.items = new Map();
+	    }
+	    add(key, navigationItem) {
+	        this.items[key] = navigationItem;
+	    }
+	    addRange(navigationItems) {
+	        for (const [key, value] of navigationItems) {
+	            this.add(key, value);
+	        }
+	    }
+	    identify(url) {
+	        for (const [key, value] of this.items) {
+	            const result = value.resolver(url);
+	            if (result !== null) {
+	                return new NavigationResult(value, result);
+	            }
+	        }
+	        return null;
+	    }
+	    getUrl(name, parameters) {
+	        return this.items[name].builder(parameters);
+	    }
+	    prefetchUrl(url) {
+	        const item = this.identify(url);
+	        if (item !== null) {
+	            item.prefetch();
+	        }
+	    }
+	}
+	exports.NavigationManager = NavigationManager;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = NavigationManager;
+
+
+/***/ },
+/* 326 */
+/***/ function(module, exports) {
+
+	"use strict";
+	class ServiceContainer {
+	    constructor() {
+	        this.items = new Map();
+	    }
+	    get(type) {
+	        if (!this.items.has(type)) {
+	            this.items[type] = new type();
+	        }
+	        return this.items[type];
+	    }
+	}
+	exports.ServiceContainer = ServiceContainer;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = ServiceContainer;
+
+
+/***/ },
+/* 327 */
+/***/ function(module, exports) {
+
+	"use strict";
+	function camelize(str) {
+	    return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, (match, index) => {
+	        if (+match === 0) {
+	            return '';
+	        }
+	        return (index === 0) ? match.toLowerCase() : match.toUpperCase();
+	    });
+	}
+	exports.camelize = camelize;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = camelize;
+
+
+/***/ },
+/* 328 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	const es6promise = __webpack_require__(94);
+	const _1 = __webpack_require__(28);
+	const Main_1 = __webpack_require__(322);
+	if (global.Promise === undefined) {
+	    es6promise.polyfill();
+	}
+	const appTargetElement = document.getElementsByTagName('app')[0];
+	if (global.app === undefined) {
+	    global.app = _1.app;
+	}
+	_1.app.addModule(Main_1.Main);
+	_1.app.init();
+	_1.app.renderToDOM(appTargetElement);
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }
 ]);

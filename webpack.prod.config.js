@@ -43,11 +43,12 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.tsx?$/, exclude: /node_modules/, loaders: [ 'react-hot-loader/webpack', 'ts-loader' ] },
-            { test: /\.json$/, loaders: [ 'json-loader' ] },
-            { test: /\.scss$/, loader: extractTextSASS.extract('style', [ 'css-loader?sourceMap&importLoaders=1', 'postcss-loader?parser=postcss-scss', 'sass-loader?sourceMap' ]) },
-            { test: /\.css$/, loader: extractTextCSS.extract('style', [ 'css-loader?sourceMap&importLoaders=1', 'postcss-loader' ]) },
-            { test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/, loader: 'file-loader?prefix=font' }
+            { test: /\.jsx$/, exclude: /node_modules/, loader: 'babel-loader?presets=react' },
+            { test: /\.tsx?$/, exclude: /node_modules/, loader: 'ts-loader' },
+            { test: /\.json$/, loader: 'json-loader' },
+            { test: /\.scss$/, loader: extractTextSASS.extract('style', [ 'css-loader?sourceMap', 'postcss-loader?parser=postcss-scss', 'sass-loader?sourceMap' ]) },
+            { test: /\.css$/, loader: extractTextCSS.extract('style', [ 'css-loader?sourceMap', 'postcss-loader' ]) },
+            { test: /\.(eot|woff|woff2|ttf|jpe?g|png|gif|svg)([\?]?.*)$/, loader: 'file-loader?prefix=asset' }
         ],
 
         preLoaders: [

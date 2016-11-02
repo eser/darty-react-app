@@ -31,6 +31,9 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-react": "^6.16.0",
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
     "css-loader": "^0.25.0",
