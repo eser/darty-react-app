@@ -1,5 +1,6 @@
 /// <reference path="../scripts.typings/index.d.ts" />
 declare var global: any;
+declare var module: any;
 
 import * as es6promise from 'es6-promise';
 
@@ -10,6 +11,11 @@ import { Main } from './app/Main';
 // polyfills
 if (global.Promise === undefined) {
     es6promise.polyfill();
+}
+
+// webpack
+if (module.hot) {
+    module.hot.accept();
 }
 
 // app

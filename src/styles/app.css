@@ -1,13 +1,16 @@
+@import 'webfonts.css';
+
 :root {
-    --mainColor: #34495e;
+    --body-bg-color: #f2f3f5;
+    --header-bg-color: #792525;
+
+    --content-header-color: #34495e; /* #000000 */
+    --content-text-color: #34495e;
+    --content-link-color: #337ab7;
 }
 
 body {
-	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size: 15px;
-	background-color: #f2f3f5;
-	margin: 0;
-	color: var(--mainColor);
+	background-color: var(--body-bg-color);
 }
 
 .inner {
@@ -18,7 +21,7 @@ body {
 }
 
 .header {
-	background-color: #f60;
+	background-color: var(--header-bg-color);
 
     & .inner {
         list-style-type: none;
@@ -27,14 +30,6 @@ body {
         & li {
             display: inline-block;
             vertical-align: middle;
-
-            &.github {
-                float: right;
-
-                & a {
-                    margin-right: 0;
-                }
-            }
 
             & a {
                 color: rgba(255,255,255,0.8);
@@ -62,20 +57,20 @@ body {
 .content {
     padding: 25px 0;
     line-height: 150%;
+    font-family: 'Arbutus Slab';
+    color: var(--content-text-color);
 
     & a {
-        color: #000;
+        color: var(--content-link-color);
     }
-}
 
-.fade-enter-active,
-.fade-leave-active {
-	transition: all 0.2s ease;
-}
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+        color: var(--content-header-color);
 
-.fade-enter,
-.fade-leave-active {
-	opacity: 0;
+        & a {
+            color: var(--content-header-color);
+        }
+    }
 }
 
 @media (max-width: 860px) {
@@ -84,10 +79,8 @@ body {
 	}
 
 	.header {
-        & .inner li {
-            &.github {
-		        display: none;
-	        }
+        & .inner li:last-child {
+            display: none;
         }
     }
 }

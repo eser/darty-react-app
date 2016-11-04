@@ -14,22 +14,26 @@ framework, so you're free to architect your code in the way that you want.
 
 ## Features
 
-* Transforms ES2015+Typescript into browser-compatible JavaScript code.
-* Module bundling with webpack to enable modularity.
+* Transforms ES2015+Typescript files with .ts/.tsx extension into browser-compatible JavaScript code.
 * Upcoming CSSNext standards ready for today (see [cssnext.io](http://cssnext.io/)).
-* Minification for CSS and JavaScript.
-* Hot module reloading on React JSX, Typescript and CSS sources.
-* Isomorphic between server and client.
+* Module bundling with webpack to pack everything into modules.
+* SASS compilation of .scss files.
+* Minification for stylesheets and scripts.
+* Hot module reloading and continous development environment.
+* Isomorphic/Universal codebase between server and client.
 * Unit-testing-ready environment.
 * IntelliSense support on TypeScript.
+* React and Redux DevTools support.
 * ~~JavaScript and CSS hinter and coding style checker.~~ (not ready yet)
 
 
-## Architecture
+## Architecture and Libraries
 
 * React for rendering components.
 * React Router for SPA routing.
 * Redux for state management.
+* Bootstrap, Font-Awesome and jQuery included.
+* Mocha for tests, ESLint for linting.
 
 
 ## Quick start
@@ -39,7 +43,7 @@ Clone the git repo `git clone
    release](https://github.com/eserozvataf/ts-spa-boilerplate/releases) you'd like to
    use.
 
-Execute `npm install` and `typings install` to install dependencies for development environment.
+Execute `npm install` to install dependencies for development environment.
 
 
 ## Jsmake Tasks
@@ -74,7 +78,7 @@ Use `jsmake` command in project folder to execute tasks defined in `makefile.js`
 | `/src/scripts/app/Main/models/`                    | -- Models and services                                       |
 | `/src/scripts/utils/`                              | - Utility class and functions                                |
 | `/src/scripts.typings/`                            | TypeScript definition files                                  |
-| `/dist/bundles/`                                   | Output directory for stylesheet and javascript bundles       |
+| `/dist/`                                           | Output directory for stylesheet and javascript bundles       |
 
 
 ## Todo List
@@ -85,9 +89,12 @@ See [GitHub Projects](https://github.com/eserozvataf/ts-spa-boilerplate/projects
 ## Requirements
 
 * node.js (https://nodejs.org/)
-* TypeScript (https://www.typescriptlang.org/)
-* Typings (https://github.com/typings/typings)
 * jsmake (https://github.com/eserozvataf/jsmake)
+
+
+## Notes and Credits
+
+Uses [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/) for embedding webfonts.
 
 
 ## License

@@ -81,7 +81,7 @@ export class PageByName_ extends React.Component<PageByNamePropsInterface, PageB
 }
 
 export const PageByName = ReactRedux.connect
-    ((store) => ({ store: store }))
+    ((state) => ({ store: state }))
     (PageByName_);
 
 export default PageByName;

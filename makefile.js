@@ -4,63 +4,11 @@ const fs = require('fs'),
 
 // package definitions
 const
-    isProduction = (
-        process.env.NODE_ENV === 'production'
-    ),
     npmBinFolder = './node_modules/.bin/',
-    distFolder = './dist/bundles/',
-    distPublicFolder = '/dist/bundles/';
-
-const bundles = {
-    js: {
-        vendor: {
-            target: 'web',
-            clean: [
-                './dist/bundles/vendor.js',
-                './dist/bundles/vendor.js.map'
-            ]
-        },
-        app: {
-            target: 'web',
-            clean: [
-                './dist/bundles/app.js',
-                './dist/bundles/app.js.map'
-            ]
-        }
-    },
-    css: {
-        app: {
-            target: 'web',
-            clean: [
-                './dist/bundles/app.css',
-                './dist/bundles/app.css.map'
-            ]
-        }
-    }
-};
-
-const watchFolders = [
-    {
-        match: './*.{html,htm}',
-        tasks: []
-    },
-    {
-        match: './src/scripts/**',
-        tasks: [
-            'build'
-        ]
-    },
-    {
-        match: './src/styles/**',
-        tasks: [
-            'build'
-        ]
-    }
-];
+    distFolder = './dist/';
 
 // webpack definitions
-const webpackConfigFile = (isProduction) ? './webpack.prod.config.js' : './webpack.dev.config.js',
-    webpackConfig = require(webpackConfigFile),
+const webpackConfig = require('./webpack.config.js'),
     bundler = webpack(webpackConfig);
 
 jsmake.task('build', function (argv) {
@@ -90,51 +38,20 @@ jsmake.task('test', function (argv) {
 
 // Stats Tasks
 jsmake.task('stats', function (argv) {
-    jsmake.utils.os.shell(path.join(npmBinFolder, 'webpack-bundle-analyzer') + ' ' + path.join(distFolder, 'stats.json'));
+    jsmake.utils.os.shell(path.join(npmBinFolder, 'webpack-bundle-analyzer') + ' ' + path.join(distFolder, 'dev.web/stats.json'));
 });
 
 // Serve Tasks
 jsmake.task('serve', function (argv) {
-    const webpackDevServer = require('webpack-dev-server');
-
-    new webpackDevServer(
-        bundler,
-        {
-            publicPath: webpackConfig.output.publicPath,
-            historyApiFallback: true,
-            hot: true
-        }
-    ).listen(
-        8080,
-        'localhost',
-        function (err, result) {
-            if (err) {
-                console.error(err);
-
-                return;
-            }
-
-            console.log('Listening at http://localhost:8080/');
-        }
-    );
+    jsmake.utils.os.shell('node ' + path.join(__dirname, 'server.js'));
 });
 
 // Other Tasks
 jsmake.task('clean', function (argv) {
-    for (const bundleCategoryKey in bundles) {
-        const bundleCategory = bundles[bundleCategoryKey];
-
-        for (const bundleKey in bundleCategory) {
-            const bundle = bundleCategory[bundleKey];
-
-            for (const item in bundle.clean) {
-                jsmake.utils.rmdir(bundle.clean[item]);
-            }
-        }
-    }
+    jsmake.utils.fs.rmdir(distFolder);
 });
 
 jsmake.task('lint', [ 'lint.js' ]);
 jsmake.task('rebuild', [ 'clean', 'build' ]);
 
-// jsmake.task('default', [ 'lint', 'build', 'serve' ]);
+// jsmake.task('default', [ 'lint', 'test', 'serve' ]);

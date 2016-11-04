@@ -33,7 +33,8 @@ export class Layout extends React.Component<LayoutPropsInterface, LayoutStateInt
             constructor_.instance = this;
         }
 
-        this.store = createStore(combinedReducers);
+        const reduxDevtools = (window as any).__REDUX_DEVTOOLS_EXTENSION__;
+        this.store = createStore(combinedReducers, reduxDevtools && reduxDevtools());
         this.state = {};
     }
 
@@ -66,8 +67,11 @@ export class Layout extends React.Component<LayoutPropsInterface, LayoutStateInt
                         <ul className="inner">
                             <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
                             <li><Link to="/pages" activeClassName="active">Pages</Link></li>
-                            <li className="github">
-                                <a href="https://github.com/eserozvataf/ts-spa-boilerplate">ts-spa-boilerplate</a>
+                            <li className="pull-right text-right">
+                                <a href="https://github.com/eserozvataf/ts-spa-boilerplate">
+                                    <i className="fa fa-code-fork fa-fw" aria-hidden="true"></i>
+                                    ts-spa-boilerplate
+                                </a>
                             </li>
                         </ul>
                     </div>

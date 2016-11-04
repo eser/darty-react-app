@@ -76,7 +76,7 @@ export class EntriesByProperty_ extends React.Component<EntriesByPropertyPropsIn
 }
 
 export const EntriesByProperty = ReactRedux.connect
-    ((store) => ({ store: store }))
+    ((state) => ({ store: state }))
     (EntriesByProperty_);
 
 export default EntriesByProperty;

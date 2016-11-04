@@ -6,14 +6,29 @@ import { Router, RouterContext, match } from 'react-router';
 import { ServiceContainer } from './utils/ServiceContainer';
 import { NavigationItemInterface, NavigationManager } from './utils/NavigationManager';
 import { camelize } from './utils/camelize';
-import { history } from './history';
+import { history, HistoryType } from './history';
 
 export interface AppModuleInterface {
 
     readonly root: any;
 
-    getRoutes(): void;
+    getRoutes(): any;
     getNavigationItems(): Map<string, NavigationItemInterface>;
+
+}
+
+export enum RenderResultType {
+    Success,
+    Redirect,
+    NotFound
+};
+
+export interface RenderResult {
+
+    type: RenderResultType;
+    location: string;
+    error: any;
+    content: string;
 
 }
 
@@ -25,12 +40,16 @@ export class App {
 
     modules: { [key: string]: AppModuleInterface };
 
+    routerRenderCount: number;
+
     constructor() {
         this.services = new ServiceContainer();
         this.navigationManager = new NavigationManager();
-        this.history = history;
+        this.history = history.create(HistoryType.Browser);
 
         this.modules = {};
+
+        this.routerRenderCount = 0;
     }
 
     addModule(appModuleType): void {
@@ -49,10 +68,20 @@ export class App {
         this.navigationManager.prefetchUrl(location.hash);
     }
 
+    *getRoutes(): any {
+        for (const moduleKey of Object.keys(this.modules)) {
+            const module = this.modules[moduleKey];
+
+            for (const moduleRoute of module.getRoutes()) {
+                yield moduleRoute;
+            }
+        }
+    }
+
     compile(): any {
         return (
-            <Router history={this.history}>
-                {Object.keys(this.modules).map((moduleKey) => this.modules[moduleKey].getRoutes())}
+            <Router key={this.routerRenderCount++} history={this.history}>
+                {[...this.getRoutes()]}
             </Router>
         );
     }
@@ -64,25 +93,45 @@ export class App {
         );
     }
 
-    renderToString(url: string): Promise<string> {
+    renderToString(url: string): Promise<RenderResult> {
         return new Promise((resolve, reject) => {
             match(
                 {
                     routes: this.compile(),
                     location: this.history.createLocation(url)
                 },
-                (err, redirect, props) => {
+                (err, redirectLocation, renderProps) => {
                     if (err) {
                         reject(err);
 
                         return;
                     }
 
-                    const result = ReactDOMServer.renderToString(
-                        <RouterContext {...props} />
+                    if (redirectLocation) {
+                        resolve({
+                            type: RenderResultType.Redirect,
+                            location: redirectLocation.pathname + redirectLocation.search
+                        });
+
+                        return;
+                    }
+
+                    if (renderProps === null) {
+                        resolve({
+                            type: RenderResultType.NotFound
+                        });
+
+                        return;
+                    }
+
+                    const content = ReactDOMServer.renderToString(
+                        <RouterContext {...renderProps} />
                     );
 
-                    resolve(result);
+                    resolve({
+                        type: RenderResultType.Success,
+                        content: content
+                    });
                 }
             );
         });

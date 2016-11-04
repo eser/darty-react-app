@@ -76,7 +76,7 @@ export class EntriesByTag_ extends React.Component<EntriesByTagPropsInterface, E
 }
 
 export const EntriesByTag = ReactRedux.connect
-    ((store) => ({ store: store }))
+    ((state) => ({ store: state }))
     (EntriesByTag_);
 
 export default EntriesByTag;

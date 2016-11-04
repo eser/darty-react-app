@@ -25,16 +25,18 @@ export class Main implements AppModuleInterface {
     }
 
     getRoutes(): any {
-        return (
-            <Route path="/" component={Layout}>
-                <IndexRoute component={Home} />
-                <Route path="properties/:property/:value" component={EntriesByProperty} />
-                <Route path="tags/:tag" component={EntriesByTag} />
-                <Route path="pages" component={Pages} />
-                <Route path="pages/:name" component={PageByName} />
-                <Route path="*" component={NotFound} status={404} />
-            </Route>
-        );
+        return [
+            (
+                <Route key="route-main" path="/" component={Layout}>
+                    <IndexRoute key="route-main-index" component={Home} />
+                    <Route key="route-main-properties-property-value" path="properties/:property/:value" component={EntriesByProperty} />
+                    <Route key="route-main-tags-tag" path="tags/:tag" component={EntriesByTag} />
+                    <Route key="route-main-pages" path="pages" component={Pages} />
+                    <Route key="route-main-pages-name" path="pages/:name" component={PageByName} />
+                    <Route key="route-main-catch-all" path="*" component={NotFound} status={404} />
+                </Route>
+            )
+        ];
     }
 
     getNavigationItems(): Map<string, NavigationItemInterface> {
