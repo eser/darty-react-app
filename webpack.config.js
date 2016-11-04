@@ -37,7 +37,6 @@ const config = {
 
     output: {
         filename: '[name].js'
-        // libraryTarget: 'commonjs'
     },
 
     resolve: {
@@ -74,6 +73,7 @@ const config = {
         }),
         extractTextCSS,
         new HtmlWebpackPlugin({
+            filename: '../../index.html',
             template: './src/index.html.ejs',
             favicon: './favicon.ico',
         }),
@@ -118,8 +118,9 @@ if (isProduction) {
     if (isTargetedNode) {
         config.target = 'node';
 
+        config.output.libraryTarget = 'commonjs';
         config.output.path = path.resolve('./dist/prod.node/');
-        config.output.publicPath = './';
+        config.output.publicPath = './dist/prod.node/';
     }
     // prod.web
     else {
@@ -127,7 +128,7 @@ if (isProduction) {
         config.target = 'web';
 
         config.output.path = path.resolve('./dist/prod.web/');
-        config.output.publicPath = './';
+        config.output.publicPath = './dist/prod.web/';
 /*
         config.plugins.push(new webpack.optimize.UglifyJsPlugin({
             compress: {
@@ -150,8 +151,9 @@ else {
     if (isTargetedNode) {
         config.target = 'node';
 
+        config.output.libraryTarget = 'commonjs';
         config.output.path = path.resolve('./dist/dev.node/');
-        config.output.publicPath = './';
+        config.output.publicPath = './dist/dev.node/';
     }
     // dev.web
     else {
@@ -159,7 +161,7 @@ else {
         config.target = 'web';
 
         config.output.path = path.resolve('./dist/dev.web/');
-        config.output.publicPath = './';
+        config.output.publicPath = './dist/dev.web/';
 
         config.entry.app.push('webpack-hot-middleware/client');
         config.module.loaders[0].loaders.unshift('react-hot-loader/webpack');
