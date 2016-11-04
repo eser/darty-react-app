@@ -1,6 +1,7 @@
 const path = require('path'),
     webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
     BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
     cssnext = require('postcss-cssnext'),
     cssnano = require('cssnano');
@@ -51,7 +52,7 @@ const config = {
             { test: /\.json$/, loader: 'json-loader' },
             { test: /\.scss$/, loader: extractTextCSS.extract('style', [ 'css-loader?sourceMap', 'postcss-loader?parser=postcss-scss', 'sass-loader?sourceMap' ]) },
             { test: /\.css$/, loader: extractTextCSS.extract('style', [ 'css-loader?sourceMap', 'postcss-loader' ]) },
-            { test: /\.(eot|woff|woff2|ttf|jpe?g|png|gif|svg)([\?]?.*)$/, loader: 'file-loader?prefix=asset' }
+            { test: /\.(eot|woff|woff2|ttf|jpe?g|png|gif|svg|ico)([\?]?.*)$/, loader: 'file-loader?name=asset.[hash].[ext]' }
         ],
 
         preLoaders: [
@@ -72,6 +73,10 @@ const config = {
             minChunks: Infinity
         }),
         extractTextCSS,
+        new HtmlWebpackPlugin({
+            template: './src/index.html.ejs',
+            favicon: './favicon.ico',
+        }),
         new BundleAnalyzerPlugin({
             // Start analyzer HTTP-server. 
             // You can use this plugin to just generate Webpack Stats JSON file by setting `startAnalyzer` to `false` 
@@ -114,7 +119,7 @@ if (isProduction) {
         config.target = 'node';
 
         config.output.path = path.resolve('./dist/prod.node/');
-        config.output.publicPath = '/dist/prod.node/';
+        config.output.publicPath = './';
     }
     // prod.web
     else {
@@ -122,7 +127,7 @@ if (isProduction) {
         config.target = 'web';
 
         config.output.path = path.resolve('./dist/prod.web/');
-        config.output.publicPath = '/dist/prod.web/';
+        config.output.publicPath = './';
 /*
         config.plugins.push(new webpack.optimize.UglifyJsPlugin({
             compress: {
@@ -146,7 +151,7 @@ else {
         config.target = 'node';
 
         config.output.path = path.resolve('./dist/dev.node/');
-        config.output.publicPath = '/dist/dev.node/';
+        config.output.publicPath = './';
     }
     // dev.web
     else {
@@ -154,7 +159,7 @@ else {
         config.target = 'web';
 
         config.output.path = path.resolve('./dist/dev.web/');
-        config.output.publicPath = '/dist/dev.web/';
+        config.output.publicPath = './';
 
         config.entry.app.push('webpack-hot-middleware/client');
         config.module.loaders[0].loaders.unshift('react-hot-loader/webpack');

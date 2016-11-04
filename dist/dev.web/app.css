@@ -3,13 +3,13 @@
   font-family: 'Arbutus Slab';
   font-style: normal;
   font-weight: 400;
-  src: url(/dist/dev.web/5f865dd00f0f1e35f1a6754c85edd97a.eot); /* IE9 Compat Modes */
+  src: url(./asset.5f865dd00f0f1e35f1a6754c85edd97a.eot); /* IE9 Compat Modes */
   src: local('Arbutus Slab'), local('ArbutusSlab-Regular'),
-       url(/dist/dev.web/5f865dd00f0f1e35f1a6754c85edd97a.eot?#iefix) format('embedded-opentype'), 
-       url(/dist/dev.web/195c87493642f00600f721a080aa00a3.woff2) format('woff2'), 
-       url(/dist/dev.web/996ead0306fca477d8aad7772ab3334c.woff) format('woff'), 
-       url(/dist/dev.web/688108d3f78e1259239434410d749d3a.ttf) format('truetype'), 
-       url(/dist/dev.web/1db220279a8da22bb9991909ae0f22e4.svg#ArbutusSlab) format('svg'); /* Legacy iOS */
+       url(./asset.5f865dd00f0f1e35f1a6754c85edd97a.eot?#iefix) format('embedded-opentype'), 
+       url(./asset.195c87493642f00600f721a080aa00a3.woff2) format('woff2'), 
+       url(./asset.996ead0306fca477d8aad7772ab3334c.woff) format('woff'), 
+       url(./asset.688108d3f78e1259239434410d749d3a.ttf) format('truetype'), 
+       url(./asset.1db220279a8da22bb9991909ae0f22e4.svg#ArbutusSlab) format('svg'); /* Legacy iOS */
 }
 :root { /* #000000 */
 }

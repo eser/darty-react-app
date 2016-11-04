@@ -238,8 +238,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(/dist/dev.web/f4769f9bdb7466be65088239c12046d1.eot);
-  src: url(/dist/dev.web/f4769f9bdb7466be65088239c12046d1.eot?#iefix) format("embedded-opentype"), url(/dist/dev.web/448c34a56d699c29117adc64c43affeb.woff2) format("woff2"), url(/dist/dev.web/fa2772327f55d8198301fdb8bcfc8158.woff) format("woff"), url(/dist/dev.web/e18bbf611f2a2e43afc071aa2f4e1512.ttf) format("truetype"), url(/dist/dev.web/89889688147bd7575d6327160d64e760.svg#glyphicons_halflingsregular) format("svg"); }
+  src: url(./asset.f4769f9bdb7466be65088239c12046d1.eot);
+  src: url(./asset.f4769f9bdb7466be65088239c12046d1.eot?#iefix) format("embedded-opentype"), url(./asset.448c34a56d699c29117adc64c43affeb.woff2) format("woff2"), url(./asset.fa2772327f55d8198301fdb8bcfc8158.woff) format("woff"), url(./asset.e18bbf611f2a2e43afc071aa2f4e1512.ttf) format("truetype"), url(./asset.89889688147bd7575d6327160d64e760.svg#glyphicons_halflingsregular) format("svg"); }
 
 .glyphicon {
   position: relative;
@@ -5739,8 +5739,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(/dist/dev.web/674f50d287a8c48dc19ba404d20fe713.eot);
-  src: url(/dist/dev.web/674f50d287a8c48dc19ba404d20fe713.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/dist/dev.web/af7ae505a9eed503f8b8e6982036873e.woff2) format("woff2"), url(/dist/dev.web/fee66e712a8a08eef5805a46892932ad.woff) format("woff"), url(/dist/dev.web/b06871f281fee6b241d60582ae9369b9.ttf) format("truetype"), url(/dist/dev.web/912ec66d7572ff821749319396470bde.svg#fontawesomeregular) format("svg");
+  src: url(./asset.674f50d287a8c48dc19ba404d20fe713.eot);
+  src: url(./asset.674f50d287a8c48dc19ba404d20fe713.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(./asset.af7ae505a9eed503f8b8e6982036873e.woff2) format("woff2"), url(./asset.fee66e712a8a08eef5805a46892932ad.woff) format("woff"), url(./asset.b06871f281fee6b241d60582ae9369b9.ttf) format("truetype"), url(./asset.912ec66d7572ff821749319396470bde.svg#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal; }
 
