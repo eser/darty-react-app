@@ -75,7 +75,7 @@ const config = {
         new HtmlWebpackPlugin({
             filename: '../../index.html',
             template: './src/index.html.ejs',
-            favicon: './favicon.ico',
+            inject: false
         }),
         new BundleAnalyzerPlugin({
             // Start analyzer HTTP-server. 
@@ -120,7 +120,8 @@ if (isProduction) {
 
         config.output.libraryTarget = 'commonjs';
         config.output.path = path.resolve('./dist/prod.node/');
-        config.output.publicPath = './dist/prod.node/';
+        config.output.publicPathHtml = './dist/prod.node/';
+        config.output.publicPath = './';
     }
     // prod.web
     else {
@@ -128,7 +129,8 @@ if (isProduction) {
         config.target = 'web';
 
         config.output.path = path.resolve('./dist/prod.web/');
-        config.output.publicPath = './dist/prod.web/';
+        config.output.publicPathHtml = './dist/prod.web/';
+        config.output.publicPath = './';
 /*
         config.plugins.push(new webpack.optimize.UglifyJsPlugin({
             compress: {
@@ -153,7 +155,8 @@ else {
 
         config.output.libraryTarget = 'commonjs';
         config.output.path = path.resolve('./dist/dev.node/');
-        config.output.publicPath = './dist/dev.node/';
+        config.output.publicPathHtml = './dist/dev.node/';
+        config.output.publicPath = './';
     }
     // dev.web
     else {
@@ -161,7 +164,8 @@ else {
         config.target = 'web';
 
         config.output.path = path.resolve('./dist/dev.web/');
-        config.output.publicPath = './dist/dev.web/';
+        config.output.publicPathHtml = './dist/dev.web/';
+        config.output.publicPath = './';
 
         config.entry.app.push('webpack-hot-middleware/client');
         config.module.loaders[0].loaders.unshift('react-hot-loader/webpack');
