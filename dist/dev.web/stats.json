@@ -4,7 +4,7 @@
     "NODE_ENV environment variable is undefined."
   ],
   "version": "1.13.2",
-  "hash": "63d7cd67fe0566d4bfc2",
+  "hash": "2f5616f3e1a2026db0b4",
   "publicPath": "/dist/dev.web/",
   "assetsByChunkName": {
     "vendor": "vendor.js",
@@ -121,7 +121,7 @@
     },
     {
       "name": "app.js",
-      "size": 488702,
+      "size": 488699,
       "chunks": [
         1
       ],
@@ -204,14 +204,14 @@
       "initial": true,
       "entry": false,
       "extraAsync": false,
-      "size": 431664,
+      "size": 431661,
       "names": [
         "app"
       ],
       "files": [
         "app.js"
       ],
-      "hash": "d28b07d015e116f41cd6",
+      "hash": "c249618ecbb15f53e4d5",
       "parents": [
         0
       ],
@@ -388,7 +388,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponentTree.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -1491,7 +1491,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponentTree.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3322,7 +3322,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMUnknownPropertyHook.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMNullInputValuePropHook.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3688,7 +3688,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\BeforeInputEventPlugin.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactBrowserEventEmitter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4534,7 +4534,7 @@
       "name": "./src/scripts/app/index.tsx",
       "index": 5,
       "index2": 244,
-      "size": 4310,
+      "size": 4307,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -4612,7 +4612,7 @@
           "loc": "3:11-28"
         }
       ],
-      "source": "\"use strict\";\nvar __assign = (this && this.__assign) || Object.assign || function(t) {\n    for (var s, i = 1, n = arguments.length; i < n; i++) {\n        s = arguments[i];\n        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n            t[p] = s[p];\n    }\n    return t;\n};\nconst React = require('react');\nconst ReactDOM = require('react-dom');\nconst ReactDOMServer = require('react-dom/server');\nconst react_router_1 = require('react-router');\nconst ServiceContainer_1 = require('./utils/ServiceContainer');\nconst NavigationManager_1 = require('./utils/NavigationManager');\nconst camelize_1 = require('./utils/camelize');\nconst history_1 = require('./history');\n(function (RenderResultType) {\n    RenderResultType[RenderResultType[\"Success\"] = 0] = \"Success\";\n    RenderResultType[RenderResultType[\"Redirect\"] = 1] = \"Redirect\";\n    RenderResultType[RenderResultType[\"NotFound\"] = 2] = \"NotFound\";\n})(exports.RenderResultType || (exports.RenderResultType = {}));\nvar RenderResultType = exports.RenderResultType;\n;\nclass App {\n    constructor() {\n        this.services = new ServiceContainer_1.ServiceContainer();\n        this.navigationManager = new NavigationManager_1.NavigationManager();\n        this.history = history_1.history.create(history_1.HistoryType.Browser);\n        this.modules = {};\n        this.routerRenderCount = 0;\n    }\n    addModule(appModuleType) {\n        const appModule = new appModuleType();\n        this.modules[camelize_1.camelize(appModuleType.name)] = appModule;\n    }\n    init() {\n        for (const moduleKey of Object.keys(this.modules)) {\n            const module = this.modules[moduleKey];\n            this.navigationManager.addRange(module.getNavigationItems());\n        }\n        this.navigationManager.prefetchUrl(location.hash);\n    }\n    *getRoutes() {\n        for (const moduleKey of Object.keys(this.modules)) {\n            const module = this.modules[moduleKey];\n            for (const moduleRoute of module.getRoutes()) {\n                yield moduleRoute;\n            }\n        }\n    }\n    compile() {\n        return (React.createElement(react_router_1.Router, {key: this.routerRenderCount++, history: this.history}, [...this.getRoutes()]));\n    }\n    renderToDOM(targetElement) {\n        ReactDOM.render(this.compile(), targetElement);\n    }\n    renderToString(url) {\n        return new Promise((resolve, reject) => {\n            react_router_1.match({\n                routes: this.compile(),\n                location: this.history.createLocation(url)\n            }, (err, redirectLocation, renderProps) => {\n                if (err) {\n                    reject(err);\n                    return;\n                }\n                if (redirectLocation) {\n                    resolve({\n                        type: RenderResultType.Redirect,\n                        location: redirectLocation.pathname + redirectLocation.search\n                    });\n                    return;\n                }\n                if (renderProps === null) {\n                    resolve({\n                        type: RenderResultType.NotFound\n                    });\n                    return;\n                }\n                const content = ReactDOMServer.renderToString(React.createElement(react_router_1.RouterContext, __assign({}, renderProps)));\n                resolve({\n                    type: RenderResultType.Success,\n                    content: content\n                });\n            });\n        });\n    }\n}\nexports.App = App;\nexports.app = new App();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.default = exports.app;\n\n\n ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', \"C:\\\\Projects\\\\GitHub\\\\ts-spa-boilerplate\\\\src\\\\scripts\\\\app\\\\index.tsx\"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, \"C:\\\\Projects\\\\GitHub\\\\ts-spa-boilerplate\\\\src\\\\scripts\\\\app\\\\index.tsx\"); } } })();"
+      "source": "\"use strict\";\nvar __assign = (this && this.__assign) || Object.assign || function(t) {\n    for (var s, i = 1, n = arguments.length; i < n; i++) {\n        s = arguments[i];\n        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n            t[p] = s[p];\n    }\n    return t;\n};\nconst React = require('react');\nconst ReactDOM = require('react-dom');\nconst ReactDOMServer = require('react-dom/server');\nconst react_router_1 = require('react-router');\nconst ServiceContainer_1 = require('./utils/ServiceContainer');\nconst NavigationManager_1 = require('./utils/NavigationManager');\nconst camelize_1 = require('./utils/camelize');\nconst history_1 = require('./history');\n(function (RenderResultType) {\n    RenderResultType[RenderResultType[\"Success\"] = 0] = \"Success\";\n    RenderResultType[RenderResultType[\"Redirect\"] = 1] = \"Redirect\";\n    RenderResultType[RenderResultType[\"NotFound\"] = 2] = \"NotFound\";\n})(exports.RenderResultType || (exports.RenderResultType = {}));\nvar RenderResultType = exports.RenderResultType;\n;\nclass App {\n    constructor() {\n        this.services = new ServiceContainer_1.ServiceContainer();\n        this.navigationManager = new NavigationManager_1.NavigationManager();\n        this.history = history_1.history.create(history_1.HistoryType.Hash);\n        this.modules = {};\n        this.routerRenderCount = 0;\n    }\n    addModule(appModuleType) {\n        const appModule = new appModuleType();\n        this.modules[camelize_1.camelize(appModuleType.name)] = appModule;\n    }\n    init() {\n        for (const moduleKey of Object.keys(this.modules)) {\n            const module = this.modules[moduleKey];\n            this.navigationManager.addRange(module.getNavigationItems());\n        }\n        this.navigationManager.prefetchUrl(location.hash);\n    }\n    *getRoutes() {\n        for (const moduleKey of Object.keys(this.modules)) {\n            const module = this.modules[moduleKey];\n            for (const moduleRoute of module.getRoutes()) {\n                yield moduleRoute;\n            }\n        }\n    }\n    compile() {\n        return (React.createElement(react_router_1.Router, {key: this.routerRenderCount++, history: this.history}, [...this.getRoutes()]));\n    }\n    renderToDOM(targetElement) {\n        ReactDOM.render(this.compile(), targetElement);\n    }\n    renderToString(url) {\n        return new Promise((resolve, reject) => {\n            react_router_1.match({\n                routes: this.compile(),\n                location: this.history.createLocation(url)\n            }, (err, redirectLocation, renderProps) => {\n                if (err) {\n                    reject(err);\n                    return;\n                }\n                if (redirectLocation) {\n                    resolve({\n                        type: RenderResultType.Redirect,\n                        location: redirectLocation.pathname + redirectLocation.search\n                    });\n                    return;\n                }\n                if (renderProps === null) {\n                    resolve({\n                        type: RenderResultType.NotFound\n                    });\n                    return;\n                }\n                const content = ReactDOMServer.renderToString(React.createElement(react_router_1.RouterContext, __assign({}, renderProps)));\n                resolve({\n                    type: RenderResultType.Success,\n                    content: content\n                });\n            });\n        });\n    }\n}\nexports.App = App;\nexports.app = new App();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.default = exports.app;\n\n\n ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', \"C:\\\\Projects\\\\GitHub\\\\ts-spa-boilerplate\\\\src\\\\scripts\\\\app\\\\index.tsx\"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, \"C:\\\\Projects\\\\GitHub\\\\ts-spa-boilerplate\\\\src\\\\scripts\\\\app\\\\index.tsx\"); } } })();"
     },
     {
       "id": 27,
@@ -4800,7 +4800,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponentTree.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7445,7 +7445,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponent.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\DOMLazyTree.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7745,7 +7745,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\EventPluginHub.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactCompositeComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8395,7 +8395,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ChangeEventPlugin.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactBrowserEventEmitter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8545,7 +8545,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponent.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMContainerInfo.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9095,7 +9095,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\encode.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\decode.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9136,7 +9136,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\encode.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\decode.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10037,7 +10037,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactInjection.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\instantiateReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10119,7 +10119,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactInjection.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\instantiateReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10898,7 +10898,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\redux\\lib\\createStore.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\redux\\lib\\combineReducers.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,

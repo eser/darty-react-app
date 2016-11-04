@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "1.13.2",
-  "hash": "00db0d77d8d732114b95",
+  "hash": "199e937e335e9cb3f148",
   "publicPath": "/dist/prod.web/",
   "assetsByChunkName": {
     "vendor": [
@@ -129,7 +129,7 @@
     },
     {
       "name": "app.js",
-      "size": 356846,
+      "size": 356843,
       "chunks": [
         1
       ],
@@ -189,7 +189,7 @@
     },
     {
       "name": "app.js.map",
-      "size": 460402,
+      "size": 460399,
       "chunks": [
         1
       ],
@@ -273,7 +273,7 @@
       "initial": true,
       "entry": false,
       "extraAsync": false,
-      "size": 338789,
+      "size": 338786,
       "names": [
         "app"
       ],
@@ -281,7 +281,7 @@
         "app.js",
         "app.js.map"
       ],
-      "hash": "004fa396699f6212ce6b",
+      "hash": "6953c80395304906682a",
       "parents": [
         0
       ],
@@ -462,7 +462,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponentTree.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -1200,7 +1200,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponentTree.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -2467,7 +2467,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createHashHistory.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-router\\lib\\PatternUtils.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -2634,7 +2634,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\BeforeInputEventPlugin.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\setInnerHTML.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3419,7 +3419,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createLocation.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\deprecate.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3541,7 +3541,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\BeforeInputEventPlugin.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactBrowserEventEmitter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4635,7 +4635,7 @@
       "name": "./src/scripts/app/index.tsx",
       "index": 5,
       "index2": 235,
-      "size": 3614,
+      "size": 3611,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -4713,7 +4713,7 @@
           "loc": "3:11-28"
         }
       ],
-      "source": "\"use strict\";\nvar __assign = (this && this.__assign) || Object.assign || function(t) {\n    for (var s, i = 1, n = arguments.length; i < n; i++) {\n        s = arguments[i];\n        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n            t[p] = s[p];\n    }\n    return t;\n};\nconst React = require('react');\nconst ReactDOM = require('react-dom');\nconst ReactDOMServer = require('react-dom/server');\nconst react_router_1 = require('react-router');\nconst ServiceContainer_1 = require('./utils/ServiceContainer');\nconst NavigationManager_1 = require('./utils/NavigationManager');\nconst camelize_1 = require('./utils/camelize');\nconst history_1 = require('./history');\n(function (RenderResultType) {\n    RenderResultType[RenderResultType[\"Success\"] = 0] = \"Success\";\n    RenderResultType[RenderResultType[\"Redirect\"] = 1] = \"Redirect\";\n    RenderResultType[RenderResultType[\"NotFound\"] = 2] = \"NotFound\";\n})(exports.RenderResultType || (exports.RenderResultType = {}));\nvar RenderResultType = exports.RenderResultType;\n;\nclass App {\n    constructor() {\n        this.services = new ServiceContainer_1.ServiceContainer();\n        this.navigationManager = new NavigationManager_1.NavigationManager();\n        this.history = history_1.history.create(history_1.HistoryType.Browser);\n        this.modules = {};\n        this.routerRenderCount = 0;\n    }\n    addModule(appModuleType) {\n        const appModule = new appModuleType();\n        this.modules[camelize_1.camelize(appModuleType.name)] = appModule;\n    }\n    init() {\n        for (const moduleKey of Object.keys(this.modules)) {\n            const module = this.modules[moduleKey];\n            this.navigationManager.addRange(module.getNavigationItems());\n        }\n        this.navigationManager.prefetchUrl(location.hash);\n    }\n    *getRoutes() {\n        for (const moduleKey of Object.keys(this.modules)) {\n            const module = this.modules[moduleKey];\n            for (const moduleRoute of module.getRoutes()) {\n                yield moduleRoute;\n            }\n        }\n    }\n    compile() {\n        return (React.createElement(react_router_1.Router, {key: this.routerRenderCount++, history: this.history}, [...this.getRoutes()]));\n    }\n    renderToDOM(targetElement) {\n        ReactDOM.render(this.compile(), targetElement);\n    }\n    renderToString(url) {\n        return new Promise((resolve, reject) => {\n            react_router_1.match({\n                routes: this.compile(),\n                location: this.history.createLocation(url)\n            }, (err, redirectLocation, renderProps) => {\n                if (err) {\n                    reject(err);\n                    return;\n                }\n                if (redirectLocation) {\n                    resolve({\n                        type: RenderResultType.Redirect,\n                        location: redirectLocation.pathname + redirectLocation.search\n                    });\n                    return;\n                }\n                if (renderProps === null) {\n                    resolve({\n                        type: RenderResultType.NotFound\n                    });\n                    return;\n                }\n                const content = ReactDOMServer.renderToString(React.createElement(react_router_1.RouterContext, __assign({}, renderProps)));\n                resolve({\n                    type: RenderResultType.Success,\n                    content: content\n                });\n            });\n        });\n    }\n}\nexports.App = App;\nexports.app = new App();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.default = exports.app;\n"
+      "source": "\"use strict\";\nvar __assign = (this && this.__assign) || Object.assign || function(t) {\n    for (var s, i = 1, n = arguments.length; i < n; i++) {\n        s = arguments[i];\n        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n            t[p] = s[p];\n    }\n    return t;\n};\nconst React = require('react');\nconst ReactDOM = require('react-dom');\nconst ReactDOMServer = require('react-dom/server');\nconst react_router_1 = require('react-router');\nconst ServiceContainer_1 = require('./utils/ServiceContainer');\nconst NavigationManager_1 = require('./utils/NavigationManager');\nconst camelize_1 = require('./utils/camelize');\nconst history_1 = require('./history');\n(function (RenderResultType) {\n    RenderResultType[RenderResultType[\"Success\"] = 0] = \"Success\";\n    RenderResultType[RenderResultType[\"Redirect\"] = 1] = \"Redirect\";\n    RenderResultType[RenderResultType[\"NotFound\"] = 2] = \"NotFound\";\n})(exports.RenderResultType || (exports.RenderResultType = {}));\nvar RenderResultType = exports.RenderResultType;\n;\nclass App {\n    constructor() {\n        this.services = new ServiceContainer_1.ServiceContainer();\n        this.navigationManager = new NavigationManager_1.NavigationManager();\n        this.history = history_1.history.create(history_1.HistoryType.Hash);\n        this.modules = {};\n        this.routerRenderCount = 0;\n    }\n    addModule(appModuleType) {\n        const appModule = new appModuleType();\n        this.modules[camelize_1.camelize(appModuleType.name)] = appModule;\n    }\n    init() {\n        for (const moduleKey of Object.keys(this.modules)) {\n            const module = this.modules[moduleKey];\n            this.navigationManager.addRange(module.getNavigationItems());\n        }\n        this.navigationManager.prefetchUrl(location.hash);\n    }\n    *getRoutes() {\n        for (const moduleKey of Object.keys(this.modules)) {\n            const module = this.modules[moduleKey];\n            for (const moduleRoute of module.getRoutes()) {\n                yield moduleRoute;\n            }\n        }\n    }\n    compile() {\n        return (React.createElement(react_router_1.Router, {key: this.routerRenderCount++, history: this.history}, [...this.getRoutes()]));\n    }\n    renderToDOM(targetElement) {\n        ReactDOM.render(this.compile(), targetElement);\n    }\n    renderToString(url) {\n        return new Promise((resolve, reject) => {\n            react_router_1.match({\n                routes: this.compile(),\n                location: this.history.createLocation(url)\n            }, (err, redirectLocation, renderProps) => {\n                if (err) {\n                    reject(err);\n                    return;\n                }\n                if (redirectLocation) {\n                    resolve({\n                        type: RenderResultType.Redirect,\n                        location: redirectLocation.pathname + redirectLocation.search\n                    });\n                    return;\n                }\n                if (renderProps === null) {\n                    resolve({\n                        type: RenderResultType.NotFound\n                    });\n                    return;\n                }\n                const content = ReactDOMServer.renderToString(React.createElement(react_router_1.RouterContext, __assign({}, renderProps)));\n                resolve({\n                    type: RenderResultType.Success,\n                    content: content\n                });\n            });\n        });\n    }\n}\nexports.App = App;\nexports.app = new App();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.default = exports.app;\n"
     },
     {
       "id": 29,
@@ -4730,7 +4730,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\commonmark\\lib\\blocks.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\commonmark\\lib\\html.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5115,7 +5115,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponentTree.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactMount.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5192,7 +5192,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createHashHistory.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -5795,7 +5795,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createHashHistory.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -6444,7 +6444,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\ts-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByProperty.tsx",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\ts-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByTag.tsx",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -6503,7 +6503,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\ts-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByProperty.tsx",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\ts-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByTag.tsx",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -6712,7 +6712,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createHashHistory.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7112,7 +7112,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponent.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\DOMLazyTree.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7162,7 +7162,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponent.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactBrowserEventEmitter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7462,7 +7462,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactChildReconciler.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\checkReactTypeSpec.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7512,7 +7512,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\EventPluginHub.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactCompositeComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -7562,7 +7562,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactPureComponent.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8112,7 +8112,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ChangeEventPlugin.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactBrowserEventEmitter.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8262,7 +8262,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMComponent.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactDOMContainerInfo.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8362,7 +8362,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\ts-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByProperty.tsx",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\ts-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\src\\scripts\\app\\Main\\components\\smart\\EntriesByTag.tsx",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8412,7 +8412,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\decode.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\encode.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8453,7 +8453,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\decode.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\entities\\lib\\encode.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8494,7 +8494,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\commonmark\\lib\\common.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\commonmark\\lib\\inlines.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8698,7 +8698,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createHashHistory.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\history\\lib\\createBrowserHistory.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8943,7 +8943,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-redux\\lib\\components\\connect.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-redux\\lib\\components\\Provider.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8984,7 +8984,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-redux\\lib\\components\\connect.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react-redux\\lib\\components\\Provider.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9722,7 +9722,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactInjection.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\instantiateReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9804,7 +9804,7 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\ReactInjection.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\react\\lib\\instantiateReactComponent.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10624,7 +10624,7 @@
         1
       ],
       "assets": [],
-      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\redux\\lib\\combineReducers.js",
+      "issuer": "C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\source-map-loader\\index.js!C:\\Projects\\GitHub\\ts-spa-boilerplate\\node_modules\\redux\\lib\\createStore.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,

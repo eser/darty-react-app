@@ -45,7 +45,7 @@ export class App {
     constructor() {
         this.services = new ServiceContainer();
         this.navigationManager = new NavigationManager();
-        this.history = history.create(HistoryType.Browser);
+        this.history = history.create(HistoryType.Hash);
 
         this.modules = {};
 

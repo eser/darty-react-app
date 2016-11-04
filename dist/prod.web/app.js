@@ -64,7 +64,7 @@ webpackJsonp([1],[
 	    constructor() {
 	        this.services = new ServiceContainer_1.ServiceContainer();
 	        this.navigationManager = new NavigationManager_1.NavigationManager();
-	        this.history = history_1.history.create(history_1.HistoryType.Browser);
+	        this.history = history_1.history.create(history_1.HistoryType.Hash);
 	        this.modules = {};
 	        this.routerRenderCount = 0;
 	    }
