@@ -3,29 +3,29 @@ import * as ReactRedux from 'react-redux';
 
 import { app } from '../../../';
 
-import { PageModel } from '../../models/PageModel';
-import { LinearTimeline } from '../dumb/LinearTimeline';
-import { Loading } from '../dumb/Loading';
-import { Error } from '../dumb/Error';
+import { PageModel } from '../models/PageModel';
+import { LinearTimeline } from '../presentationals/LinearTimeline';
+import { Loading } from '../../Shared/presentationals/Loading';
+import { Error } from '../../Shared/presentationals/Error';
 
 import * as constants from '../../../constants';
 
-export interface EntriesByPropertyPropsInterface {
+export interface EntriesByTagPropsInterface {
     store: any;
     params: any;
 }
 
-export interface EntriesByPropertyStateInterface {
+export interface EntriesByTagStateInterface {
     datasource: any;
     error: any;
 }
 
-export class EntriesByProperty_ extends React.Component<EntriesByPropertyPropsInterface, EntriesByPropertyStateInterface> {
+export class EntriesByTag_ extends React.Component<EntriesByTagPropsInterface, EntriesByTagStateInterface> {
 
-    state: EntriesByPropertyStateInterface;
+    state: EntriesByTagStateInterface;
     model: PageModel;
 
-    constructor(props: EntriesByPropertyPropsInterface) {
+    constructor(props: EntriesByTagPropsInterface) {
         super(props);
 
         this.state = {
@@ -34,11 +34,11 @@ export class EntriesByProperty_ extends React.Component<EntriesByPropertyPropsIn
         };
 
         this.model = app.services.get(PageModel);
-        this.updateDatasource(this.props.params.property, this.props.params.value);
+        this.updateDatasource(this.props.params.tag);
     }
 
-    componentWillReceiveProps(nextProps: EntriesByPropertyPropsInterface): void {
-        this.updateDatasource(nextProps.params.property, nextProps.params.value);
+    componentWillReceiveProps(nextProps: EntriesByTagPropsInterface): void {
+        this.updateDatasource(nextProps.params.tag);
     }
 
     render(): any {
@@ -60,23 +60,23 @@ export class EntriesByProperty_ extends React.Component<EntriesByPropertyPropsIn
 
         return (
             <div>
-                <h1>Entries By Property: {this.props.params.property}={this.props.params.value}</h1>
+                <h1>Entries By Tag: {this.props.params.tag}</h1>
 
                 <LinearTimeline datasource={this.state.datasource} datakey="entries" editable={isEditable} />
             </div>
         );
     }
 
-    updateDatasource(property: string, value: string): void {
-        this.model.getEntriesByProperty(property, value)
+    updateDatasource(tag: string): void {
+        this.model.getEntriesByTag(tag)
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ datasource: null, error: err }); });
     }
 
 }
 
-export const EntriesByProperty = ReactRedux.connect
+export const EntriesByTag = ReactRedux.connect
     ((state) => ({ store: state }))
-    (EntriesByProperty_);
+    (EntriesByTag_);
 
-export default EntriesByProperty;
+export default EntriesByTag;

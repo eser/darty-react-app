@@ -2,9 +2,9 @@ declare var fetch: Function;
 
 import 'whatwg-fetch';
 
-import * as constants from '../../constants';
+import * as constants from '../../../constants';
 
-import { CacheContainer } from '../../utils/CacheContainer';
+import { CacheContainer } from '../../../utils/CacheContainer';
 
 export class PageModel {
 

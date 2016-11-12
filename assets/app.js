@@ -878,7 +878,7 @@ webpackJsonp([1],[
 	"use strict";
 	const React = __webpack_require__(2);
 	const react_router_1 = __webpack_require__(25);
-	const LinearTimelineItem_1 = __webpack_require__(328);
+	const LinearTimelineItem_1 = __webpack_require__(332);
 	class LinearTimeline extends React.Component {
 	    constructor(props) {
 	        super(props);
@@ -10381,11 +10381,32 @@ webpackJsonp([1],[
 
 	"use strict";
 	const React = __webpack_require__(2);
+	class Home extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        return (React.createElement("div", null,
+	            React.createElement("h1", null, "Home"),
+	            "...and there is a dummy content"));
+	    }
+	}
+	exports.Home = Home;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = Home;
+
+
+/***/ },
+/* 327 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
 	const react_router_1 = __webpack_require__(25);
 	const _1 = __webpack_require__(27);
 	const redux_1 = __webpack_require__(96);
 	const react_redux_1 = __webpack_require__(48);
-	const _2 = __webpack_require__(337);
+	const combinedReducers_1 = __webpack_require__(338);
 	class Layout extends React.Component {
 	    constructor(props) {
 	        super(props);
@@ -10394,7 +10415,7 @@ webpackJsonp([1],[
 	            constructor_.instance = this;
 	        }
 	        const reduxDevtools = window.__REDUX_DEVTOOLS_EXTENSION__;
-	        this.store = redux_1.createStore(_2.combinedReducers, reduxDevtools && reduxDevtools());
+	        this.store = redux_1.createStore(combinedReducers_1.combinedReducers, reduxDevtools && reduxDevtools());
 	        this.state = {};
 	    }
 	    clickHandler(ev) {
@@ -10433,136 +10454,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 327 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	class Conditional extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        if (!this.props.test) {
-	            return null;
-	        }
-	        return this.props.children;
-	    }
-	}
-	exports.Conditional = Conditional;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = Conditional;
-
-
-/***/ },
 /* 328 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const ReactMarkdown = __webpack_require__(227);
-	const Conditional_1 = __webpack_require__(327);
-	class LinearTimelineItem extends React.Component {
-	    constructor(props) {
-	        super(props);
-	        this.state = {
-	            editMode: false
-	        };
-	    }
-	    getContent() {
-	        return this.props.item.content.replace(/\[\[([^\]]*)\]\]/g, (all, first) => `[${first}](#/pages/${encodeURIComponent(first)})`);
-	    }
-	    toggleEditMode() {
-	        this.setState({
-	            editMode: !this.state.editMode
-	        });
-	    }
-	    saveChanges() {
-	        this.props.item.content = this.refs.textarea.value;
-	        this.setState({
-	            editMode: false
-	        });
-	    }
-	    discardChanges() {
-	        this.setState({
-	            editMode: false
-	        });
-	    }
-	    render() {
-	        if (this.state.editMode) {
-	            return (React.createElement("div", null,
-	                React.createElement("div", null,
-	                    React.createElement("textarea", { ref: "textarea", defaultValue: this.props.item.content })),
-	                React.createElement("button", { onClick: this.saveChanges.bind(this) }, "save"),
-	                React.createElement("button", { onClick: this.discardChanges.bind(this) }, "cancel")));
-	        }
-	        return (React.createElement("div", { ref: "markdown" },
-	            React.createElement(ReactMarkdown, { source: this.getContent() }),
-	            React.createElement(Conditional_1.Conditional, { test: this.props.editable },
-	                React.createElement("button", { onClick: this.toggleEditMode.bind(this) }, "edit"))));
-	    }
-	}
-	exports.LinearTimelineItem = LinearTimelineItem;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = LinearTimelineItem;
-
-
-/***/ },
-/* 329 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	class PageContent extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        const data = this.props.datasource[this.props.datakey];
-	        return (React.createElement("div", null, data.content));
-	    }
-	}
-	exports.PageContent = PageContent;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = PageContent;
-
-
-/***/ },
-/* 330 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	const react_router_1 = __webpack_require__(25);
-	class PageList extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        const data = this.props.datasource[this.props.datakey];
-	        return (React.createElement("ul", { className: "fa-ul" }, Object.keys(data).map((type) => {
-	            const typeKey = `type.${encodeURIComponent(type)}`, typeData = data[type];
-	            return (React.createElement("li", { key: typeKey },
-	                React.createElement("h3", { key: `${typeKey}.caption` },
-	                    React.createElement("i", { className: "fa-li fa fa-folder-o fa-fw" }),
-	                    type),
-	                React.createElement("ul", { className: "fa-ul", key: `${typeKey}.list` }, typeData.map((page) => {
-	                    const pageKey = `page.${encodeURIComponent(page.name)}`;
-	                    return (React.createElement("li", { key: `${typeKey}.page.${pageKey}` },
-	                        React.createElement(react_router_1.Link, { key: `${typeKey}.page.${pageKey}.link`, to: `/pages/${encodeURIComponent(page.name)}` },
-	                            React.createElement("i", { className: "fa-li fa fa-file-o fa-fw" }),
-	                            page.name)));
-	                }))));
-	        })));
-	    }
-	}
-	exports.PageList = PageList;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = PageList;
-
-
-/***/ },
-/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10617,7 +10509,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 332 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10670,49 +10562,7 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 333 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	class Home extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        return (React.createElement("div", null,
-	            React.createElement("h1", null, "Home"),
-	            "...and there is a dummy content"));
-	    }
-	}
-	exports.Home = Home;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = Home;
-
-
-/***/ },
-/* 334 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	const React = __webpack_require__(2);
-	class NotFound extends React.Component {
-	    constructor(props) {
-	        super(props);
-	    }
-	    render() {
-	        return (React.createElement("div", null,
-	            React.createElement("h1", null, "Not Found"),
-	            "Page not found"));
-	    }
-	}
-	exports.NotFound = NotFound;
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = NotFound;
-
-
-/***/ },
-/* 335 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10720,7 +10570,7 @@ webpackJsonp([1],[
 	const ReactRedux = __webpack_require__(48);
 	const _1 = __webpack_require__(27);
 	const PageModel_1 = __webpack_require__(43);
-	const PageContent_1 = __webpack_require__(329);
+	const PageContent_1 = __webpack_require__(333);
 	const LinearTimeline_1 = __webpack_require__(97);
 	const Loading_1 = __webpack_require__(57);
 	const Error_1 = __webpack_require__(56);
@@ -10768,14 +10618,14 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 336 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	const React = __webpack_require__(2);
 	const _1 = __webpack_require__(27);
 	const PageModel_1 = __webpack_require__(43);
-	const PageList_1 = __webpack_require__(330);
+	const PageList_1 = __webpack_require__(334);
 	const Loading_1 = __webpack_require__(57);
 	const Error_1 = __webpack_require__(56);
 	class Pages extends React.Component {
@@ -10815,19 +10665,135 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 337 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	const redux_1 = __webpack_require__(96);
-	const login_1 = __webpack_require__(338);
-	exports.combinedReducers = redux_1.combineReducers({
-	    login: login_1.loginReducer
-	});
+	const React = __webpack_require__(2);
+	const ReactMarkdown = __webpack_require__(227);
+	const Conditional_1 = __webpack_require__(337);
+	class LinearTimelineItem extends React.Component {
+	    constructor(props) {
+	        super(props);
+	        this.state = {
+	            editMode: false
+	        };
+	    }
+	    getContent() {
+	        return this.props.item.content.replace(/\[\[([^\]]*)\]\]/g, (all, first) => `[${first}](#/pages/${encodeURIComponent(first)})`);
+	    }
+	    toggleEditMode() {
+	        this.setState({
+	            editMode: !this.state.editMode
+	        });
+	    }
+	    saveChanges() {
+	        this.props.item.content = this.refs.textarea.value;
+	        this.setState({
+	            editMode: false
+	        });
+	    }
+	    discardChanges() {
+	        this.setState({
+	            editMode: false
+	        });
+	    }
+	    render() {
+	        if (this.state.editMode) {
+	            return (React.createElement("div", null,
+	                React.createElement("div", null,
+	                    React.createElement("textarea", { ref: "textarea", defaultValue: this.props.item.content })),
+	                React.createElement("button", { onClick: this.saveChanges.bind(this) }, "save"),
+	                React.createElement("button", { onClick: this.discardChanges.bind(this) }, "cancel")));
+	        }
+	        return (React.createElement("div", { ref: "markdown" },
+	            React.createElement(ReactMarkdown, { source: this.getContent() }),
+	            React.createElement(Conditional_1.Conditional, { test: this.props.editable },
+	                React.createElement("button", { onClick: this.toggleEditMode.bind(this) }, "edit"))));
+	    }
+	}
+	exports.LinearTimelineItem = LinearTimelineItem;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = LinearTimelineItem;
 
 
 /***/ },
-/* 338 */
+/* 333 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	class PageContent extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        const data = this.props.datasource[this.props.datakey];
+	        return (React.createElement("div", null, data.content));
+	    }
+	}
+	exports.PageContent = PageContent;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = PageContent;
+
+
+/***/ },
+/* 334 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	const react_router_1 = __webpack_require__(25);
+	class PageList extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        const data = this.props.datasource[this.props.datakey];
+	        return (React.createElement("ul", { className: "fa-ul" }, Object.keys(data).map((type) => {
+	            const typeKey = `type.${encodeURIComponent(type)}`, typeData = data[type];
+	            return (React.createElement("li", { key: typeKey },
+	                React.createElement("h3", { key: `${typeKey}.caption` },
+	                    React.createElement("i", { className: "fa-li fa fa-folder-o fa-fw" }),
+	                    type),
+	                React.createElement("ul", { className: "fa-ul", key: `${typeKey}.list` }, typeData.map((page) => {
+	                    const pageKey = `page.${encodeURIComponent(page.name)}`;
+	                    return (React.createElement("li", { key: `${typeKey}.page.${pageKey}` },
+	                        React.createElement(react_router_1.Link, { key: `${typeKey}.page.${pageKey}.link`, to: `/pages/${encodeURIComponent(page.name)}` },
+	                            React.createElement("i", { className: "fa-li fa fa-file-o fa-fw" }),
+	                            page.name)));
+	                }))));
+	        })));
+	    }
+	}
+	exports.PageList = PageList;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = PageList;
+
+
+/***/ },
+/* 335 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	class NotFound extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        return (React.createElement("div", null,
+	            React.createElement("h1", null, "Not Found"),
+	            "Page not found"));
+	    }
+	}
+	exports.NotFound = NotFound;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = NotFound;
+
+
+/***/ },
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10848,6 +10814,40 @@ webpackJsonp([1],[
 
 
 /***/ },
+/* 337 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const React = __webpack_require__(2);
+	class Conditional extends React.Component {
+	    constructor(props) {
+	        super(props);
+	    }
+	    render() {
+	        if (!this.props.test) {
+	            return null;
+	        }
+	        return this.props.children;
+	    }
+	}
+	exports.Conditional = Conditional;
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports.default = Conditional;
+
+
+/***/ },
+/* 338 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	const redux_1 = __webpack_require__(96);
+	const loginReducer_1 = __webpack_require__(336);
+	exports.combinedReducers = redux_1.combineReducers({
+	    login: loginReducer_1.loginReducer
+	});
+
+
+/***/ },
 /* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -10856,13 +10856,13 @@ webpackJsonp([1],[
 	const react_router_1 = __webpack_require__(25);
 	const _1 = __webpack_require__(27);
 	const PageModel_1 = __webpack_require__(43);
-	const Layout_1 = __webpack_require__(326);
-	const NotFound_1 = __webpack_require__(334);
-	const Home_1 = __webpack_require__(333);
-	const EntriesByProperty_1 = __webpack_require__(331);
-	const EntriesByTag_1 = __webpack_require__(332);
-	const Pages_1 = __webpack_require__(336);
-	const PageByName_1 = __webpack_require__(335);
+	const Layout_1 = __webpack_require__(327);
+	const NotFound_1 = __webpack_require__(335);
+	const Home_1 = __webpack_require__(326);
+	const EntriesByProperty_1 = __webpack_require__(328);
+	const EntriesByTag_1 = __webpack_require__(329);
+	const Pages_1 = __webpack_require__(331);
+	const PageByName_1 = __webpack_require__(330);
 	class Main {
 	    get root() {
 	        return Layout_1.Layout.instance;

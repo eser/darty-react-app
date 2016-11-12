@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactMarkdown from 'react-markdown';
 
-import { Conditional } from './Conditional';
+import { Conditional } from '../../Shared/presentationals/Conditional';
 
 export interface LinearTimelineItemPropsInterface {
     item: any;

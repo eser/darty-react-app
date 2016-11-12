@@ -4,15 +4,15 @@ import { Route, IndexRoute } from 'react-router';
 import { app, App, AppModuleInterface } from '../';
 import { NavigationItemInterface } from '../utils/NavigationManager';
 
-import { PageModel } from './models/PageModel';
+import { PageModel } from './Pages/models/PageModel';
 
 import { Layout } from './Layout';
-import { NotFound } from './components/smart/NotFound';
-import { Home } from './components/smart/Home';
-import { EntriesByProperty } from './components/smart/EntriesByProperty';
-import { EntriesByTag } from './components/smart/EntriesByTag';
-import { Pages } from './components/smart/Pages';
-import { PageByName } from './components/smart/PageByName';
+import { NotFound } from './Shared/containers/NotFound';
+import { Home } from './Home/containers/Home';
+import { EntriesByProperty } from './Pages/containers/EntriesByProperty';
+import { EntriesByTag } from './Pages/containers/EntriesByTag';
+import { Pages } from './Pages/containers/Pages';
+import { PageByName } from './Pages/containers/PageByName';
 
 export interface PageInterface {
     page: string;

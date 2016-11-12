@@ -3,30 +3,29 @@ import * as ReactRedux from 'react-redux';
 
 import { app } from '../../../';
 
-import { PageModel } from '../../models/PageModel';
-import { PageContent } from '../dumb/PageContent';
-import { LinearTimeline } from '../dumb/LinearTimeline';
-import { Loading } from '../dumb/Loading';
-import { Error } from '../dumb/Error';
+import { PageModel } from '../models/PageModel';
+import { LinearTimeline } from '../presentationals/LinearTimeline';
+import { Loading } from '../../Shared/presentationals/Loading';
+import { Error } from '../../Shared/presentationals/Error';
 
 import * as constants from '../../../constants';
 
-export interface PageByNamePropsInterface {
+export interface EntriesByPropertyPropsInterface {
     store: any;
     params: any;
 }
 
-export interface PageByNameStateInterface {
+export interface EntriesByPropertyStateInterface {
     datasource: any;
     error: any;
 }
 
-export class PageByName_ extends React.Component<PageByNamePropsInterface, PageByNameStateInterface> {
+export class EntriesByProperty_ extends React.Component<EntriesByPropertyPropsInterface, EntriesByPropertyStateInterface> {
 
-    state: PageByNameStateInterface;
+    state: EntriesByPropertyStateInterface;
     model: PageModel;
 
-    constructor(props: PageByNamePropsInterface) {
+    constructor(props: EntriesByPropertyPropsInterface) {
         super(props);
 
         this.state = {
@@ -35,11 +34,11 @@ export class PageByName_ extends React.Component<PageByNamePropsInterface, PageB
         };
 
         this.model = app.services.get(PageModel);
-        this.updateDatasource(this.props.params.name);
+        this.updateDatasource(this.props.params.property, this.props.params.value);
     }
 
-    componentWillReceiveProps(nextProps: PageByNamePropsInterface): void {
-        this.updateDatasource(nextProps.params.name);
+    componentWillReceiveProps(nextProps: EntriesByPropertyPropsInterface): void {
+        this.updateDatasource(nextProps.params.property, nextProps.params.value);
     }
 
     render(): any {
@@ -61,27 +60,23 @@ export class PageByName_ extends React.Component<PageByNamePropsInterface, PageB
 
         return (
             <div>
-                <h1>Page: {this.props.params.name}</h1>
-
-                <PageContent datasource={this.state.datasource} datakey="page" />
-
-                <h2>History:</h2>
+                <h1>Entries By Property: {this.props.params.property}={this.props.params.value}</h1>
 
                 <LinearTimeline datasource={this.state.datasource} datakey="entries" editable={isEditable} />
             </div>
         );
     }
 
-    updateDatasource(name: string): void {
-        this.model.getPageByName(name)
+    updateDatasource(property: string, value: string): void {
+        this.model.getEntriesByProperty(property, value)
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ datasource: null, error: err }); });
     }
 
 }
 
-export const PageByName = ReactRedux.connect
+export const EntriesByProperty = ReactRedux.connect
     ((state) => ({ store: state }))
-    (PageByName_);
+    (EntriesByProperty_);
 
-export default PageByName;
+export default EntriesByProperty;

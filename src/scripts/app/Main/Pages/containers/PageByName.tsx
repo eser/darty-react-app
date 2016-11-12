@@ -3,29 +3,30 @@ import * as ReactRedux from 'react-redux';
 
 import { app } from '../../../';
 
-import { PageModel } from '../../models/PageModel';
-import { LinearTimeline } from '../dumb/LinearTimeline';
-import { Loading } from '../dumb/Loading';
-import { Error } from '../dumb/Error';
+import { PageModel } from '../models/PageModel';
+import { PageContent } from '../presentationals/PageContent';
+import { LinearTimeline } from '../presentationals/LinearTimeline';
+import { Loading } from '../../Shared/presentationals/Loading';
+import { Error } from '../../Shared/presentationals/Error';
 
 import * as constants from '../../../constants';
 
-export interface EntriesByTagPropsInterface {
+export interface PageByNamePropsInterface {
     store: any;
     params: any;
 }
 
-export interface EntriesByTagStateInterface {
+export interface PageByNameStateInterface {
     datasource: any;
     error: any;
 }
 
-export class EntriesByTag_ extends React.Component<EntriesByTagPropsInterface, EntriesByTagStateInterface> {
+export class PageByName_ extends React.Component<PageByNamePropsInterface, PageByNameStateInterface> {
 
-    state: EntriesByTagStateInterface;
+    state: PageByNameStateInterface;
     model: PageModel;
 
-    constructor(props: EntriesByTagPropsInterface) {
+    constructor(props: PageByNamePropsInterface) {
         super(props);
 
         this.state = {
@@ -34,11 +35,11 @@ export class EntriesByTag_ extends React.Component<EntriesByTagPropsInterface, E
         };
 
         this.model = app.services.get(PageModel);
-        this.updateDatasource(this.props.params.tag);
+        this.updateDatasource(this.props.params.name);
     }
 
-    componentWillReceiveProps(nextProps: EntriesByTagPropsInterface): void {
-        this.updateDatasource(nextProps.params.tag);
+    componentWillReceiveProps(nextProps: PageByNamePropsInterface): void {
+        this.updateDatasource(nextProps.params.name);
     }
 
     render(): any {
@@ -60,23 +61,27 @@ export class EntriesByTag_ extends React.Component<EntriesByTagPropsInterface, E
 
         return (
             <div>
-                <h1>Entries By Tag: {this.props.params.tag}</h1>
+                <h1>Page: {this.props.params.name}</h1>
+
+                <PageContent datasource={this.state.datasource} datakey="page" />
+
+                <h2>History:</h2>
 
                 <LinearTimeline datasource={this.state.datasource} datakey="entries" editable={isEditable} />
             </div>
         );
     }
 
-    updateDatasource(tag: string): void {
-        this.model.getEntriesByTag(tag)
+    updateDatasource(name: string): void {
+        this.model.getPageByName(name)
             .then((response) => { this.setState({ datasource: response, error: false }); })
             .catch((err) => { this.setState({ datasource: null, error: err }); });
     }
 
 }
 
-export const EntriesByTag = ReactRedux.connect
+export const PageByName = ReactRedux.connect
     ((state) => ({ store: state }))
-    (EntriesByTag_);
+    (PageByName_);
 
-export default EntriesByTag;
+export default PageByName;

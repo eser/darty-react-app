@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import { app } from '../../../';
 
-import { PageModel } from '../../models/PageModel';
-import { PageList } from '../dumb/PageList';
-import { Loading } from '../dumb/Loading';
-import { Error } from '../dumb/Error';
+import { PageModel } from '../models/PageModel';
+import { PageList } from '../presentationals/PageList';
+import { Loading } from '../../Shared/presentationals/Loading';
+import { Error } from '../../Shared/presentationals/Error';
 
 export interface PagesPropsInterface {
     params: any;

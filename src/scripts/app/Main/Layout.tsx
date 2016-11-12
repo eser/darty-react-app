@@ -7,7 +7,7 @@ import { app } from '../';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { combinedReducers } from './flow/';
+import { combinedReducers } from './combinedReducers';
 
 import * as constants from '../constants';
 
