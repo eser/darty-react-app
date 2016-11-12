@@ -1,4 +1,4 @@
-@import 'webfonts.css';
+@import './webfonts.css';
 
 :root {
     --body-bg-color: #f2f3f5;

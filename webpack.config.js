@@ -51,7 +51,7 @@ const config = {
             { test: /\.json$/, loader: 'json-loader' },
             { test: /\.scss$/, loader: extractTextCSS.extract('style', [ 'css-loader?sourceMap', 'postcss-loader?parser=postcss-scss', 'sass-loader?sourceMap' ]) },
             { test: /\.css$/, loader: extractTextCSS.extract('style', [ 'css-loader?sourceMap', 'postcss-loader' ]) },
-            { test: /\.(eot|woff|woff2|ttf|jpe?g|png|gif|svg|ico)([\?]?.*)$/, loader: 'file-loader?name=asset.[hash].[ext]' }
+            { test: /\.(eot|woff|woff2|ttf|jpe?g|png|gif|svg|ico)([\?]?.*)$/, loader: 'file-loader?name=files/[name].[hash].[ext]' }
         ],
 
         preLoaders: [
@@ -73,8 +73,8 @@ const config = {
         }),
         extractTextCSS,
         new HtmlWebpackPlugin({
-            filename: '../../index.html',
-            template: './src/index.html.ejs',
+            filename: '../index.html',
+            template: './src/html/index.html.ejs',
             inject: false
         }),
         new BundleAnalyzerPlugin({
@@ -119,8 +119,8 @@ if (isProduction) {
         config.target = 'node';
 
         config.output.libraryTarget = 'commonjs';
-        config.output.path = path.resolve('./dist/prod.node/');
-        config.output.publicPathHtml = './dist/prod.node/';
+        config.output.path = path.resolve('./lib/');
+        config.output.publicPathHtml = './lib/';
         config.output.publicPath = './';
     }
     // prod.web
@@ -128,8 +128,8 @@ if (isProduction) {
         config.devtool = 'source-map';
         config.target = 'web';
 
-        config.output.path = path.resolve('./dist/prod.web/');
-        config.output.publicPathHtml = './dist/prod.web/';
+        config.output.path = path.resolve('./assets/');
+        config.output.publicPathHtml = './assets/';
         config.output.publicPath = './';
 /*
         config.plugins.push(new webpack.optimize.UglifyJsPlugin({
@@ -154,8 +154,8 @@ else {
         config.target = 'node';
 
         config.output.libraryTarget = 'commonjs';
-        config.output.path = path.resolve('./dist/dev.node/');
-        config.output.publicPathHtml = './dist/dev.node/';
+        config.output.path = path.resolve('./lib/');
+        config.output.publicPathHtml = './lib/';
         config.output.publicPath = './';
     }
     // dev.web
@@ -163,8 +163,8 @@ else {
         config.devtool = 'eval';
         config.target = 'web';
 
-        config.output.path = path.resolve('./dist/dev.web/');
-        config.output.publicPathHtml = './dist/dev.web/';
+        config.output.path = path.resolve('./assets/');
+        config.output.publicPathHtml = './assets/';
         config.output.publicPath = './';
 
         config.entry.app.push('webpack-hot-middleware/client');

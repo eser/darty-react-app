@@ -1,0 +1,15 @@
+/* arbutus-slab-regular - latin_latin-ext */
+@font-face {
+  font-family: 'Arbutus Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./files/arbutus-slab-v4-latin_latin-ext-regular.5f865dd00f0f1e35f1a6754c85edd97a.eot); /* IE9 Compat Modes */
+  src: local('Arbutus Slab'), local('ArbutusSlab-Regular'),
+       url(./files/arbutus-slab-v4-latin_latin-ext-regular.5f865dd00f0f1e35f1a6754c85edd97a.eot?#iefix) format('embedded-opentype'), 
+       url(./files/arbutus-slab-v4-latin_latin-ext-regular.195c87493642f00600f721a080aa00a3.woff2) format('woff2'), 
+       url(./files/arbutus-slab-v4-latin_latin-ext-regular.996ead0306fca477d8aad7772ab3334c.woff) format('woff'), 
+       url(./files/arbutus-slab-v4-latin_latin-ext-regular.688108d3f78e1259239434410d749d3a.ttf) format('truetype'), 
+       url(./files/arbutus-slab-v4-latin_latin-ext-regular.1db220279a8da22bb9991909ae0f22e4.svg#ArbutusSlab) format('svg'); /* Legacy iOS */
+}
+body{background-color:#f2f3f5}.inner{display:block;max-width:800px;box-sizing:border-box;margin:0 auto}.header{background-color:#792525}.header .inner{list-style-type:none;padding:0}.header .inner li{display:inline-block;vertical-align:middle}.header .inner li a{color:hsla(0,0%,100%,.8);text-decoration:none;line-height:24px;transition:color .15s ease;font-weight:300;letter-spacing:.075em;margin-right:1.8em;padding:15px 5px;display:block}.header .inner li a:hover{color:#fff}.header .inner li a.active{text-decoration:underline}.content{padding:25px 0;line-height:150%;font-family:Arbutus Slab;color:#34495e}.content a{color:#337ab7}.content h1,.content h1 a,.content h2,.content h2 a,.content h3,.content h3 a,.content h4,.content h4 a,.content h5,.content h5 a,.content h6,.content h6 a{color:#34495e}@media (max-width:860px){body{font-size:14px}.header .inner li:last-child{display:none}}@media (max-width:600px){body{font-size:12px}}
+/*# sourceMappingURL=app.css.map*/
