@@ -78,7 +78,9 @@ Use `jsmake` command in project folder to execute tasks defined in `makefile.js`
 | `/src/scripts/app/Main/models/`                    | -- Models and services                                       |
 | `/src/scripts/utils/`                              | - Utility class and functions                                |
 | `/src/scripts.typings/`                            | TypeScript definition files                                  |
-| `/dist/`                                           | Output directory for stylesheet and javascript bundles       |
+| `/assets/`                                         | Output directory for stylesheet and javascript bundles       |
+| `/lib/`                                            | node.js modules                                              |
+| `/test/`                                           | Tests                                                        |
 
 
 ## Todo List
