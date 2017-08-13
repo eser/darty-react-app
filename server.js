@@ -11,18 +11,23 @@ const app = express();
 
 console.log('Enabling Webpack dev middleware.');
 app.use(webpackDevMiddleware(bundler, {
-    lazy: false,
     noInfo: true,
-    publicPath: webpackConfig.output.publicPath,
-    quiet: false,
-    stats: webpackConfig.compiler.stats
+    lazy: false,
+    stats: {
+        assets: false,
+        colors: true,
+        chunks: false,
+        modules: false
+    },
+    serverSideRender: true,
+    publicPath: webpackConfig.output.publicPath
 }));
 
 console.log('Enabling Webpack Hot Module Replacement (HMR).');
 app.use(webpackHotMiddleware(bundler));
 
 const hostname = 'localhost',
-    port = 3000;
+    port = 8080;
 
 app.listen(port, hostname, (err) => {
     if (err) {
@@ -34,10 +39,21 @@ app.listen(port, hostname, (err) => {
     console.log(`Server is now running at http://${hostname}:${port}.`);
 });
 
-app.use(express.static(__dirname, {
-    index: 'dev/index.html'
-}));
+app.use(
+    express.static(
+        path.join(__dirname, 'dist'),
+        {
+            index: 'index.html'
+        }
+    )
+);
 
-app.get('*', (req, res) => {
-    res.json('still in testing');
+app.use((req, res) => {
+    // const assetsByChunkName = res.locals.webpackStats.toJson().assetsByChunkName;
+
+    // res.send(
+    //     appManager.renderToString(req.originalUrl)
+    // );
+
+    res.send(`path not found - ${req.originalUrl}`);
 });

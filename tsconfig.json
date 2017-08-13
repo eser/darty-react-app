@@ -1,35 +1,21 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "es2017",
         "module": "commonjs",
         "moduleResolution": "node",
-        "sourceMap": true,
-        "isolatedModules": false,
         "jsx": "react",
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "declaration": false,
-        "noImplicitAny": false,
         "removeComments": true,
-        "noLib": false,
-        "preserveConstEnums": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "strictNullChecks": true,
         "newLine": "LF",
         "rootDirs": [
-            "src/scripts/",
-            "test/"
+            "src/"
         ],
-        "outDir": "dist/scripts/"
+        "sourceMap": true,
+        "allowJs": true,
+        "outDir": "dist/"
     },
-    "filesGlob": [
-        "src/scripts/**/*.ts",
-        "src/scripts/**/*.tsx"
-    ],
     "exclude": [
         "node_modules",
-        "dist",
-        "src/scripts.typings/main",
-        "src/scripts.typings/main.d.ts"
+        "dist"
     ]
 }

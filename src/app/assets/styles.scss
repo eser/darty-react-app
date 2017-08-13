@@ -1,0 +1,96 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+$fa-font-path: "~font-awesome/fonts";
+@import '../../../node_modules/font-awesome/scss/font-awesome.scss';
+
+:root {
+    --body-bg-color: #f2f3f5;
+    --header-bg-color: #792525;
+
+    --content-header-color: #34495e; /* #000000 */
+    --content-text-color: #34495e;
+    --content-link-color: #337ab7;
+}
+
+body {
+	background-color: var(--body-bg-color);
+}
+
+.inner {
+    display: block;
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.header {
+	background-color: var(--header-bg-color);
+
+    & .inner {
+        list-style-type: none;
+        padding: 0;
+
+        & li {
+            display: inline-block;
+            vertical-align: middle;
+
+            & a {
+                color: rgba(255,255,255,0.8);
+            	text-decoration: none;
+                line-height: 24px;
+                transition: color 0.15s ease;
+                font-weight: 300;
+                letter-spacing: 0.075em;
+                margin-right: 1.8em;
+                padding: 15px 5px;
+                display: block;
+
+                &:hover {
+                    color: #fff;
+                }
+
+                &.active {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    padding: 25px 0;
+    line-height: 150%;
+    font-family: 'Arbutus Slab';
+    color: var(--content-text-color);
+
+    & a {
+        color: var(--content-link-color);
+    }
+
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+        color: var(--content-header-color);
+
+        & a {
+            color: var(--content-header-color);
+        }
+    }
+}
+
+@media (max-width: 860px) {
+	body {
+		font-size: 14px;
+	}
+
+	.header {
+        & .inner li:last-child {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+	body {
+		font-size: 12px;
+	}
+}

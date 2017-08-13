@@ -1,2 +1,16 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor metadata
+.vscode/
+
+# NPM
 node_modules/
-tmp/
+package-lock.json
+
+# API keys and secrets
+.env
+
+# Swap files
+*.swp
