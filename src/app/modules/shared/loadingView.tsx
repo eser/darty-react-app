@@ -19,9 +19,7 @@ class LoadingView extends React.Component<LoadingViewPropsInterface, LoadingView
 }
 
 export {
+    LoadingView as default,
     LoadingViewPropsInterface,
     LoadingViewStateInterface,
-    LoadingView,
 };
-
-export default LoadingView;

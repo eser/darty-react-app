@@ -1,20 +1,19 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import * as PropTypes from 'prop-types';
 
-import { appContext } from './appContext';
+import appContext from './appContext';
 
-import { AuthorizationFilter } from './modules/shared/authorizationFilter';
+import AuthorizationFilter from './modules/shared/authorizationFilter';
 
-import { LayoutContainer } from './layouts/default/layoutContainer';
-import { HomeContainer } from './modules/home/homeContainer';
-import { PageByNameContainer } from './modules/pages/pageByNameContainer';
-import { EntriesByPropertyContainer } from './modules/pages/entriesByPropertyContainer';
-import { EntriesByTagContainer } from './modules/pages/entriesByTagContainer';
-import { PagesContainer } from './modules/pages/pagesContainer';
-import { NotFoundContainer } from './modules/notFound/notFoundContainer';
+import LayoutContainer from './layouts/default/layoutContainer';
+import HomeContainer from './modules/home/homeContainer';
+import PageByNameContainer from './modules/pages/pageByNameContainer';
+import EntriesByPropertyContainer from './modules/pages/entriesByPropertyContainer';
+import EntriesByTagContainer from './modules/pages/entriesByTagContainer';
+import PagesContainer from './modules/pages/pagesContainer';
+import NotFoundContainer from './modules/notFound/notFoundContainer';
 
-import { LoadingView } from './modules/shared/loadingView';
+import LoadingView from './modules/shared/loadingView';
 
 interface AppContainerPropsInterface {
 }
@@ -24,15 +23,6 @@ interface AppContainerStateInterface {
 }
 
 class AppContainer extends React.Component<AppContainerPropsInterface, AppContainerStateInterface> {
-    static contextTypes = {
-        router: PropTypes.object,
-    };
-
-    static childContextTypes = {
-        appContainer: PropTypes.object,
-        appContext: PropTypes.object,
-    };
-
     constructor(props: AppContainerPropsInterface, context: any) {
         super(props, context);
 
@@ -57,24 +47,12 @@ class AppContainer extends React.Component<AppContainerPropsInterface, AppContai
         // this.events.emit('appInit');
     }
 
-    // TODO designed to be a shortcut, and will be removed on production...
-    setUser(user) {
-        appContext.get('eventManager').emit('userInformationHasChanged', user);
-    }
-
     async logout() {
         const sessionService = appContext.get('sessionService');
 
         await sessionService.logout();
 
         this.context.router.history.push('/login');
-    }
-
-    getChildContext() {
-        return {
-            appContainer: this,
-            appContext: appContext,
-        };
     }
 
     componentWillMount() {
@@ -108,7 +86,5 @@ class AppContainer extends React.Component<AppContainerPropsInterface, AppContai
 }
 
 export {
-    AppContainer,
+    AppContainer as default,
 };
-
-export default AppContainer;

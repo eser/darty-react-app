@@ -64,9 +64,7 @@ class LayoutContainer extends React.Component<LayoutContainerPropsInterface, Lay
 }
 
 export {
+    LayoutContainer as default,
     LayoutContainerPropsInterface,
     LayoutContainerStateInterface,
-    LayoutContainer,
 };
-
-export default LayoutContainer;

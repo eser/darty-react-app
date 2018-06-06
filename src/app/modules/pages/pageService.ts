@@ -1,6 +1,6 @@
 declare var process: any;
 
-import { cacheManager, CacheManager } from 'es6-cachemanager/lib/esm';
+import cacheManager from 'es6-cachemanager/lib/esm';
 
 class PageService {
     async getEntriesByProperty(property: string, value: string): Promise<any> {
@@ -94,7 +94,5 @@ class PageService {
 }
 
 export {
-    PageService,
+    PageService as default,
 };
-
-export default PageService;

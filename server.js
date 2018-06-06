@@ -1,33 +1,37 @@
-const express = require('express'),
-    path = require('path'),
-    webpack = require('webpack'),
-    webpackDevMiddleware = require('webpack-dev-middleware'),
-    webpackHotMiddleware = require('webpack-hot-middleware');
+/* eslint-env node */
+const express = require('express');
+const path = require('path');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
 
-const webpackConfig = require('./webpack.config.js'),
-    bundler = webpack(webpackConfig);
+const webpackConfig = require('./webpack.config.js');
 
+const bundler = webpack(webpackConfig);
 const app = express();
 
 console.log('Enabling Webpack dev middleware.');
 app.use(webpackDevMiddleware(bundler, {
     noInfo: true,
     lazy: false,
-    stats: {
-        assets: false,
-        colors: true,
-        chunks: false,
-        modules: false
-    },
+    stats: Object.assign(
+        {},
+        webpackConfig.stats,
+        {
+            assets: false,
+            chunks: false,
+            modules: false,
+        },
+    ),
     serverSideRender: true,
-    publicPath: webpackConfig.output.publicPath
+    publicPath: webpackConfig.output.publicPath,
 }));
 
 console.log('Enabling Webpack Hot Module Replacement (HMR).');
 app.use(webpackHotMiddleware(bundler));
 
-const hostname = 'localhost',
-    port = 8080;
+const hostname = 'localhost';
+const port = parseInt(process.env.PORT, 10);
 
 app.listen(port, hostname, (err) => {
     if (err) {
@@ -43,16 +47,16 @@ app.use(
     express.static(
         path.join(__dirname, 'dist'),
         {
-            index: 'index.html'
-        }
-    )
+            index: 'index.html',
+        },
+    ),
 );
 
 app.use((req, res) => {
     // const assetsByChunkName = res.locals.webpackStats.toJson().assetsByChunkName;
 
     // res.send(
-    //     appManager.renderToString(req.originalUrl)
+    //     appStack.renderToString(req.originalUrl)
     // );
 
     res.send(`path not found - ${req.originalUrl}`);

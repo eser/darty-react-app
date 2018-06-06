@@ -25,9 +25,7 @@ class PageContentView extends React.Component<PageContentViewPropsInterface, Pag
 }
 
 export {
+    PageContentView as default,
     PageContentViewPropsInterface,
     PageContentViewStateInterface,
-    PageContentView,
 };
-
-export default PageContentView;

@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  app:
+    container_name: ts-spa-boilerplate
+    build: .
+    command: "npm start"
+    ports:
+      - "3000:80"
+    # volumes:
+    #  - ./srv
+    environment:
+      - PORT=3000

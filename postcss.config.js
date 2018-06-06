@@ -1,16 +1,35 @@
 const fs = require('fs');
 const path = require('path');
 
+function ensureDirectoryExistence(filePath) {
+    const dirname = path.dirname(filePath);
+
+    if (fs.existsSync(dirname)) {
+        return;
+    }
+
+    ensureDirectoryExistence(dirname);
+    fs.mkdirSync(dirname);
+}
+
+function writeToFile(target, content) {
+    ensureDirectoryExistence(target);
+
+    fs.writeFileSync(
+        target,
+        JSON.stringify(content)
+    );
+}
+
 module.exports = (ctx) => {
     const isProduction = (ctx.env === 'production');
 
     const configPostCssModules = {
         generateScopedName: '[name]__[local]___[hash:base64:5]',
         getJSON: (cssFileName, json) => {
-            const cssName = path.basename(cssFileName, '.css');
-            const jsonFileName = path.resolve(`./dist/styles/${cssName}.json`);
+            const targetPath = path.relative(__dirname, cssFileName);
 
-            fs.writeFileSync(jsonFileName, JSON.stringify(json));
+            writeToFile(`./dist/styles/${targetPath}.json`, json);
         },
     };
 

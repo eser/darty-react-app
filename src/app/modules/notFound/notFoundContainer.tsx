@@ -23,9 +23,7 @@ class NotFoundContainer extends React.Component<NotFoundContainerPropsInterface,
 }
 
 export {
+    NotFoundContainer as default,
     NotFoundContainerPropsInterface,
     NotFoundContainerStateInterface,
-    NotFoundContainer,
 };
-
-export default NotFoundContainer;

@@ -2,6 +2,8 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 
+import appContext from '../../appContext';
+
 interface AuthorizationFilterPropsInterface {
 }
 
@@ -9,10 +11,6 @@ interface AuthorizationFilterStateInterface {
 }
 
 class AuthorizationFilter extends React.Component<AuthorizationFilterPropsInterface, AuthorizationFilterStateInterface> {
-    static contextTypes = {
-        appContext: PropTypes.object,
-    };
-
     constructor(props: AuthorizationFilterPropsInterface, context: any) {
         super(props, context);
 
@@ -22,7 +20,7 @@ class AuthorizationFilter extends React.Component<AuthorizationFilterPropsInterf
     }
 
     render(): any {
-        const sessionManager = this.context.appContext.get('sessionManager');
+        const sessionManager = appContext.get('sessionManager');
 
         if (!sessionManager.state.logged) {
             return (
@@ -37,7 +35,5 @@ class AuthorizationFilter extends React.Component<AuthorizationFilterPropsInterf
 }
 
 export {
-    AuthorizationFilter,
+    AuthorizationFilter as default,
 };
-
-export default AuthorizationFilter;

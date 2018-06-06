@@ -88,7 +88,5 @@ class SessionService {
 }
 
 export {
-    SessionService,
+    SessionService as default,
 };
-
-export default SessionService;

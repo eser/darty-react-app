@@ -23,9 +23,7 @@ class ConditionalView extends React.Component<ConditionalViewPropsInterface, Con
 }
 
 export {
+    ConditionalView as default,
     ConditionalViewPropsInterface,
     ConditionalViewStateInterface,
-    ConditionalView,
 };
-
-export default ConditionalView;

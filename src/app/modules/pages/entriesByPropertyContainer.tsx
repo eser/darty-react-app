@@ -1,9 +1,11 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { LinearTimelineView } from './linearTimelineView';
-import { LoadingView } from '../shared/loadingView';
-import { ErrorView } from '../shared/errorView';
+import appContext from '../../appContext';
+
+import LinearTimelineView from './linearTimelineView';
+import LoadingView from '../shared/loadingView';
+import ErrorView from '../shared/errorView';
 
 interface EntriesByPropertyContainerPropsInterface {
     property: string;
@@ -16,10 +18,6 @@ interface EntriesByPropertyContainerStateInterface {
 }
 
 class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContainerPropsInterface, EntriesByPropertyContainerStateInterface> {
-    static contextTypes = {
-        appContext: PropTypes.object,
-    };
-
     constructor(props: EntriesByPropertyContainerPropsInterface, context: any) {
         super(props, context);
 
@@ -64,7 +62,7 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
     }
 
     updateDatasource(property: string, value: string): void {
-        const pageService = this.context.appContext.get('pageService');
+        const pageService = appContext.get('pageService');
 
         pageService.getEntriesByProperty(property, value)
             .then((response) => { this.setState({ datasource: response, error: false }); })
@@ -73,9 +71,7 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
 }
 
 export {
+    EntriesByPropertyContainer as default,
     EntriesByPropertyContainerPropsInterface,
     EntriesByPropertyContainerStateInterface,
-    EntriesByPropertyContainer,
 };
-
-export default EntriesByPropertyContainer;

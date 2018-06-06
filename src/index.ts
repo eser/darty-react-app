@@ -1,7 +1,8 @@
+/* eslint-env browser */
 declare var global: any;
 
-import { appManager } from './startup';
+import { appStack } from './bootstrapper';
 
 const targetElement = document.getElementsByTagName('app')[0];
-appManager.renderToDOM(targetElement);
-// appManager.renderToString('/').then(x => console.log(x));
+appStack.renderToDOM(targetElement);
+// appStack.renderToString('/').then(x => console.log(x));

@@ -45,9 +45,7 @@ class PageListView extends React.Component<PageListViewPropsInterface, PageListV
 }
 
 export {
+    PageListView as default,
     PageListViewPropsInterface,
     PageListViewStateInterface,
-    PageListView,
 }
-
-export default PageListView;

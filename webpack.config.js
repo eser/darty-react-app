@@ -1,24 +1,31 @@
+/* eslint-env node */
 const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const extractTextCSS = new ExtractTextPlugin('[name]');
+const dirRoot = __dirname;
 
-const isProduction = (process.env.NODE_ENV === 'production');
+const envValue = process.env.NODE_ENV || 'development';
+const isProduction = (envValue === 'production');
 
 module.exports = {
+    target: 'web',
+    mode: isProduction ? 'production' : 'development',
+
     entry: {
-        'app.js': './src/index.ts',
+        'app': './src/index.ts',
         'app-styles.css': './src/app/assets/styles.scss',
         'app-fonts.css': './src/app/assets/fonts.scss',
     },
 
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name]',
+        path: path.join(dirRoot, 'dist'),
+        filename: '[name].js',
+        chunkFilename: '[id].[chunkhash].js',
         publicPath: '/',
     },
 
@@ -31,7 +38,6 @@ module.exports = {
                         loader: 'ts-loader',
                         options: {
                             transpileOnly: true,
-                            entryFileIsJs: true,
                         },
                     },
                 ],
@@ -39,34 +45,47 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: extractTextCSS.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                importLoaders: 1,
-                            },
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2,
+                            sourceMap: true,
                         },
-                        'postcss-loader',
-                        'sass-loader',
-                    ],
-                }),
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
             },
             {
                 test: /\.css$/,
-                use: extractTextCSS.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                importLoaders: 1,
-                            },
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2,
+                            sourceMap: true,
                         },
-                        'postcss-loader',
-                    ],
-                }),
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
             },
             {
                 test: /\.(eot|woff2?|ttf|jpe?g|png|gif|svg|ico)([\?]?.*)$/,
@@ -86,15 +105,21 @@ module.exports = {
     resolve: {
         extensions: [ '.ts', '.tsx', '.js', '.jsx' ],
         modules: [
-            path.join(__dirname, 'src'),
-            path.join(__dirname, 'node_modules'),
+            path.join(dirRoot, 'src'),
+            path.join(dirRoot, 'node_modules'),
         ],
     },
 
     plugins: [
-        new webpack.EnvironmentPlugin([
-            'NODE_ENV',
-        ]),
+        // new CleanWebpackPlugin(
+        //     [ 'dist' ],
+        //     { root: dirRoot },
+        // ),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify(envValue),
+            },
+        }),
         new DotenvPlugin({
             sample: './.env.default',
             path: './.env',
@@ -114,7 +139,12 @@ module.exports = {
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
         }),
-        extractTextCSS,
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name]',
+            chunkFilename: '[id]',
+        }),
         new BundleAnalyzerPlugin({
             // Start analyzer HTTP-server.
             // You can use this plugin to just generate Webpack Stats JSON file by setting
@@ -131,4 +161,12 @@ module.exports = {
             statsFilename: 'stats.json',
         }),
     ],
+
+    stats: {
+        children: false,
+        colors: true,
+        entrypoints: true,
+        env: true,
+        modules: false,
+    },
 };

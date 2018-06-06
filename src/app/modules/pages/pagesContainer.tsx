@@ -1,9 +1,11 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { PageListView } from './pageListView';
-import { LoadingView } from '../shared/loadingView';
-import { ErrorView } from '../shared/errorView';
+import appContext from '../../appContext';
+
+import PageListView from './pageListView';
+import LoadingView from '../shared/loadingView';
+import ErrorView from '../shared/errorView';
 
 interface PagesContainerPropsInterface {
 }
@@ -14,10 +16,6 @@ interface PagesContainerStateInterface {
 }
 
 class PagesContainer extends React.Component<PagesContainerPropsInterface, PagesContainerStateInterface> {
-    static contextTypes = {
-        appContext: PropTypes.object,
-    };
-
     constructor(props: PagesContainerPropsInterface, context: any) {
         super(props, context);
 
@@ -60,7 +58,7 @@ class PagesContainer extends React.Component<PagesContainerPropsInterface, Pages
     }
 
     updateDatasource(): void {
-        const pageService = this.context.appContext.get('pageService');
+        const pageService = appContext.get('pageService');
 
         pageService.getPages()
             .then((response) => { this.setState({ datasource: response, error: false }); })
@@ -70,9 +68,7 @@ class PagesContainer extends React.Component<PagesContainerPropsInterface, Pages
 }
 
 export {
+    PagesContainer as default,
     PagesContainerPropsInterface,
     PagesContainerStateInterface,
-    PagesContainer,
 };
-
-export default PagesContainer;

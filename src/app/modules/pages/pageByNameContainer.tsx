@@ -1,10 +1,12 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { PageContentView } from './pageContentView';
-import { LinearTimelineView } from './linearTimelineView';
-import { LoadingView } from '../shared/loadingView';
-import { ErrorView } from '../shared/errorView';
+import appContext from '../../appContext';
+
+import PageContentView from './pageContentView';
+import LinearTimelineView from './linearTimelineView';
+import LoadingView from '../shared/loadingView';
+import ErrorView from '../shared/errorView';
 
 interface PageByNameContainerPropsInterface {
     name: string;
@@ -16,10 +18,6 @@ interface PageByNameContainerStateInterface {
 }
 
 class PageByNameContainer extends React.Component<PageByNameContainerPropsInterface, PageByNameContainerStateInterface> {
-    static contextTypes = {
-        appContext: PropTypes.object,
-    };
-
     constructor(props: PageByNameContainerPropsInterface, context: any) {
         super(props, context);
 
@@ -68,7 +66,7 @@ class PageByNameContainer extends React.Component<PageByNameContainerPropsInterf
     }
 
     updateDatasource(name: string): void {
-        const pageService = this.context.appContext.get('pageService');
+        const pageService = appContext.get('pageService');
 
         pageService.getPageByName(name)
             .then((response) => { this.setState({ datasource: response, error: false }); })
@@ -77,9 +75,7 @@ class PageByNameContainer extends React.Component<PageByNameContainerPropsInterf
 }
 
 export {
+    PageByNameContainer as default,
     PageByNameContainerPropsInterface,
     PageByNameContainerStateInterface,
-    PageByNameContainer,
 };
-
-export default PageByNameContainer;

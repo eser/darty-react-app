@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { LinearTimelineItemView } from './LinearTimelineItemView';
+import LinearTimelineItemView from './LinearTimelineItemView';
 
 interface LinearTimelineViewPropsInterface {
     datasource: any;
@@ -71,9 +71,7 @@ class LinearTimelineView extends React.Component<LinearTimelineViewPropsInterfac
 }
 
 export {
+    LinearTimelineView as default,
     LinearTimelineViewPropsInterface,
     LinearTimelineViewStateInterface,
-    LinearTimelineView,
 };
-
-export default LinearTimelineView;

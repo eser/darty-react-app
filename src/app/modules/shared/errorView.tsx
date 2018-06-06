@@ -20,9 +20,7 @@ class ErrorView extends React.Component<ErrorViewPropsInterface, ErrorViewStateI
 }
 
 export {
+    ErrorView as default,
     ErrorViewPropsInterface,
     ErrorViewStateInterface,
-    ErrorView,
 };
-
-export default ErrorView;

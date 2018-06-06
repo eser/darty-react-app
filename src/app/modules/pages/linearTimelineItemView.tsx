@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactMarkdown from 'react-markdown';
 
-import { ConditionalView } from '../shared/conditionalView';
+import ConditionalView from '../shared/conditionalView';
 
 interface LinearTimelineItemViewPropsInterface {
     item: any;
@@ -75,9 +75,7 @@ class LinearTimelineItemView extends React.Component<LinearTimelineItemViewProps
 }
 
 export {
+    LinearTimelineItemView as default,
     LinearTimelineItemViewPropsInterface,
     LinearTimelineItemViewStateInterface,
-    LinearTimelineItemView,
 };
-
-export default LinearTimelineItemView;

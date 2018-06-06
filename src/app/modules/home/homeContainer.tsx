@@ -23,9 +23,7 @@ class HomeContainer extends React.Component<HomeContainerPropsInterface, HomeCon
 }
 
 export {
+    HomeContainer as default,
     HomeContainerPropsInterface,
     HomeContainerStateInterface,
-    HomeContainer,
 };
-
-export default HomeContainer;

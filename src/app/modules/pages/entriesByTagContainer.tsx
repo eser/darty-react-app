@@ -1,9 +1,11 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import { LinearTimelineView } from './linearTimelineView';
-import { LoadingView } from '../shared/loadingView';
-import { ErrorView } from '../shared/errorView';
+import appContext from '../../appContext';
+
+import LinearTimelineView from './linearTimelineView';
+import LoadingView from '../shared/loadingView';
+import ErrorView from '../shared/errorView';
 
 interface EntriesByTagContainerPropsInterface {
     tag: string;
@@ -15,10 +17,6 @@ interface EntriesByTagContainerStateInterface {
 }
 
 class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsInterface, EntriesByTagContainerStateInterface> {
-    static contextTypes = {
-        appContext: PropTypes.object,
-    };
-
     constructor(props: EntriesByTagContainerPropsInterface, context: any) {
         super(props, context);
 
@@ -63,7 +61,7 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
     }
 
     updateDatasource(tag: string): void {
-        const pageService = this.context.appContext.get('pageService');
+        const pageService = appContext.get('pageService');
 
         pageService.getEntriesByTag(tag)
             .then((response) => { this.setState({ datasource: response, error: false }); })
@@ -72,9 +70,7 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
 }
 
 export {
+    EntriesByTagContainer as default,
     EntriesByTagContainerPropsInterface,
     EntriesByTagContainerStateInterface,
-    EntriesByTagContainer,
 };
-
-export default EntriesByTagContainer;
