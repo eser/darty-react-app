@@ -11,7 +11,7 @@ class LoadingView extends React.Component<LoadingViewPropsInterface, LoadingView
         super(props, context);
     }
 
-    render(): any {
+    render(): JSX.Element {
         return (
             <div>Loading...</div>
         );

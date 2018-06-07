@@ -4,7 +4,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as ReactDOMServer from 'react-dom/server';
 import { Route, StaticRouter, Switch } from 'react-router-dom';
-import * as PropTypes from 'prop-types';
 
 interface AppStackContainerPropsInterface {
     appStack: AppStack;
@@ -14,7 +13,7 @@ interface AppStackContainerStateInterface {
 }
 
 class AppStackContainer extends React.Component<AppStackContainerPropsInterface, AppStackContainerStateInterface> {
-    render(): any {
+    render(): JSX.Element {
         let renderIndex = 0;
 
         return (

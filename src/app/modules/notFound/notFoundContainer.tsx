@@ -11,7 +11,7 @@ class NotFoundContainer extends React.Component<NotFoundContainerPropsInterface,
         super(props, context);
     }
 
-    render(): any {
+    render(): JSX.Element {
         return (
             <div>
                 <h1>Not Found</h1>

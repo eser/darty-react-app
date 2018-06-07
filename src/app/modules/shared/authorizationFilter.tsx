@@ -19,7 +19,7 @@ class AuthorizationFilter extends React.Component<AuthorizationFilterPropsInterf
         };
     }
 
-    render(): any {
+    render(): JSX.Element {
         const sessionManager = appContext.get('sessionManager');
 
         if (!sessionManager.state.logged) {

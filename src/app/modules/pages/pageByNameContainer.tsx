@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
 
 import appContext from '../../appContext';
 
@@ -13,6 +12,7 @@ interface PageByNameContainerPropsInterface {
 }
 
 interface PageByNameContainerStateInterface {
+    isCompleted: boolean;
     datasource: any;
     error: string | false;
 }
@@ -22,23 +22,26 @@ class PageByNameContainer extends React.Component<PageByNameContainerPropsInterf
         super(props, context);
 
         this.state = {
+            isCompleted: false,
             datasource: null,
             error: false,
         };
     }
 
-    componentWillMount(): void {
-        this.updateDatasource(this.props.name);
+    componentDidMount(): void {
+        if (!this.state.isCompleted) {
+            this.updateDatasource(this.props.name);
+        }
     }
 
-    componentWillReceiveProps(nextProps: PageByNameContainerPropsInterface): void {
-        this.updateDatasource(nextProps.name);
+    componentDidUpdate(prevProps: PageByNameContainerPropsInterface, prevState: PageByNameContainerStateInterface): void {
+        if (this.props.name !== prevProps.name) {
+            this.componentDidMount();
+        }
     }
 
-    render(): any {
+    render(): JSX.Element {
         if (this.state.error !== false) {
-            console.error(this.state.error);
-
             return (
                 <ErrorView message="An error occurred" />
             );
@@ -65,12 +68,19 @@ class PageByNameContainer extends React.Component<PageByNameContainerPropsInterf
         );
     }
 
-    updateDatasource(name: string): void {
+    async updateDatasource(name: string): Promise<void> {
         const pageService = appContext.get('pageService');
 
-        pageService.getPageByName(name)
-            .then((response) => { this.setState({ datasource: response, error: false }); })
-            .catch((err) => { this.setState({ datasource: null, error: err }); });
+        try {
+            const response = await pageService.getPageByName(name);
+
+            this.setState({ isCompleted: true, datasource: response, error: false });
+        }
+        catch (err) {
+            console.error(err);
+
+            this.setState({ isCompleted: true, datasource: null, error: err });
+        }
     }
 }
 

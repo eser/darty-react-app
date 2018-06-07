@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
 
 import appContext from '../../appContext';
 
@@ -11,6 +10,7 @@ interface PagesContainerPropsInterface {
 }
 
 interface PagesContainerStateInterface {
+    isCompleted: boolean;
     datasource: any;
     error: string | false;
 }
@@ -20,20 +20,17 @@ class PagesContainer extends React.Component<PagesContainerPropsInterface, Pages
         super(props, context);
 
         this.state = {
+            isCompleted: false,
             datasource: null,
             error: false,
         };
     }
 
-    componentWillMount(): void {
+    componentDidMount(): void {
         this.updateDatasource();
     }
 
-    componentWillReceiveProps(nextProps: PagesContainerPropsInterface): void {
-        this.updateDatasource();
-    }
-
-    render(): any {
+    render(): JSX.Element {
         if (this.state.error !== false) {
             console.error(this.state.error);
 
@@ -57,14 +54,18 @@ class PagesContainer extends React.Component<PagesContainerPropsInterface, Pages
         );
     }
 
-    updateDatasource(): void {
+    async updateDatasource(): Promise<void> {
         const pageService = appContext.get('pageService');
 
-        pageService.getPages()
-            .then((response) => { this.setState({ datasource: response, error: false }); })
-            .catch((err) => { this.setState({ datasource: null, error: err }); });
-    }
+        try {
+            const response = await pageService.getPages();
 
+            this.setState({ isCompleted: true, datasource: response, error: false });
+        }
+        catch (err) {
+            this.setState({ isCompleted: true, datasource: null, error: err });
+        }
+    }
 }
 
 export {

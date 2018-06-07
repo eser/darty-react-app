@@ -31,7 +31,7 @@ class AppContainer extends React.Component<AppContainerPropsInterface, AppContai
         };
     }
 
-    async init() {
+    async init(): Promise<void> {
         if (this.state.initialized) {
             return;
         }
@@ -47,7 +47,7 @@ class AppContainer extends React.Component<AppContainerPropsInterface, AppContai
         // this.events.emit('appInit');
     }
 
-    async logout() {
+    async logout(): Promise<void> {
         const sessionService = appContext.get('sessionService');
 
         await sessionService.logout();
@@ -55,11 +55,11 @@ class AppContainer extends React.Component<AppContainerPropsInterface, AppContai
         this.context.router.history.push('/login');
     }
 
-    componentWillMount() {
+    componentDidMount(): void {
         this.init();
     }
 
-    render() {
+    render(): JSX.Element {
         if (this.state === null || !this.state.initialized) {
             return (
                 <LoadingView />

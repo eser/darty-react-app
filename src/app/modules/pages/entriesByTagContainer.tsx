@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
 
 import appContext from '../../appContext';
 
@@ -12,6 +11,7 @@ interface EntriesByTagContainerPropsInterface {
 }
 
 interface EntriesByTagContainerStateInterface {
+    isCompleted: boolean;
     datasource: any;
     error: string | false;
 }
@@ -21,20 +21,25 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
         super(props, context);
 
         this.state = {
+            isCompleted: false,
             datasource: null,
             error: false,
         };
     }
 
-    componentWillMount(): void {
-        this.updateDatasource(this.props.tag);
+    componentDidMount(): void {
+        if (!this.state.isCompleted) {
+            this.updateDatasource(this.props.tag);
+        }
     }
 
-    componentWillReceiveProps(nextProps: EntriesByTagContainerPropsInterface): void {
-        this.updateDatasource(nextProps.tag);
+    componentDidUpdate(prevProps: EntriesByTagContainerPropsInterface, prevState: EntriesByTagContainerStateInterface): void {
+        if (this.props.tag !== prevProps.tag) {
+            this.componentDidMount();
+        }
     }
 
-    render(): any {
+    render(): JSX.Element {
         if (this.state.error !== false) {
             console.error(this.state.error);
 
@@ -60,12 +65,17 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
         );
     }
 
-    updateDatasource(tag: string): void {
+    async updateDatasource(tag: string): Promise<void> {
         const pageService = appContext.get('pageService');
 
-        pageService.getEntriesByTag(tag)
-            .then((response) => { this.setState({ datasource: response, error: false }); })
-            .catch((err) => { this.setState({ datasource: null, error: err }); });
+        try {
+            const response = await pageService.getEntriesByTag(tag);
+
+            this.setState({ isCompleted: true, datasource: response, error: false });
+        }
+        catch (err) {
+            this.setState({ isCompleted: true, datasource: null, error: err });
+        }
     }
 }
 

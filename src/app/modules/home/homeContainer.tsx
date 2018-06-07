@@ -11,7 +11,7 @@ class HomeContainer extends React.Component<HomeContainerPropsInterface, HomeCon
         super(props);
     }
 
-    render(): any {
+    render(): JSX.Element {
         return (
             <div>
                 <h1>Home</h1>

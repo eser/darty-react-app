@@ -50,7 +50,7 @@ class LinearTimelineItemView extends React.Component<LinearTimelineItemViewProps
         });
     }
 
-    render(): any {
+    render(): JSX.Element {
         if (this.state.editMode) {
             return (
                 <div>

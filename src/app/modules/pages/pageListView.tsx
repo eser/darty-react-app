@@ -14,7 +14,7 @@ class PageListView extends React.Component<PageListViewPropsInterface, PageListV
         super(props, context);
     }
 
-    render(): any {
+    render(): JSX.Element {
         const data = this.props.datasource[this.props.datakey];
 
         return (

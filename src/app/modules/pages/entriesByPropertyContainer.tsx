@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
 
 import appContext from '../../appContext';
 
@@ -13,6 +12,7 @@ interface EntriesByPropertyContainerPropsInterface {
 }
 
 interface EntriesByPropertyContainerStateInterface {
+    isCompleted: boolean;
     datasource: any;
     error: string | false;
 }
@@ -22,20 +22,25 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
         super(props, context);
 
         this.state = {
+            isCompleted: false,
             datasource: null,
             error: false,
         };
     }
 
-    componentWillMount(): void {
-        this.updateDatasource(this.props.property, this.props.value);
+    componentDidMount(): void {
+        if (!this.state.isCompleted) {
+            this.updateDatasource(this.props.property, this.props.value);
+        }
     }
 
-    componentWillReceiveProps(nextProps: EntriesByPropertyContainerPropsInterface): void {
-        this.updateDatasource(nextProps.property, nextProps.value);
+    componentDidUpdate(prevProps: EntriesByPropertyContainerPropsInterface, prevState: EntriesByPropertyContainerStateInterface): void {
+        if (this.props.property !== prevProps.property || this.props.value !== prevProps.value) {
+            this.componentDidMount();
+        }
     }
 
-    render(): any {
+    render(): JSX.Element {
         if (this.state.error !== false) {
             console.error(this.state.error);
 
@@ -61,12 +66,17 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
         );
     }
 
-    updateDatasource(property: string, value: string): void {
+    async updateDatasource(property: string, value: string): Promise<void> {
         const pageService = appContext.get('pageService');
 
-        pageService.getEntriesByProperty(property, value)
-            .then((response) => { this.setState({ datasource: response, error: false }); })
-            .catch((err) => { this.setState({ datasource: null, error: err }); });
+        try {
+            const response = await pageService.getEntriesByProperty(property, value);
+
+            this.setState({ isCompleted: true, datasource: response, error: false });
+        }
+        catch (err) {
+            this.setState({ isCompleted: true, datasource: null, error: err });
+        }
     }
 }
 

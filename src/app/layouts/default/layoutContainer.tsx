@@ -37,7 +37,7 @@ class LayoutContainer extends React.Component<LayoutContainerPropsInterface, Lay
     // the JSX syntax is quite intuitive but check out
     // https://facebook.github.io/react/docs/jsx-in-depth.html
     // if you need additional help
-    render(): any {
+    render(): JSX.Element {
         return (
             <div>
                 <div className="header">

@@ -17,7 +17,7 @@ class LinearTimelineView extends React.Component<LinearTimelineViewPropsInterfac
         super(props, context);
     }
 
-    render(): any {
+    render(): JSX.Element {
         const data = this.props.datasource[this.props.datakey];
 
         return (
