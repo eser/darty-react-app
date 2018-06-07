@@ -13,16 +13,29 @@ interface PageByNameContainerPropsInterface {
 
 interface PageByNameContainerStateInterface {
     isCompleted: boolean;
+    name: string;
     datasource: any;
     error: string | false;
 }
 
 class PageByNameContainer extends React.Component<PageByNameContainerPropsInterface, PageByNameContainerStateInterface> {
+    static getDerivedStateFromProps(nextProps: PageByNameContainerPropsInterface, prevState: PageByNameContainerStateInterface) {
+        if (nextProps.name !== prevState.name) {
+            return {
+                isCompleted: false,
+                name: nextProps.name,
+            };
+        }
+
+        return null;
+    }
+
     constructor(props: PageByNameContainerPropsInterface, context: any) {
         super(props, context);
 
         this.state = {
             isCompleted: false,
+            name: props.name,
             datasource: null,
             error: false,
         };
@@ -30,14 +43,12 @@ class PageByNameContainer extends React.Component<PageByNameContainerPropsInterf
 
     componentDidMount(): void {
         if (!this.state.isCompleted) {
-            this.updateDatasource(this.props.name);
+            this.updateDatasource(this.state.name);
         }
     }
 
     componentDidUpdate(prevProps: PageByNameContainerPropsInterface, prevState: PageByNameContainerStateInterface): void {
-        if (this.props.name !== prevProps.name) {
-            this.componentDidMount();
-        }
+        this.componentDidMount();
     }
 
     render(): JSX.Element {
@@ -57,7 +68,7 @@ class PageByNameContainer extends React.Component<PageByNameContainerPropsInterf
 
         return (
             <div>
-                <h1>Page: {this.props.name}</h1>
+                <h1>Page: {this.state.name}</h1>
 
                 <PageContentView datasource={this.state.datasource} datakey="page" />
 

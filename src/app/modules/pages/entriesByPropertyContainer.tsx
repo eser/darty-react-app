@@ -13,16 +13,32 @@ interface EntriesByPropertyContainerPropsInterface {
 
 interface EntriesByPropertyContainerStateInterface {
     isCompleted: boolean;
+    property: string;
+    value: string;
     datasource: any;
     error: string | false;
 }
 
 class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContainerPropsInterface, EntriesByPropertyContainerStateInterface> {
+    static getDerivedStateFromProps(nextProps: EntriesByPropertyContainerPropsInterface, prevState: EntriesByPropertyContainerStateInterface) {
+        if (nextProps.property !== prevState.property || nextProps.value !== prevState.value) {
+            return {
+                isCompleted: false,
+                property: nextProps.property,
+                value: nextProps.value,
+            };
+        }
+
+        return null;
+    }
+
     constructor(props: EntriesByPropertyContainerPropsInterface, context: any) {
         super(props, context);
 
         this.state = {
             isCompleted: false,
+            property: props.property,
+            value: props.value,
             datasource: null,
             error: false,
         };
@@ -30,20 +46,16 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
 
     componentDidMount(): void {
         if (!this.state.isCompleted) {
-            this.updateDatasource(this.props.property, this.props.value);
+            this.updateDatasource(this.state.property, this.state.value);
         }
     }
 
     componentDidUpdate(prevProps: EntriesByPropertyContainerPropsInterface, prevState: EntriesByPropertyContainerStateInterface): void {
-        if (this.props.property !== prevProps.property || this.props.value !== prevProps.value) {
-            this.componentDidMount();
-        }
+        this.componentDidMount();
     }
 
     render(): JSX.Element {
         if (this.state.error !== false) {
-            console.error(this.state.error);
-
             return (
                 <ErrorView message="An error occurred" />
             );
@@ -59,7 +71,7 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
 
         return (
             <div>
-                <h1>Entries By Property: {this.props.property}={this.props.value}</h1>
+                <h1>Entries By Property: {this.state.property}={this.state.value}</h1>
 
                 <LinearTimelineView datasource={this.state.datasource} datakey="entries" editable={isEditable} />
             </div>
@@ -75,6 +87,8 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
             this.setState({ isCompleted: true, datasource: response, error: false });
         }
         catch (err) {
+            console.error(err);
+
             this.setState({ isCompleted: true, datasource: null, error: err });
         }
     }

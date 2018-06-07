@@ -12,16 +12,29 @@ interface EntriesByTagContainerPropsInterface {
 
 interface EntriesByTagContainerStateInterface {
     isCompleted: boolean;
+    tag: string;
     datasource: any;
     error: string | false;
 }
 
 class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsInterface, EntriesByTagContainerStateInterface> {
+    static getDerivedStateFromProps(nextProps: EntriesByTagContainerPropsInterface, prevState: EntriesByTagContainerStateInterface) {
+        if (nextProps.tag !== prevState.tag) {
+            return {
+                isCompleted: false,
+                tag: nextProps.tag,
+            };
+        }
+
+        return null;
+    }
+
     constructor(props: EntriesByTagContainerPropsInterface, context: any) {
         super(props, context);
 
         this.state = {
             isCompleted: false,
+            tag: props.tag,
             datasource: null,
             error: false,
         };
@@ -29,20 +42,16 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
 
     componentDidMount(): void {
         if (!this.state.isCompleted) {
-            this.updateDatasource(this.props.tag);
+            this.updateDatasource(this.state.tag);
         }
     }
 
     componentDidUpdate(prevProps: EntriesByTagContainerPropsInterface, prevState: EntriesByTagContainerStateInterface): void {
-        if (this.props.tag !== prevProps.tag) {
-            this.componentDidMount();
-        }
+        this.componentDidMount();
     }
 
     render(): JSX.Element {
         if (this.state.error !== false) {
-            console.error(this.state.error);
-
             return (
                 <ErrorView message="An error occurred" />
             );
@@ -58,7 +67,7 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
 
         return (
             <div>
-                <h1>Entries By Tag: {this.props.tag}</h1>
+                <h1>Entries By Tag: {this.state.tag}</h1>
 
                 <LinearTimelineView datasource={this.state.datasource} datakey="entries" editable={isEditable} />
             </div>
@@ -74,6 +83,8 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
             this.setState({ isCompleted: true, datasource: response, error: false });
         }
         catch (err) {
+            console.error(err);
+
             this.setState({ isCompleted: true, datasource: null, error: err });
         }
     }

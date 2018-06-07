@@ -32,8 +32,6 @@ class PagesContainer extends React.Component<PagesContainerPropsInterface, Pages
 
     render(): JSX.Element {
         if (this.state.error !== false) {
-            console.error(this.state.error);
-
             return (
                 <ErrorView message="An error occurred" />
             );
@@ -63,6 +61,8 @@ class PagesContainer extends React.Component<PagesContainerPropsInterface, Pages
             this.setState({ isCompleted: true, datasource: response, error: false });
         }
         catch (err) {
+            console.error(err);
+
             this.setState({ isCompleted: true, datasource: null, error: err });
         }
     }
