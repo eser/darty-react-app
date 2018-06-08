@@ -3,14 +3,14 @@ declare var global: any;
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
-interface LayoutContainerPropsInterface {
+interface LayoutContainerProps {
 }
 
-interface LayoutContainerStateInterface {
+interface LayoutContainerState {
 }
 
-class LayoutContainer extends React.Component<LayoutContainerPropsInterface, LayoutContainerStateInterface> {
-    constructor(props: LayoutContainerPropsInterface, context: any) {
+class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContainerState> {
+    constructor(props: LayoutContainerProps, context: any) {
         super(props, context);
 
         this.state = {};
@@ -65,6 +65,6 @@ class LayoutContainer extends React.Component<LayoutContainerPropsInterface, Lay
 
 export {
     LayoutContainer as default,
-    LayoutContainerPropsInterface,
-    LayoutContainerStateInterface,
+    LayoutContainerProps,
+    LayoutContainerState,
 };

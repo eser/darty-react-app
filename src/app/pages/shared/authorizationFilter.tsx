@@ -4,14 +4,14 @@ import { Redirect } from 'react-router-dom';
 
 import appContext from '../../appContext';
 
-interface AuthorizationFilterPropsInterface {
+interface AuthorizationFilterProps {
 }
 
-interface AuthorizationFilterStateInterface {
+interface AuthorizationFilterState {
 }
 
-class AuthorizationFilter extends React.Component<AuthorizationFilterPropsInterface, AuthorizationFilterStateInterface> {
-    constructor(props: AuthorizationFilterPropsInterface, context: any) {
+class AuthorizationFilter extends React.Component<AuthorizationFilterProps, AuthorizationFilterState> {
+    constructor(props: AuthorizationFilterProps, context: any) {
         super(props, context);
 
         this.state = {

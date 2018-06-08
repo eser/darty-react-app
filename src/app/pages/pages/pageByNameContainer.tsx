@@ -7,19 +7,19 @@ import LinearTimelineView from './linearTimelineView';
 import LoadingView from '../shared/loadingView';
 import ErrorView from '../shared/errorView';
 
-interface PageByNameContainerPropsInterface {
+interface PageByNameContainerProps {
     name: string;
 }
 
-interface PageByNameContainerStateInterface {
+interface PageByNameContainerState {
     isCompleted: boolean;
     name: string;
     datasource: any;
     error: string | false;
 }
 
-class PageByNameContainer extends React.Component<PageByNameContainerPropsInterface, PageByNameContainerStateInterface> {
-    static getDerivedStateFromProps(nextProps: PageByNameContainerPropsInterface, prevState: PageByNameContainerStateInterface) {
+class PageByNameContainer extends React.Component<PageByNameContainerProps, PageByNameContainerState> {
+    static getDerivedStateFromProps(nextProps: PageByNameContainerProps, prevState: PageByNameContainerState) {
         if (nextProps.name !== prevState.name) {
             return {
                 isCompleted: false,
@@ -30,7 +30,7 @@ class PageByNameContainer extends React.Component<PageByNameContainerPropsInterf
         return null;
     }
 
-    constructor(props: PageByNameContainerPropsInterface, context: any) {
+    constructor(props: PageByNameContainerProps, context: any) {
         super(props, context);
 
         this.state = {
@@ -47,7 +47,7 @@ class PageByNameContainer extends React.Component<PageByNameContainerPropsInterf
         }
     }
 
-    componentDidUpdate(prevProps: PageByNameContainerPropsInterface, prevState: PageByNameContainerStateInterface): void {
+    componentDidUpdate(prevProps: PageByNameContainerProps, prevState: PageByNameContainerState): void {
         this.componentDidMount();
     }
 
@@ -97,6 +97,6 @@ class PageByNameContainer extends React.Component<PageByNameContainerPropsInterf
 
 export {
     PageByNameContainer as default,
-    PageByNameContainerPropsInterface,
-    PageByNameContainerStateInterface,
+    PageByNameContainerProps,
+    PageByNameContainerState,
 };

@@ -5,14 +5,14 @@ import * as ReactDOM from 'react-dom';
 import * as ReactDOMServer from 'react-dom/server';
 import { Route, StaticRouter, Switch } from 'react-router-dom';
 
-interface AppStackContainerPropsInterface {
+interface AppStackContainerProps {
     appStack: AppStack;
 }
 
-interface AppStackContainerStateInterface {
+interface AppStackContainerState {
 }
 
-class AppStackContainer extends React.Component<AppStackContainerPropsInterface, AppStackContainerStateInterface> {
+class AppStackContainer extends React.Component<AppStackContainerProps, AppStackContainerState> {
     render(): JSX.Element {
         let renderIndex = 0;
 

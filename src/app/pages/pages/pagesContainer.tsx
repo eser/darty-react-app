@@ -6,17 +6,17 @@ import PageListView from './pageListView';
 import LoadingView from '../shared/loadingView';
 import ErrorView from '../shared/errorView';
 
-interface PagesContainerPropsInterface {
+interface PagesContainerProps {
 }
 
-interface PagesContainerStateInterface {
+interface PagesContainerState {
     isCompleted: boolean;
     datasource: any;
     error: string | false;
 }
 
-class PagesContainer extends React.Component<PagesContainerPropsInterface, PagesContainerStateInterface> {
-    constructor(props: PagesContainerPropsInterface, context: any) {
+class PagesContainer extends React.Component<PagesContainerProps, PagesContainerState> {
+    constructor(props: PagesContainerProps, context: any) {
         super(props, context);
 
         this.state = {
@@ -70,6 +70,6 @@ class PagesContainer extends React.Component<PagesContainerPropsInterface, Pages
 
 export {
     PagesContainer as default,
-    PagesContainerPropsInterface,
-    PagesContainerStateInterface,
+    PagesContainerProps,
+    PagesContainerState,
 };

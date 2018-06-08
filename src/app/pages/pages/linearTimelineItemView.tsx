@@ -3,19 +3,19 @@ import * as ReactMarkdown from 'react-markdown';
 
 import ConditionalView from '../shared/conditionalView';
 
-interface LinearTimelineItemViewPropsInterface {
+interface LinearTimelineItemViewProps {
     item: any;
     editable: boolean;
 }
 
-interface LinearTimelineItemViewStateInterface {
+interface LinearTimelineItemViewState {
     editMode: boolean;
 }
 
-class LinearTimelineItemView extends React.Component<LinearTimelineItemViewPropsInterface, LinearTimelineItemViewStateInterface> {
+class LinearTimelineItemView extends React.Component<LinearTimelineItemViewProps, LinearTimelineItemViewState> {
     refs: any;
 
-    constructor(props: LinearTimelineItemViewPropsInterface, context: any) {
+    constructor(props: LinearTimelineItemViewProps, context: any) {
         super(props, context);
 
         this.state = {
@@ -76,6 +76,6 @@ class LinearTimelineItemView extends React.Component<LinearTimelineItemViewProps
 
 export {
     LinearTimelineItemView as default,
-    LinearTimelineItemViewPropsInterface,
-    LinearTimelineItemViewStateInterface,
+    LinearTimelineItemViewProps,
+    LinearTimelineItemViewState,
 };

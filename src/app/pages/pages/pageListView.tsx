@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-interface PageListViewPropsInterface {
+interface PageListViewProps {
     datasource: any;
     datakey: any;
 }
 
-interface PageListViewStateInterface {
+interface PageListViewState {
 }
 
-class PageListView extends React.Component<PageListViewPropsInterface, PageListViewStateInterface> {
-    constructor(props: PageListViewPropsInterface, context: any) {
+class PageListView extends React.Component<PageListViewProps, PageListViewState> {
+    constructor(props: PageListViewProps, context: any) {
         super(props, context);
     }
 
@@ -46,6 +46,6 @@ class PageListView extends React.Component<PageListViewPropsInterface, PageListV
 
 export {
     PageListView as default,
-    PageListViewPropsInterface,
-    PageListViewStateInterface,
+    PageListViewProps,
+    PageListViewState,
 }

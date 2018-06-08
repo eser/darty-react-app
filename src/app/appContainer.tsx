@@ -15,15 +15,15 @@ import NotFoundContainer from './pages/notFound/notFoundContainer';
 
 import LoadingView from './pages/shared/loadingView';
 
-interface AppContainerPropsInterface {
+interface AppContainerProps {
 }
 
-interface AppContainerStateInterface {
+interface AppContainerState {
     initialized: boolean;
 }
 
-class AppContainer extends React.Component<AppContainerPropsInterface, AppContainerStateInterface> {
-    constructor(props: AppContainerPropsInterface, context: any) {
+class AppContainer extends React.Component<AppContainerProps, AppContainerState> {
+    constructor(props: AppContainerProps, context: any) {
         super(props, context);
 
         this.state = {

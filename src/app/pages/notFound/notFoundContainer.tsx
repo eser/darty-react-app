@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-interface NotFoundContainerPropsInterface {
+interface NotFoundContainerProps {
 }
 
-interface NotFoundContainerStateInterface {
+interface NotFoundContainerState {
 }
 
-class NotFoundContainer extends React.Component<NotFoundContainerPropsInterface, NotFoundContainerStateInterface> {
-    constructor(props: NotFoundContainerPropsInterface, context: any) {
+class NotFoundContainer extends React.Component<NotFoundContainerProps, NotFoundContainerState> {
+    constructor(props: NotFoundContainerProps, context: any) {
         super(props, context);
     }
 
@@ -24,6 +24,6 @@ class NotFoundContainer extends React.Component<NotFoundContainerPropsInterface,
 
 export {
     NotFoundContainer as default,
-    NotFoundContainerPropsInterface,
-    NotFoundContainerStateInterface,
+    NotFoundContainerProps,
+    NotFoundContainerState,
 };

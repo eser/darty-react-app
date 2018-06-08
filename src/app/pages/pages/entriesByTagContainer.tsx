@@ -6,19 +6,19 @@ import LinearTimelineView from './linearTimelineView';
 import LoadingView from '../shared/loadingView';
 import ErrorView from '../shared/errorView';
 
-interface EntriesByTagContainerPropsInterface {
+interface EntriesByTagContainerProps {
     tag: string;
 }
 
-interface EntriesByTagContainerStateInterface {
+interface EntriesByTagContainerState {
     isCompleted: boolean;
     tag: string;
     datasource: any;
     error: string | false;
 }
 
-class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsInterface, EntriesByTagContainerStateInterface> {
-    static getDerivedStateFromProps(nextProps: EntriesByTagContainerPropsInterface, prevState: EntriesByTagContainerStateInterface) {
+class EntriesByTagContainer extends React.Component<EntriesByTagContainerProps, EntriesByTagContainerState> {
+    static getDerivedStateFromProps(nextProps: EntriesByTagContainerProps, prevState: EntriesByTagContainerState) {
         if (nextProps.tag !== prevState.tag) {
             return {
                 isCompleted: false,
@@ -29,7 +29,7 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
         return null;
     }
 
-    constructor(props: EntriesByTagContainerPropsInterface, context: any) {
+    constructor(props: EntriesByTagContainerProps, context: any) {
         super(props, context);
 
         this.state = {
@@ -46,7 +46,7 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
         }
     }
 
-    componentDidUpdate(prevProps: EntriesByTagContainerPropsInterface, prevState: EntriesByTagContainerStateInterface): void {
+    componentDidUpdate(prevProps: EntriesByTagContainerProps, prevState: EntriesByTagContainerState): void {
         this.componentDidMount();
     }
 
@@ -92,6 +92,6 @@ class EntriesByTagContainer extends React.Component<EntriesByTagContainerPropsIn
 
 export {
     EntriesByTagContainer as default,
-    EntriesByTagContainerPropsInterface,
-    EntriesByTagContainerStateInterface,
+    EntriesByTagContainerProps,
+    EntriesByTagContainerState,
 };

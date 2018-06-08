@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-interface ConditionalViewPropsInterface {
+interface ConditionalViewProps {
     test: boolean;
     children: any;
 }
 
-interface ConditionalViewStateInterface {
+interface ConditionalViewState {
 }
 
-class ConditionalView extends React.Component<ConditionalViewPropsInterface, ConditionalViewStateInterface> {
-    constructor(props: ConditionalViewPropsInterface, context: any) {
+class ConditionalView extends React.Component<ConditionalViewProps, ConditionalViewState> {
+    constructor(props: ConditionalViewProps, context: any) {
         super(props, context);
     }
 
@@ -24,6 +24,6 @@ class ConditionalView extends React.Component<ConditionalViewPropsInterface, Con
 
 export {
     ConditionalView as default,
-    ConditionalViewPropsInterface,
-    ConditionalViewStateInterface,
+    ConditionalViewProps,
+    ConditionalViewState,
 };

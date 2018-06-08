@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 import LinearTimelineItemView from './LinearTimelineItemView';
 
-interface LinearTimelineViewPropsInterface {
+interface LinearTimelineViewProps {
     datasource: any;
     datakey: any;
     editable: boolean;
 }
 
-interface LinearTimelineViewStateInterface {
+interface LinearTimelineViewState {
 }
 
-class LinearTimelineView extends React.Component<LinearTimelineViewPropsInterface, LinearTimelineViewStateInterface> {
-    constructor(props: LinearTimelineViewPropsInterface, context: any) {
+class LinearTimelineView extends React.Component<LinearTimelineViewProps, LinearTimelineViewState> {
+    constructor(props: LinearTimelineViewProps, context: any) {
         super(props, context);
     }
 
@@ -72,6 +72,6 @@ class LinearTimelineView extends React.Component<LinearTimelineViewPropsInterfac
 
 export {
     LinearTimelineView as default,
-    LinearTimelineViewPropsInterface,
-    LinearTimelineViewStateInterface,
+    LinearTimelineViewProps,
+    LinearTimelineViewState,
 };

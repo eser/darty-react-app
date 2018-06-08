@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-interface LoadingViewPropsInterface {
+interface LoadingViewProps {
 }
 
-interface LoadingViewStateInterface {
+interface LoadingViewState {
 }
 
-class LoadingView extends React.Component<LoadingViewPropsInterface, LoadingViewStateInterface> {
-    constructor(props: LoadingViewPropsInterface, context: any) {
+class LoadingView extends React.Component<LoadingViewProps, LoadingViewState> {
+    constructor(props: LoadingViewProps, context: any) {
         super(props, context);
     }
 
@@ -20,6 +20,6 @@ class LoadingView extends React.Component<LoadingViewPropsInterface, LoadingView
 
 export {
     LoadingView as default,
-    LoadingViewPropsInterface,
-    LoadingViewStateInterface,
+    LoadingViewProps,
+    LoadingViewState,
 };

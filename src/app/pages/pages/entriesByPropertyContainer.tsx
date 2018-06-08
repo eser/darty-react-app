@@ -6,12 +6,12 @@ import LinearTimelineView from './linearTimelineView';
 import LoadingView from '../shared/loadingView';
 import ErrorView from '../shared/errorView';
 
-interface EntriesByPropertyContainerPropsInterface {
+interface EntriesByPropertyContainerProps {
     property: string;
     value: string;
 }
 
-interface EntriesByPropertyContainerStateInterface {
+interface EntriesByPropertyContainerState {
     isCompleted: boolean;
     property: string;
     value: string;
@@ -19,8 +19,8 @@ interface EntriesByPropertyContainerStateInterface {
     error: string | false;
 }
 
-class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContainerPropsInterface, EntriesByPropertyContainerStateInterface> {
-    static getDerivedStateFromProps(nextProps: EntriesByPropertyContainerPropsInterface, prevState: EntriesByPropertyContainerStateInterface) {
+class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContainerProps, EntriesByPropertyContainerState> {
+    static getDerivedStateFromProps(nextProps: EntriesByPropertyContainerProps, prevState: EntriesByPropertyContainerState) {
         if (nextProps.property !== prevState.property || nextProps.value !== prevState.value) {
             return {
                 isCompleted: false,
@@ -32,7 +32,7 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
         return null;
     }
 
-    constructor(props: EntriesByPropertyContainerPropsInterface, context: any) {
+    constructor(props: EntriesByPropertyContainerProps, context: any) {
         super(props, context);
 
         this.state = {
@@ -50,7 +50,7 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
         }
     }
 
-    componentDidUpdate(prevProps: EntriesByPropertyContainerPropsInterface, prevState: EntriesByPropertyContainerStateInterface): void {
+    componentDidUpdate(prevProps: EntriesByPropertyContainerProps, prevState: EntriesByPropertyContainerState): void {
         this.componentDidMount();
     }
 
@@ -96,6 +96,6 @@ class EntriesByPropertyContainer extends React.Component<EntriesByPropertyContai
 
 export {
     EntriesByPropertyContainer as default,
-    EntriesByPropertyContainerPropsInterface,
-    EntriesByPropertyContainerStateInterface,
+    EntriesByPropertyContainerProps,
+    EntriesByPropertyContainerState,
 };

@@ -1,14 +1,14 @@
 import * as React from 'react';
 
-interface ErrorViewPropsInterface {
+interface ErrorViewProps {
     message: string;
 }
 
-interface ErrorViewStateInterface {
+interface ErrorViewState {
 }
 
-class ErrorView extends React.Component<ErrorViewPropsInterface, ErrorViewStateInterface> {
-    constructor(props: ErrorViewPropsInterface, context: any) {
+class ErrorView extends React.Component<ErrorViewProps, ErrorViewState> {
+    constructor(props: ErrorViewProps, context: any) {
         super(props, context);
     }
 
@@ -21,6 +21,6 @@ class ErrorView extends React.Component<ErrorViewPropsInterface, ErrorViewStateI
 
 export {
     ErrorView as default,
-    ErrorViewPropsInterface,
-    ErrorViewStateInterface,
+    ErrorViewProps,
+    ErrorViewState,
 };

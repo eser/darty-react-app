@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-interface HomeContainerPropsInterface {
+interface HomeContainerProps {
 }
 
-interface HomeContainerStateInterface {
+interface HomeContainerState {
 }
 
-class HomeContainer extends React.Component<HomeContainerPropsInterface, HomeContainerStateInterface> {
-    constructor(props: HomeContainerPropsInterface, context: any) {
+class HomeContainer extends React.Component<HomeContainerProps, HomeContainerState> {
+    constructor(props: HomeContainerProps, context: any) {
         super(props);
     }
 
@@ -24,6 +24,6 @@ class HomeContainer extends React.Component<HomeContainerPropsInterface, HomeCon
 
 export {
     HomeContainer as default,
-    HomeContainerPropsInterface,
-    HomeContainerStateInterface,
+    HomeContainerProps,
+    HomeContainerState,
 };

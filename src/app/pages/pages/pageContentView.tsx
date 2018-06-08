@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-interface PageContentViewPropsInterface {
+interface PageContentViewProps {
     datasource: any;
     datakey: any;
 }
 
-interface PageContentViewStateInterface {
+interface PageContentViewState {
 }
 
-class PageContentView extends React.Component<PageContentViewPropsInterface, PageContentViewStateInterface> {
-    constructor(props: PageContentViewPropsInterface, context: any) {
+class PageContentView extends React.Component<PageContentViewProps, PageContentViewState> {
+    constructor(props: PageContentViewProps, context: any) {
         super(props, context);
     }
 
@@ -26,6 +26,6 @@ class PageContentView extends React.Component<PageContentViewPropsInterface, Pag
 
 export {
     PageContentView as default,
-    PageContentViewPropsInterface,
-    PageContentViewStateInterface,
+    PageContentViewProps,
+    PageContentViewState,
 };
