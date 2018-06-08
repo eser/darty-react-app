@@ -3,17 +3,17 @@ import { Route, Switch } from 'react-router-dom';
 
 import appContext from './appContext';
 
-import AuthorizationFilter from './modules/shared/authorizationFilter';
+import AuthorizationFilter from './pages/shared/authorizationFilter';
 
 import LayoutContainer from './layouts/default/layoutContainer';
-import HomeContainer from './modules/home/homeContainer';
-import PageByNameContainer from './modules/pages/pageByNameContainer';
-import EntriesByPropertyContainer from './modules/pages/entriesByPropertyContainer';
-import EntriesByTagContainer from './modules/pages/entriesByTagContainer';
-import PagesContainer from './modules/pages/pagesContainer';
-import NotFoundContainer from './modules/notFound/notFoundContainer';
+import HomeContainer from './pages/home/homeContainer';
+import PageByNameContainer from './pages/pages/pageByNameContainer';
+import EntriesByPropertyContainer from './pages/pages/entriesByPropertyContainer';
+import EntriesByTagContainer from './pages/pages/entriesByTagContainer';
+import PagesContainer from './pages/pages/pagesContainer';
+import NotFoundContainer from './pages/notFound/notFoundContainer';
 
-import LoadingView from './modules/shared/loadingView';
+import LoadingView from './pages/shared/loadingView';
 
 interface AppContainerPropsInterface {
 }

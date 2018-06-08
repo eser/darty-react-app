@@ -1,7 +1,7 @@
 import { ServiceLifetime, ServiceManager } from 'servicemanager';
 
-import PageService from './modules/pages/pageService';
-import SessionService from './modules/shared/sessionService';
+import PageService from './pages/pages/pageService';
+import SessionService from './pages/shared/sessionService';
 
 const appContext = new ServiceManager();
 
