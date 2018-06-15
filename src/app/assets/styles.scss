@@ -1,5 +1,4 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-@import '../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import '../../../node_modules/bulma';
 
 $fa-font-path: "~font-awesome/fonts";
 @import '../../../node_modules/font-awesome/scss/font-awesome.scss';
@@ -27,33 +26,11 @@ body {
 .header {
 	background-color: var(--header-bg-color);
 
-    & .inner {
-        list-style-type: none;
-        padding: 0;
+    & a {
+        color: rgba(255,255,255,0.8);
 
-        & li {
-            display: inline-block;
-            vertical-align: middle;
-
-            & a {
-                color: rgba(255,255,255,0.8);
-            	text-decoration: none;
-                line-height: 24px;
-                transition: color 0.15s ease;
-                font-weight: 300;
-                letter-spacing: 0.075em;
-                margin-right: 1.8em;
-                padding: 15px 5px;
-                display: block;
-
-                &:hover {
-                    color: #fff;
-                }
-
-                &.active {
-                    text-decoration: underline;
-                }
-            }
+        &:hover {
+            color: #fff;
         }
     }
 }

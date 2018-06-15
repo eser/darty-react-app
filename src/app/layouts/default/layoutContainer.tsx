@@ -39,25 +39,46 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
     // if you need additional help
     render(): JSX.Element {
         return (
-            <div>
-                <div className="header">
-                    <ul className="inner">
-                        <li><NavLink exact={true} to="/" activeClassName="active">Home</NavLink></li>
-                        <li><NavLink to="/pages/" activeClassName="active">Pages</NavLink></li>
-                        <li className="pull-right text-right">
-                            <a href="https://github.com/eserozvataf/ts-spa-boilerplate">
-                                <i className="fa fa-code-fork fa-fw" aria-hidden="true"></i>
-                                ts-spa-boilerplate
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="content">
-                    <div className="inner" onClick={this.clickHandler.bind(this)}>
+            <div className="hero is-fullheight is-default">
+                <header className="hero-head header">
+                    <nav className="navbar">
+                        <div className="container">
+                            <div className="navbar-brand">
+                                <a className="navbar-item" href="https://github.com/eserozvataf/ts-spa-boilerplate">
+                                    <i className="fa fa-code-fork fa-fw" aria-hidden="true"></i>
+                                    ts-spa-boilerplate
+                                </a>
+                                <span className="navbar-burger burger" data-target="navbarMenu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </div>
+                            <div id="navbarMenu" className="navbar-menu">
+                                <div className="navbar-end">
+                                    <div className="tabs is-right">
+                                        <ul>
+                                            <li><NavLink exact={true} to="/" activeClassName="is-active">Home</NavLink></li>
+                                            <li><NavLink to="/pages/" activeClassName="is-active">Pages</NavLink></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <main className="hero-body">
+                    <div className="container content" onClick={this.clickHandler.bind(this)}>
                         {this.props.children}
                     </div>
-                </div>
+                </main>
+                <footer className="hero-foot">
+                    <div className="container">
+                        <div className="has-text-centered">
+                            ts-spa-boilerplate
+                        </div>
+                    </div>
+                </footer>
             </div>
         );
     }
