@@ -1,12 +1,10 @@
 import { ServiceLifetime, ServiceManager } from 'servicemanager';
 
-import PageService from './pages/pages/pageService';
-import SessionService from './pages/shared/sessionService';
+import DummyService from './pages/dummy/dummyService';
 
 const appContext = new ServiceManager();
 
-appContext.set('pageService', () => new PageService(), ServiceLifetime.Transient);
-appContext.set('sessionService', new SessionService(), ServiceLifetime.Singleton);
+appContext.set('dummyService', () => new DummyService(), ServiceLifetime.Transient);
 
 export {
     appContext as default,

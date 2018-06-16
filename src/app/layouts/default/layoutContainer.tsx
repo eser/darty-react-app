@@ -39,43 +39,47 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
     // if you need additional help
     render(): JSX.Element {
         return (
-            <div className="hero is-fullheight is-default">
-                <header className="hero-head header">
-                    <nav className="navbar">
+            <div className="hero is-fullheight">
+                <header className="header hero-head">
+                    <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
                         <div className="container">
                             <div className="navbar-brand">
-                                <a className="navbar-item" href="https://github.com/eserozvataf/ts-spa-boilerplate">
-                                    <i className="fa fa-code-fork fa-fw" aria-hidden="true"></i>
+                                {/* <div className="navbar-item">
                                     ts-spa-boilerplate
-                                </a>
-                                <span className="navbar-burger burger" data-target="navbarMenu">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                                </div> */}
+                                <span className="navbar-burger burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                                    <span aria-hidden="true"></span>
+                                    <span aria-hidden="true"></span>
+                                    <span aria-hidden="true"></span>
                                 </span>
                             </div>
                             <div id="navbarMenu" className="navbar-menu">
+                                <div className="navbar-start">
+                                    <NavLink exact={true} to="/" className="navbar-item" activeClassName="is-active">Home</NavLink>
+                                    <NavLink to="/dummy/" className="navbar-item" activeClassName="is-active">Dummy</NavLink>
+                                </div>
                                 <div className="navbar-end">
-                                    <div className="tabs is-right">
-                                        <ul>
-                                            <li><NavLink exact={true} to="/" activeClassName="is-active">Home</NavLink></li>
-                                            <li><NavLink to="/pages/" activeClassName="is-active">Pages</NavLink></li>
-                                        </ul>
-                                    </div>
+                                    <a className="navbar-item" href="https://github.com/eserozvataf/ts-spa-boilerplate">
+                                        <span className="icon"><i className="fa fa-code-fork fa-fw" aria-hidden="true"></i></span>
+                                        GitHub
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </nav>
                 </header>
-                <main className="hero-body">
-                    <div className="container content" onClick={this.clickHandler.bind(this)}>
-                        {this.props.children}
+                <main className="section hero-body">
+                    <div className="container">
+                        <div className="content" onClick={this.clickHandler.bind(this)}>
+                            {this.props.children}
+                        </div>
                     </div>
                 </main>
-                <footer className="hero-foot">
+                <footer className="footer hero-foot">
                     <div className="container">
-                        <div className="has-text-centered">
-                            ts-spa-boilerplate
+                        <div className="content has-text-centered">
+                            TypeScript SPA Boilerplate is a front-end development stack for starting with a structured, scaleable and adaptable basecode.<br />
+                            Visit <a href="https://github.com/eserozvataf/ts-spa-boilerplate">GitHub page</a> for details. Apache License, Version 2.0
                         </div>
                     </div>
                 </footer>

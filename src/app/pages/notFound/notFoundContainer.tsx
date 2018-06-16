@@ -14,7 +14,7 @@ class NotFoundContainer extends React.Component<NotFoundContainerProps, NotFound
     render(): JSX.Element {
         return (
             <div>
-                <h1>Not Found</h1>
+                <h1 className="title">Not Found</h1>
 
                 Page not found
             </div>

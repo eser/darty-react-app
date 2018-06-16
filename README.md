@@ -22,8 +22,8 @@ framework, so you're free to architect your code in the way that you want.
 * Isomorphic/Universal codebase between server and client.
 * IntelliSense support on TypeScript.
 * React DevTools support.
-* ~~Unit-testing-ready environment.~~ (not ready yet)
-* ~~JavaScript and CSS hinter and coding style checker.~~ (not ready yet)
+* Unit-testing-ready environment.
+* ~~JavaScript and CSS linting.~~ (not ready yet)
 
 
 ## Architecture and Libraries
@@ -31,7 +31,7 @@ framework, so you're free to architect your code in the way that you want.
 * React for rendering components.
 * React Router for SPA routing.
 * ~~Redux~~ [react-eventmanager](https://github.com/eserozvataf/react-eventmanager) for state management.
-* Bootstrap, Font-Awesome and jQuery included.
+* bulma and Font-Awesome are included.
 * Jest for tests, ESLint for linting.
 
 
@@ -65,7 +65,7 @@ Use `jsmake` command in project folder to execute tasks defined in `makefile.js`
 
 | Directory                                          | Description                                                  |
 |----------------------------------------------------|--------------------------------------------------------------|
-| `/src/`                                            | Application Manager                                          |
+| `/src/`                                            | Bootstrap                                                    |
 | `/src/app/`                                        | Main Application                                             |
 | `/src/app/assets/`                                 | - Assets (images, fonts, stylesheets, etc.)                  |
 | `/src/app/layouts/`                                | - Layouts / Templates                                        |

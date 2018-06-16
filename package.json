@@ -20,7 +20,9 @@
     "init": "cp .env.default .env",
     "start": "node ./server.js",
     "bundle": "webpack",
-    "bundle:prod": "webpack -p"
+    "bundle:prod": "webpack -p",
+    "lint": "eslint ./src/",
+    "test": "jest"
   },
   "license": "Apache-2.0",
   "contributors": [
@@ -36,6 +38,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@types/jest": "^23.1.0",
     "@types/react": "^16.3.17",
     "autoprefixer": "^8.6.2",
     "bulma": "^0.7.1",
@@ -54,6 +57,7 @@
     "express": "^4.16.3",
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
+    "jest": "^23.1.0",
     "jquery": "^3.3.1",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.4.0",
@@ -71,6 +75,7 @@
     "sass-loader": "^7.0.3",
     "servicemanager": "^0.1.0",
     "style-loader": "^0.21.0",
+    "ts-jest": "^22.4.6",
     "ts-loader": "^4.4.1",
     "typescript": "^2.9.2",
     "webpack": "^4.12.0",

@@ -14,7 +14,7 @@ class HomeContainer extends React.Component<HomeContainerProps, HomeContainerSta
     render(): JSX.Element {
         return (
             <div>
-                <h1>Home</h1>
+                <h1 className="title">Home</h1>
 
                 ...and there is a dummy content
             </div>

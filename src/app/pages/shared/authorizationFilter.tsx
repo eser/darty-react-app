@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 
 import appContext from '../../appContext';
@@ -20,13 +19,13 @@ class AuthorizationFilter extends React.Component<AuthorizationFilterProps, Auth
     }
 
     render(): JSX.Element {
-        const sessionManager = appContext.get('sessionManager');
+        // const sessionManager = appContext.get('sessionManager');
 
-        if (!sessionManager.state.logged) {
-            return (
-                <Redirect to="/login" />
-            );
-        }
+        // if (!sessionManager.state.logged) {
+        //     return (
+        //         <Redirect to="/login" />
+        //     );
+        // }
 
         // TODO remove React.Children.only after we upgraded React to 16.x
         //      since it supports rendering/returning multiple elements

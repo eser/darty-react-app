@@ -7,10 +7,7 @@ import AuthorizationFilter from './pages/shared/authorizationFilter';
 
 import LayoutContainer from './layouts/default/layoutContainer';
 import HomeContainer from './pages/home/homeContainer';
-import PageByNameContainer from './pages/pages/pageByNameContainer';
-import EntriesByPropertyContainer from './pages/pages/entriesByPropertyContainer';
-import EntriesByTagContainer from './pages/pages/entriesByTagContainer';
-import PagesContainer from './pages/pages/pagesContainer';
+import DummyContainer from './pages/dummy/dummyContainer';
 import NotFoundContainer from './pages/notFound/notFoundContainer';
 
 import LoadingView from './pages/shared/loadingView';
@@ -36,23 +33,11 @@ class AppContainer extends React.Component<AppContainerProps, AppContainerState>
             return;
         }
 
-        const sessionService = appContext.get('sessionService');
-
-        await sessionService.init();
-
         this.setState({
             initialized: true,
         });
 
         // this.events.emit('appInit');
-    }
-
-    async logout(): Promise<void> {
-        const sessionService = appContext.get('sessionService');
-
-        await sessionService.logout();
-
-        this.context.router.history.push('/login');
     }
 
     componentDidMount(): void {
@@ -70,11 +55,7 @@ class AppContainer extends React.Component<AppContainerProps, AppContainerState>
             <Switch>
                 <Route path="/" exact={true} strict={true} render={() => <LayoutContainer><HomeContainer /></LayoutContainer>} />
 
-                <Route path="/properties/:property/:value" exact={true} strict={true} render={(props) => <LayoutContainer><EntriesByPropertyContainer property={props.match.params.property} value={props.match.params.value} /></LayoutContainer>} />
-                <Route path="/tags/:tag" exact={true} strict={true} render={(props) => <LayoutContainer><EntriesByTagContainer tag={props.match.params.tag} /></LayoutContainer>} />
-
-                <Route path="/pages/:name/" exact={true} strict={true} render={(props) => <LayoutContainer><PageByNameContainer name={props.match.params.name} /></LayoutContainer>} />
-                <Route path="/pages/" exact={true} strict={true} render={() => <LayoutContainer><PagesContainer /></LayoutContainer>} />
+                <Route path="/dummy/" exact={true} strict={true} render={() => <LayoutContainer><DummyContainer /></LayoutContainer>} />
 
                 {/* <Route path="/login" exact={true} strict={true} render={() => <LoginContainer />} />
                 <Route path="/settings" exact={true} strict={true} render={() => <AuthorizationFilter><LayoutContainer><SettingsContainer /></LayoutContainer></AuthorizationFilter>} /> */}
