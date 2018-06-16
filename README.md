@@ -7,7 +7,7 @@ community knowledge. It does not impose a specific development philosophy or
 framework, so you're free to architect your code in the way that you want.
 
 * Source: [https://github.com/eserozvataf/ts-spa-boilerplate](https://github.com/eserozvataf/ts-spa-boilerplate)
-* Preview: [http://eserozvataf.github.io/ts-spa-boilerplate/](http://eserozvataf.github.io/ts-spa-boilerplate/)
+* Preview: [http://ts-spa-boilerplate.s3-website-eu-west-1.amazonaws.com](http://ts-spa-boilerplate.s3-website-eu-west-1.amazonaws.com)
 * Twitter: [@eserozvataf](http://twitter.com/eserozvataf)
 * Homepage: [http://eser.ozvataf.com/](http://eser.ozvataf.com/)
 
