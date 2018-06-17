@@ -134,11 +134,6 @@ module.exports = {
             { from: './src/tile-wide.png', to: './' },
             { from: './src/tile.png', to: './' },
         ]),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-        }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({

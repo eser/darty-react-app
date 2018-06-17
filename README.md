@@ -30,7 +30,7 @@ framework, so you're free to architect your code in the way that you want.
 
 * React for rendering components.
 * React Router for SPA routing.
-* ~~Redux~~ [react-eventmanager](https://github.com/eserozvataf/react-eventmanager) for state management.
+* ~~Redux~~ for state management.
 * bulma and Font-Awesome are included.
 * Jest for tests, ESLint for linting.
 

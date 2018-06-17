@@ -19,10 +19,12 @@
   "scripts": {
     "init": "cp .env.default .env",
     "start": "node ./server.js",
+    "lint": "eslint ./src/",
+    "test": "jest",
     "bundle": "webpack",
     "bundle:prod": "webpack -p",
-    "lint": "eslint ./src/",
-    "test": "jest"
+    "aws:copy": "aws s3 sync ./dist s3://ts-spa-boilerplate",
+    "aws:open": "start http://ts-spa-boilerplate.s3-website-eu-west-1.amazonaws.com",
   },
   "license": "Apache-2.0",
   "contributors": [
@@ -37,7 +39,7 @@
     "url": "https://github.com/eserozvataf/ts-spa-boilerplate.git"
   },
   "dependencies": {},
-  "devDependencies": {
+  "devDependencies": {`
     "@types/jest": "^23.1.0",
     "@types/react": "^16.3.17",
     "autoprefixer": "^8.6.2",
@@ -46,7 +48,6 @@
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
-    "es6-cachemanager": "^0.0.2",
     "es6-promise": "^4.2.4",
     "eslint": "^4.19.1",
     "eslint-config-eser": "^2.0.7",
@@ -58,7 +59,6 @@
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
     "jest": "^23.1.0",
-    "jquery": "^3.3.1",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
@@ -68,9 +68,6 @@
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-eventmanager": "^0.0.3",
-    "react-intl": "^2.4.0",
-    "react-markdown": "^3.3.3",
     "react-router-dom": "^4.3.1",
     "sass-loader": "^7.0.3",
     "servicemanager": "^0.1.0",
