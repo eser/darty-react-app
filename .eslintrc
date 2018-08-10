@@ -3,8 +3,10 @@
         "eser-react"
     ],
     "env": {
-        "commonjs": true
+        "commonjs": true,
+        "jest": true
     },
+    "parser": "typescript-eslint-parser",
     "parserOptions": {
         "sourceType": "module",
         "ecmaFeatures": {

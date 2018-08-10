@@ -5,9 +5,8 @@ Thumbs.db
 # Editor metadata
 .vscode/
 
-# NPM
+# npm
 node_modules/
-package-lock.json
 
 # API keys and secrets
 .env

@@ -1,6 +1,5 @@
 {
   "name": "ts-spa-boilerplate",
-  "version": "0.10.0",
   "description": "TypeScript SPA Boilerplate",
   "keywords": [
     "typescript",
@@ -9,24 +8,9 @@
     "boilerplate",
     "starter"
   ],
-  "author": "Eser Ozvataf",
+  "version": "0.10.0",
   "homepage": "http://ts-spa-boilerplate.s3-website-eu-west-1.amazonaws.com",
-  "bugs": {
-    "url": "https://github.com/eserozvataf/ts-spa-boilerplate/issues",
-    "email": "eser@ozvataf.com"
-  },
-  "main": "dist/index.js",
-  "scripts": {
-    "init": "cp .env.default .env",
-    "start": "node ./server.js",
-    "lint": "eslint ./src/",
-    "test": "jest",
-    "bundle": "webpack",
-    "bundle:prod": "webpack -p",
-    "aws:copy": "aws s3 sync ./dist s3://ts-spa-boilerplate",
-    "aws:open": "start http://ts-spa-boilerplate.s3-website-eu-west-1.amazonaws.com"
-  },
-  "license": "Apache-2.0",
+  "author": "Eser Ozvataf <eser@ozvataf.com>",
   "contributors": [
     {
       "name": "Eser Ozvataf",
@@ -37,6 +21,24 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/eserozvataf/ts-spa-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eserozvataf/ts-spa-boilerplate/issues"
+  },
+  "license": "Apache-2.0",
+  "main": "./dist/index.js",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "scripts": {
+    "init": "cp .env.default .env",
+    "start": "node ./server.js",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.mjs ./src/",
+    "test": "jest",
+    "bundle": "webpack",
+    "bundle:prod": "webpack -p",
+    "aws:copy": "aws s3 sync ./dist s3://ts-spa-boilerplate",
+    "aws:open": "start http://ts-spa-boilerplate.s3-website-eu-west-1.amazonaws.com"
   },
   "dependencies": {},
   "devDependencies": {
@@ -74,7 +76,9 @@
     "style-loader": "^0.22.1",
     "ts-jest": "^23.1.3",
     "ts-loader": "^4.4.2",
+    "tslib": "^1.9.3",
     "typescript": "^3.0.1",
+    "typescript-eslint-parser": "^18.0.0",
     "webpack": "^4.16.5",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",

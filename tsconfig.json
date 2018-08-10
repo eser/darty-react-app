@@ -1,21 +1,27 @@
 {
     "compilerOptions": {
-        "target": "es2017",
+        "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
+        "allowJs": true,
         "jsx": "react",
+        "importHelpers": false,
+        "sourceMap": true,
+        "downlevelIteration": true,
         "experimentalDecorators": true,
+        "noImplicitAny": false,
         "removeComments": true,
+        "strictNullChecks": true,
+        "strict": true,
         "newLine": "LF",
         "rootDirs": [
-            "src/"
+            "./src/"
         ],
-        "sourceMap": true,
-        "allowJs": true,
-        "outDir": "dist/"
+        "outDir": "./dist/",
+        "lib": [
+            "es2015"
+        ]
     },
     "exclude": [
-        "node_modules",
-        "dist"
     ]
 }
