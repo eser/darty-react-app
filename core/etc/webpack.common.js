@@ -37,9 +37,17 @@ const commonConfig = (name) => configWrapper((vars) => {
         },
 
         module: {
+            strictExportPresence: true,
+
             rules: [
                 {
+                    parser: {
+                        requireEnsure: false,
+                    },
+                },
+                {
                     test: /\.[tj]sx?$/,
+                    enforce: 'pre',
                     use: [
                         {
                             loader: 'ts-loader',
@@ -60,6 +68,9 @@ const commonConfig = (name) => configWrapper((vars) => {
                 path.join(vars.dirRoot, 'src'),
                 path.join(vars.dirRoot, 'node_modules'),
             ],
+            alias: {
+                'react-native': 'react-native-web',
+            },
         },
 
         plugins: [

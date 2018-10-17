@@ -16,6 +16,8 @@ const serverConfig = configWrapper((vars) => {
     return {
         ...common,
 
+        bail: true,
+
         target: 'node',
         externals: [
             nodeExternals({
@@ -35,6 +37,8 @@ const serverConfig = configWrapper((vars) => {
         },
 
         module: {
+            ...common.module,
+
             rules: [
                 ...common.module.rules,
                 {

@@ -73,11 +73,15 @@ const browserConfig = configWrapper((vars) => {
                     },
                 },
             },
+            // runtimeChunk: true,
         },
 
         module: {
+            ...common.module,
+
             rules: [
                 ...common.module.rules,
+
                 {
                     test: /\.scss$/,
                     use: [
@@ -159,6 +163,14 @@ const browserConfig = configWrapper((vars) => {
             ),
             ...optionalPlugins,
         ],
+
+        node: {
+            dgram: 'empty',
+            fs: 'empty',
+            net: 'empty',
+            tls: 'empty',
+            child_process: 'empty',
+        },
     };
 });
 
