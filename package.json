@@ -59,6 +59,7 @@
     "copy-webpack-plugin": "^4.5.3",
     "css-loader": "^1.0.0",
     "cssnano": "^4.1.4",
+    "enzyme": "^3.7.0",
     "es6-promise": "^4.2.5",
     "eslint": "^5.7.0",
     "eslint-config-eser": "^2.0.7",
