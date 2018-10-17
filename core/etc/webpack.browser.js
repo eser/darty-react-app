@@ -9,15 +9,6 @@ const ExtractCssChunksPlugin = require('extract-css-chunks-webpack-plugin');
 const browserConfig = configWrapper((vars) => {
     const common = commonConfig('browser')(vars.env, vars.argv);
 
-    let assets;
-
-    try {
-        assets = require(`${vars.dirRoot}/assets.json`);
-    }
-    catch (ex) {
-        assets = [];
-    }
-
     let optionalPlugins = [];
 
     if (vars.isProduction) {
@@ -95,7 +86,7 @@ const browserConfig = configWrapper((vars) => {
                                 sourceMap: true,
                                 modules: true,
                                 namedExport: true,
-                                silent: true,
+                                camelCase: true,
                                 // localIdentName: '[local]___[hash:base64:5]',
                                 localIdentName: '[local]',
                             },
@@ -126,7 +117,7 @@ const browserConfig = configWrapper((vars) => {
                                 sourceMap: true,
                                 modules: true,
                                 namedExport: true,
-                                silent: true,
+                                camelCase: true,
                                 // localIdentName: '[local]___[hash:base64:5]',
                                 localIdentName: '[local]',
                             },
@@ -158,6 +149,10 @@ const browserConfig = configWrapper((vars) => {
                     use: [
                         {
                             loader: 'url-loader',
+                            options: {
+                                name: '[name].[ext]',
+                                outputPath: 'assets/',
+                            },
                         },
                     ],
                 },
@@ -169,6 +164,8 @@ const browserConfig = configWrapper((vars) => {
                             options: {
                                 limit: 10000,
                                 mimetype: 'image/svg+xml',
+                                name: '[name].[ext]',
+                                outputPath: 'assets/',
                             },
                         },
                     ],
@@ -186,7 +183,7 @@ const browserConfig = configWrapper((vars) => {
                 cssModules: true,
             }),
             new CopyWebpackPlugin(
-                assets.map(x => ({ from: `./src/${x}`, to: './' }))
+                vars.manifest.staticFiles.map(x => ({ from: x, to: './', flatten: true })),
             ),
             ...optionalPlugins,
         ],

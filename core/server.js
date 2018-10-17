@@ -50,6 +50,8 @@ app.use(
     ),
 );
 
+app.all('*', serverRenderer);
+
 app.listen(port, (err) => {
     if (err) {
         console.error(err);

@@ -4,9 +4,9 @@
   "warnings": [
   ],
   "version": "4.20.2",
-  "hash": "d3b60e5d373f69cadf15",
-  "time": 1843,
-  "builtAt": 1539790215716,
+  "hash": "1700ff03eeed676dfab1",
+  "time": 1460,
+  "builtAt": 1539807319587,
   "publicPath": "/",
   "outputPath": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/dist",
   "assetsByChunkName": {
@@ -15,7 +15,7 @@
   "assets": [
     {
       "name": "server.js",
-      "size": 1123989,
+      "size": 1127959,
       "chunks": [
         "server"
       ],
@@ -60,14 +60,14 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 386610,
+      "size": 390357,
       "names": [
         "server"
       ],
       "files": [
         "server.js"
       ],
-      "hash": "c4e932051168a502b0ad",
+      "hash": "259c7f55f53b7f4a4c3c",
       "siblings": [
       ],
       "parents": [
@@ -83,7 +83,7 @@
           "name": "./core/src/appStack.tsx",
           "index": 52,
           "index2": 80,
-          "size": 994,
+          "size": 1446,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -119,14 +119,14 @@
               "moduleName": "./core/src/index.server.tsx",
               "type": "cjs require",
               "userRequest": "./appStack",
-              "loc": "6:17-38"
+              "loc": "16:33-54"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 2,
-          "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar appStackContainer_1 = require(\"./appStackContainer\");\nvar AppStack = (function () {\n    function AppStack(definitions) {\n        if (definitions === void 0) { definitions = []; }\n        this.definitions = definitions;\n    }\n    AppStack.prototype.add = function (path, app, store, state) {\n        this.definitions[path] = { app: app, store: store, state: state };\n        return this;\n    };\n    AppStack.prototype.addRange = function (definitions) {\n        for (var path in definitions) {\n            this.definitions[path] = definitions[path];\n        }\n        return this;\n    };\n    AppStack.prototype.wrapWith = function (wrapper) {\n        return wrapper(this.render());\n    };\n    AppStack.prototype.render = function () {\n        return (React.createElement(appStackContainer_1.default, { appStack: this }));\n    };\n    return AppStack;\n}());\nexports.default = AppStack;\n"
+          "source": "\"use strict\";\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar appStackContainer_1 = __importDefault(require(\"./appStackContainer\"));\nvar AppStack = (function () {\n    function AppStack(definitions) {\n        if (definitions === void 0) { definitions = []; }\n        this.definitions = definitions;\n    }\n    AppStack.prototype.add = function (path, app, store, state) {\n        this.definitions[path] = { app: app, store: store, state: state };\n        return this;\n    };\n    AppStack.prototype.addRange = function (definitions) {\n        for (var path in definitions) {\n            this.definitions[path] = definitions[path];\n        }\n        return this;\n    };\n    AppStack.prototype.wrapWith = function (wrapper) {\n        return wrapper(this.render());\n    };\n    AppStack.prototype.render = function () {\n        return (React.createElement(appStackContainer_1.default, { appStack: this }));\n    };\n    return AppStack;\n}());\nexports.default = AppStack;\n"
         },
         {
           "id": "./core/src/appStackContainer.tsx",
@@ -134,7 +134,7 @@
           "name": "./core/src/appStackContainer.tsx",
           "index": 53,
           "index2": 79,
-          "size": 1890,
+          "size": 2186,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -175,14 +175,14 @@
               "moduleName": "./core/src/appStack.tsx",
               "type": "cjs require",
               "userRequest": "./appStackContainer",
-              "loc": "4:26-56"
+              "loc": "14:42-72"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 3,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar react_redux_1 = require(\"react-redux\");\nvar AppStackContainer = (function (_super) {\n    __extends(AppStackContainer, _super);\n    function AppStackContainer() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    AppStackContainer.prototype.render = function () {\n        var _this = this;\n        var renderIndex = 0;\n        return (React.createElement(react_router_dom_1.Switch, { key: \"appStack-switch\" }, Object.keys(this.props.appStack.definitions).map(function (itemKey) {\n            var definition = _this.props.appStack.definitions[itemKey];\n            var component = React.createElement(react_router_dom_1.Route, { path: itemKey, component: definition.app, key: \"appStack-switch-provider-app-\" + renderIndex++ });\n            if (definition.store !== undefined) {\n                return (React.createElement(react_redux_1.Provider, { store: definition.store(definition.state), key: \"appStack-switch-provider-\" + renderIndex++ }, component));\n            }\n            return component;\n        })));\n    };\n    return AppStackContainer;\n}(React.Component));\nexports.default = AppStackContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar react_redux_1 = require(\"react-redux\");\nvar AppStackContainer = (function (_super) {\n    __extends(AppStackContainer, _super);\n    function AppStackContainer() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    AppStackContainer.prototype.render = function () {\n        var _this = this;\n        var renderIndex = 0;\n        return (React.createElement(react_router_dom_1.Switch, { key: \"appStack-switch\" }, Object.keys(this.props.appStack.definitions).map(function (itemKey) {\n            var definition = _this.props.appStack.definitions[itemKey];\n            var component = React.createElement(react_router_dom_1.Route, { path: itemKey, component: definition.app, key: \"appStack-switch-provider-app-\" + renderIndex++ });\n            if (definition.store !== undefined) {\n                return (React.createElement(react_redux_1.Provider, { store: definition.store(definition.state), key: \"appStack-switch-provider-\" + renderIndex++ }, component));\n            }\n            return component;\n        })));\n    };\n    return AppStackContainer;\n}(React.Component));\nexports.default = AppStackContainer;\n"
         },
         {
           "id": "./core/src/index.server.tsx",
@@ -190,7 +190,7 @@
           "name": "./core/src/index.server.tsx",
           "index": 1,
           "index2": 95,
-          "size": 859,
+          "size": 1342,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -228,7 +228,7 @@
           "optimizationBailout": [
           ],
           "depth": 1,
-          "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar ReactDOMServer = require(\"react-dom/server\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar appStack_1 = require(\"./appStack\");\nvar startup_1 = require(\"../../src/startup\");\nfunction ssrRenderer(appStack, url, context) {\n    if (context === void 0) { context = {}; }\n    var root = appStack.wrapWith(function (children) {\n        return React.createElement(react_router_dom_1.StaticRouter, {\n            location: url,\n            context: context,\n        }, children);\n    });\n    var html = ReactDOMServer.renderToString(root);\n    return html;\n}\nvar appStack = new appStack_1.default()\n    .addRange(startup_1.default);\nvar serverObjects = {\n    appStack: appStack,\n    ssrRenderer: ssrRenderer,\n};\nexports.default = serverObjects;\n"
+          "source": "\"use strict\";\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar ReactDOMServer = __importStar(require(\"react-dom/server\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar appStack_1 = __importDefault(require(\"./appStack\"));\nvar startup_1 = __importDefault(require(\"../../src/startup\"));\nfunction ssrRenderer(appStack, url, context) {\n    if (context === void 0) { context = {}; }\n    var root = appStack.wrapWith(function (children) {\n        return React.createElement(react_router_dom_1.StaticRouter, {\n            location: url,\n            context: context,\n        }, children);\n    });\n    var html = ReactDOMServer.renderToString(root);\n    return html;\n}\nvar appStack = new appStack_1.default()\n    .addRange(startup_1.default);\nvar serverObjects = {\n    appStack: appStack,\n    ssrRenderer: ssrRenderer,\n};\nexports.default = serverObjects;\n"
         },
         {
           "id": "./node_modules/history/es/DOMUtils.js",
@@ -264,9 +264,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -479,9 +479,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -692,9 +692,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1045,9 +1045,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1122,9 +1122,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1199,9 +1199,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1276,9 +1276,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1374,9 +1374,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
-          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
           "issuerPath": [
             {
               "id": 0,
@@ -1394,9 +1394,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             }
           ],
           "failed": false,
@@ -3069,9 +3069,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router/es/generatePath.js",
-          "issuerId": "./node_modules/react-router/es/generatePath.js",
-          "issuerName": "./node_modules/react-router/es/generatePath.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router/es/matchPath.js",
+          "issuerId": "./node_modules/react-router/es/matchPath.js",
+          "issuerName": "./node_modules/react-router/es/matchPath.js",
           "issuerPath": [
             {
               "id": 0,
@@ -3089,14 +3089,14 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/generatePath.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/generatePath.js",
-              "name": "./node_modules/react-router-dom/es/generatePath.js"
+              "id": "./node_modules/react-router-dom/es/matchPath.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/matchPath.js",
+              "name": "./node_modules/react-router-dom/es/matchPath.js"
             },
             {
-              "id": "./node_modules/react-router/es/generatePath.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router/es/generatePath.js",
-              "name": "./node_modules/react-router/es/generatePath.js"
+              "id": "./node_modules/react-router/es/matchPath.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router/es/matchPath.js",
+              "name": "./node_modules/react-router/es/matchPath.js"
             }
           ],
           "failed": false,
@@ -3261,9 +3261,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/prop-types/index.js",
@@ -3307,9 +3307,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
-          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
           "issuerPath": [
             {
               "id": 0,
@@ -3327,9 +3327,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             }
           ],
           "failed": false,
@@ -4513,7 +4513,7 @@
               "moduleName": "./core/src/index.server.tsx",
               "type": "cjs require",
               "userRequest": "react-dom/server",
-              "loc": "4:21-48"
+              "loc": "14:34-61"
             }
           ],
           "providedExports": null,
@@ -5450,7 +5450,7 @@
               "moduleName": "./core/src/appStackContainer.tsx",
               "type": "cjs require",
               "userRequest": "react-redux",
-              "loc": "18:20-42"
+              "loc": "25:20-42"
             },
             {
               "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -5459,7 +5459,7 @@
               "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
               "type": "cjs require",
               "userRequest": "react-redux",
-              "loc": "53:20-42"
+              "loc": "63:20-42"
             }
           ],
           "providedExports": [
@@ -6942,7 +6942,7 @@
               "moduleName": "./core/src/appStackContainer.tsx",
               "type": "cjs require",
               "userRequest": "react-router-dom",
-              "loc": "17:25-52"
+              "loc": "24:25-52"
             },
             {
               "moduleId": "./core/src/index.server.tsx",
@@ -6951,7 +6951,7 @@
               "moduleName": "./core/src/index.server.tsx",
               "type": "cjs require",
               "userRequest": "react-router-dom",
-              "loc": "5:25-52"
+              "loc": "15:25-52"
             },
             {
               "moduleId": "./src/app/appContainer.tsx",
@@ -6960,7 +6960,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "react-router-dom",
-              "loc": "52:25-52"
+              "loc": "62:25-52"
             },
             {
               "moduleId": "./src/app/layouts/default/layoutContainer.tsx",
@@ -6969,7 +6969,7 @@
               "moduleName": "./src/app/layouts/default/layoutContainer.tsx",
               "type": "cjs require",
               "userRequest": "react-router-dom",
-              "loc": "17:25-52"
+              "loc": "24:25-52"
             }
           ],
           "providedExports": [
@@ -8062,7 +8062,7 @@
               "moduleName": "./core/src/appStack.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "3:12-28"
+              "loc": "13:25-41"
             },
             {
               "moduleId": "./core/src/appStackContainer.tsx",
@@ -8071,7 +8071,7 @@
               "moduleName": "./core/src/appStackContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "16:12-28"
+              "loc": "23:25-41"
             },
             {
               "moduleId": "./core/src/index.server.tsx",
@@ -8080,7 +8080,7 @@
               "moduleName": "./core/src/index.server.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "3:12-28"
+              "loc": "13:25-41"
             },
             {
               "moduleId": "./node_modules/react-dom/cjs/react-dom-server.node.development.js",
@@ -8503,7 +8503,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "51:12-28"
+              "loc": "61:25-41"
             },
             {
               "moduleId": "./src/app/layouts/default/layoutContainer.tsx",
@@ -8512,7 +8512,7 @@
               "moduleName": "./src/app/layouts/default/layoutContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "16:12-28"
+              "loc": "23:25-41"
             },
             {
               "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -8521,7 +8521,7 @@
               "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "51:12-28"
+              "loc": "61:25-41"
             },
             {
               "moduleId": "./src/app/pages/dummy/summaryResultView.tsx",
@@ -8530,7 +8530,7 @@
               "moduleName": "./src/app/pages/dummy/summaryResultView.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "16:12-28"
+              "loc": "23:25-41"
             },
             {
               "moduleId": "./src/app/pages/home/homeContainer.tsx",
@@ -8539,7 +8539,7 @@
               "moduleName": "./src/app/pages/home/homeContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "16:12-28"
+              "loc": "23:25-41"
             },
             {
               "moduleId": "./src/app/pages/notFound/notFoundContainer.tsx",
@@ -8548,7 +8548,7 @@
               "moduleName": "./src/app/pages/notFound/notFoundContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "16:12-28"
+              "loc": "23:25-41"
             }
           ],
           "providedExports": null,
@@ -8609,7 +8609,7 @@
               "moduleName": "./src/app/appStore.ts",
               "type": "cjs require",
               "userRequest": "redux-logger",
-              "loc": "25:21-44"
+              "loc": "28:21-44"
             }
           ],
           "providedExports": null,
@@ -8670,7 +8670,7 @@
               "moduleName": "./src/app/appStore.ts",
               "type": "cjs require",
               "userRequest": "redux-thunk",
-              "loc": "24:20-42"
+              "loc": "27:36-58"
             }
           ],
           "providedExports": [
@@ -8751,7 +8751,7 @@
               "moduleName": "./src/app/appStore.ts",
               "type": "cjs require",
               "userRequest": "redux",
-              "loc": "23:14-30"
+              "loc": "26:14-30"
             },
             {
               "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -8760,7 +8760,7 @@
               "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
               "type": "cjs require",
               "userRequest": "redux",
-              "loc": "52:14-30"
+              "loc": "62:14-30"
             }
           ],
           "providedExports": [
@@ -8810,9 +8810,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -9060,9 +9060,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -9122,9 +9122,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
-          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
           "issuerPath": [
             {
               "id": 0,
@@ -9142,9 +9142,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/HashRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-              "name": "./node_modules/react-router-dom/es/HashRouter.js"
+              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
             }
           ],
           "failed": false,
@@ -9639,7 +9639,7 @@
               "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
               "type": "cjs require",
               "userRequest": "../../actions/dummyRequest",
-              "loc": "55:21-58"
+              "loc": "65:37-74"
             }
           ],
           "providedExports": null,
@@ -9654,7 +9654,7 @@
           "name": "./src/app/appContainer.tsx",
           "index": 84,
           "index2": 89,
-          "size": 5134,
+          "size": 5637,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -9695,14 +9695,14 @@
               "moduleName": "./src/startup.ts",
               "type": "cjs require",
               "userRequest": "./app/appContainer",
-              "loc": "3:21-50"
+              "loc": "6:37-66"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 3,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar layoutContainer_1 = require(\"./layouts/default/layoutContainer\");\nvar homeContainer_1 = require(\"./pages/home/homeContainer\");\nvar dummyContainer_1 = require(\"./pages/dummy/dummyContainer\");\nvar notFoundContainer_1 = require(\"./pages/notFound/notFoundContainer\");\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        return (React.createElement(react_router_dom_1.Switch, null,\n            React.createElement(react_router_dom_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(homeContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(dummyContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } })));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar layoutContainer_1 = __importDefault(require(\"./layouts/default/layoutContainer\"));\nvar homeContainer_1 = __importDefault(require(\"./pages/home/homeContainer\"));\nvar dummyContainer_1 = __importDefault(require(\"./pages/dummy/dummyContainer\"));\nvar notFoundContainer_1 = __importDefault(require(\"./pages/notFound/notFoundContainer\"));\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        return (React.createElement(react_router_dom_1.Switch, null,\n            React.createElement(react_router_dom_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(homeContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(dummyContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } })));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
         },
         {
           "id": "./src/app/appStore.ts",
@@ -9710,7 +9710,7 @@
           "name": "./src/app/appStore.ts",
           "index": 93,
           "index2": 93,
-          "size": 1633,
+          "size": 1806,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -9751,14 +9751,14 @@
               "moduleName": "./src/startup.ts",
               "type": "cjs require",
               "userRequest": "./app/appStore",
-              "loc": "4:17-42"
+              "loc": "7:33-58"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 3,
-          "source": "\"use strict\";\nvar __read = (this && this.__read) || function (o, n) {\n    var m = typeof Symbol === \"function\" && o[Symbol.iterator];\n    if (!m) return o;\n    var i = m.call(o), r, ar = [], e;\n    try {\n        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);\n    }\n    catch (error) { e = { error: error }; }\n    finally {\n        try {\n            if (r && !r.done && (m = i[\"return\"])) m.call(i);\n        }\n        finally { if (e) throw e.error; }\n    }\n    return ar;\n};\nvar __spread = (this && this.__spread) || function () {\n    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));\n    return ar;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar redux_1 = require(\"redux\");\nvar redux_thunk_1 = require(\"redux-thunk\");\nvar redux_logger_1 = require(\"redux-logger\");\nvar dummy_1 = require(\"./reducers/dummy\");\nvar middlewares = [redux_thunk_1.default];\nif (process.env.NODE_ENV === 'development') {\n    var logger = redux_logger_1.createLogger({\n        timestamp: true,\n    });\n    middlewares.push(logger);\n}\nvar reducers = redux_1.combineReducers({\n    dummy: dummy_1.default,\n});\nexports.reducers = reducers;\nfunction appStoreCreator(initialState) {\n    var store = redux_1.createStore(reducers, initialState, redux_1.applyMiddleware.apply(void 0, __spread(middlewares)));\n    if (module.hot) {\n        module.hot.accept('./appStore', function () {\n            var nextRootReducer = require('./appStore');\n            store.replaceReducer(nextRootReducer.reducers);\n        });\n    }\n    return store;\n}\nexports.default = appStoreCreator;\n"
+          "source": "\"use strict\";\nvar __read = (this && this.__read) || function (o, n) {\n    var m = typeof Symbol === \"function\" && o[Symbol.iterator];\n    if (!m) return o;\n    var i = m.call(o), r, ar = [], e;\n    try {\n        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);\n    }\n    catch (error) { e = { error: error }; }\n    finally {\n        try {\n            if (r && !r.done && (m = i[\"return\"])) m.call(i);\n        }\n        finally { if (e) throw e.error; }\n    }\n    return ar;\n};\nvar __spread = (this && this.__spread) || function () {\n    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));\n    return ar;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar redux_1 = require(\"redux\");\nvar redux_thunk_1 = __importDefault(require(\"redux-thunk\"));\nvar redux_logger_1 = require(\"redux-logger\");\nvar dummy_1 = __importDefault(require(\"./reducers/dummy\"));\nvar middlewares = [redux_thunk_1.default];\nif (process.env.NODE_ENV === 'development') {\n    var logger = redux_logger_1.createLogger({\n        timestamp: true,\n    });\n    middlewares.push(logger);\n}\nvar reducers = redux_1.combineReducers({\n    dummy: dummy_1.default,\n});\nexports.reducers = reducers;\nfunction appStoreCreator(initialState) {\n    var store = redux_1.createStore(reducers, initialState, redux_1.applyMiddleware.apply(void 0, __spread(middlewares)));\n    if (module.hot) {\n        module.hot.accept('./appStore', function () {\n            var nextRootReducer = require('./appStore');\n            store.replaceReducer(nextRootReducer.reducers);\n        });\n    }\n    return store;\n}\nexports.default = appStoreCreator;\n"
         },
         {
           "id": "./src/app/assets/fonts.scss",
@@ -9812,7 +9812,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./assets/fonts.scss",
-              "loc": "58:0-30"
+              "loc": "68:0-30"
             }
           ],
           "providedExports": null,
@@ -9873,7 +9873,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./assets/styles.scss",
-              "loc": "57:0-31"
+              "loc": "67:0-31"
             },
             {
               "moduleId": "./src/app/pages/home/homeContainer.tsx",
@@ -9882,7 +9882,7 @@
               "moduleName": "./src/app/pages/home/homeContainer.tsx",
               "type": "cjs require",
               "userRequest": "../../assets/styles.scss",
-              "loc": "17:13-48"
+              "loc": "24:26-61"
             }
           ],
           "providedExports": null,
@@ -9897,7 +9897,7 @@
           "name": "./src/app/layouts/default/layoutContainer.tsx",
           "index": 85,
           "index2": 81,
-          "size": 4275,
+          "size": 4571,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -9943,14 +9943,14 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./layouts/default/layoutContainer",
-              "loc": "53:24-68"
+              "loc": "63:40-84"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 4,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar LayoutContainer = (function (_super) {\n    __extends(LayoutContainer, _super);\n    function LayoutContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    LayoutContainer.prototype.clickHandler = function (ev) {\n        var target = ev.target;\n        if (target.tagName === 'A') {\n            var url = target.getAttribute('href');\n            if (url !== null) {\n            }\n        }\n    };\n    LayoutContainer.prototype.render = function () {\n        return (React.createElement(\"div\", { className: \"hero is-fullheight\" },\n            React.createElement(\"header\", { className: \"header hero-head\" },\n                React.createElement(\"nav\", { className: \"navbar is-transparent\", role: \"navigation\", \"aria-label\": \"main navigation\" },\n                    React.createElement(\"div\", { className: \"container\" },\n                        React.createElement(\"div\", { className: \"navbar-brand\" },\n                            React.createElement(\"span\", { className: \"navbar-burger burger\", role: \"button\", \"aria-label\": \"menu\", \"aria-expanded\": \"false\", \"data-target\": \"navbarMenu\" },\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }))),\n                        React.createElement(\"div\", { id: \"navbarMenu\", className: \"navbar-menu\" },\n                            React.createElement(\"div\", { className: \"navbar-start\" },\n                                React.createElement(react_router_dom_1.NavLink, { exact: true, to: \"/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Home\"),\n                                React.createElement(react_router_dom_1.NavLink, { to: \"/dummy/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Dummy\")),\n                            React.createElement(\"div\", { className: \"navbar-end\" },\n                                React.createElement(\"a\", { className: \"navbar-item\", href: \"https://github.com/eserozvataf/ts-spa-boilerplate\" },\n                                    React.createElement(\"span\", { className: \"icon\" },\n                                        React.createElement(\"i\", { className: \"fa fa-code-fork fa-fw\", \"aria-hidden\": \"true\" })),\n                                    \"GitHub\")))))),\n            React.createElement(\"main\", { className: \"section hero-body\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content\", onClick: this.clickHandler.bind(this) }, this.props.children))),\n            React.createElement(\"footer\", { className: \"footer hero-foot\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content has-text-centered\" },\n                        \"TypeScript SPA Boilerplate is a front-end development stack for starting with a structured, scaleable and adaptable basecode.\",\n                        React.createElement(\"br\", null),\n                        \"Visit \",\n                        React.createElement(\"a\", { href: \"https://github.com/eserozvataf/ts-spa-boilerplate\" }, \"GitHub page\"),\n                        \" for details. Apache License, Version 2.0\")))));\n    };\n    return LayoutContainer;\n}(React.Component));\nexports.default = LayoutContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar LayoutContainer = (function (_super) {\n    __extends(LayoutContainer, _super);\n    function LayoutContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    LayoutContainer.prototype.clickHandler = function (ev) {\n        var target = ev.target;\n        if (target.tagName === 'A') {\n            var url = target.getAttribute('href');\n            if (url !== null) {\n            }\n        }\n    };\n    LayoutContainer.prototype.render = function () {\n        return (React.createElement(\"div\", { className: \"hero is-fullheight\" },\n            React.createElement(\"header\", { className: \"header hero-head\" },\n                React.createElement(\"nav\", { className: \"navbar is-transparent\", role: \"navigation\", \"aria-label\": \"main navigation\" },\n                    React.createElement(\"div\", { className: \"container\" },\n                        React.createElement(\"div\", { className: \"navbar-brand\" },\n                            React.createElement(\"span\", { className: \"navbar-burger burger\", role: \"button\", \"aria-label\": \"menu\", \"aria-expanded\": \"false\", \"data-target\": \"navbarMenu\" },\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }))),\n                        React.createElement(\"div\", { id: \"navbarMenu\", className: \"navbar-menu\" },\n                            React.createElement(\"div\", { className: \"navbar-start\" },\n                                React.createElement(react_router_dom_1.NavLink, { exact: true, to: \"/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Home\"),\n                                React.createElement(react_router_dom_1.NavLink, { to: \"/dummy/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Dummy\")),\n                            React.createElement(\"div\", { className: \"navbar-end\" },\n                                React.createElement(\"a\", { className: \"navbar-item\", href: \"https://github.com/eserozvataf/ts-spa-boilerplate\" },\n                                    React.createElement(\"span\", { className: \"icon\" },\n                                        React.createElement(\"i\", { className: \"fa fa-code-fork fa-fw\", \"aria-hidden\": \"true\" })),\n                                    \"GitHub\")))))),\n            React.createElement(\"main\", { className: \"section hero-body\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content\", onClick: this.clickHandler.bind(this) }, this.props.children))),\n            React.createElement(\"footer\", { className: \"footer hero-foot\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content has-text-centered\" },\n                        \"TypeScript SPA Boilerplate is a front-end development stack for starting with a structured, scaleable and adaptable basecode.\",\n                        React.createElement(\"br\", null),\n                        \"Visit \",\n                        React.createElement(\"a\", { href: \"https://github.com/eserozvataf/ts-spa-boilerplate\" }, \"GitHub page\"),\n                        \" for details. Apache License, Version 2.0\")))));\n    };\n    return LayoutContainer;\n}(React.Component));\nexports.default = LayoutContainer;\n"
         },
         {
           "id": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -9958,7 +9958,7 @@
           "name": "./src/app/pages/dummy/dummyContainer.tsx",
           "index": 88,
           "index2": 86,
-          "size": 5000,
+          "size": 5469,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -10004,14 +10004,14 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./pages/dummy/dummyContainer",
-              "loc": "55:23-62"
+              "loc": "65:39-78"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 4,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar redux_1 = require(\"redux\");\nvar react_redux_1 = require(\"react-redux\");\nvar summaryResultView_1 = require(\"./summaryResultView\");\nvar dummyRequest_1 = require(\"../../actions/dummyRequest\");\nvar DummyContainer = (function (_super) {\n    __extends(DummyContainer, _super);\n    function DummyContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            firstNumber: 4,\n            secondNumber: 7,\n        };\n        return _this;\n    }\n    DummyContainer.prototype.componentDidMount = function () {\n        this.update();\n    };\n    DummyContainer.prototype.update = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);\n                return [2];\n            });\n        });\n    };\n    DummyContainer.prototype.render = function () {\n        var summary;\n        if (this.props.dummy.loading) {\n            summary = 'Calculating...';\n        }\n        else {\n            summary = this.props.dummy.result;\n        }\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Dummy\"),\n            React.createElement(summaryResultView_1.default, { firstNumber: this.state.firstNumber, secondNumber: this.state.secondNumber, summary: summary })));\n    };\n    return DummyContainer;\n}(React.Component));\nexports.DummyContainer = DummyContainer;\nvar mapStateToProps = function (state) { return ({\n    dummy: state.dummy,\n}); };\nvar mapDispatchToProps = function (dispatch) { return redux_1.bindActionCreators({\n    dummyRequestAction: dummyRequest_1.default,\n}, dispatch); };\nvar DummyContainerConnected = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(DummyContainer);\nexports.default = DummyContainerConnected;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar redux_1 = require(\"redux\");\nvar react_redux_1 = require(\"react-redux\");\nvar summaryResultView_1 = __importDefault(require(\"./summaryResultView\"));\nvar dummyRequest_1 = __importDefault(require(\"../../actions/dummyRequest\"));\nvar DummyContainer = (function (_super) {\n    __extends(DummyContainer, _super);\n    function DummyContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            firstNumber: 4,\n            secondNumber: 7,\n        };\n        return _this;\n    }\n    DummyContainer.prototype.componentDidMount = function () {\n        this.update();\n    };\n    DummyContainer.prototype.update = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);\n                return [2];\n            });\n        });\n    };\n    DummyContainer.prototype.render = function () {\n        var summary;\n        if (this.props.dummy.loading) {\n            summary = 'Calculating...';\n        }\n        else {\n            summary = this.props.dummy.result;\n        }\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Dummy\"),\n            React.createElement(summaryResultView_1.default, { firstNumber: this.state.firstNumber, secondNumber: this.state.secondNumber, summary: summary })));\n    };\n    return DummyContainer;\n}(React.Component));\nexports.DummyContainer = DummyContainer;\nvar mapStateToProps = function (state) { return ({\n    dummy: state.dummy,\n}); };\nvar mapDispatchToProps = function (dispatch) { return redux_1.bindActionCreators({\n    dummyRequestAction: dummyRequest_1.default,\n}, dispatch); };\nvar DummyContainerConnected = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(DummyContainer);\nexports.default = DummyContainerConnected;\n"
         },
         {
           "id": 0,
@@ -10055,7 +10055,7 @@
           "name": "./src/app/pages/dummy/summaryResultView.tsx",
           "index": 89,
           "index2": 84,
-          "size": 1240,
+          "size": 1536,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -10106,14 +10106,14 @@
               "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
               "type": "cjs require",
               "userRequest": "./summaryResultView",
-              "loc": "54:26-56"
+              "loc": "64:42-72"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 5,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar SummaryResultView = (function (_super) {\n    __extends(SummaryResultView, _super);\n    function SummaryResultView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    SummaryResultView.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            this.props.firstNumber,\n            \" + \",\n            this.props.secondNumber,\n            \" = \",\n            this.props.summary));\n    };\n    return SummaryResultView;\n}(React.PureComponent));\nexports.default = SummaryResultView;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar SummaryResultView = (function (_super) {\n    __extends(SummaryResultView, _super);\n    function SummaryResultView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    SummaryResultView.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            this.props.firstNumber,\n            \" + \",\n            this.props.secondNumber,\n            \" = \",\n            this.props.summary));\n    };\n    return SummaryResultView;\n}(React.PureComponent));\nexports.default = SummaryResultView;\n"
         },
         {
           "id": "./src/app/pages/home/homeContainer.tsx",
@@ -10121,7 +10121,7 @@
           "name": "./src/app/pages/home/homeContainer.tsx",
           "index": 86,
           "index2": 83,
-          "size": 1233,
+          "size": 1543,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -10167,14 +10167,14 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./pages/home/homeContainer",
-              "loc": "54:22-59"
+              "loc": "64:38-75"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 4,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar styles = require(\"../../assets/styles.scss\");\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
         },
         {
           "id": "./src/app/pages/notFound/notFoundContainer.tsx",
@@ -10182,7 +10182,7 @@
           "name": "./src/app/pages/notFound/notFoundContainer.tsx",
           "index": 91,
           "index2": 87,
-          "size": 1199,
+          "size": 1495,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -10228,14 +10228,14 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./pages/notFound/notFoundContainer",
-              "loc": "56:26-71"
+              "loc": "66:42-87"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 4,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(React.Component));\nexports.default = NotFoundContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(React.Component));\nexports.default = NotFoundContainer;\n"
         },
         {
           "id": "./src/app/reducers/dummy.ts",
@@ -10289,7 +10289,7 @@
               "moduleName": "./src/app/appStore.ts",
               "type": "cjs require",
               "userRequest": "./reducers/dummy",
-              "loc": "26:14-41"
+              "loc": "29:30-57"
             }
           ],
           "providedExports": null,
@@ -10304,7 +10304,7 @@
           "name": "./src/startup.ts",
           "index": 83,
           "index2": 94,
-          "size": 305,
+          "size": 478,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -10340,14 +10340,14 @@
               "moduleName": "./core/src/index.server.tsx",
               "type": "cjs require",
               "userRequest": "../../src/startup",
-              "loc": "7:16-44"
+              "loc": "17:32-60"
             }
           ],
           "providedExports": null,
           "optimizationBailout": [
           ],
           "depth": 2,
-          "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar appContainer_1 = require(\"./app/appContainer\");\nvar appStore_1 = require(\"./app/appStore\");\nvar appMapping = {\n    '/': { app: appContainer_1.default, store: appStore_1.default, state: {} },\n};\nexports.default = appMapping;\n"
+          "source": "\"use strict\";\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar appContainer_1 = __importDefault(require(\"./app/appContainer\"));\nvar appStore_1 = __importDefault(require(\"./app/appStore\"));\nvar appMapping = {\n    '/': { app: appContainer_1.default, store: appStore_1.default, state: {} },\n};\nexports.default = appMapping;\n"
         },
         {
           "id": "stream",
@@ -10435,7 +10435,7 @@
       "name": "./core/src/appStack.tsx",
       "index": 52,
       "index2": 80,
-      "size": 994,
+      "size": 1446,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -10471,14 +10471,14 @@
           "moduleName": "./core/src/index.server.tsx",
           "type": "cjs require",
           "userRequest": "./appStack",
-          "loc": "6:17-38"
+          "loc": "16:33-54"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 2,
-      "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar appStackContainer_1 = require(\"./appStackContainer\");\nvar AppStack = (function () {\n    function AppStack(definitions) {\n        if (definitions === void 0) { definitions = []; }\n        this.definitions = definitions;\n    }\n    AppStack.prototype.add = function (path, app, store, state) {\n        this.definitions[path] = { app: app, store: store, state: state };\n        return this;\n    };\n    AppStack.prototype.addRange = function (definitions) {\n        for (var path in definitions) {\n            this.definitions[path] = definitions[path];\n        }\n        return this;\n    };\n    AppStack.prototype.wrapWith = function (wrapper) {\n        return wrapper(this.render());\n    };\n    AppStack.prototype.render = function () {\n        return (React.createElement(appStackContainer_1.default, { appStack: this }));\n    };\n    return AppStack;\n}());\nexports.default = AppStack;\n"
+      "source": "\"use strict\";\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar appStackContainer_1 = __importDefault(require(\"./appStackContainer\"));\nvar AppStack = (function () {\n    function AppStack(definitions) {\n        if (definitions === void 0) { definitions = []; }\n        this.definitions = definitions;\n    }\n    AppStack.prototype.add = function (path, app, store, state) {\n        this.definitions[path] = { app: app, store: store, state: state };\n        return this;\n    };\n    AppStack.prototype.addRange = function (definitions) {\n        for (var path in definitions) {\n            this.definitions[path] = definitions[path];\n        }\n        return this;\n    };\n    AppStack.prototype.wrapWith = function (wrapper) {\n        return wrapper(this.render());\n    };\n    AppStack.prototype.render = function () {\n        return (React.createElement(appStackContainer_1.default, { appStack: this }));\n    };\n    return AppStack;\n}());\nexports.default = AppStack;\n"
     },
     {
       "id": "./core/src/appStackContainer.tsx",
@@ -10486,7 +10486,7 @@
       "name": "./core/src/appStackContainer.tsx",
       "index": 53,
       "index2": 79,
-      "size": 1890,
+      "size": 2186,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -10527,14 +10527,14 @@
           "moduleName": "./core/src/appStack.tsx",
           "type": "cjs require",
           "userRequest": "./appStackContainer",
-          "loc": "4:26-56"
+          "loc": "14:42-72"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 3,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar react_redux_1 = require(\"react-redux\");\nvar AppStackContainer = (function (_super) {\n    __extends(AppStackContainer, _super);\n    function AppStackContainer() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    AppStackContainer.prototype.render = function () {\n        var _this = this;\n        var renderIndex = 0;\n        return (React.createElement(react_router_dom_1.Switch, { key: \"appStack-switch\" }, Object.keys(this.props.appStack.definitions).map(function (itemKey) {\n            var definition = _this.props.appStack.definitions[itemKey];\n            var component = React.createElement(react_router_dom_1.Route, { path: itemKey, component: definition.app, key: \"appStack-switch-provider-app-\" + renderIndex++ });\n            if (definition.store !== undefined) {\n                return (React.createElement(react_redux_1.Provider, { store: definition.store(definition.state), key: \"appStack-switch-provider-\" + renderIndex++ }, component));\n            }\n            return component;\n        })));\n    };\n    return AppStackContainer;\n}(React.Component));\nexports.default = AppStackContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar react_redux_1 = require(\"react-redux\");\nvar AppStackContainer = (function (_super) {\n    __extends(AppStackContainer, _super);\n    function AppStackContainer() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    AppStackContainer.prototype.render = function () {\n        var _this = this;\n        var renderIndex = 0;\n        return (React.createElement(react_router_dom_1.Switch, { key: \"appStack-switch\" }, Object.keys(this.props.appStack.definitions).map(function (itemKey) {\n            var definition = _this.props.appStack.definitions[itemKey];\n            var component = React.createElement(react_router_dom_1.Route, { path: itemKey, component: definition.app, key: \"appStack-switch-provider-app-\" + renderIndex++ });\n            if (definition.store !== undefined) {\n                return (React.createElement(react_redux_1.Provider, { store: definition.store(definition.state), key: \"appStack-switch-provider-\" + renderIndex++ }, component));\n            }\n            return component;\n        })));\n    };\n    return AppStackContainer;\n}(React.Component));\nexports.default = AppStackContainer;\n"
     },
     {
       "id": "./core/src/index.server.tsx",
@@ -10542,7 +10542,7 @@
       "name": "./core/src/index.server.tsx",
       "index": 1,
       "index2": 95,
-      "size": 859,
+      "size": 1342,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -10580,7 +10580,7 @@
       "optimizationBailout": [
       ],
       "depth": 1,
-      "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar ReactDOMServer = require(\"react-dom/server\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar appStack_1 = require(\"./appStack\");\nvar startup_1 = require(\"../../src/startup\");\nfunction ssrRenderer(appStack, url, context) {\n    if (context === void 0) { context = {}; }\n    var root = appStack.wrapWith(function (children) {\n        return React.createElement(react_router_dom_1.StaticRouter, {\n            location: url,\n            context: context,\n        }, children);\n    });\n    var html = ReactDOMServer.renderToString(root);\n    return html;\n}\nvar appStack = new appStack_1.default()\n    .addRange(startup_1.default);\nvar serverObjects = {\n    appStack: appStack,\n    ssrRenderer: ssrRenderer,\n};\nexports.default = serverObjects;\n"
+      "source": "\"use strict\";\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar ReactDOMServer = __importStar(require(\"react-dom/server\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar appStack_1 = __importDefault(require(\"./appStack\"));\nvar startup_1 = __importDefault(require(\"../../src/startup\"));\nfunction ssrRenderer(appStack, url, context) {\n    if (context === void 0) { context = {}; }\n    var root = appStack.wrapWith(function (children) {\n        return React.createElement(react_router_dom_1.StaticRouter, {\n            location: url,\n            context: context,\n        }, children);\n    });\n    var html = ReactDOMServer.renderToString(root);\n    return html;\n}\nvar appStack = new appStack_1.default()\n    .addRange(startup_1.default);\nvar serverObjects = {\n    appStack: appStack,\n    ssrRenderer: ssrRenderer,\n};\nexports.default = serverObjects;\n"
     },
     {
       "id": "./node_modules/history/es/DOMUtils.js",
@@ -10616,9 +10616,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -10831,9 +10831,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11044,9 +11044,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11397,9 +11397,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11474,9 +11474,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11551,9 +11551,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11628,9 +11628,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11726,9 +11726,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-      "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
-      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
       "issuerPath": [
         {
           "id": 0,
@@ -11746,9 +11746,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         }
       ],
       "failed": false,
@@ -13421,9 +13421,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router/es/generatePath.js",
-      "issuerId": "./node_modules/react-router/es/generatePath.js",
-      "issuerName": "./node_modules/react-router/es/generatePath.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router/es/matchPath.js",
+      "issuerId": "./node_modules/react-router/es/matchPath.js",
+      "issuerName": "./node_modules/react-router/es/matchPath.js",
       "issuerPath": [
         {
           "id": 0,
@@ -13441,14 +13441,14 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/generatePath.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/generatePath.js",
-          "name": "./node_modules/react-router-dom/es/generatePath.js"
+          "id": "./node_modules/react-router-dom/es/matchPath.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/matchPath.js",
+          "name": "./node_modules/react-router-dom/es/matchPath.js"
         },
         {
-          "id": "./node_modules/react-router/es/generatePath.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router/es/generatePath.js",
-          "name": "./node_modules/react-router/es/generatePath.js"
+          "id": "./node_modules/react-router/es/matchPath.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router/es/matchPath.js",
+          "name": "./node_modules/react-router/es/matchPath.js"
         }
       ],
       "failed": false,
@@ -13613,9 +13613,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/prop-types/index.js",
@@ -13659,9 +13659,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-      "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
-      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
       "issuerPath": [
         {
           "id": 0,
@@ -13679,9 +13679,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         }
       ],
       "failed": false,
@@ -14865,7 +14865,7 @@
           "moduleName": "./core/src/index.server.tsx",
           "type": "cjs require",
           "userRequest": "react-dom/server",
-          "loc": "4:21-48"
+          "loc": "14:34-61"
         }
       ],
       "providedExports": null,
@@ -15802,7 +15802,7 @@
           "moduleName": "./core/src/appStackContainer.tsx",
           "type": "cjs require",
           "userRequest": "react-redux",
-          "loc": "18:20-42"
+          "loc": "25:20-42"
         },
         {
           "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -15811,7 +15811,7 @@
           "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
           "type": "cjs require",
           "userRequest": "react-redux",
-          "loc": "53:20-42"
+          "loc": "63:20-42"
         }
       ],
       "providedExports": [
@@ -17294,7 +17294,7 @@
           "moduleName": "./core/src/appStackContainer.tsx",
           "type": "cjs require",
           "userRequest": "react-router-dom",
-          "loc": "17:25-52"
+          "loc": "24:25-52"
         },
         {
           "moduleId": "./core/src/index.server.tsx",
@@ -17303,7 +17303,7 @@
           "moduleName": "./core/src/index.server.tsx",
           "type": "cjs require",
           "userRequest": "react-router-dom",
-          "loc": "5:25-52"
+          "loc": "15:25-52"
         },
         {
           "moduleId": "./src/app/appContainer.tsx",
@@ -17312,7 +17312,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "react-router-dom",
-          "loc": "52:25-52"
+          "loc": "62:25-52"
         },
         {
           "moduleId": "./src/app/layouts/default/layoutContainer.tsx",
@@ -17321,7 +17321,7 @@
           "moduleName": "./src/app/layouts/default/layoutContainer.tsx",
           "type": "cjs require",
           "userRequest": "react-router-dom",
-          "loc": "17:25-52"
+          "loc": "24:25-52"
         }
       ],
       "providedExports": [
@@ -17657,9 +17657,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -18532,7 +18532,7 @@
           "moduleName": "./core/src/appStack.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "3:12-28"
+          "loc": "13:25-41"
         },
         {
           "moduleId": "./core/src/appStackContainer.tsx",
@@ -18541,7 +18541,7 @@
           "moduleName": "./core/src/appStackContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "16:12-28"
+          "loc": "23:25-41"
         },
         {
           "moduleId": "./core/src/index.server.tsx",
@@ -18550,7 +18550,7 @@
           "moduleName": "./core/src/index.server.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "3:12-28"
+          "loc": "13:25-41"
         },
         {
           "moduleId": "./node_modules/react-dom/cjs/react-dom-server.node.development.js",
@@ -18973,7 +18973,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "51:12-28"
+          "loc": "61:25-41"
         },
         {
           "moduleId": "./src/app/layouts/default/layoutContainer.tsx",
@@ -18982,7 +18982,7 @@
           "moduleName": "./src/app/layouts/default/layoutContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "16:12-28"
+          "loc": "23:25-41"
         },
         {
           "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -18991,7 +18991,7 @@
           "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "51:12-28"
+          "loc": "61:25-41"
         },
         {
           "moduleId": "./src/app/pages/dummy/summaryResultView.tsx",
@@ -19000,7 +19000,7 @@
           "moduleName": "./src/app/pages/dummy/summaryResultView.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "16:12-28"
+          "loc": "23:25-41"
         },
         {
           "moduleId": "./src/app/pages/home/homeContainer.tsx",
@@ -19009,7 +19009,7 @@
           "moduleName": "./src/app/pages/home/homeContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "16:12-28"
+          "loc": "23:25-41"
         },
         {
           "moduleId": "./src/app/pages/notFound/notFoundContainer.tsx",
@@ -19018,7 +19018,7 @@
           "moduleName": "./src/app/pages/notFound/notFoundContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "16:12-28"
+          "loc": "23:25-41"
         }
       ],
       "providedExports": null,
@@ -19079,7 +19079,7 @@
           "moduleName": "./src/app/appStore.ts",
           "type": "cjs require",
           "userRequest": "redux-logger",
-          "loc": "25:21-44"
+          "loc": "28:21-44"
         }
       ],
       "providedExports": null,
@@ -19140,7 +19140,7 @@
           "moduleName": "./src/app/appStore.ts",
           "type": "cjs require",
           "userRequest": "redux-thunk",
-          "loc": "24:20-42"
+          "loc": "27:36-58"
         }
       ],
       "providedExports": [
@@ -19221,7 +19221,7 @@
           "moduleName": "./src/app/appStore.ts",
           "type": "cjs require",
           "userRequest": "redux",
-          "loc": "23:14-30"
+          "loc": "26:14-30"
         },
         {
           "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -19230,7 +19230,7 @@
           "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
           "type": "cjs require",
           "userRequest": "redux",
-          "loc": "52:14-30"
+          "loc": "62:14-30"
         }
       ],
       "providedExports": [
@@ -19280,9 +19280,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -19510,9 +19510,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-      "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
-      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
       "issuerPath": [
         {
           "id": 0,
@@ -19530,9 +19530,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/HashRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
-          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
+          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
         }
       ],
       "failed": false,
@@ -20027,7 +20027,7 @@
           "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
           "type": "cjs require",
           "userRequest": "../../actions/dummyRequest",
-          "loc": "55:21-58"
+          "loc": "65:37-74"
         }
       ],
       "providedExports": null,
@@ -20042,7 +20042,7 @@
       "name": "./src/app/appContainer.tsx",
       "index": 84,
       "index2": 89,
-      "size": 5134,
+      "size": 5637,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20083,14 +20083,14 @@
           "moduleName": "./src/startup.ts",
           "type": "cjs require",
           "userRequest": "./app/appContainer",
-          "loc": "3:21-50"
+          "loc": "6:37-66"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 3,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar layoutContainer_1 = require(\"./layouts/default/layoutContainer\");\nvar homeContainer_1 = require(\"./pages/home/homeContainer\");\nvar dummyContainer_1 = require(\"./pages/dummy/dummyContainer\");\nvar notFoundContainer_1 = require(\"./pages/notFound/notFoundContainer\");\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        return (React.createElement(react_router_dom_1.Switch, null,\n            React.createElement(react_router_dom_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(homeContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(dummyContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } })));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar layoutContainer_1 = __importDefault(require(\"./layouts/default/layoutContainer\"));\nvar homeContainer_1 = __importDefault(require(\"./pages/home/homeContainer\"));\nvar dummyContainer_1 = __importDefault(require(\"./pages/dummy/dummyContainer\"));\nvar notFoundContainer_1 = __importDefault(require(\"./pages/notFound/notFoundContainer\"));\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        return (React.createElement(react_router_dom_1.Switch, null,\n            React.createElement(react_router_dom_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(homeContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(dummyContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } })));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
     },
     {
       "id": "./src/app/appStore.ts",
@@ -20098,7 +20098,7 @@
       "name": "./src/app/appStore.ts",
       "index": 93,
       "index2": 93,
-      "size": 1633,
+      "size": 1806,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20139,14 +20139,14 @@
           "moduleName": "./src/startup.ts",
           "type": "cjs require",
           "userRequest": "./app/appStore",
-          "loc": "4:17-42"
+          "loc": "7:33-58"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 3,
-      "source": "\"use strict\";\nvar __read = (this && this.__read) || function (o, n) {\n    var m = typeof Symbol === \"function\" && o[Symbol.iterator];\n    if (!m) return o;\n    var i = m.call(o), r, ar = [], e;\n    try {\n        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);\n    }\n    catch (error) { e = { error: error }; }\n    finally {\n        try {\n            if (r && !r.done && (m = i[\"return\"])) m.call(i);\n        }\n        finally { if (e) throw e.error; }\n    }\n    return ar;\n};\nvar __spread = (this && this.__spread) || function () {\n    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));\n    return ar;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar redux_1 = require(\"redux\");\nvar redux_thunk_1 = require(\"redux-thunk\");\nvar redux_logger_1 = require(\"redux-logger\");\nvar dummy_1 = require(\"./reducers/dummy\");\nvar middlewares = [redux_thunk_1.default];\nif (process.env.NODE_ENV === 'development') {\n    var logger = redux_logger_1.createLogger({\n        timestamp: true,\n    });\n    middlewares.push(logger);\n}\nvar reducers = redux_1.combineReducers({\n    dummy: dummy_1.default,\n});\nexports.reducers = reducers;\nfunction appStoreCreator(initialState) {\n    var store = redux_1.createStore(reducers, initialState, redux_1.applyMiddleware.apply(void 0, __spread(middlewares)));\n    if (module.hot) {\n        module.hot.accept('./appStore', function () {\n            var nextRootReducer = require('./appStore');\n            store.replaceReducer(nextRootReducer.reducers);\n        });\n    }\n    return store;\n}\nexports.default = appStoreCreator;\n"
+      "source": "\"use strict\";\nvar __read = (this && this.__read) || function (o, n) {\n    var m = typeof Symbol === \"function\" && o[Symbol.iterator];\n    if (!m) return o;\n    var i = m.call(o), r, ar = [], e;\n    try {\n        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);\n    }\n    catch (error) { e = { error: error }; }\n    finally {\n        try {\n            if (r && !r.done && (m = i[\"return\"])) m.call(i);\n        }\n        finally { if (e) throw e.error; }\n    }\n    return ar;\n};\nvar __spread = (this && this.__spread) || function () {\n    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));\n    return ar;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar redux_1 = require(\"redux\");\nvar redux_thunk_1 = __importDefault(require(\"redux-thunk\"));\nvar redux_logger_1 = require(\"redux-logger\");\nvar dummy_1 = __importDefault(require(\"./reducers/dummy\"));\nvar middlewares = [redux_thunk_1.default];\nif (process.env.NODE_ENV === 'development') {\n    var logger = redux_logger_1.createLogger({\n        timestamp: true,\n    });\n    middlewares.push(logger);\n}\nvar reducers = redux_1.combineReducers({\n    dummy: dummy_1.default,\n});\nexports.reducers = reducers;\nfunction appStoreCreator(initialState) {\n    var store = redux_1.createStore(reducers, initialState, redux_1.applyMiddleware.apply(void 0, __spread(middlewares)));\n    if (module.hot) {\n        module.hot.accept('./appStore', function () {\n            var nextRootReducer = require('./appStore');\n            store.replaceReducer(nextRootReducer.reducers);\n        });\n    }\n    return store;\n}\nexports.default = appStoreCreator;\n"
     },
     {
       "id": "./src/app/assets/fonts.scss",
@@ -20200,7 +20200,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./assets/fonts.scss",
-          "loc": "58:0-30"
+          "loc": "68:0-30"
         }
       ],
       "providedExports": null,
@@ -20261,7 +20261,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./assets/styles.scss",
-          "loc": "57:0-31"
+          "loc": "67:0-31"
         },
         {
           "moduleId": "./src/app/pages/home/homeContainer.tsx",
@@ -20270,7 +20270,7 @@
           "moduleName": "./src/app/pages/home/homeContainer.tsx",
           "type": "cjs require",
           "userRequest": "../../assets/styles.scss",
-          "loc": "17:13-48"
+          "loc": "24:26-61"
         }
       ],
       "providedExports": null,
@@ -20285,7 +20285,7 @@
       "name": "./src/app/layouts/default/layoutContainer.tsx",
       "index": 85,
       "index2": 81,
-      "size": 4275,
+      "size": 4571,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20331,14 +20331,14 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./layouts/default/layoutContainer",
-          "loc": "53:24-68"
+          "loc": "63:40-84"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 4,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar LayoutContainer = (function (_super) {\n    __extends(LayoutContainer, _super);\n    function LayoutContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    LayoutContainer.prototype.clickHandler = function (ev) {\n        var target = ev.target;\n        if (target.tagName === 'A') {\n            var url = target.getAttribute('href');\n            if (url !== null) {\n            }\n        }\n    };\n    LayoutContainer.prototype.render = function () {\n        return (React.createElement(\"div\", { className: \"hero is-fullheight\" },\n            React.createElement(\"header\", { className: \"header hero-head\" },\n                React.createElement(\"nav\", { className: \"navbar is-transparent\", role: \"navigation\", \"aria-label\": \"main navigation\" },\n                    React.createElement(\"div\", { className: \"container\" },\n                        React.createElement(\"div\", { className: \"navbar-brand\" },\n                            React.createElement(\"span\", { className: \"navbar-burger burger\", role: \"button\", \"aria-label\": \"menu\", \"aria-expanded\": \"false\", \"data-target\": \"navbarMenu\" },\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }))),\n                        React.createElement(\"div\", { id: \"navbarMenu\", className: \"navbar-menu\" },\n                            React.createElement(\"div\", { className: \"navbar-start\" },\n                                React.createElement(react_router_dom_1.NavLink, { exact: true, to: \"/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Home\"),\n                                React.createElement(react_router_dom_1.NavLink, { to: \"/dummy/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Dummy\")),\n                            React.createElement(\"div\", { className: \"navbar-end\" },\n                                React.createElement(\"a\", { className: \"navbar-item\", href: \"https://github.com/eserozvataf/ts-spa-boilerplate\" },\n                                    React.createElement(\"span\", { className: \"icon\" },\n                                        React.createElement(\"i\", { className: \"fa fa-code-fork fa-fw\", \"aria-hidden\": \"true\" })),\n                                    \"GitHub\")))))),\n            React.createElement(\"main\", { className: \"section hero-body\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content\", onClick: this.clickHandler.bind(this) }, this.props.children))),\n            React.createElement(\"footer\", { className: \"footer hero-foot\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content has-text-centered\" },\n                        \"TypeScript SPA Boilerplate is a front-end development stack for starting with a structured, scaleable and adaptable basecode.\",\n                        React.createElement(\"br\", null),\n                        \"Visit \",\n                        React.createElement(\"a\", { href: \"https://github.com/eserozvataf/ts-spa-boilerplate\" }, \"GitHub page\"),\n                        \" for details. Apache License, Version 2.0\")))));\n    };\n    return LayoutContainer;\n}(React.Component));\nexports.default = LayoutContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar LayoutContainer = (function (_super) {\n    __extends(LayoutContainer, _super);\n    function LayoutContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    LayoutContainer.prototype.clickHandler = function (ev) {\n        var target = ev.target;\n        if (target.tagName === 'A') {\n            var url = target.getAttribute('href');\n            if (url !== null) {\n            }\n        }\n    };\n    LayoutContainer.prototype.render = function () {\n        return (React.createElement(\"div\", { className: \"hero is-fullheight\" },\n            React.createElement(\"header\", { className: \"header hero-head\" },\n                React.createElement(\"nav\", { className: \"navbar is-transparent\", role: \"navigation\", \"aria-label\": \"main navigation\" },\n                    React.createElement(\"div\", { className: \"container\" },\n                        React.createElement(\"div\", { className: \"navbar-brand\" },\n                            React.createElement(\"span\", { className: \"navbar-burger burger\", role: \"button\", \"aria-label\": \"menu\", \"aria-expanded\": \"false\", \"data-target\": \"navbarMenu\" },\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }))),\n                        React.createElement(\"div\", { id: \"navbarMenu\", className: \"navbar-menu\" },\n                            React.createElement(\"div\", { className: \"navbar-start\" },\n                                React.createElement(react_router_dom_1.NavLink, { exact: true, to: \"/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Home\"),\n                                React.createElement(react_router_dom_1.NavLink, { to: \"/dummy/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Dummy\")),\n                            React.createElement(\"div\", { className: \"navbar-end\" },\n                                React.createElement(\"a\", { className: \"navbar-item\", href: \"https://github.com/eserozvataf/ts-spa-boilerplate\" },\n                                    React.createElement(\"span\", { className: \"icon\" },\n                                        React.createElement(\"i\", { className: \"fa fa-code-fork fa-fw\", \"aria-hidden\": \"true\" })),\n                                    \"GitHub\")))))),\n            React.createElement(\"main\", { className: \"section hero-body\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content\", onClick: this.clickHandler.bind(this) }, this.props.children))),\n            React.createElement(\"footer\", { className: \"footer hero-foot\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content has-text-centered\" },\n                        \"TypeScript SPA Boilerplate is a front-end development stack for starting with a structured, scaleable and adaptable basecode.\",\n                        React.createElement(\"br\", null),\n                        \"Visit \",\n                        React.createElement(\"a\", { href: \"https://github.com/eserozvataf/ts-spa-boilerplate\" }, \"GitHub page\"),\n                        \" for details. Apache License, Version 2.0\")))));\n    };\n    return LayoutContainer;\n}(React.Component));\nexports.default = LayoutContainer;\n"
     },
     {
       "id": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -20346,7 +20346,7 @@
       "name": "./src/app/pages/dummy/dummyContainer.tsx",
       "index": 88,
       "index2": 86,
-      "size": 5000,
+      "size": 5469,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20392,14 +20392,14 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./pages/dummy/dummyContainer",
-          "loc": "55:23-62"
+          "loc": "65:39-78"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 4,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar redux_1 = require(\"redux\");\nvar react_redux_1 = require(\"react-redux\");\nvar summaryResultView_1 = require(\"./summaryResultView\");\nvar dummyRequest_1 = require(\"../../actions/dummyRequest\");\nvar DummyContainer = (function (_super) {\n    __extends(DummyContainer, _super);\n    function DummyContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            firstNumber: 4,\n            secondNumber: 7,\n        };\n        return _this;\n    }\n    DummyContainer.prototype.componentDidMount = function () {\n        this.update();\n    };\n    DummyContainer.prototype.update = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);\n                return [2];\n            });\n        });\n    };\n    DummyContainer.prototype.render = function () {\n        var summary;\n        if (this.props.dummy.loading) {\n            summary = 'Calculating...';\n        }\n        else {\n            summary = this.props.dummy.result;\n        }\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Dummy\"),\n            React.createElement(summaryResultView_1.default, { firstNumber: this.state.firstNumber, secondNumber: this.state.secondNumber, summary: summary })));\n    };\n    return DummyContainer;\n}(React.Component));\nexports.DummyContainer = DummyContainer;\nvar mapStateToProps = function (state) { return ({\n    dummy: state.dummy,\n}); };\nvar mapDispatchToProps = function (dispatch) { return redux_1.bindActionCreators({\n    dummyRequestAction: dummyRequest_1.default,\n}, dispatch); };\nvar DummyContainerConnected = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(DummyContainer);\nexports.default = DummyContainerConnected;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar redux_1 = require(\"redux\");\nvar react_redux_1 = require(\"react-redux\");\nvar summaryResultView_1 = __importDefault(require(\"./summaryResultView\"));\nvar dummyRequest_1 = __importDefault(require(\"../../actions/dummyRequest\"));\nvar DummyContainer = (function (_super) {\n    __extends(DummyContainer, _super);\n    function DummyContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            firstNumber: 4,\n            secondNumber: 7,\n        };\n        return _this;\n    }\n    DummyContainer.prototype.componentDidMount = function () {\n        this.update();\n    };\n    DummyContainer.prototype.update = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);\n                return [2];\n            });\n        });\n    };\n    DummyContainer.prototype.render = function () {\n        var summary;\n        if (this.props.dummy.loading) {\n            summary = 'Calculating...';\n        }\n        else {\n            summary = this.props.dummy.result;\n        }\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Dummy\"),\n            React.createElement(summaryResultView_1.default, { firstNumber: this.state.firstNumber, secondNumber: this.state.secondNumber, summary: summary })));\n    };\n    return DummyContainer;\n}(React.Component));\nexports.DummyContainer = DummyContainer;\nvar mapStateToProps = function (state) { return ({\n    dummy: state.dummy,\n}); };\nvar mapDispatchToProps = function (dispatch) { return redux_1.bindActionCreators({\n    dummyRequestAction: dummyRequest_1.default,\n}, dispatch); };\nvar DummyContainerConnected = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(DummyContainer);\nexports.default = DummyContainerConnected;\n"
     },
     {
       "id": "./src/app/pages/dummy/summaryResultView.tsx",
@@ -20407,7 +20407,7 @@
       "name": "./src/app/pages/dummy/summaryResultView.tsx",
       "index": 89,
       "index2": 84,
-      "size": 1240,
+      "size": 1536,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20458,14 +20458,14 @@
           "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
           "type": "cjs require",
           "userRequest": "./summaryResultView",
-          "loc": "54:26-56"
+          "loc": "64:42-72"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 5,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar SummaryResultView = (function (_super) {\n    __extends(SummaryResultView, _super);\n    function SummaryResultView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    SummaryResultView.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            this.props.firstNumber,\n            \" + \",\n            this.props.secondNumber,\n            \" = \",\n            this.props.summary));\n    };\n    return SummaryResultView;\n}(React.PureComponent));\nexports.default = SummaryResultView;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar SummaryResultView = (function (_super) {\n    __extends(SummaryResultView, _super);\n    function SummaryResultView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    SummaryResultView.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            this.props.firstNumber,\n            \" + \",\n            this.props.secondNumber,\n            \" = \",\n            this.props.summary));\n    };\n    return SummaryResultView;\n}(React.PureComponent));\nexports.default = SummaryResultView;\n"
     },
     {
       "id": "./src/app/pages/home/homeContainer.tsx",
@@ -20473,7 +20473,7 @@
       "name": "./src/app/pages/home/homeContainer.tsx",
       "index": 86,
       "index2": 83,
-      "size": 1233,
+      "size": 1543,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20519,14 +20519,14 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./pages/home/homeContainer",
-          "loc": "54:22-59"
+          "loc": "64:38-75"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 4,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar styles = require(\"../../assets/styles.scss\");\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
     },
     {
       "id": "./src/app/pages/notFound/notFoundContainer.tsx",
@@ -20534,7 +20534,7 @@
       "name": "./src/app/pages/notFound/notFoundContainer.tsx",
       "index": 91,
       "index2": 87,
-      "size": 1199,
+      "size": 1495,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20580,14 +20580,14 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./pages/notFound/notFoundContainer",
-          "loc": "56:26-71"
+          "loc": "66:42-87"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 4,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(React.Component));\nexports.default = NotFoundContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(React.Component));\nexports.default = NotFoundContainer;\n"
     },
     {
       "id": "./src/app/reducers/dummy.ts",
@@ -20641,7 +20641,7 @@
           "moduleName": "./src/app/appStore.ts",
           "type": "cjs require",
           "userRequest": "./reducers/dummy",
-          "loc": "26:14-41"
+          "loc": "29:30-57"
         }
       ],
       "providedExports": null,
@@ -20656,7 +20656,7 @@
       "name": "./src/startup.ts",
       "index": 83,
       "index2": 94,
-      "size": 305,
+      "size": 478,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20692,14 +20692,14 @@
           "moduleName": "./core/src/index.server.tsx",
           "type": "cjs require",
           "userRequest": "../../src/startup",
-          "loc": "7:16-44"
+          "loc": "17:32-60"
         }
       ],
       "providedExports": null,
       "optimizationBailout": [
       ],
       "depth": 2,
-      "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar appContainer_1 = require(\"./app/appContainer\");\nvar appStore_1 = require(\"./app/appStore\");\nvar appMapping = {\n    '/': { app: appContainer_1.default, store: appStore_1.default, state: {} },\n};\nexports.default = appMapping;\n"
+      "source": "\"use strict\";\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar appContainer_1 = __importDefault(require(\"./app/appContainer\"));\nvar appStore_1 = __importDefault(require(\"./app/appStore\"));\nvar appMapping = {\n    '/': { app: appContainer_1.default, store: appStore_1.default, state: {} },\n};\nexports.default = appMapping;\n"
     },
     {
       "id": "stream",

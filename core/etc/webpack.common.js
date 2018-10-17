@@ -11,9 +11,19 @@ const configWrapper = (targetConfigFunction) => (env, argv) => {
     const envValue = argv.mode || process.env.NODE_ENV || 'development';
     const isProduction = (envValue === 'production');
 
+    let manifest;
+
+    try {
+        manifest = require(`${dirRoot}/manifest.json`);
+    }
+    catch (ex) {
+        manifest = {};
+    }
+
     return targetConfigFunction({
         env,
         argv,
+        manifest,
         dirRoot,
         envValue,
         isProduction,
