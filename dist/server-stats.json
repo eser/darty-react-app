@@ -5,8 +5,8 @@
   ],
   "version": "4.20.2",
   "hash": "1700ff03eeed676dfab1",
-  "time": 1460,
-  "builtAt": 1539807319587,
+  "time": 1621,
+  "builtAt": 1539808462253,
   "publicPath": "/",
   "outputPath": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/dist",
   "assetsByChunkName": {
@@ -244,9 +244,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/createBrowserHistory.js",
-          "issuerId": "./node_modules/history/es/createBrowserHistory.js",
-          "issuerName": "./node_modules/history/es/createBrowserHistory.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/createHashHistory.js",
+          "issuerId": "./node_modules/history/es/createHashHistory.js",
+          "issuerName": "./node_modules/history/es/createHashHistory.js",
           "issuerPath": [
             {
               "id": 0,
@@ -264,9 +264,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -274,9 +274,9 @@
               "name": "./node_modules/history/es/index.js"
             },
             {
-              "id": "./node_modules/history/es/createBrowserHistory.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/createBrowserHistory.js",
-              "name": "./node_modules/history/es/createBrowserHistory.js"
+              "id": "./node_modules/history/es/createHashHistory.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/createHashHistory.js",
+              "name": "./node_modules/history/es/createHashHistory.js"
             }
           ],
           "failed": false,
@@ -479,9 +479,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -692,9 +692,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1045,9 +1045,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1122,9 +1122,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1199,9 +1199,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1276,9 +1276,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1374,9 +1374,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
           "issuerPath": [
             {
               "id": 0,
@@ -1394,9 +1394,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             }
           ],
           "failed": false,
@@ -3261,9 +3261,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/prop-types/index.js",
@@ -3307,9 +3307,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
           "issuerPath": [
             {
               "id": 0,
@@ -3327,9 +3327,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             }
           ],
           "failed": false,
@@ -8810,9 +8810,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -9060,9 +9060,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -9122,9 +9122,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
           "issuerPath": [
             {
               "id": 0,
@@ -9142,9 +9142,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             }
           ],
           "failed": false,
@@ -10596,9 +10596,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/createBrowserHistory.js",
-      "issuerId": "./node_modules/history/es/createBrowserHistory.js",
-      "issuerName": "./node_modules/history/es/createBrowserHistory.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/createHashHistory.js",
+      "issuerId": "./node_modules/history/es/createHashHistory.js",
+      "issuerName": "./node_modules/history/es/createHashHistory.js",
       "issuerPath": [
         {
           "id": 0,
@@ -10616,9 +10616,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -10626,9 +10626,9 @@
           "name": "./node_modules/history/es/index.js"
         },
         {
-          "id": "./node_modules/history/es/createBrowserHistory.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/createBrowserHistory.js",
-          "name": "./node_modules/history/es/createBrowserHistory.js"
+          "id": "./node_modules/history/es/createHashHistory.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/createHashHistory.js",
+          "name": "./node_modules/history/es/createHashHistory.js"
         }
       ],
       "failed": false,
@@ -10831,9 +10831,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11044,9 +11044,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11397,9 +11397,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11474,9 +11474,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11551,9 +11551,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11628,9 +11628,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11726,9 +11726,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+      "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
       "issuerPath": [
         {
           "id": 0,
@@ -11746,9 +11746,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         }
       ],
       "failed": false,
@@ -13613,9 +13613,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/prop-types/index.js",
@@ -13659,9 +13659,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+      "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
       "issuerPath": [
         {
           "id": 0,
@@ -13679,9 +13679,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         }
       ],
       "failed": false,
@@ -17657,9 +17657,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -19280,9 +19280,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -19510,9 +19510,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+      "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
       "issuerPath": [
         {
           "id": 0,
@@ -19530,9 +19530,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         }
       ],
       "failed": false,

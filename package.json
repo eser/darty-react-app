@@ -40,6 +40,7 @@
     "bundle:prod": "webpack --config ./core/etc/webpack.browser.js --mode production",
     "bundleServer": "webpack --config ./core/etc/webpack.server.js",
     "bundleServer:prod": "webpack --config ./core/etc/webpack.server.js --mode production",
+    "containerize": "docker-compose up",
     "aws:copy": "aws s3 sync ./dist s3://ts-spa-boilerplate",
     "aws:open": "start http://ts-spa-boilerplate.s3-website-eu-west-1.amazonaws.com"
   },
