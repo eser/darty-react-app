@@ -3,21 +3,21 @@ import * as React from 'react';
 import AppStackContainer from './appStackContainer';
 
 class AppStack {
-    appClasses: { [key: string]: any };
+    definitions: { [key: string]: any };
 
-    constructor(appClasses: { [key: string]: any } = []) {
-        this.appClasses = appClasses;
+    constructor(definitions: { [key: string]: any } = []) {
+        this.definitions = definitions;
     }
 
-    add(path: string, appClass: any): AppStack {
-        this.appClasses[path] = appClass;
+    add(path: string, app: any, store: any, state: any): AppStack {
+        this.definitions[path] = { app: app, store: store, state: state };
 
         return this;
     }
 
-    addRange(appClasses: { [key: string]: any }): AppStack {
-        for (const path in appClasses) {
-            this.appClasses[path] = appClasses[path];
+    addRange(definitions: { [key: string]: { app: any, store: any, state: any } }): AppStack {
+        for (const path in definitions) {
+            this.definitions[path] = definitions[path];
         }
 
         return this;

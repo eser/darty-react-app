@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Redirect } from 'react-router-dom';
 
-import appContext from '../../appContext';
-
 interface AuthorizationFilterProps {
 }
 
@@ -19,7 +17,7 @@ class AuthorizationFilter extends React.Component<AuthorizationFilterProps, Auth
     }
 
     render(): JSX.Element {
-        // const sessionManager = appContext.get('sessionManager');
+        // const sessionManager = new SessionManager();
 
         // if (!sessionManager.state.logged) {
         //     return (

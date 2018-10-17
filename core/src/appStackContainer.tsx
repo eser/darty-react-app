@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import AppStack from './appStack';
 
@@ -16,9 +17,20 @@ class AppStackContainer extends React.Component<AppStackContainerProps, AppStack
 
         return (
             <Switch key="appStack-switch">
-                {Object.keys(this.props.appStack.appClasses).map((itemKey) =>
-                    <Route path={itemKey} component={this.props.appStack.appClasses[itemKey]} key={`appStack-switch-app-${renderIndex++}`} />
-                )}
+                {Object.keys(this.props.appStack.definitions).map((itemKey) => {
+                    const definition = this.props.appStack.definitions[itemKey];
+                    const component = <Route path={itemKey} component={definition.app} key={`appStack-switch-provider-app-${renderIndex++}`} />;
+
+                    if (definition.store !== undefined) {
+                        return (
+                            <Provider store={definition.store(definition.state)} key={`appStack-switch-provider-${renderIndex++}`}>
+                                {component}
+                            </Provider>
+                        );
+                    }
+
+                    return component;
+                })}
             </Switch>
         );
     }
