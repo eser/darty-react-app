@@ -6,10 +6,6 @@ import SummaryResultView from './summaryResultView';
 
 import dummyRequestAction from '../../actions/dummyRequest';
 
-import LoadingView from '../shared/loadingView';
-import ErrorView from '../shared/errorView';
-import { stat } from 'fs';
-
 interface DummyContainerProps {
 }
 
@@ -37,18 +33,6 @@ class DummyContainer extends React.Component<DummyContainerProps, DummyContainer
     }
 
     render(): JSX.Element {
-        // if (!this.state.isCompleted) {
-        //     return (
-        //         <LoadingView />
-        //     );
-        // }
-
-        // if (this.state.error !== false) {
-        //     return (
-        //         <ErrorView message="An error occurred" />
-        //     );
-        // }
-
         let summary;
 
         if (this.props.dummy.loading) {

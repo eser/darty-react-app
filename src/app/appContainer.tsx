@@ -8,8 +8,6 @@ import HomeContainer from './pages/home/homeContainer';
 import DummyContainer from './pages/dummy/dummyContainer';
 import NotFoundContainer from './pages/notFound/notFoundContainer';
 
-import LoadingView from './pages/shared/loadingView';
-
 // stylesheets
 import './assets/styles.scss';
 import './assets/fonts.scss';
@@ -47,12 +45,6 @@ class AppContainer extends React.Component<AppContainerProps, AppContainerState>
     }
 
     render(): JSX.Element {
-        if (this.state === null || !this.state.initialized) {
-            return (
-                <LoadingView />
-            );
-        }
-
         return (
             <Switch>
                 <Route path="/" exact={true} strict={true} render={() => <LayoutContainer><HomeContainer /></LayoutContainer>} />

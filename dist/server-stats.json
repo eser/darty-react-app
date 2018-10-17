@@ -4,9 +4,9 @@
   "warnings": [
   ],
   "version": "4.20.2",
-  "hash": "51de72d92dc6658f9d76",
-  "time": 1497,
-  "builtAt": 1539774051691,
+  "hash": "d3b60e5d373f69cadf15",
+  "time": 1843,
+  "builtAt": 1539790215716,
   "publicPath": "/",
   "outputPath": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/dist",
   "assetsByChunkName": {
@@ -15,7 +15,7 @@
   "assets": [
     {
       "name": "server.js",
-      "size": 1127564,
+      "size": 1123989,
       "chunks": [
         "server"
       ],
@@ -60,14 +60,14 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 387828,
+      "size": 386610,
       "names": [
         "server"
       ],
       "files": [
         "server.js"
       ],
-      "hash": "816d45d69ea6069919b4",
+      "hash": "c4e932051168a502b0ad",
       "siblings": [
       ],
       "parents": [
@@ -189,7 +189,7 @@
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
           "name": "./core/src/index.server.tsx",
           "index": 1,
-          "index2": 96,
+          "index2": 95,
           "size": 859,
           "cacheable": true,
           "built": true,
@@ -264,9 +264,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -479,9 +479,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -692,9 +692,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1045,9 +1045,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1122,9 +1122,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1199,9 +1199,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1276,9 +1276,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -1374,9 +1374,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
           "issuerPath": [
             {
               "id": 0,
@@ -1394,9 +1394,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             }
           ],
           "failed": false,
@@ -3261,9 +3261,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/prop-types/index.js",
@@ -3307,9 +3307,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
           "issuerPath": [
             {
               "id": 0,
@@ -3327,9 +3327,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             }
           ],
           "failed": false,
@@ -8549,15 +8549,6 @@
               "type": "cjs require",
               "userRequest": "react",
               "loc": "16:12-28"
-            },
-            {
-              "moduleId": "./src/app/pages/shared/loadingView.tsx",
-              "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/shared/loadingView.tsx",
-              "module": "./src/app/pages/shared/loadingView.tsx",
-              "moduleName": "./src/app/pages/shared/loadingView.tsx",
-              "type": "cjs require",
-              "userRequest": "react",
-              "loc": "16:12-28"
             }
           ],
           "providedExports": null,
@@ -8570,8 +8561,8 @@
           "id": "./node_modules/redux-logger/dist/redux-logger.js",
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/redux-logger/dist/redux-logger.js",
           "name": "./node_modules/redux-logger/dist/redux-logger.js",
-          "index": 96,
-          "index2": 92,
+          "index": 95,
+          "index2": 91,
           "size": 10513,
           "cacheable": true,
           "built": true,
@@ -8631,8 +8622,8 @@
           "id": "./node_modules/redux-thunk/es/index.js",
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/redux-thunk/es/index.js",
           "name": "./node_modules/redux-thunk/es/index.js",
-          "index": 95,
-          "index2": 91,
+          "index": 94,
+          "index2": 90,
           "size": 481,
           "cacheable": true,
           "built": true,
@@ -8819,9 +8810,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -9069,9 +9060,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             },
             {
               "id": "./node_modules/history/es/index.js",
@@ -9131,9 +9122,9 @@
           "chunks": [
             "server"
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+          "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
           "issuerPath": [
             {
               "id": 0,
@@ -9151,9 +9142,9 @@
               "name": "./node_modules/react-router-dom/es/index.js"
             },
             {
-              "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-              "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+              "id": "./node_modules/react-router-dom/es/HashRouter.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+              "name": "./node_modules/react-router-dom/es/HashRouter.js"
             }
           ],
           "failed": false,
@@ -9595,8 +9586,8 @@
           "id": "./src/app/actions/dummyRequest.ts",
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/actions/dummyRequest.ts",
           "name": "./src/app/actions/dummyRequest.ts",
-          "index": 89,
-          "index2": 84,
+          "index": 90,
+          "index2": 85,
           "size": 460,
           "cacheable": true,
           "built": true,
@@ -9662,8 +9653,8 @@
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
           "name": "./src/app/appContainer.tsx",
           "index": 84,
-          "index2": 90,
-          "size": 5336,
+          "index2": 89,
+          "size": 5134,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -9711,14 +9702,14 @@
           "optimizationBailout": [
           ],
           "depth": 3,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar layoutContainer_1 = require(\"./layouts/default/layoutContainer\");\nvar homeContainer_1 = require(\"./pages/home/homeContainer\");\nvar dummyContainer_1 = require(\"./pages/dummy/dummyContainer\");\nvar notFoundContainer_1 = require(\"./pages/notFound/notFoundContainer\");\nvar loadingView_1 = require(\"./pages/shared/loadingView\");\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        if (this.state === null || !this.state.initialized) {\n            return (React.createElement(loadingView_1.default, null));\n        }\n        return (React.createElement(react_router_dom_1.Switch, null,\n            React.createElement(react_router_dom_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(homeContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(dummyContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } })));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar layoutContainer_1 = require(\"./layouts/default/layoutContainer\");\nvar homeContainer_1 = require(\"./pages/home/homeContainer\");\nvar dummyContainer_1 = require(\"./pages/dummy/dummyContainer\");\nvar notFoundContainer_1 = require(\"./pages/notFound/notFoundContainer\");\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        return (React.createElement(react_router_dom_1.Switch, null,\n            React.createElement(react_router_dom_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(homeContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(dummyContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } })));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
         },
         {
           "id": "./src/app/appStore.ts",
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appStore.ts",
           "name": "./src/app/appStore.ts",
-          "index": 94,
-          "index2": 94,
+          "index": 93,
+          "index2": 93,
           "size": 1633,
           "cacheable": true,
           "built": true,
@@ -9773,67 +9764,6 @@
           "id": "./src/app/assets/fonts.scss",
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/css-loader/locals.js!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/assets/fonts.scss",
           "name": "./src/app/assets/fonts.scss",
-          "index": 93,
-          "index2": 89,
-          "size": 0,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "server"
-          ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-          "issuerId": "./src/app/appContainer.tsx",
-          "issuerName": "./src/app/appContainer.tsx",
-          "issuerPath": [
-            {
-              "id": 0,
-              "identifier": "multi ./core/src/index.server.tsx",
-              "name": "multi ./core/src/index.server.tsx"
-            },
-            {
-              "id": "./core/src/index.server.tsx",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
-              "name": "./core/src/index.server.tsx"
-            },
-            {
-              "id": "./src/startup.ts",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
-              "name": "./src/startup.ts"
-            },
-            {
-              "id": "./src/app/appContainer.tsx",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-              "name": "./src/app/appContainer.tsx"
-            }
-          ],
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "assets": [
-          ],
-          "reasons": [
-            {
-              "moduleId": "./src/app/appContainer.tsx",
-              "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-              "module": "./src/app/appContainer.tsx",
-              "moduleName": "./src/app/appContainer.tsx",
-              "type": "cjs require",
-              "userRequest": "./assets/fonts.scss",
-              "loc": "59:0-30"
-            }
-          ],
-          "providedExports": null,
-          "optimizationBailout": [
-          ],
-          "depth": 4,
-          "source": ""
-        },
-        {
-          "id": "./src/app/assets/styles.scss",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/css-loader/locals.js!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/assets/styles.scss",
-          "name": "./src/app/assets/styles.scss",
           "index": 92,
           "index2": 88,
           "size": 0,
@@ -9881,8 +9811,78 @@
               "module": "./src/app/appContainer.tsx",
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
+              "userRequest": "./assets/fonts.scss",
+              "loc": "58:0-30"
+            }
+          ],
+          "providedExports": null,
+          "optimizationBailout": [
+          ],
+          "depth": 4,
+          "source": ""
+        },
+        {
+          "id": "./src/app/assets/styles.scss",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/css-loader/locals.js!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/assets/styles.scss",
+          "name": "./src/app/assets/styles.scss",
+          "index": 87,
+          "index2": 82,
+          "size": 0,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "server"
+          ],
+          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
+          "issuerId": "./src/app/appContainer.tsx",
+          "issuerName": "./src/app/appContainer.tsx",
+          "issuerPath": [
+            {
+              "id": 0,
+              "identifier": "multi ./core/src/index.server.tsx",
+              "name": "multi ./core/src/index.server.tsx"
+            },
+            {
+              "id": "./core/src/index.server.tsx",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
+              "name": "./core/src/index.server.tsx"
+            },
+            {
+              "id": "./src/startup.ts",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
+              "name": "./src/startup.ts"
+            },
+            {
+              "id": "./src/app/appContainer.tsx",
+              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
+              "name": "./src/app/appContainer.tsx"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": "./src/app/appContainer.tsx",
+              "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
+              "module": "./src/app/appContainer.tsx",
+              "moduleName": "./src/app/appContainer.tsx",
+              "type": "cjs require",
               "userRequest": "./assets/styles.scss",
-              "loc": "58:0-31"
+              "loc": "57:0-31"
+            },
+            {
+              "moduleId": "./src/app/pages/home/homeContainer.tsx",
+              "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/home/homeContainer.tsx",
+              "module": "./src/app/pages/home/homeContainer.tsx",
+              "moduleName": "./src/app/pages/home/homeContainer.tsx",
+              "type": "cjs require",
+              "userRequest": "../../assets/styles.scss",
+              "loc": "17:13-48"
             }
           ],
           "providedExports": null,
@@ -9956,8 +9956,8 @@
           "id": "./src/app/pages/dummy/dummyContainer.tsx",
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/dummy/dummyContainer.tsx",
           "name": "./src/app/pages/dummy/dummyContainer.tsx",
-          "index": 87,
-          "index2": 85,
+          "index": 88,
+          "index2": 86,
           "size": 5000,
           "cacheable": true,
           "built": true,
@@ -10014,11 +10014,47 @@
           "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar redux_1 = require(\"redux\");\nvar react_redux_1 = require(\"react-redux\");\nvar summaryResultView_1 = require(\"./summaryResultView\");\nvar dummyRequest_1 = require(\"../../actions/dummyRequest\");\nvar DummyContainer = (function (_super) {\n    __extends(DummyContainer, _super);\n    function DummyContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            firstNumber: 4,\n            secondNumber: 7,\n        };\n        return _this;\n    }\n    DummyContainer.prototype.componentDidMount = function () {\n        this.update();\n    };\n    DummyContainer.prototype.update = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);\n                return [2];\n            });\n        });\n    };\n    DummyContainer.prototype.render = function () {\n        var summary;\n        if (this.props.dummy.loading) {\n            summary = 'Calculating...';\n        }\n        else {\n            summary = this.props.dummy.result;\n        }\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Dummy\"),\n            React.createElement(summaryResultView_1.default, { firstNumber: this.state.firstNumber, secondNumber: this.state.secondNumber, summary: summary })));\n    };\n    return DummyContainer;\n}(React.Component));\nexports.DummyContainer = DummyContainer;\nvar mapStateToProps = function (state) { return ({\n    dummy: state.dummy,\n}); };\nvar mapDispatchToProps = function (dispatch) { return redux_1.bindActionCreators({\n    dummyRequestAction: dummyRequest_1.default,\n}, dispatch); };\nvar DummyContainerConnected = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(DummyContainer);\nexports.default = DummyContainerConnected;\n"
         },
         {
+          "id": 0,
+          "identifier": "multi ./core/src/index.server.tsx",
+          "name": "multi ./core/src/index.server.tsx",
+          "index": 0,
+          "index2": 96,
+          "size": 28,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "server"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "multi entry"
+            }
+          ],
+          "providedExports": null,
+          "optimizationBailout": [
+          ],
+          "depth": 0
+        },
+        {
           "id": "./src/app/pages/dummy/summaryResultView.tsx",
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/dummy/summaryResultView.tsx",
           "name": "./src/app/pages/dummy/summaryResultView.tsx",
-          "index": 88,
-          "index2": 83,
+          "index": 89,
+          "index2": 84,
           "size": 1240,
           "cacheable": true,
           "built": true,
@@ -10084,8 +10120,8 @@
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/home/homeContainer.tsx",
           "name": "./src/app/pages/home/homeContainer.tsx",
           "index": 86,
-          "index2": 82,
-          "size": 1178,
+          "index2": 83,
+          "size": 1233,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -10138,14 +10174,14 @@
           "optimizationBailout": [
           ],
           "depth": 4,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar styles = require(\"../../assets/styles.scss\");\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
         },
         {
           "id": "./src/app/pages/notFound/notFoundContainer.tsx",
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/notFound/notFoundContainer.tsx",
           "name": "./src/app/pages/notFound/notFoundContainer.tsx",
-          "index": 90,
-          "index2": 86,
+          "index": 91,
+          "index2": 87,
           "size": 1199,
           "cacheable": true,
           "built": true,
@@ -10202,108 +10238,11 @@
           "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(React.Component));\nexports.default = NotFoundContainer;\n"
         },
         {
-          "id": 0,
-          "identifier": "multi ./core/src/index.server.tsx",
-          "name": "multi ./core/src/index.server.tsx",
-          "index": 0,
-          "index2": 97,
-          "size": 28,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "server"
-          ],
-          "issuer": null,
-          "issuerId": null,
-          "issuerName": null,
-          "issuerPath": null,
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "assets": [
-          ],
-          "reasons": [
-            {
-              "moduleId": null,
-              "moduleIdentifier": null,
-              "module": null,
-              "moduleName": null,
-              "type": "multi entry"
-            }
-          ],
-          "providedExports": null,
-          "optimizationBailout": [
-          ],
-          "depth": 0
-        },
-        {
-          "id": "./src/app/pages/shared/loadingView.tsx",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/shared/loadingView.tsx",
-          "name": "./src/app/pages/shared/loadingView.tsx",
-          "index": 91,
-          "index2": 87,
-          "size": 1071,
-          "cacheable": true,
-          "built": true,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "server"
-          ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-          "issuerId": "./src/app/appContainer.tsx",
-          "issuerName": "./src/app/appContainer.tsx",
-          "issuerPath": [
-            {
-              "id": 0,
-              "identifier": "multi ./core/src/index.server.tsx",
-              "name": "multi ./core/src/index.server.tsx"
-            },
-            {
-              "id": "./core/src/index.server.tsx",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
-              "name": "./core/src/index.server.tsx"
-            },
-            {
-              "id": "./src/startup.ts",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
-              "name": "./src/startup.ts"
-            },
-            {
-              "id": "./src/app/appContainer.tsx",
-              "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-              "name": "./src/app/appContainer.tsx"
-            }
-          ],
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "assets": [
-          ],
-          "reasons": [
-            {
-              "moduleId": "./src/app/appContainer.tsx",
-              "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-              "module": "./src/app/appContainer.tsx",
-              "moduleName": "./src/app/appContainer.tsx",
-              "type": "cjs require",
-              "userRequest": "./pages/shared/loadingView",
-              "loc": "57:20-57"
-            }
-          ],
-          "providedExports": null,
-          "optimizationBailout": [
-          ],
-          "depth": 4,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar LoadingView = (function (_super) {\n    __extends(LoadingView, _super);\n    function LoadingView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    LoadingView.prototype.render = function () {\n        return (React.createElement(\"div\", null, \"Loading...\"));\n    };\n    return LoadingView;\n}(React.Component));\nexports.default = LoadingView;\n"
-        },
-        {
           "id": "./src/app/reducers/dummy.ts",
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/reducers/dummy.ts",
           "name": "./src/app/reducers/dummy.ts",
-          "index": 97,
-          "index2": 93,
+          "index": 96,
+          "index2": 92,
           "size": 897,
           "cacheable": true,
           "built": true,
@@ -10364,7 +10303,7 @@
           "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
           "name": "./src/startup.ts",
           "index": 83,
-          "index2": 95,
+          "index2": 94,
           "size": 305,
           "cacheable": true,
           "built": true,
@@ -10602,7 +10541,7 @@
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
       "name": "./core/src/index.server.tsx",
       "index": 1,
-      "index2": 96,
+      "index2": 95,
       "size": 859,
       "cacheable": true,
       "built": true,
@@ -10677,9 +10616,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -10892,9 +10831,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11105,9 +11044,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11458,9 +11397,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11535,9 +11474,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11612,9 +11551,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11689,9 +11628,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -11787,9 +11726,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+      "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
       "issuerPath": [
         {
           "id": 0,
@@ -11807,9 +11746,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         }
       ],
       "failed": false,
@@ -13674,9 +13613,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/prop-types/index.js",
@@ -13720,9 +13659,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+      "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
       "issuerPath": [
         {
           "id": 0,
@@ -13740,9 +13679,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         }
       ],
       "failed": false,
@@ -17685,6 +17624,124 @@
       "source": "function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React from \"react\";\nimport PropTypes from \"prop-types\";\nimport invariant from \"invariant\";\n\n/**\n * The public API for prompting the user before navigating away\n * from a screen with a component.\n */\n\nvar Prompt = function (_React$Component) {\n  _inherits(Prompt, _React$Component);\n\n  function Prompt() {\n    _classCallCheck(this, Prompt);\n\n    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));\n  }\n\n  Prompt.prototype.enable = function enable(message) {\n    if (this.unblock) this.unblock();\n\n    this.unblock = this.context.router.history.block(message);\n  };\n\n  Prompt.prototype.disable = function disable() {\n    if (this.unblock) {\n      this.unblock();\n      this.unblock = null;\n    }\n  };\n\n  Prompt.prototype.componentWillMount = function componentWillMount() {\n    invariant(this.context.router, \"You should not use <Prompt> outside a <Router>\");\n\n    if (this.props.when) this.enable(this.props.message);\n  };\n\n  Prompt.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {\n    if (nextProps.when) {\n      if (!this.props.when || this.props.message !== nextProps.message) this.enable(nextProps.message);\n    } else {\n      this.disable();\n    }\n  };\n\n  Prompt.prototype.componentWillUnmount = function componentWillUnmount() {\n    this.disable();\n  };\n\n  Prompt.prototype.render = function render() {\n    return null;\n  };\n\n  return Prompt;\n}(React.Component);\n\nPrompt.propTypes = {\n  when: PropTypes.bool,\n  message: PropTypes.oneOfType([PropTypes.func, PropTypes.string]).isRequired\n};\nPrompt.defaultProps = {\n  when: true\n};\nPrompt.contextTypes = {\n  router: PropTypes.shape({\n    history: PropTypes.shape({\n      block: PropTypes.func.isRequired\n    }).isRequired\n  }).isRequired\n};\n\n\nexport default Prompt;"
     },
     {
+      "id": "./node_modules/value-equal/index.js",
+      "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/value-equal/index.js",
+      "name": "./node_modules/value-equal/index.js",
+      "index": 21,
+      "index2": 14,
+      "size": 1136,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "server"
+      ],
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/LocationUtils.js",
+      "issuerId": "./node_modules/history/es/LocationUtils.js",
+      "issuerName": "./node_modules/history/es/LocationUtils.js",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "multi ./core/src/index.server.tsx",
+          "name": "multi ./core/src/index.server.tsx"
+        },
+        {
+          "id": "./core/src/index.server.tsx",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
+          "name": "./core/src/index.server.tsx"
+        },
+        {
+          "id": "./node_modules/react-router-dom/es/index.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/index.js",
+          "name": "./node_modules/react-router-dom/es/index.js"
+        },
+        {
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
+        },
+        {
+          "id": "./node_modules/history/es/index.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/index.js",
+          "name": "./node_modules/history/es/index.js"
+        },
+        {
+          "id": "./node_modules/history/es/LocationUtils.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/LocationUtils.js",
+          "name": "./node_modules/history/es/LocationUtils.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./node_modules/history/es/LocationUtils.js",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/LocationUtils.js",
+          "module": "./node_modules/history/es/LocationUtils.js",
+          "moduleName": "./node_modules/history/es/LocationUtils.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "value-equal",
+          "loc": "4:0-37"
+        },
+        {
+          "moduleId": "./node_modules/history/es/LocationUtils.js",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/LocationUtils.js",
+          "module": "./node_modules/history/es/LocationUtils.js",
+          "moduleName": "./node_modules/history/es/LocationUtils.js",
+          "type": "harmony import specifier",
+          "userRequest": "value-equal",
+          "loc": "64:103-113"
+        }
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 6,
+      "source": "var _typeof = typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; };\n\nfunction valueEqual(a, b) {\n  if (a === b) return true;\n\n  if (a == null || b == null) return false;\n\n  if (Array.isArray(a)) {\n    return Array.isArray(b) && a.length === b.length && a.every(function (item, index) {\n      return valueEqual(item, b[index]);\n    });\n  }\n\n  var aType = typeof a === 'undefined' ? 'undefined' : _typeof(a);\n  var bType = typeof b === 'undefined' ? 'undefined' : _typeof(b);\n\n  if (aType !== bType) return false;\n\n  if (aType === 'object') {\n    var aValue = a.valueOf();\n    var bValue = b.valueOf();\n\n    if (aValue !== a || bValue !== b) return valueEqual(aValue, bValue);\n\n    var aKeys = Object.keys(a);\n    var bKeys = Object.keys(b);\n\n    if (aKeys.length !== bKeys.length) return false;\n\n    return aKeys.every(function (key) {\n      return valueEqual(a[key], b[key]);\n    });\n  }\n\n  return false;\n}\n\nexport default valueEqual;"
+    },
+    {
+      "id": 0,
+      "identifier": "multi ./core/src/index.server.tsx",
+      "name": "multi ./core/src/index.server.tsx",
+      "index": 0,
+      "index2": 96,
+      "size": 28,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "server"
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "multi entry"
+        }
+      ],
+      "providedExports": null,
+      "optimizationBailout": [
+      ],
+      "depth": 0
+    },
+    {
       "id": "./node_modules/react-router/es/Redirect.js",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router/es/Redirect.js",
       "name": "./node_modules/react-router/es/Redirect.js",
@@ -17755,137 +17812,6 @@
       ],
       "depth": 4,
       "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport React from \"react\";\nimport PropTypes from \"prop-types\";\nimport warning from \"warning\";\nimport invariant from \"invariant\";\nimport { createLocation, locationsAreEqual } from \"history\";\nimport generatePath from \"./generatePath\";\n\n/**\n * The public API for updating the location programmatically\n * with a component.\n */\n\nvar Redirect = function (_React$Component) {\n  _inherits(Redirect, _React$Component);\n\n  function Redirect() {\n    _classCallCheck(this, Redirect);\n\n    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));\n  }\n\n  Redirect.prototype.isStatic = function isStatic() {\n    return this.context.router && this.context.router.staticContext;\n  };\n\n  Redirect.prototype.componentWillMount = function componentWillMount() {\n    invariant(this.context.router, \"You should not use <Redirect> outside a <Router>\");\n\n    if (this.isStatic()) this.perform();\n  };\n\n  Redirect.prototype.componentDidMount = function componentDidMount() {\n    if (!this.isStatic()) this.perform();\n  };\n\n  Redirect.prototype.componentDidUpdate = function componentDidUpdate(prevProps) {\n    var prevTo = createLocation(prevProps.to);\n    var nextTo = createLocation(this.props.to);\n\n    if (locationsAreEqual(prevTo, nextTo)) {\n      warning(false, \"You tried to redirect to the same route you're currently on: \" + (\"\\\"\" + nextTo.pathname + nextTo.search + \"\\\"\"));\n      return;\n    }\n\n    this.perform();\n  };\n\n  Redirect.prototype.computeTo = function computeTo(_ref) {\n    var computedMatch = _ref.computedMatch,\n        to = _ref.to;\n\n    if (computedMatch) {\n      if (typeof to === \"string\") {\n        return generatePath(to, computedMatch.params);\n      } else {\n        return _extends({}, to, {\n          pathname: generatePath(to.pathname, computedMatch.params)\n        });\n      }\n    }\n\n    return to;\n  };\n\n  Redirect.prototype.perform = function perform() {\n    var history = this.context.router.history;\n    var push = this.props.push;\n\n    var to = this.computeTo(this.props);\n\n    if (push) {\n      history.push(to);\n    } else {\n      history.replace(to);\n    }\n  };\n\n  Redirect.prototype.render = function render() {\n    return null;\n  };\n\n  return Redirect;\n}(React.Component);\n\nRedirect.propTypes = {\n  computedMatch: PropTypes.object, // private, from <Switch>\n  push: PropTypes.bool,\n  from: PropTypes.string,\n  to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired\n};\nRedirect.defaultProps = {\n  push: false\n};\nRedirect.contextTypes = {\n  router: PropTypes.shape({\n    history: PropTypes.shape({\n      push: PropTypes.func.isRequired,\n      replace: PropTypes.func.isRequired\n    }).isRequired,\n    staticContext: PropTypes.object\n  }).isRequired\n};\n\n\nexport default Redirect;"
-    },
-    {
-      "id": "./node_modules/redux/es/redux.js",
-      "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/redux/es/redux.js",
-      "name": "./node_modules/redux/es/redux.js",
-      "index": 63,
-      "index2": 59,
-      "size": 23104,
-      "cacheable": true,
-      "built": true,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        "server"
-      ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appStore.ts",
-      "issuerId": "./src/app/appStore.ts",
-      "issuerName": "./src/app/appStore.ts",
-      "issuerPath": [
-        {
-          "id": 0,
-          "identifier": "multi ./core/src/index.server.tsx",
-          "name": "multi ./core/src/index.server.tsx"
-        },
-        {
-          "id": "./core/src/index.server.tsx",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
-          "name": "./core/src/index.server.tsx"
-        },
-        {
-          "id": "./src/startup.ts",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
-          "name": "./src/startup.ts"
-        },
-        {
-          "id": "./src/app/appStore.ts",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appStore.ts",
-          "name": "./src/app/appStore.ts"
-        }
-      ],
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "assets": [
-      ],
-      "reasons": [
-        {
-          "moduleId": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
-          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-redux/es/connect/mapDispatchToProps.js",
-          "module": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
-          "moduleName": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
-          "type": "harmony side effect evaluation",
-          "userRequest": "redux",
-          "loc": "1:0-43"
-        },
-        {
-          "moduleId": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
-          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-redux/es/connect/mapDispatchToProps.js",
-          "module": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
-          "moduleName": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
-          "type": "harmony import specifier",
-          "userRequest": "redux",
-          "loc": "16:11-29"
-        },
-        {
-          "moduleId": "./src/app/appStore.ts",
-          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appStore.ts",
-          "module": "./src/app/appStore.ts",
-          "moduleName": "./src/app/appStore.ts",
-          "type": "cjs require",
-          "userRequest": "redux",
-          "loc": "23:14-30"
-        },
-        {
-          "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
-          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/dummy/dummyContainer.tsx",
-          "module": "./src/app/pages/dummy/dummyContainer.tsx",
-          "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
-          "type": "cjs require",
-          "userRequest": "redux",
-          "loc": "52:14-30"
-        }
-      ],
-      "providedExports": [
-        "createStore",
-        "combineReducers",
-        "bindActionCreators",
-        "applyMiddleware",
-        "compose",
-        "__DO_NOT_USE__ActionTypes"
-      ],
-      "optimizationBailout": [
-      ],
-      "depth": 4,
-      "source": "import $$observable from 'symbol-observable';\n\n/**\n * These are private action types reserved by Redux.\n * For any unknown actions, you must return the current state.\n * If the current state is undefined, you must return the initial state.\n * Do not reference these action types directly in your code.\n */\nvar randomString = function randomString() {\n  return Math.random().toString(36).substring(7).split('').join('.');\n};\n\nvar ActionTypes = {\n  INIT: \"@@redux/INIT\" + randomString(),\n  REPLACE: \"@@redux/REPLACE\" + randomString(),\n  PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {\n    return \"@@redux/PROBE_UNKNOWN_ACTION\" + randomString();\n  }\n};\n\n/**\n * @param {any} obj The object to inspect.\n * @returns {boolean} True if the argument appears to be a plain object.\n */\nfunction isPlainObject(obj) {\n  if (typeof obj !== 'object' || obj === null) return false;\n  var proto = obj;\n\n  while (Object.getPrototypeOf(proto) !== null) {\n    proto = Object.getPrototypeOf(proto);\n  }\n\n  return Object.getPrototypeOf(obj) === proto;\n}\n\n/**\n * Creates a Redux store that holds the state tree.\n * The only way to change the data in the store is to call `dispatch()` on it.\n *\n * There should only be a single store in your app. To specify how different\n * parts of the state tree respond to actions, you may combine several reducers\n * into a single reducer function by using `combineReducers`.\n *\n * @param {Function} reducer A function that returns the next state tree, given\n * the current state tree and the action to handle.\n *\n * @param {any} [preloadedState] The initial state. You may optionally specify it\n * to hydrate the state from the server in universal apps, or to restore a\n * previously serialized user session.\n * If you use `combineReducers` to produce the root reducer function, this must be\n * an object with the same shape as `combineReducers` keys.\n *\n * @param {Function} [enhancer] The store enhancer. You may optionally specify it\n * to enhance the store with third-party capabilities such as middleware,\n * time travel, persistence, etc. The only store enhancer that ships with Redux\n * is `applyMiddleware()`.\n *\n * @returns {Store} A Redux store that lets you read the state, dispatch actions\n * and subscribe to changes.\n */\n\nfunction createStore(reducer, preloadedState, enhancer) {\n  var _ref2;\n\n  if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') {\n    throw new Error('It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function');\n  }\n\n  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {\n    enhancer = preloadedState;\n    preloadedState = undefined;\n  }\n\n  if (typeof enhancer !== 'undefined') {\n    if (typeof enhancer !== 'function') {\n      throw new Error('Expected the enhancer to be a function.');\n    }\n\n    return enhancer(createStore)(reducer, preloadedState);\n  }\n\n  if (typeof reducer !== 'function') {\n    throw new Error('Expected the reducer to be a function.');\n  }\n\n  var currentReducer = reducer;\n  var currentState = preloadedState;\n  var currentListeners = [];\n  var nextListeners = currentListeners;\n  var isDispatching = false;\n\n  function ensureCanMutateNextListeners() {\n    if (nextListeners === currentListeners) {\n      nextListeners = currentListeners.slice();\n    }\n  }\n  /**\n   * Reads the state tree managed by the store.\n   *\n   * @returns {any} The current state tree of your application.\n   */\n\n\n  function getState() {\n    if (isDispatching) {\n      throw new Error('You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');\n    }\n\n    return currentState;\n  }\n  /**\n   * Adds a change listener. It will be called any time an action is dispatched,\n   * and some part of the state tree may potentially have changed. You may then\n   * call `getState()` to read the current state tree inside the callback.\n   *\n   * You may call `dispatch()` from a change listener, with the following\n   * caveats:\n   *\n   * 1. The subscriptions are snapshotted just before every `dispatch()` call.\n   * If you subscribe or unsubscribe while the listeners are being invoked, this\n   * will not have any effect on the `dispatch()` that is currently in progress.\n   * However, the next `dispatch()` call, whether nested or not, will use a more\n   * recent snapshot of the subscription list.\n   *\n   * 2. The listener should not expect to see all state changes, as the state\n   * might have been updated multiple times during a nested `dispatch()` before\n   * the listener is called. It is, however, guaranteed that all subscribers\n   * registered before the `dispatch()` started will be called with the latest\n   * state by the time it exits.\n   *\n   * @param {Function} listener A callback to be invoked on every dispatch.\n   * @returns {Function} A function to remove this change listener.\n   */\n\n\n  function subscribe(listener) {\n    if (typeof listener !== 'function') {\n      throw new Error('Expected the listener to be a function.');\n    }\n\n    if (isDispatching) {\n      throw new Error('You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest state. ' + 'See https://redux.js.org/api-reference/store#subscribe(listener) for more details.');\n    }\n\n    var isSubscribed = true;\n    ensureCanMutateNextListeners();\n    nextListeners.push(listener);\n    return function unsubscribe() {\n      if (!isSubscribed) {\n        return;\n      }\n\n      if (isDispatching) {\n        throw new Error('You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js.org/api-reference/store#subscribe(listener) for more details.');\n      }\n\n      isSubscribed = false;\n      ensureCanMutateNextListeners();\n      var index = nextListeners.indexOf(listener);\n      nextListeners.splice(index, 1);\n    };\n  }\n  /**\n   * Dispatches an action. It is the only way to trigger a state change.\n   *\n   * The `reducer` function, used to create the store, will be called with the\n   * current state tree and the given `action`. Its return value will\n   * be considered the **next** state of the tree, and the change listeners\n   * will be notified.\n   *\n   * The base implementation only supports plain object actions. If you want to\n   * dispatch a Promise, an Observable, a thunk, or something else, you need to\n   * wrap your store creating function into the corresponding middleware. For\n   * example, see the documentation for the `redux-thunk` package. Even the\n   * middleware will eventually dispatch plain object actions using this method.\n   *\n   * @param {Object} action A plain object representing “what changed”. It is\n   * a good idea to keep actions serializable so you can record and replay user\n   * sessions, or use the time travelling `redux-devtools`. An action must have\n   * a `type` property which may not be `undefined`. It is a good idea to use\n   * string constants for action types.\n   *\n   * @returns {Object} For convenience, the same action object you dispatched.\n   *\n   * Note that, if you use a custom middleware, it may wrap `dispatch()` to\n   * return something else (for example, a Promise you can await).\n   */\n\n\n  function dispatch(action) {\n    if (!isPlainObject(action)) {\n      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');\n    }\n\n    if (typeof action.type === 'undefined') {\n      throw new Error('Actions may not have an undefined \"type\" property. ' + 'Have you misspelled a constant?');\n    }\n\n    if (isDispatching) {\n      throw new Error('Reducers may not dispatch actions.');\n    }\n\n    try {\n      isDispatching = true;\n      currentState = currentReducer(currentState, action);\n    } finally {\n      isDispatching = false;\n    }\n\n    var listeners = currentListeners = nextListeners;\n\n    for (var i = 0; i < listeners.length; i++) {\n      var listener = listeners[i];\n      listener();\n    }\n\n    return action;\n  }\n  /**\n   * Replaces the reducer currently used by the store to calculate the state.\n   *\n   * You might need this if your app implements code splitting and you want to\n   * load some of the reducers dynamically. You might also need this if you\n   * implement a hot reloading mechanism for Redux.\n   *\n   * @param {Function} nextReducer The reducer for the store to use instead.\n   * @returns {void}\n   */\n\n\n  function replaceReducer(nextReducer) {\n    if (typeof nextReducer !== 'function') {\n      throw new Error('Expected the nextReducer to be a function.');\n    }\n\n    currentReducer = nextReducer;\n    dispatch({\n      type: ActionTypes.REPLACE\n    });\n  }\n  /**\n   * Interoperability point for observable/reactive libraries.\n   * @returns {observable} A minimal observable of state changes.\n   * For more information, see the observable proposal:\n   * https://github.com/tc39/proposal-observable\n   */\n\n\n  function observable() {\n    var _ref;\n\n    var outerSubscribe = subscribe;\n    return _ref = {\n      /**\n       * The minimal observable subscription method.\n       * @param {Object} observer Any object that can be used as an observer.\n       * The observer object should have a `next` method.\n       * @returns {subscription} An object with an `unsubscribe` method that can\n       * be used to unsubscribe the observable from the store, and prevent further\n       * emission of values from the observable.\n       */\n      subscribe: function subscribe(observer) {\n        if (typeof observer !== 'object' || observer === null) {\n          throw new TypeError('Expected the observer to be an object.');\n        }\n\n        function observeState() {\n          if (observer.next) {\n            observer.next(getState());\n          }\n        }\n\n        observeState();\n        var unsubscribe = outerSubscribe(observeState);\n        return {\n          unsubscribe: unsubscribe\n        };\n      }\n    }, _ref[$$observable] = function () {\n      return this;\n    }, _ref;\n  } // When a store is created, an \"INIT\" action is dispatched so that every\n  // reducer returns their initial state. This effectively populates\n  // the initial state tree.\n\n\n  dispatch({\n    type: ActionTypes.INIT\n  });\n  return _ref2 = {\n    dispatch: dispatch,\n    subscribe: subscribe,\n    getState: getState,\n    replaceReducer: replaceReducer\n  }, _ref2[$$observable] = observable, _ref2;\n}\n\n/**\n * Prints a warning in the console if it exists.\n *\n * @param {String} message The warning message.\n * @returns {void}\n */\nfunction warning(message) {\n  /* eslint-disable no-console */\n  if (typeof console !== 'undefined' && typeof console.error === 'function') {\n    console.error(message);\n  }\n  /* eslint-enable no-console */\n\n\n  try {\n    // This error was thrown as a convenience so that if you enable\n    // \"break on all exceptions\" in your console,\n    // it would pause the execution at this line.\n    throw new Error(message);\n  } catch (e) {} // eslint-disable-line no-empty\n\n}\n\nfunction getUndefinedStateErrorMessage(key, action) {\n  var actionType = action && action.type;\n  var actionDescription = actionType && \"action \\\"\" + String(actionType) + \"\\\"\" || 'an action';\n  return \"Given \" + actionDescription + \", reducer \\\"\" + key + \"\\\" returned undefined. \" + \"To ignore an action, you must explicitly return the previous state. \" + \"If you want this reducer to hold no value, you can return null instead of undefined.\";\n}\n\nfunction getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {\n  var reducerKeys = Object.keys(reducers);\n  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';\n\n  if (reducerKeys.length === 0) {\n    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';\n  }\n\n  if (!isPlainObject(inputState)) {\n    return \"The \" + argumentName + \" has unexpected type of \\\"\" + {}.toString.call(inputState).match(/\\s([a-z|A-Z]+)/)[1] + \"\\\". Expected argument to be an object with the following \" + (\"keys: \\\"\" + reducerKeys.join('\", \"') + \"\\\"\");\n  }\n\n  var unexpectedKeys = Object.keys(inputState).filter(function (key) {\n    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];\n  });\n  unexpectedKeys.forEach(function (key) {\n    unexpectedKeyCache[key] = true;\n  });\n  if (action && action.type === ActionTypes.REPLACE) return;\n\n  if (unexpectedKeys.length > 0) {\n    return \"Unexpected \" + (unexpectedKeys.length > 1 ? 'keys' : 'key') + \" \" + (\"\\\"\" + unexpectedKeys.join('\", \"') + \"\\\" found in \" + argumentName + \". \") + \"Expected to find one of the known reducer keys instead: \" + (\"\\\"\" + reducerKeys.join('\", \"') + \"\\\". Unexpected keys will be ignored.\");\n  }\n}\n\nfunction assertReducerShape(reducers) {\n  Object.keys(reducers).forEach(function (key) {\n    var reducer = reducers[key];\n    var initialState = reducer(undefined, {\n      type: ActionTypes.INIT\n    });\n\n    if (typeof initialState === 'undefined') {\n      throw new Error(\"Reducer \\\"\" + key + \"\\\" returned undefined during initialization. \" + \"If the state passed to the reducer is undefined, you must \" + \"explicitly return the initial state. The initial state may \" + \"not be undefined. If you don't want to set a value for this reducer, \" + \"you can use null instead of undefined.\");\n    }\n\n    if (typeof reducer(undefined, {\n      type: ActionTypes.PROBE_UNKNOWN_ACTION()\n    }) === 'undefined') {\n      throw new Error(\"Reducer \\\"\" + key + \"\\\" returned undefined when probed with a random type. \" + (\"Don't try to handle \" + ActionTypes.INIT + \" or other actions in \\\"redux/*\\\" \") + \"namespace. They are considered private. Instead, you must return the \" + \"current state for any unknown actions, unless it is undefined, \" + \"in which case you must return the initial state, regardless of the \" + \"action type. The initial state may not be undefined, but can be null.\");\n    }\n  });\n}\n/**\n * Turns an object whose values are different reducer functions, into a single\n * reducer function. It will call every child reducer, and gather their results\n * into a single state object, whose keys correspond to the keys of the passed\n * reducer functions.\n *\n * @param {Object} reducers An object whose values correspond to different\n * reducer functions that need to be combined into one. One handy way to obtain\n * it is to use ES6 `import * as reducers` syntax. The reducers may never return\n * undefined for any action. Instead, they should return their initial state\n * if the state passed to them was undefined, and the current state for any\n * unrecognized action.\n *\n * @returns {Function} A reducer function that invokes every reducer inside the\n * passed object, and builds a state object with the same shape.\n */\n\n\nfunction combineReducers(reducers) {\n  var reducerKeys = Object.keys(reducers);\n  var finalReducers = {};\n\n  for (var i = 0; i < reducerKeys.length; i++) {\n    var key = reducerKeys[i];\n\n    if (process.env.NODE_ENV !== 'production') {\n      if (typeof reducers[key] === 'undefined') {\n        warning(\"No reducer provided for key \\\"\" + key + \"\\\"\");\n      }\n    }\n\n    if (typeof reducers[key] === 'function') {\n      finalReducers[key] = reducers[key];\n    }\n  }\n\n  var finalReducerKeys = Object.keys(finalReducers);\n  var unexpectedKeyCache;\n\n  if (process.env.NODE_ENV !== 'production') {\n    unexpectedKeyCache = {};\n  }\n\n  var shapeAssertionError;\n\n  try {\n    assertReducerShape(finalReducers);\n  } catch (e) {\n    shapeAssertionError = e;\n  }\n\n  return function combination(state, action) {\n    if (state === void 0) {\n      state = {};\n    }\n\n    if (shapeAssertionError) {\n      throw shapeAssertionError;\n    }\n\n    if (process.env.NODE_ENV !== 'production') {\n      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);\n\n      if (warningMessage) {\n        warning(warningMessage);\n      }\n    }\n\n    var hasChanged = false;\n    var nextState = {};\n\n    for (var _i = 0; _i < finalReducerKeys.length; _i++) {\n      var _key = finalReducerKeys[_i];\n      var reducer = finalReducers[_key];\n      var previousStateForKey = state[_key];\n      var nextStateForKey = reducer(previousStateForKey, action);\n\n      if (typeof nextStateForKey === 'undefined') {\n        var errorMessage = getUndefinedStateErrorMessage(_key, action);\n        throw new Error(errorMessage);\n      }\n\n      nextState[_key] = nextStateForKey;\n      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;\n    }\n\n    return hasChanged ? nextState : state;\n  };\n}\n\nfunction bindActionCreator(actionCreator, dispatch) {\n  return function () {\n    return dispatch(actionCreator.apply(this, arguments));\n  };\n}\n/**\n * Turns an object whose values are action creators, into an object with the\n * same keys, but with every function wrapped into a `dispatch` call so they\n * may be invoked directly. This is just a convenience method, as you can call\n * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.\n *\n * For convenience, you can also pass a single function as the first argument,\n * and get a function in return.\n *\n * @param {Function|Object} actionCreators An object whose values are action\n * creator functions. One handy way to obtain it is to use ES6 `import * as`\n * syntax. You may also pass a single function.\n *\n * @param {Function} dispatch The `dispatch` function available on your Redux\n * store.\n *\n * @returns {Function|Object} The object mimicking the original object, but with\n * every action creator wrapped into the `dispatch` call. If you passed a\n * function as `actionCreators`, the return value will also be a single\n * function.\n */\n\n\nfunction bindActionCreators(actionCreators, dispatch) {\n  if (typeof actionCreators === 'function') {\n    return bindActionCreator(actionCreators, dispatch);\n  }\n\n  if (typeof actionCreators !== 'object' || actionCreators === null) {\n    throw new Error(\"bindActionCreators expected an object or a function, instead received \" + (actionCreators === null ? 'null' : typeof actionCreators) + \". \" + \"Did you write \\\"import ActionCreators from\\\" instead of \\\"import * as ActionCreators from\\\"?\");\n  }\n\n  var keys = Object.keys(actionCreators);\n  var boundActionCreators = {};\n\n  for (var i = 0; i < keys.length; i++) {\n    var key = keys[i];\n    var actionCreator = actionCreators[key];\n\n    if (typeof actionCreator === 'function') {\n      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);\n    }\n  }\n\n  return boundActionCreators;\n}\n\nfunction _defineProperty(obj, key, value) {\n  if (key in obj) {\n    Object.defineProperty(obj, key, {\n      value: value,\n      enumerable: true,\n      configurable: true,\n      writable: true\n    });\n  } else {\n    obj[key] = value;\n  }\n\n  return obj;\n}\n\nfunction _objectSpread(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i] != null ? arguments[i] : {};\n    var ownKeys = Object.keys(source);\n\n    if (typeof Object.getOwnPropertySymbols === 'function') {\n      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {\n        return Object.getOwnPropertyDescriptor(source, sym).enumerable;\n      }));\n    }\n\n    ownKeys.forEach(function (key) {\n      _defineProperty(target, key, source[key]);\n    });\n  }\n\n  return target;\n}\n\n/**\n * Composes single-argument functions from right to left. The rightmost\n * function can take multiple arguments as it provides the signature for\n * the resulting composite function.\n *\n * @param {...Function} funcs The functions to compose.\n * @returns {Function} A function obtained by composing the argument functions\n * from right to left. For example, compose(f, g, h) is identical to doing\n * (...args) => f(g(h(...args))).\n */\nfunction compose() {\n  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {\n    funcs[_key] = arguments[_key];\n  }\n\n  if (funcs.length === 0) {\n    return function (arg) {\n      return arg;\n    };\n  }\n\n  if (funcs.length === 1) {\n    return funcs[0];\n  }\n\n  return funcs.reduce(function (a, b) {\n    return function () {\n      return a(b.apply(void 0, arguments));\n    };\n  });\n}\n\n/**\n * Creates a store enhancer that applies middleware to the dispatch method\n * of the Redux store. This is handy for a variety of tasks, such as expressing\n * asynchronous actions in a concise manner, or logging every action payload.\n *\n * See `redux-thunk` package as an example of the Redux middleware.\n *\n * Because middleware is potentially asynchronous, this should be the first\n * store enhancer in the composition chain.\n *\n * Note that each middleware will be given the `dispatch` and `getState` functions\n * as named arguments.\n *\n * @param {...Function} middlewares The middleware chain to be applied.\n * @returns {Function} A store enhancer applying the middleware.\n */\n\nfunction applyMiddleware() {\n  for (var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++) {\n    middlewares[_key] = arguments[_key];\n  }\n\n  return function (createStore) {\n    return function () {\n      var store = createStore.apply(void 0, arguments);\n\n      var _dispatch = function dispatch() {\n        throw new Error(\"Dispatching while constructing your middleware is not allowed. \" + \"Other middleware would not be applied to this dispatch.\");\n      };\n\n      var middlewareAPI = {\n        getState: store.getState,\n        dispatch: function dispatch() {\n          return _dispatch.apply(void 0, arguments);\n        }\n      };\n      var chain = middlewares.map(function (middleware) {\n        return middleware(middlewareAPI);\n      });\n      _dispatch = compose.apply(void 0, chain)(store.dispatch);\n      return _objectSpread({}, store, {\n        dispatch: _dispatch\n      });\n    };\n  };\n}\n\n/*\n * This is a dummy function to check if the function name has been altered by minification.\n * If the function has been minified and NODE_ENV !== 'production', warn the user.\n */\n\nfunction isCrushed() {}\n\nif (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {\n  warning('You are currently using minified code outside of NODE_ENV === \"production\". ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) ' + 'to ensure you have the correct code for your production build.');\n}\n\nexport { createStore, combineReducers, bindActionCreators, applyMiddleware, compose, ActionTypes as __DO_NOT_USE__ActionTypes };\n"
-    },
-    {
-      "id": 0,
-      "identifier": "multi ./core/src/index.server.tsx",
-      "name": "multi ./core/src/index.server.tsx",
-      "index": 0,
-      "index2": 97,
-      "size": 28,
-      "built": true,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        "server"
-      ],
-      "issuer": null,
-      "issuerId": null,
-      "issuerName": null,
-      "issuerPath": null,
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "assets": [
-      ],
-      "reasons": [
-        {
-          "moduleId": null,
-          "moduleIdentifier": null,
-          "module": null,
-          "moduleName": null,
-          "type": "multi entry"
-        }
-      ],
-      "providedExports": null,
-      "optimizationBailout": [
-      ],
-      "depth": 0
     },
     {
       "id": "./node_modules/react-router/es/Route.js",
@@ -19093,15 +19019,6 @@
           "type": "cjs require",
           "userRequest": "react",
           "loc": "16:12-28"
-        },
-        {
-          "moduleId": "./src/app/pages/shared/loadingView.tsx",
-          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/shared/loadingView.tsx",
-          "module": "./src/app/pages/shared/loadingView.tsx",
-          "moduleName": "./src/app/pages/shared/loadingView.tsx",
-          "type": "cjs require",
-          "userRequest": "react",
-          "loc": "16:12-28"
         }
       ],
       "providedExports": null,
@@ -19114,8 +19031,8 @@
       "id": "./node_modules/redux-logger/dist/redux-logger.js",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/redux-logger/dist/redux-logger.js",
       "name": "./node_modules/redux-logger/dist/redux-logger.js",
-      "index": 96,
-      "index2": 92,
+      "index": 95,
+      "index2": 91,
       "size": 10513,
       "cacheable": true,
       "built": true,
@@ -19175,8 +19092,8 @@
       "id": "./node_modules/redux-thunk/es/index.js",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/redux-thunk/es/index.js",
       "name": "./node_modules/redux-thunk/es/index.js",
-      "index": 95,
-      "index2": 91,
+      "index": 94,
+      "index2": 90,
       "size": 481,
       "cacheable": true,
       "built": true,
@@ -19235,6 +19152,101 @@
       "source": "function createThunkMiddleware(extraArgument) {\n  return function (_ref) {\n    var dispatch = _ref.dispatch,\n        getState = _ref.getState;\n    return function (next) {\n      return function (action) {\n        if (typeof action === 'function') {\n          return action(dispatch, getState, extraArgument);\n        }\n\n        return next(action);\n      };\n    };\n  };\n}\n\nvar thunk = createThunkMiddleware();\nthunk.withExtraArgument = createThunkMiddleware;\n\nexport default thunk;"
     },
     {
+      "id": "./node_modules/redux/es/redux.js",
+      "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/redux/es/redux.js",
+      "name": "./node_modules/redux/es/redux.js",
+      "index": 63,
+      "index2": 59,
+      "size": 23104,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "server"
+      ],
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appStore.ts",
+      "issuerId": "./src/app/appStore.ts",
+      "issuerName": "./src/app/appStore.ts",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "multi ./core/src/index.server.tsx",
+          "name": "multi ./core/src/index.server.tsx"
+        },
+        {
+          "id": "./core/src/index.server.tsx",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
+          "name": "./core/src/index.server.tsx"
+        },
+        {
+          "id": "./src/startup.ts",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
+          "name": "./src/startup.ts"
+        },
+        {
+          "id": "./src/app/appStore.ts",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appStore.ts",
+          "name": "./src/app/appStore.ts"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-redux/es/connect/mapDispatchToProps.js",
+          "module": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
+          "moduleName": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "redux",
+          "loc": "1:0-43"
+        },
+        {
+          "moduleId": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-redux/es/connect/mapDispatchToProps.js",
+          "module": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
+          "moduleName": "./node_modules/react-redux/es/connect/mapDispatchToProps.js",
+          "type": "harmony import specifier",
+          "userRequest": "redux",
+          "loc": "16:11-29"
+        },
+        {
+          "moduleId": "./src/app/appStore.ts",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appStore.ts",
+          "module": "./src/app/appStore.ts",
+          "moduleName": "./src/app/appStore.ts",
+          "type": "cjs require",
+          "userRequest": "redux",
+          "loc": "23:14-30"
+        },
+        {
+          "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/dummy/dummyContainer.tsx",
+          "module": "./src/app/pages/dummy/dummyContainer.tsx",
+          "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
+          "type": "cjs require",
+          "userRequest": "redux",
+          "loc": "52:14-30"
+        }
+      ],
+      "providedExports": [
+        "createStore",
+        "combineReducers",
+        "bindActionCreators",
+        "applyMiddleware",
+        "compose",
+        "__DO_NOT_USE__ActionTypes"
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 4,
+      "source": "import $$observable from 'symbol-observable';\n\n/**\n * These are private action types reserved by Redux.\n * For any unknown actions, you must return the current state.\n * If the current state is undefined, you must return the initial state.\n * Do not reference these action types directly in your code.\n */\nvar randomString = function randomString() {\n  return Math.random().toString(36).substring(7).split('').join('.');\n};\n\nvar ActionTypes = {\n  INIT: \"@@redux/INIT\" + randomString(),\n  REPLACE: \"@@redux/REPLACE\" + randomString(),\n  PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {\n    return \"@@redux/PROBE_UNKNOWN_ACTION\" + randomString();\n  }\n};\n\n/**\n * @param {any} obj The object to inspect.\n * @returns {boolean} True if the argument appears to be a plain object.\n */\nfunction isPlainObject(obj) {\n  if (typeof obj !== 'object' || obj === null) return false;\n  var proto = obj;\n\n  while (Object.getPrototypeOf(proto) !== null) {\n    proto = Object.getPrototypeOf(proto);\n  }\n\n  return Object.getPrototypeOf(obj) === proto;\n}\n\n/**\n * Creates a Redux store that holds the state tree.\n * The only way to change the data in the store is to call `dispatch()` on it.\n *\n * There should only be a single store in your app. To specify how different\n * parts of the state tree respond to actions, you may combine several reducers\n * into a single reducer function by using `combineReducers`.\n *\n * @param {Function} reducer A function that returns the next state tree, given\n * the current state tree and the action to handle.\n *\n * @param {any} [preloadedState] The initial state. You may optionally specify it\n * to hydrate the state from the server in universal apps, or to restore a\n * previously serialized user session.\n * If you use `combineReducers` to produce the root reducer function, this must be\n * an object with the same shape as `combineReducers` keys.\n *\n * @param {Function} [enhancer] The store enhancer. You may optionally specify it\n * to enhance the store with third-party capabilities such as middleware,\n * time travel, persistence, etc. The only store enhancer that ships with Redux\n * is `applyMiddleware()`.\n *\n * @returns {Store} A Redux store that lets you read the state, dispatch actions\n * and subscribe to changes.\n */\n\nfunction createStore(reducer, preloadedState, enhancer) {\n  var _ref2;\n\n  if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') {\n    throw new Error('It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function');\n  }\n\n  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {\n    enhancer = preloadedState;\n    preloadedState = undefined;\n  }\n\n  if (typeof enhancer !== 'undefined') {\n    if (typeof enhancer !== 'function') {\n      throw new Error('Expected the enhancer to be a function.');\n    }\n\n    return enhancer(createStore)(reducer, preloadedState);\n  }\n\n  if (typeof reducer !== 'function') {\n    throw new Error('Expected the reducer to be a function.');\n  }\n\n  var currentReducer = reducer;\n  var currentState = preloadedState;\n  var currentListeners = [];\n  var nextListeners = currentListeners;\n  var isDispatching = false;\n\n  function ensureCanMutateNextListeners() {\n    if (nextListeners === currentListeners) {\n      nextListeners = currentListeners.slice();\n    }\n  }\n  /**\n   * Reads the state tree managed by the store.\n   *\n   * @returns {any} The current state tree of your application.\n   */\n\n\n  function getState() {\n    if (isDispatching) {\n      throw new Error('You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');\n    }\n\n    return currentState;\n  }\n  /**\n   * Adds a change listener. It will be called any time an action is dispatched,\n   * and some part of the state tree may potentially have changed. You may then\n   * call `getState()` to read the current state tree inside the callback.\n   *\n   * You may call `dispatch()` from a change listener, with the following\n   * caveats:\n   *\n   * 1. The subscriptions are snapshotted just before every `dispatch()` call.\n   * If you subscribe or unsubscribe while the listeners are being invoked, this\n   * will not have any effect on the `dispatch()` that is currently in progress.\n   * However, the next `dispatch()` call, whether nested or not, will use a more\n   * recent snapshot of the subscription list.\n   *\n   * 2. The listener should not expect to see all state changes, as the state\n   * might have been updated multiple times during a nested `dispatch()` before\n   * the listener is called. It is, however, guaranteed that all subscribers\n   * registered before the `dispatch()` started will be called with the latest\n   * state by the time it exits.\n   *\n   * @param {Function} listener A callback to be invoked on every dispatch.\n   * @returns {Function} A function to remove this change listener.\n   */\n\n\n  function subscribe(listener) {\n    if (typeof listener !== 'function') {\n      throw new Error('Expected the listener to be a function.');\n    }\n\n    if (isDispatching) {\n      throw new Error('You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest state. ' + 'See https://redux.js.org/api-reference/store#subscribe(listener) for more details.');\n    }\n\n    var isSubscribed = true;\n    ensureCanMutateNextListeners();\n    nextListeners.push(listener);\n    return function unsubscribe() {\n      if (!isSubscribed) {\n        return;\n      }\n\n      if (isDispatching) {\n        throw new Error('You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js.org/api-reference/store#subscribe(listener) for more details.');\n      }\n\n      isSubscribed = false;\n      ensureCanMutateNextListeners();\n      var index = nextListeners.indexOf(listener);\n      nextListeners.splice(index, 1);\n    };\n  }\n  /**\n   * Dispatches an action. It is the only way to trigger a state change.\n   *\n   * The `reducer` function, used to create the store, will be called with the\n   * current state tree and the given `action`. Its return value will\n   * be considered the **next** state of the tree, and the change listeners\n   * will be notified.\n   *\n   * The base implementation only supports plain object actions. If you want to\n   * dispatch a Promise, an Observable, a thunk, or something else, you need to\n   * wrap your store creating function into the corresponding middleware. For\n   * example, see the documentation for the `redux-thunk` package. Even the\n   * middleware will eventually dispatch plain object actions using this method.\n   *\n   * @param {Object} action A plain object representing “what changed”. It is\n   * a good idea to keep actions serializable so you can record and replay user\n   * sessions, or use the time travelling `redux-devtools`. An action must have\n   * a `type` property which may not be `undefined`. It is a good idea to use\n   * string constants for action types.\n   *\n   * @returns {Object} For convenience, the same action object you dispatched.\n   *\n   * Note that, if you use a custom middleware, it may wrap `dispatch()` to\n   * return something else (for example, a Promise you can await).\n   */\n\n\n  function dispatch(action) {\n    if (!isPlainObject(action)) {\n      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');\n    }\n\n    if (typeof action.type === 'undefined') {\n      throw new Error('Actions may not have an undefined \"type\" property. ' + 'Have you misspelled a constant?');\n    }\n\n    if (isDispatching) {\n      throw new Error('Reducers may not dispatch actions.');\n    }\n\n    try {\n      isDispatching = true;\n      currentState = currentReducer(currentState, action);\n    } finally {\n      isDispatching = false;\n    }\n\n    var listeners = currentListeners = nextListeners;\n\n    for (var i = 0; i < listeners.length; i++) {\n      var listener = listeners[i];\n      listener();\n    }\n\n    return action;\n  }\n  /**\n   * Replaces the reducer currently used by the store to calculate the state.\n   *\n   * You might need this if your app implements code splitting and you want to\n   * load some of the reducers dynamically. You might also need this if you\n   * implement a hot reloading mechanism for Redux.\n   *\n   * @param {Function} nextReducer The reducer for the store to use instead.\n   * @returns {void}\n   */\n\n\n  function replaceReducer(nextReducer) {\n    if (typeof nextReducer !== 'function') {\n      throw new Error('Expected the nextReducer to be a function.');\n    }\n\n    currentReducer = nextReducer;\n    dispatch({\n      type: ActionTypes.REPLACE\n    });\n  }\n  /**\n   * Interoperability point for observable/reactive libraries.\n   * @returns {observable} A minimal observable of state changes.\n   * For more information, see the observable proposal:\n   * https://github.com/tc39/proposal-observable\n   */\n\n\n  function observable() {\n    var _ref;\n\n    var outerSubscribe = subscribe;\n    return _ref = {\n      /**\n       * The minimal observable subscription method.\n       * @param {Object} observer Any object that can be used as an observer.\n       * The observer object should have a `next` method.\n       * @returns {subscription} An object with an `unsubscribe` method that can\n       * be used to unsubscribe the observable from the store, and prevent further\n       * emission of values from the observable.\n       */\n      subscribe: function subscribe(observer) {\n        if (typeof observer !== 'object' || observer === null) {\n          throw new TypeError('Expected the observer to be an object.');\n        }\n\n        function observeState() {\n          if (observer.next) {\n            observer.next(getState());\n          }\n        }\n\n        observeState();\n        var unsubscribe = outerSubscribe(observeState);\n        return {\n          unsubscribe: unsubscribe\n        };\n      }\n    }, _ref[$$observable] = function () {\n      return this;\n    }, _ref;\n  } // When a store is created, an \"INIT\" action is dispatched so that every\n  // reducer returns their initial state. This effectively populates\n  // the initial state tree.\n\n\n  dispatch({\n    type: ActionTypes.INIT\n  });\n  return _ref2 = {\n    dispatch: dispatch,\n    subscribe: subscribe,\n    getState: getState,\n    replaceReducer: replaceReducer\n  }, _ref2[$$observable] = observable, _ref2;\n}\n\n/**\n * Prints a warning in the console if it exists.\n *\n * @param {String} message The warning message.\n * @returns {void}\n */\nfunction warning(message) {\n  /* eslint-disable no-console */\n  if (typeof console !== 'undefined' && typeof console.error === 'function') {\n    console.error(message);\n  }\n  /* eslint-enable no-console */\n\n\n  try {\n    // This error was thrown as a convenience so that if you enable\n    // \"break on all exceptions\" in your console,\n    // it would pause the execution at this line.\n    throw new Error(message);\n  } catch (e) {} // eslint-disable-line no-empty\n\n}\n\nfunction getUndefinedStateErrorMessage(key, action) {\n  var actionType = action && action.type;\n  var actionDescription = actionType && \"action \\\"\" + String(actionType) + \"\\\"\" || 'an action';\n  return \"Given \" + actionDescription + \", reducer \\\"\" + key + \"\\\" returned undefined. \" + \"To ignore an action, you must explicitly return the previous state. \" + \"If you want this reducer to hold no value, you can return null instead of undefined.\";\n}\n\nfunction getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {\n  var reducerKeys = Object.keys(reducers);\n  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';\n\n  if (reducerKeys.length === 0) {\n    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';\n  }\n\n  if (!isPlainObject(inputState)) {\n    return \"The \" + argumentName + \" has unexpected type of \\\"\" + {}.toString.call(inputState).match(/\\s([a-z|A-Z]+)/)[1] + \"\\\". Expected argument to be an object with the following \" + (\"keys: \\\"\" + reducerKeys.join('\", \"') + \"\\\"\");\n  }\n\n  var unexpectedKeys = Object.keys(inputState).filter(function (key) {\n    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];\n  });\n  unexpectedKeys.forEach(function (key) {\n    unexpectedKeyCache[key] = true;\n  });\n  if (action && action.type === ActionTypes.REPLACE) return;\n\n  if (unexpectedKeys.length > 0) {\n    return \"Unexpected \" + (unexpectedKeys.length > 1 ? 'keys' : 'key') + \" \" + (\"\\\"\" + unexpectedKeys.join('\", \"') + \"\\\" found in \" + argumentName + \". \") + \"Expected to find one of the known reducer keys instead: \" + (\"\\\"\" + reducerKeys.join('\", \"') + \"\\\". Unexpected keys will be ignored.\");\n  }\n}\n\nfunction assertReducerShape(reducers) {\n  Object.keys(reducers).forEach(function (key) {\n    var reducer = reducers[key];\n    var initialState = reducer(undefined, {\n      type: ActionTypes.INIT\n    });\n\n    if (typeof initialState === 'undefined') {\n      throw new Error(\"Reducer \\\"\" + key + \"\\\" returned undefined during initialization. \" + \"If the state passed to the reducer is undefined, you must \" + \"explicitly return the initial state. The initial state may \" + \"not be undefined. If you don't want to set a value for this reducer, \" + \"you can use null instead of undefined.\");\n    }\n\n    if (typeof reducer(undefined, {\n      type: ActionTypes.PROBE_UNKNOWN_ACTION()\n    }) === 'undefined') {\n      throw new Error(\"Reducer \\\"\" + key + \"\\\" returned undefined when probed with a random type. \" + (\"Don't try to handle \" + ActionTypes.INIT + \" or other actions in \\\"redux/*\\\" \") + \"namespace. They are considered private. Instead, you must return the \" + \"current state for any unknown actions, unless it is undefined, \" + \"in which case you must return the initial state, regardless of the \" + \"action type. The initial state may not be undefined, but can be null.\");\n    }\n  });\n}\n/**\n * Turns an object whose values are different reducer functions, into a single\n * reducer function. It will call every child reducer, and gather their results\n * into a single state object, whose keys correspond to the keys of the passed\n * reducer functions.\n *\n * @param {Object} reducers An object whose values correspond to different\n * reducer functions that need to be combined into one. One handy way to obtain\n * it is to use ES6 `import * as reducers` syntax. The reducers may never return\n * undefined for any action. Instead, they should return their initial state\n * if the state passed to them was undefined, and the current state for any\n * unrecognized action.\n *\n * @returns {Function} A reducer function that invokes every reducer inside the\n * passed object, and builds a state object with the same shape.\n */\n\n\nfunction combineReducers(reducers) {\n  var reducerKeys = Object.keys(reducers);\n  var finalReducers = {};\n\n  for (var i = 0; i < reducerKeys.length; i++) {\n    var key = reducerKeys[i];\n\n    if (process.env.NODE_ENV !== 'production') {\n      if (typeof reducers[key] === 'undefined') {\n        warning(\"No reducer provided for key \\\"\" + key + \"\\\"\");\n      }\n    }\n\n    if (typeof reducers[key] === 'function') {\n      finalReducers[key] = reducers[key];\n    }\n  }\n\n  var finalReducerKeys = Object.keys(finalReducers);\n  var unexpectedKeyCache;\n\n  if (process.env.NODE_ENV !== 'production') {\n    unexpectedKeyCache = {};\n  }\n\n  var shapeAssertionError;\n\n  try {\n    assertReducerShape(finalReducers);\n  } catch (e) {\n    shapeAssertionError = e;\n  }\n\n  return function combination(state, action) {\n    if (state === void 0) {\n      state = {};\n    }\n\n    if (shapeAssertionError) {\n      throw shapeAssertionError;\n    }\n\n    if (process.env.NODE_ENV !== 'production') {\n      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);\n\n      if (warningMessage) {\n        warning(warningMessage);\n      }\n    }\n\n    var hasChanged = false;\n    var nextState = {};\n\n    for (var _i = 0; _i < finalReducerKeys.length; _i++) {\n      var _key = finalReducerKeys[_i];\n      var reducer = finalReducers[_key];\n      var previousStateForKey = state[_key];\n      var nextStateForKey = reducer(previousStateForKey, action);\n\n      if (typeof nextStateForKey === 'undefined') {\n        var errorMessage = getUndefinedStateErrorMessage(_key, action);\n        throw new Error(errorMessage);\n      }\n\n      nextState[_key] = nextStateForKey;\n      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;\n    }\n\n    return hasChanged ? nextState : state;\n  };\n}\n\nfunction bindActionCreator(actionCreator, dispatch) {\n  return function () {\n    return dispatch(actionCreator.apply(this, arguments));\n  };\n}\n/**\n * Turns an object whose values are action creators, into an object with the\n * same keys, but with every function wrapped into a `dispatch` call so they\n * may be invoked directly. This is just a convenience method, as you can call\n * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.\n *\n * For convenience, you can also pass a single function as the first argument,\n * and get a function in return.\n *\n * @param {Function|Object} actionCreators An object whose values are action\n * creator functions. One handy way to obtain it is to use ES6 `import * as`\n * syntax. You may also pass a single function.\n *\n * @param {Function} dispatch The `dispatch` function available on your Redux\n * store.\n *\n * @returns {Function|Object} The object mimicking the original object, but with\n * every action creator wrapped into the `dispatch` call. If you passed a\n * function as `actionCreators`, the return value will also be a single\n * function.\n */\n\n\nfunction bindActionCreators(actionCreators, dispatch) {\n  if (typeof actionCreators === 'function') {\n    return bindActionCreator(actionCreators, dispatch);\n  }\n\n  if (typeof actionCreators !== 'object' || actionCreators === null) {\n    throw new Error(\"bindActionCreators expected an object or a function, instead received \" + (actionCreators === null ? 'null' : typeof actionCreators) + \". \" + \"Did you write \\\"import ActionCreators from\\\" instead of \\\"import * as ActionCreators from\\\"?\");\n  }\n\n  var keys = Object.keys(actionCreators);\n  var boundActionCreators = {};\n\n  for (var i = 0; i < keys.length; i++) {\n    var key = keys[i];\n    var actionCreator = actionCreators[key];\n\n    if (typeof actionCreator === 'function') {\n      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);\n    }\n  }\n\n  return boundActionCreators;\n}\n\nfunction _defineProperty(obj, key, value) {\n  if (key in obj) {\n    Object.defineProperty(obj, key, {\n      value: value,\n      enumerable: true,\n      configurable: true,\n      writable: true\n    });\n  } else {\n    obj[key] = value;\n  }\n\n  return obj;\n}\n\nfunction _objectSpread(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i] != null ? arguments[i] : {};\n    var ownKeys = Object.keys(source);\n\n    if (typeof Object.getOwnPropertySymbols === 'function') {\n      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {\n        return Object.getOwnPropertyDescriptor(source, sym).enumerable;\n      }));\n    }\n\n    ownKeys.forEach(function (key) {\n      _defineProperty(target, key, source[key]);\n    });\n  }\n\n  return target;\n}\n\n/**\n * Composes single-argument functions from right to left. The rightmost\n * function can take multiple arguments as it provides the signature for\n * the resulting composite function.\n *\n * @param {...Function} funcs The functions to compose.\n * @returns {Function} A function obtained by composing the argument functions\n * from right to left. For example, compose(f, g, h) is identical to doing\n * (...args) => f(g(h(...args))).\n */\nfunction compose() {\n  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {\n    funcs[_key] = arguments[_key];\n  }\n\n  if (funcs.length === 0) {\n    return function (arg) {\n      return arg;\n    };\n  }\n\n  if (funcs.length === 1) {\n    return funcs[0];\n  }\n\n  return funcs.reduce(function (a, b) {\n    return function () {\n      return a(b.apply(void 0, arguments));\n    };\n  });\n}\n\n/**\n * Creates a store enhancer that applies middleware to the dispatch method\n * of the Redux store. This is handy for a variety of tasks, such as expressing\n * asynchronous actions in a concise manner, or logging every action payload.\n *\n * See `redux-thunk` package as an example of the Redux middleware.\n *\n * Because middleware is potentially asynchronous, this should be the first\n * store enhancer in the composition chain.\n *\n * Note that each middleware will be given the `dispatch` and `getState` functions\n * as named arguments.\n *\n * @param {...Function} middlewares The middleware chain to be applied.\n * @returns {Function} A store enhancer applying the middleware.\n */\n\nfunction applyMiddleware() {\n  for (var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++) {\n    middlewares[_key] = arguments[_key];\n  }\n\n  return function (createStore) {\n    return function () {\n      var store = createStore.apply(void 0, arguments);\n\n      var _dispatch = function dispatch() {\n        throw new Error(\"Dispatching while constructing your middleware is not allowed. \" + \"Other middleware would not be applied to this dispatch.\");\n      };\n\n      var middlewareAPI = {\n        getState: store.getState,\n        dispatch: function dispatch() {\n          return _dispatch.apply(void 0, arguments);\n        }\n      };\n      var chain = middlewares.map(function (middleware) {\n        return middleware(middlewareAPI);\n      });\n      _dispatch = compose.apply(void 0, chain)(store.dispatch);\n      return _objectSpread({}, store, {\n        dispatch: _dispatch\n      });\n    };\n  };\n}\n\n/*\n * This is a dummy function to check if the function name has been altered by minification.\n * If the function has been minified and NODE_ENV !== 'production', warn the user.\n */\n\nfunction isCrushed() {}\n\nif (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {\n  warning('You are currently using minified code outside of NODE_ENV === \"production\". ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) ' + 'to ensure you have the correct code for your production build.');\n}\n\nexport { createStore, combineReducers, bindActionCreators, applyMiddleware, compose, ActionTypes as __DO_NOT_USE__ActionTypes };\n"
+    },
+    {
       "id": "./node_modules/resolve-pathname/index.js",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/resolve-pathname/index.js",
       "name": "./node_modules/resolve-pathname/index.js",
@@ -19268,9 +19280,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         },
         {
           "id": "./node_modules/history/es/index.js",
@@ -19485,88 +19497,6 @@
       "source": "export default function symbolObservablePonyfill(root) {\n\tvar result;\n\tvar Symbol = root.Symbol;\n\n\tif (typeof Symbol === 'function') {\n\t\tif (Symbol.observable) {\n\t\t\tresult = Symbol.observable;\n\t\t} else {\n\t\t\tresult = Symbol('observable');\n\t\t\tSymbol.observable = result;\n\t\t}\n\t} else {\n\t\tresult = '@@observable';\n\t}\n\n\treturn result;\n};\n"
     },
     {
-      "id": "./node_modules/value-equal/index.js",
-      "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/value-equal/index.js",
-      "name": "./node_modules/value-equal/index.js",
-      "index": 21,
-      "index2": 14,
-      "size": 1136,
-      "cacheable": true,
-      "built": true,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        "server"
-      ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/LocationUtils.js",
-      "issuerId": "./node_modules/history/es/LocationUtils.js",
-      "issuerName": "./node_modules/history/es/LocationUtils.js",
-      "issuerPath": [
-        {
-          "id": 0,
-          "identifier": "multi ./core/src/index.server.tsx",
-          "name": "multi ./core/src/index.server.tsx"
-        },
-        {
-          "id": "./core/src/index.server.tsx",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
-          "name": "./core/src/index.server.tsx"
-        },
-        {
-          "id": "./node_modules/react-router-dom/es/index.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/index.js",
-          "name": "./node_modules/react-router-dom/es/index.js"
-        },
-        {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
-        },
-        {
-          "id": "./node_modules/history/es/index.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/index.js",
-          "name": "./node_modules/history/es/index.js"
-        },
-        {
-          "id": "./node_modules/history/es/LocationUtils.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/LocationUtils.js",
-          "name": "./node_modules/history/es/LocationUtils.js"
-        }
-      ],
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "assets": [
-      ],
-      "reasons": [
-        {
-          "moduleId": "./node_modules/history/es/LocationUtils.js",
-          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/LocationUtils.js",
-          "module": "./node_modules/history/es/LocationUtils.js",
-          "moduleName": "./node_modules/history/es/LocationUtils.js",
-          "type": "harmony side effect evaluation",
-          "userRequest": "value-equal",
-          "loc": "4:0-37"
-        },
-        {
-          "moduleId": "./node_modules/history/es/LocationUtils.js",
-          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/history/es/LocationUtils.js",
-          "module": "./node_modules/history/es/LocationUtils.js",
-          "moduleName": "./node_modules/history/es/LocationUtils.js",
-          "type": "harmony import specifier",
-          "userRequest": "value-equal",
-          "loc": "64:103-113"
-        }
-      ],
-      "providedExports": [
-        "default"
-      ],
-      "optimizationBailout": [
-      ],
-      "depth": 6,
-      "source": "var _typeof = typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; };\n\nfunction valueEqual(a, b) {\n  if (a === b) return true;\n\n  if (a == null || b == null) return false;\n\n  if (Array.isArray(a)) {\n    return Array.isArray(b) && a.length === b.length && a.every(function (item, index) {\n      return valueEqual(item, b[index]);\n    });\n  }\n\n  var aType = typeof a === 'undefined' ? 'undefined' : _typeof(a);\n  var bType = typeof b === 'undefined' ? 'undefined' : _typeof(b);\n\n  if (aType !== bType) return false;\n\n  if (aType === 'object') {\n    var aValue = a.valueOf();\n    var bValue = b.valueOf();\n\n    if (aValue !== a || bValue !== b) return valueEqual(aValue, bValue);\n\n    var aKeys = Object.keys(a);\n    var bKeys = Object.keys(b);\n\n    if (aKeys.length !== bKeys.length) return false;\n\n    return aKeys.every(function (key) {\n      return valueEqual(a[key], b[key]);\n    });\n  }\n\n  return false;\n}\n\nexport default valueEqual;"
-    },
-    {
       "id": "./node_modules/warning/warning.js",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/warning/warning.js",
       "name": "./node_modules/warning/warning.js",
@@ -19580,9 +19510,9 @@
       "chunks": [
         "server"
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerId": "./node_modules/react-router-dom/es/BrowserRouter.js",
-      "issuerName": "./node_modules/react-router-dom/es/BrowserRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+      "issuerId": "./node_modules/react-router-dom/es/HashRouter.js",
+      "issuerName": "./node_modules/react-router-dom/es/HashRouter.js",
       "issuerPath": [
         {
           "id": 0,
@@ -19600,9 +19530,9 @@
           "name": "./node_modules/react-router-dom/es/index.js"
         },
         {
-          "id": "./node_modules/react-router-dom/es/BrowserRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/BrowserRouter.js",
-          "name": "./node_modules/react-router-dom/es/BrowserRouter.js"
+          "id": "./node_modules/react-router-dom/es/HashRouter.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/react-router-dom/es/HashRouter.js",
+          "name": "./node_modules/react-router-dom/es/HashRouter.js"
         }
       ],
       "failed": false,
@@ -20044,8 +19974,8 @@
       "id": "./src/app/actions/dummyRequest.ts",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/actions/dummyRequest.ts",
       "name": "./src/app/actions/dummyRequest.ts",
-      "index": 89,
-      "index2": 84,
+      "index": 90,
+      "index2": 85,
       "size": 460,
       "cacheable": true,
       "built": true,
@@ -20111,8 +20041,8 @@
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
       "name": "./src/app/appContainer.tsx",
       "index": 84,
-      "index2": 90,
-      "size": 5336,
+      "index2": 89,
+      "size": 5134,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20160,14 +20090,14 @@
       "optimizationBailout": [
       ],
       "depth": 3,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar layoutContainer_1 = require(\"./layouts/default/layoutContainer\");\nvar homeContainer_1 = require(\"./pages/home/homeContainer\");\nvar dummyContainer_1 = require(\"./pages/dummy/dummyContainer\");\nvar notFoundContainer_1 = require(\"./pages/notFound/notFoundContainer\");\nvar loadingView_1 = require(\"./pages/shared/loadingView\");\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        if (this.state === null || !this.state.initialized) {\n            return (React.createElement(loadingView_1.default, null));\n        }\n        return (React.createElement(react_router_dom_1.Switch, null,\n            React.createElement(react_router_dom_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(homeContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(dummyContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } })));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar layoutContainer_1 = require(\"./layouts/default/layoutContainer\");\nvar homeContainer_1 = require(\"./pages/home/homeContainer\");\nvar dummyContainer_1 = require(\"./pages/dummy/dummyContainer\");\nvar notFoundContainer_1 = require(\"./pages/notFound/notFoundContainer\");\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        return (React.createElement(react_router_dom_1.Switch, null,\n            React.createElement(react_router_dom_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(homeContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                    React.createElement(dummyContainer_1.default, null)); } }),\n            React.createElement(react_router_dom_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } })));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
     },
     {
       "id": "./src/app/appStore.ts",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appStore.ts",
       "name": "./src/app/appStore.ts",
-      "index": 94,
-      "index2": 94,
+      "index": 93,
+      "index2": 93,
       "size": 1633,
       "cacheable": true,
       "built": true,
@@ -20222,67 +20152,6 @@
       "id": "./src/app/assets/fonts.scss",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/css-loader/locals.js!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/assets/fonts.scss",
       "name": "./src/app/assets/fonts.scss",
-      "index": 93,
-      "index2": 89,
-      "size": 0,
-      "cacheable": true,
-      "built": true,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        "server"
-      ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-      "issuerId": "./src/app/appContainer.tsx",
-      "issuerName": "./src/app/appContainer.tsx",
-      "issuerPath": [
-        {
-          "id": 0,
-          "identifier": "multi ./core/src/index.server.tsx",
-          "name": "multi ./core/src/index.server.tsx"
-        },
-        {
-          "id": "./core/src/index.server.tsx",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
-          "name": "./core/src/index.server.tsx"
-        },
-        {
-          "id": "./src/startup.ts",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
-          "name": "./src/startup.ts"
-        },
-        {
-          "id": "./src/app/appContainer.tsx",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-          "name": "./src/app/appContainer.tsx"
-        }
-      ],
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "assets": [
-      ],
-      "reasons": [
-        {
-          "moduleId": "./src/app/appContainer.tsx",
-          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-          "module": "./src/app/appContainer.tsx",
-          "moduleName": "./src/app/appContainer.tsx",
-          "type": "cjs require",
-          "userRequest": "./assets/fonts.scss",
-          "loc": "59:0-30"
-        }
-      ],
-      "providedExports": null,
-      "optimizationBailout": [
-      ],
-      "depth": 4,
-      "source": ""
-    },
-    {
-      "id": "./src/app/assets/styles.scss",
-      "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/css-loader/locals.js!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/assets/styles.scss",
-      "name": "./src/app/assets/styles.scss",
       "index": 92,
       "index2": 88,
       "size": 0,
@@ -20330,8 +20199,78 @@
           "module": "./src/app/appContainer.tsx",
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
+          "userRequest": "./assets/fonts.scss",
+          "loc": "58:0-30"
+        }
+      ],
+      "providedExports": null,
+      "optimizationBailout": [
+      ],
+      "depth": 4,
+      "source": ""
+    },
+    {
+      "id": "./src/app/assets/styles.scss",
+      "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/css-loader/locals.js!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/assets/styles.scss",
+      "name": "./src/app/assets/styles.scss",
+      "index": 87,
+      "index2": 82,
+      "size": 0,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "server"
+      ],
+      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
+      "issuerId": "./src/app/appContainer.tsx",
+      "issuerName": "./src/app/appContainer.tsx",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "multi ./core/src/index.server.tsx",
+          "name": "multi ./core/src/index.server.tsx"
+        },
+        {
+          "id": "./core/src/index.server.tsx",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
+          "name": "./core/src/index.server.tsx"
+        },
+        {
+          "id": "./src/startup.ts",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
+          "name": "./src/startup.ts"
+        },
+        {
+          "id": "./src/app/appContainer.tsx",
+          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
+          "name": "./src/app/appContainer.tsx"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./src/app/appContainer.tsx",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
+          "module": "./src/app/appContainer.tsx",
+          "moduleName": "./src/app/appContainer.tsx",
+          "type": "cjs require",
           "userRequest": "./assets/styles.scss",
-          "loc": "58:0-31"
+          "loc": "57:0-31"
+        },
+        {
+          "moduleId": "./src/app/pages/home/homeContainer.tsx",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/home/homeContainer.tsx",
+          "module": "./src/app/pages/home/homeContainer.tsx",
+          "moduleName": "./src/app/pages/home/homeContainer.tsx",
+          "type": "cjs require",
+          "userRequest": "../../assets/styles.scss",
+          "loc": "17:13-48"
         }
       ],
       "providedExports": null,
@@ -20405,8 +20344,8 @@
       "id": "./src/app/pages/dummy/dummyContainer.tsx",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/dummy/dummyContainer.tsx",
       "name": "./src/app/pages/dummy/dummyContainer.tsx",
-      "index": 87,
-      "index2": 85,
+      "index": 88,
+      "index2": 86,
       "size": 5000,
       "cacheable": true,
       "built": true,
@@ -20466,8 +20405,8 @@
       "id": "./src/app/pages/dummy/summaryResultView.tsx",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/dummy/summaryResultView.tsx",
       "name": "./src/app/pages/dummy/summaryResultView.tsx",
-      "index": 88,
-      "index2": 83,
+      "index": 89,
+      "index2": 84,
       "size": 1240,
       "cacheable": true,
       "built": true,
@@ -20533,8 +20472,8 @@
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/home/homeContainer.tsx",
       "name": "./src/app/pages/home/homeContainer.tsx",
       "index": 86,
-      "index2": 82,
-      "size": 1178,
+      "index2": 83,
+      "size": 1233,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -20587,14 +20526,14 @@
       "optimizationBailout": [
       ],
       "depth": 4,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar styles = require(\"../../assets/styles.scss\");\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
     },
     {
       "id": "./src/app/pages/notFound/notFoundContainer.tsx",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/notFound/notFoundContainer.tsx",
       "name": "./src/app/pages/notFound/notFoundContainer.tsx",
-      "index": 90,
-      "index2": 86,
+      "index": 91,
+      "index2": 87,
       "size": 1199,
       "cacheable": true,
       "built": true,
@@ -20651,72 +20590,11 @@
       "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(React.Component));\nexports.default = NotFoundContainer;\n"
     },
     {
-      "id": "./src/app/pages/shared/loadingView.tsx",
-      "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/pages/shared/loadingView.tsx",
-      "name": "./src/app/pages/shared/loadingView.tsx",
-      "index": 91,
-      "index2": 87,
-      "size": 1071,
-      "cacheable": true,
-      "built": true,
-      "optional": false,
-      "prefetched": false,
-      "chunks": [
-        "server"
-      ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-      "issuerId": "./src/app/appContainer.tsx",
-      "issuerName": "./src/app/appContainer.tsx",
-      "issuerPath": [
-        {
-          "id": 0,
-          "identifier": "multi ./core/src/index.server.tsx",
-          "name": "multi ./core/src/index.server.tsx"
-        },
-        {
-          "id": "./core/src/index.server.tsx",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/core/src/index.server.tsx",
-          "name": "./core/src/index.server.tsx"
-        },
-        {
-          "id": "./src/startup.ts",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
-          "name": "./src/startup.ts"
-        },
-        {
-          "id": "./src/app/appContainer.tsx",
-          "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-          "name": "./src/app/appContainer.tsx"
-        }
-      ],
-      "failed": false,
-      "errors": 0,
-      "warnings": 0,
-      "assets": [
-      ],
-      "reasons": [
-        {
-          "moduleId": "./src/app/appContainer.tsx",
-          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/appContainer.tsx",
-          "module": "./src/app/appContainer.tsx",
-          "moduleName": "./src/app/appContainer.tsx",
-          "type": "cjs require",
-          "userRequest": "./pages/shared/loadingView",
-          "loc": "57:20-57"
-        }
-      ],
-      "providedExports": null,
-      "optimizationBailout": [
-      ],
-      "depth": 4,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = require(\"react\");\nvar LoadingView = (function (_super) {\n    __extends(LoadingView, _super);\n    function LoadingView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    LoadingView.prototype.render = function () {\n        return (React.createElement(\"div\", null, \"Loading...\"));\n    };\n    return LoadingView;\n}(React.Component));\nexports.default = LoadingView;\n"
-    },
-    {
       "id": "./src/app/reducers/dummy.ts",
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/app/reducers/dummy.ts",
       "name": "./src/app/reducers/dummy.ts",
-      "index": 97,
-      "index2": 93,
+      "index": 96,
+      "index2": 92,
       "size": 897,
       "cacheable": true,
       "built": true,
@@ -20777,7 +20655,7 @@
       "identifier": "/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/ts-spa-boilerplate/src/startup.ts",
       "name": "./src/startup.ts",
       "index": 83,
-      "index2": 95,
+      "index2": 94,
       "size": 305,
       "cacheable": true,
       "built": true,

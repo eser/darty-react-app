@@ -79,6 +79,9 @@ const commonConfig = (name) => configWrapper((vars) => {
                     NODE_ENV: JSON.stringify(vars.envValue),
                 },
             }),
+            new webpack.WatchIgnorePlugin([
+                /css\.d\.ts$/
+            ]),
             new DotenvPlugin({
                 sample: './.env.default',
                 path: './.env',

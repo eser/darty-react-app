@@ -73,7 +73,9 @@ const browserConfig = configWrapper((vars) => {
                     },
                 },
             },
-            // runtimeChunk: true,
+            // runtimeChunk: {
+            //     name: 'bootstrap'
+            // },
         },
 
         module: {
@@ -87,10 +89,15 @@ const browserConfig = configWrapper((vars) => {
                     use: [
                         ExtractCssChunksPlugin.loader,
                         {
-                            loader: 'css-loader',
+                            loader: 'typings-for-css-modules-loader',
                             options: {
                                 importLoaders: 2,
                                 sourceMap: true,
+                                modules: true,
+                                namedExport: true,
+                                silent: true,
+                                // localIdentName: '[local]___[hash:base64:5]',
+                                localIdentName: '[local]',
                             },
                         },
                         {
@@ -113,15 +120,21 @@ const browserConfig = configWrapper((vars) => {
                     use: [
                         ExtractCssChunksPlugin.loader,
                         {
-                            loader: 'css-loader',
+                            loader: 'typings-for-css-modules-loader',
                             options: {
                                 importLoaders: 2,
                                 sourceMap: true,
+                                modules: true,
+                                namedExport: true,
+                                silent: true,
+                                // localIdentName: '[local]___[hash:base64:5]',
+                                localIdentName: '[local]',
                             },
                         },
                         {
                             loader: 'postcss-loader',
                             options: {
+                                parser: 'postcss-js',
                                 sourceMap: true,
                                 path: path.resolve(__dirname),
                             },
@@ -129,7 +142,7 @@ const browserConfig = configWrapper((vars) => {
                     ],
                 },
                 {
-                    test: /\.(eot|ttf|jpe?g|png|gif|svg|ico)([\?]?.*)$/,
+                    test: /\.(eot|ttf|jpe?g|png|gif|ico)([\?]?.*)$/,
                     use: [
                         {
                             loader: 'file-loader',
@@ -148,6 +161,18 @@ const browserConfig = configWrapper((vars) => {
                         },
                     ],
                 },
+                {
+                    test: /\.(svg)([\?]?.*)$/,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 10000,
+                                mimetype: 'image/svg+xml',
+                            },
+                        },
+                    ],
+                },
             ],
         },
 
@@ -157,6 +182,8 @@ const browserConfig = configWrapper((vars) => {
                 filename: '[name].css',
                 // chunkFilename: '[id].[chunkhash].css',
                 chunkFilename: '[id].css',
+                hot: true,
+                cssModules: true,
             }),
             new CopyWebpackPlugin(
                 assets.map(x => ({ from: `./src/${x}`, to: './' }))

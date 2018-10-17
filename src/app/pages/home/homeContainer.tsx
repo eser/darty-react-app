@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import * as styles from '../../assets/styles.scss';
+
 interface HomeContainerProps {
 }
 
@@ -14,7 +16,7 @@ class HomeContainer extends React.Component<HomeContainerProps, HomeContainerSta
     render(): JSX.Element {
         return (
             <div>
-                <h1 className="title">Home</h1>
+                <h1 className={styles.title}>Home</h1>
 
                 ...and there is a dummy content
             </div>
