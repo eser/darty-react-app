@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "jsx": "react",
+        "importHelpers": false,
+        "sourceMap": true,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "strictNullChecks": true,
+        "strict": true,
+        "newLine": "LF",
+        "rootDirs": [
+            "./src/"
+        ],
+        "outDir": "./dist/compiled/",
+        "lib": [
+            "es2015"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "~*": [
+                "./src/*"
+            ]
+        }
+    },
+    "exclude": [
+    ]
+}

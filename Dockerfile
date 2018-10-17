@@ -1,9 +1,9 @@
 # Install Node.js docker container
-FROM node:onbuild
+FROM node:alpine
 
 # Environment variables
 ENV NODE_ENV production
-ENV PORT 80
+ENV PORT 3000
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -18,7 +18,7 @@ RUN npm install --no-package-lock
 # Bundle app source
 COPY . .
 
-EXPOSE 80
+EXPOSE ${PORT}
 
 RUN npm run init
 

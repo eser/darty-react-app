@@ -12,6 +12,10 @@ import NotFoundContainer from './pages/notFound/notFoundContainer';
 
 import LoadingView from './pages/shared/loadingView';
 
+// stylesheets
+import './assets/styles.scss';
+import './assets/fonts.scss';
+
 interface AppContainerProps {
 }
 

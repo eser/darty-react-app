@@ -1,0 +1,19 @@
+{
+    "extends": [
+        "eser-react"
+    ],
+    "env": {
+        "commonjs": true,
+        "jest": true
+    },
+    "parser": "typescript-eslint-parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "jsx-a11y/href-no-hash": 0
+    }
+}
