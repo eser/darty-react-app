@@ -6,8 +6,8 @@
   ],
   "version": "4.22.0",
   "hash": "e2de3094e427e9f4d41c",
-  "time": 7665,
-  "builtAt": 1540150886556,
+  "time": 7565,
+  "builtAt": 1540152609492,
   "publicPath": "/",
   "outputPath": "/Users/eserozvataf/Projects/open-source/dart-app/dist",
   "assetsByChunkName": {
@@ -508,9 +508,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createHashHistory.js",
-          "issuerId": "./node_modules/history/createHashHistory.js",
-          "issuerName": "./node_modules/history/createHashHistory.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createBrowserHistory.js",
+          "issuerId": "./node_modules/history/createBrowserHistory.js",
+          "issuerName": "./node_modules/history/createBrowserHistory.js",
           "issuerPath": [
             {
               "id": 0,
@@ -538,9 +538,9 @@
               "name": "./node_modules/history/index.js"
             },
             {
-              "id": "./node_modules/history/createHashHistory.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createHashHistory.js",
-              "name": "./node_modules/history/createHashHistory.js"
+              "id": "./node_modules/history/createBrowserHistory.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createBrowserHistory.js",
+              "name": "./node_modules/history/createBrowserHistory.js"
             }
           ],
           "failed": false,
@@ -11836,9 +11836,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createHashHistory.js",
-      "issuerId": "./node_modules/history/createHashHistory.js",
-      "issuerName": "./node_modules/history/createHashHistory.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createBrowserHistory.js",
+      "issuerId": "./node_modules/history/createBrowserHistory.js",
+      "issuerName": "./node_modules/history/createBrowserHistory.js",
       "issuerPath": [
         {
           "id": 0,
@@ -11866,9 +11866,9 @@
           "name": "./node_modules/history/index.js"
         },
         {
-          "id": "./node_modules/history/createHashHistory.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createHashHistory.js",
-          "name": "./node_modules/history/createHashHistory.js"
+          "id": "./node_modules/history/createBrowserHistory.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createBrowserHistory.js",
+          "name": "./node_modules/history/createBrowserHistory.js"
         }
       ],
       "failed": false,
