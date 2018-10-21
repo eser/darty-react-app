@@ -6,8 +6,8 @@
   ],
   "version": "4.22.0",
   "hash": "e2de3094e427e9f4d41c",
-  "time": 8120,
-  "builtAt": 1540136322756,
+  "time": 7665,
+  "builtAt": 1540150886556,
   "publicPath": "/",
   "outputPath": "/Users/eserozvataf/Projects/open-source/dart-app/dist",
   "assetsByChunkName": {
@@ -508,9 +508,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createBrowserHistory.js",
-          "issuerId": "./node_modules/history/createBrowserHistory.js",
-          "issuerName": "./node_modules/history/createBrowserHistory.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createHashHistory.js",
+          "issuerId": "./node_modules/history/createHashHistory.js",
+          "issuerName": "./node_modules/history/createHashHistory.js",
           "issuerPath": [
             {
               "id": 0,
@@ -538,9 +538,9 @@
               "name": "./node_modules/history/index.js"
             },
             {
-              "id": "./node_modules/history/createBrowserHistory.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createBrowserHistory.js",
-              "name": "./node_modules/history/createBrowserHistory.js"
+              "id": "./node_modules/history/createHashHistory.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createHashHistory.js",
+              "name": "./node_modules/history/createHashHistory.js"
             }
           ],
           "failed": false,
@@ -11140,9 +11140,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
-          "issuerId": "./node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
-          "issuerName": "./node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/node-fetch/lib/index.js",
+          "issuerId": "./node_modules/node-fetch/lib/index.js",
+          "issuerName": "./node_modules/node-fetch/lib/index.js",
           "issuerPath": [
             {
               "id": 0,
@@ -11155,19 +11155,9 @@
               "name": "./node_modules/dart/core/src/index.server.tsx"
             },
             {
-              "id": "./node_modules/react-dom/server.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-dom/server.js",
-              "name": "./node_modules/react-dom/server.js"
-            },
-            {
-              "id": "./node_modules/react-dom/server.node.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-dom/server.node.js",
-              "name": "./node_modules/react-dom/server.node.js"
-            },
-            {
-              "id": "./node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
-              "name": "./node_modules/react-dom/cjs/react-dom-server.node.production.min.js"
+              "id": "./node_modules/node-fetch/lib/index.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/node-fetch/lib/index.js",
+              "name": "./node_modules/node-fetch/lib/index.js"
             }
           ],
           "failed": false,
@@ -11846,9 +11836,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createBrowserHistory.js",
-      "issuerId": "./node_modules/history/createBrowserHistory.js",
-      "issuerName": "./node_modules/history/createBrowserHistory.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createHashHistory.js",
+      "issuerId": "./node_modules/history/createHashHistory.js",
+      "issuerName": "./node_modules/history/createHashHistory.js",
       "issuerPath": [
         {
           "id": 0,
@@ -11876,9 +11866,9 @@
           "name": "./node_modules/history/index.js"
         },
         {
-          "id": "./node_modules/history/createBrowserHistory.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createBrowserHistory.js",
-          "name": "./node_modules/history/createBrowserHistory.js"
+          "id": "./node_modules/history/createHashHistory.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/history/createHashHistory.js",
+          "name": "./node_modules/history/createHashHistory.js"
         }
       ],
       "failed": false,
@@ -22478,9 +22468,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
-      "issuerId": "./node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
-      "issuerName": "./node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/node-fetch/lib/index.js",
+      "issuerId": "./node_modules/node-fetch/lib/index.js",
+      "issuerName": "./node_modules/node-fetch/lib/index.js",
       "issuerPath": [
         {
           "id": 0,
@@ -22493,19 +22483,9 @@
           "name": "./node_modules/dart/core/src/index.server.tsx"
         },
         {
-          "id": "./node_modules/react-dom/server.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-dom/server.js",
-          "name": "./node_modules/react-dom/server.js"
-        },
-        {
-          "id": "./node_modules/react-dom/server.node.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-dom/server.node.js",
-          "name": "./node_modules/react-dom/server.node.js"
-        },
-        {
-          "id": "./node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-dom/cjs/react-dom-server.node.production.min.js",
-          "name": "./node_modules/react-dom/cjs/react-dom-server.node.production.min.js"
+          "id": "./node_modules/node-fetch/lib/index.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/node-fetch/lib/index.js",
+          "name": "./node_modules/node-fetch/lib/index.js"
         }
       ],
       "failed": false,
