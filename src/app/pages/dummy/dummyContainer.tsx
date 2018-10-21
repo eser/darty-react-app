@@ -28,7 +28,7 @@ class DummyContainer extends React.Component<DummyContainerProps, DummyContainer
         this.update();
     }
 
-    async update(): Promise<void> {
+    update(): void {
         this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);
     }
 

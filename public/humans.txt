@@ -12,5 +12,7 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5, JavaScript
-    TypeScript, jsmake
-    React, Bulma
+    TypeScript, Dart
+    React, Redux, Bulma
+
+Dart: https://github.com/eserozvataf/dart

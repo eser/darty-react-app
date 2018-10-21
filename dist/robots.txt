@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap: http://ts-spa-boilerplate.s3-website-eu-west-1.amazonaws.com/sitemap.xml
+# Sitemap: http://dart-app.s3-website-eu-west-1.amazonaws.com/sitemap.xml

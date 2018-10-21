@@ -36,13 +36,14 @@ Dart App is a front-end development template for [Dart](https://github.com/esero
 
 ## Quick start
 
-Clone the git repo `git clone
-   https://github.com/eserozvataf/dart-app.git` - and checkout the [tagged
-   release](https://github.com/eserozvataf/dart-app/releases) you'd like to
-   use.
+Clone the git repo and execute install dependencies from npm to get ready:
 
-Execute `npm install` to install dependencies for development environment.
-
+```sh
+git clone https://github.com/eserozvataf/dart-app.git project
+cd project
+npm install
+npm run dev
+```
 
 ## NPM Tasks
 
