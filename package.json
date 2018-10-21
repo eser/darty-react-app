@@ -42,7 +42,7 @@
     "aws:open": "start http://dart-app.s3-website-eu-west-1.amazonaws.com"
   },
   "dependencies": {
-    "dart": "^0.23.0",
+    "dart": "^0.24.0",
     "express": "^4.16.4"
   },
   "devDependencies": {

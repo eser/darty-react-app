@@ -6,8 +6,8 @@
   ],
   "version": "4.22.0",
   "hash": "e2de3094e427e9f4d41c",
-  "time": 6427,
-  "builtAt": 1540133089498,
+  "time": 6296,
+  "builtAt": 1540135011905,
   "publicPath": "/",
   "outputPath": "/Users/eserozvataf/Projects/open-source/dart-app/dist",
   "assetsByChunkName": {
@@ -528,9 +528,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/history/index.js",
@@ -610,9 +610,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/history/index.js",
@@ -705,9 +705,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/history/index.js",
@@ -809,9 +809,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/history/index.js",
@@ -877,9 +877,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/history/index.js",
@@ -945,9 +945,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/history/index.js",
@@ -1013,9 +1013,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/history/index.js",
@@ -1084,9 +1084,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "issuerId": "./node_modules/react-router/MemoryRouter.js",
-          "issuerName": "./node_modules/react-router/MemoryRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "issuerId": "./node_modules/react-router/Redirect.js",
+          "issuerName": "./node_modules/react-router/Redirect.js",
           "issuerPath": [
             {
               "id": 0,
@@ -1104,9 +1104,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             }
           ],
           "failed": false,
@@ -4045,9 +4045,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Prompt.js",
-          "issuerId": "./node_modules/react-router/Prompt.js",
-          "issuerName": "./node_modules/react-router/Prompt.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "issuerId": "./node_modules/react-router/Redirect.js",
+          "issuerName": "./node_modules/react-router/Redirect.js",
           "issuerPath": [
             {
               "id": 0,
@@ -4065,9 +4065,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/Prompt.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Prompt.js",
-              "name": "./node_modules/react-router/Prompt.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             }
           ],
           "failed": false,
@@ -5335,9 +5335,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/prop-types/index.js",
@@ -5383,9 +5383,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "issuerId": "./node_modules/react-router/MemoryRouter.js",
-          "issuerName": "./node_modules/react-router/MemoryRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "issuerId": "./node_modules/react-router/Redirect.js",
+          "issuerName": "./node_modules/react-router/Redirect.js",
           "issuerPath": [
             {
               "id": 0,
@@ -5403,9 +5403,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             }
           ],
           "failed": false,
@@ -5583,9 +5583,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/prop-types/index.js",
@@ -9555,9 +9555,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/history/index.js",
@@ -9892,9 +9892,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/history/index.js",
@@ -9945,9 +9945,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "issuerId": "./node_modules/react-router/MemoryRouter.js",
-          "issuerName": "./node_modules/react-router/MemoryRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "issuerId": "./node_modules/react-router/Redirect.js",
+          "issuerName": "./node_modules/react-router/Redirect.js",
           "issuerPath": [
             {
               "id": 0,
@@ -9965,9 +9965,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             }
           ],
           "failed": false,
@@ -11856,9 +11856,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/history/index.js",
@@ -11938,9 +11938,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/history/index.js",
@@ -12033,9 +12033,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/history/index.js",
@@ -12137,9 +12137,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/history/index.js",
@@ -12205,9 +12205,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/history/index.js",
@@ -12273,9 +12273,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/history/index.js",
@@ -12341,9 +12341,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/history/index.js",
@@ -12412,9 +12412,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-      "issuerId": "./node_modules/react-router/MemoryRouter.js",
-      "issuerName": "./node_modules/react-router/MemoryRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+      "issuerId": "./node_modules/react-router/Redirect.js",
+      "issuerName": "./node_modules/react-router/Redirect.js",
       "issuerPath": [
         {
           "id": 0,
@@ -12432,9 +12432,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         }
       ],
       "failed": false,
@@ -15373,9 +15373,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Prompt.js",
-      "issuerId": "./node_modules/react-router/Prompt.js",
-      "issuerName": "./node_modules/react-router/Prompt.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+      "issuerId": "./node_modules/react-router/Redirect.js",
+      "issuerName": "./node_modules/react-router/Redirect.js",
       "issuerPath": [
         {
           "id": 0,
@@ -15393,9 +15393,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/Prompt.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Prompt.js",
-          "name": "./node_modules/react-router/Prompt.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         }
       ],
       "failed": false,
@@ -16663,9 +16663,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/prop-types/index.js",
@@ -16711,9 +16711,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-      "issuerId": "./node_modules/react-router/MemoryRouter.js",
-      "issuerName": "./node_modules/react-router/MemoryRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+      "issuerId": "./node_modules/react-router/Redirect.js",
+      "issuerName": "./node_modules/react-router/Redirect.js",
       "issuerPath": [
         {
           "id": 0,
@@ -16731,9 +16731,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         }
       ],
       "failed": false,
@@ -16911,9 +16911,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/prop-types/index.js",
@@ -20767,9 +20767,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/history/index.js",
@@ -21104,9 +21104,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/history/index.js",
@@ -21157,9 +21157,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-      "issuerId": "./node_modules/react-router/MemoryRouter.js",
-      "issuerName": "./node_modules/react-router/MemoryRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+      "issuerId": "./node_modules/react-router/Redirect.js",
+      "issuerName": "./node_modules/react-router/Redirect.js",
       "issuerPath": [
         {
           "id": 0,
@@ -21177,9 +21177,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         }
       ],
       "failed": false,
