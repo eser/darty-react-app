@@ -37,14 +37,12 @@
     "test": "dart test",
     "bundle": "dart bundle",
     "bundle:prod": "dart bundle:prod",
-    "bundleServer": "dart bundleServer",
-    "bundleServer:prod": "dart bundleServer:prod",
     "containerize": "dart containerize",
     "aws:copy": "aws s3 sync ./dist s3://dart-app",
     "aws:open": "start http://dart-app.s3-website-eu-west-1.amazonaws.com"
   },
   "dependencies": {
-    "dart": "^0.20.0",
+    "dart": "^0.22.0",
     "express": "^4.16.4"
   },
   "devDependencies": {

@@ -59,8 +59,6 @@ Use `npm run <task>` command in project folder to execute tasks defined in `pack
 | `init`                   | Initializes codebase.                                                                  |
 | `bundle`                 | Builds the project, generates required files for clients                               |
 | `bundle:prod`            | Builds the project, generates required files for clients (production)                  |
-| `bundleServer`           | Builds the project, generates required files for SSR                                   |
-| `bundleServer:prod`      | Builds the project, generates required files for SSR (production)                      |
 | `start`                  | Starts SSR-enabled express server                                                      |
 | `dev`                    | Enables live development environment powered by hot module reloading                   |
 | `lint`                   | Executes linter to check codebase against linting errors                               |
