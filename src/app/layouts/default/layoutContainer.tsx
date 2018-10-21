@@ -45,7 +45,7 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
                         <div className="container">
                             <div className="navbar-brand">
                                 {/* <div className="navbar-item">
-                                    ts-spa-boilerplate
+                                    Dart App
                                 </div> */}
                                 <span className="navbar-burger burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                                     <span aria-hidden="true"></span>
@@ -59,7 +59,7 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
                                     <NavLink to="/dummy/" className="navbar-item" activeClassName="is-active">Dummy</NavLink>
                                 </div>
                                 <div className="navbar-end">
-                                    <a className="navbar-item" href="https://github.com/eserozvataf/ts-spa-boilerplate">
+                                    <a className="navbar-item" href="https://github.com/eserozvataf/dart-app">
                                         <span className="icon"><i className="fa fa-code-fork fa-fw" aria-hidden="true"></i></span>
                                         GitHub
                                     </a>
@@ -78,8 +78,8 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
                 <footer className="footer hero-foot">
                     <div className="container">
                         <div className="content has-text-centered">
-                            TypeScript SPA Boilerplate is a front-end development stack for starting with a structured, scaleable and adaptable basecode.<br />
-                            Visit <a href="https://github.com/eserozvataf/ts-spa-boilerplate">GitHub page</a> for details. Apache License, Version 2.0
+                            Dart App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.<br />
+                            Visit <a href="https://github.com/eserozvataf/dart-app">GitHub page</a> for details. Apache License, Version 2.0
                         </div>
                     </div>
                 </footer>
