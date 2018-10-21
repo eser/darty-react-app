@@ -29,38 +29,44 @@ Dart App is a front-end development template for [Dart](https://github.com/esero
 * React Router for SPA routing.
 * Redux for state management.
 * bulma and Font-Awesome are included.
-* Jest for tests, ESLint for linting.
+* Jest and Enzyme for tests, ESLint for linting.
 * Webpack bundling with code splitting enabled.
 * express for server-side rendering.
 
 
 ## Quick start
 
+Ensure that `node.js` is installed on your system first.
+
+### Alternative 1
+Use the following command:
+
+```sh
+npx dart create app
+cd app
+npm run dev
+```
+
+### Alternative 2
 Clone the git repo and execute install dependencies from npm to get ready:
 
 ```sh
-git clone https://github.com/eserozvataf/dart-app.git project
-cd project
+git clone https://github.com/eserozvataf/dart-app.git app
+cd app
 npm install
 npm run dev
 ```
 
 ## NPM Tasks
 
-Ensure that `node.js` is installed on your system first.
-```bash
-$ node --version
-```
-
 Use `npm run <task>` command in project folder to execute tasks defined in `package.json`.
 
 | Task                     | Description                                                                            |
 |--------------------------|----------------------------------------------------------------------------------------|
-| `init`                   | Initializes codebase.                                                                  |
-| `bundle`                 | Builds the project, generates required files for clients                               |
-| `bundle:prod`            | Builds the project, generates required files for clients (production)                  |
+| `bundle`                 | Builds the project, generates required files                                           |
+| `bundle:prod`            | Builds the project, generates required files (production)                              |
 | `start`                  | Starts SSR-enabled express server                                                      |
-| `dev`                    | Enables live development environment powered by hot module reloading                   |
+| `dev`                    | Enables live development environment powered by hot module reloading          |
 | `lint`                   | Executes linter to check codebase against linting errors                               |
 | `test`                   | Runs tests to check codebase against unit testing scenerios                            |
 | `containerize`           | Build and runs container image for docker                                              |
@@ -73,14 +79,15 @@ Use `npm run <task>` command in project folder to execute tasks defined in `pack
 | `/src/`                                            | The folder for your source files                             |
 | `/src/app/`                                        | Main Application                                             |
 | `/src/app/actions/`                                | - Actions (coded UI actions for redux)                       |
-| `/src/app/assets/`                                 | - Assets (images, fonts, stylesheets, etc.)                  |
+| `/src/app/assets/`                                 | - Assets (images, fonts, stylesheets, etc.)              |
 | `/src/app/layouts/`                                | - Layouts / Templates                                        |
 | `/src/app/pages/`                                  | - Pages                                                      |
 | `/src/app/reducers/`                               | - Reducers (coded state logic for redux)                     |
 | `/src/app/appContainer.tsx`                        | - Main application router                                    |
-| `/src/app/appStore.tsx`                            | - Main application store for redux state management          |
+| `/src/app/appStore.tsx`                            | - Main application store for redux state management         |
 | `/src/startup.ts`                                  | The list and configuration of your mapped applications       |
-| `/public/`                                         | The folder for your static files will be on your webroot     |
+| `/src/index.html`                                  | The index file                                               |
+| `/public/`                                         | The folder for your static files will be on your webroot    |
 
 
 ## Todo List
