@@ -42,19 +42,19 @@
     "aws:open": "start http://dart-app.s3-website-eu-west-1.amazonaws.com"
   },
   "dependencies": {
-    "dart": "^0.27.0",
+    "dart": "^0.28.0",
     "express": "^4.16.4"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.14",
-    "@types/jest": "^23.3.5",
+    "@types/jest": "^23.3.7",
     "@types/react": "^16.4.18",
     "@types/react-router-dom": "^4.3.1",
     "bulma": "^0.7.2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "font-awesome": "^4.7.0",
-    "react": "^16.5.2",
+    "react": "^16.6.0",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",

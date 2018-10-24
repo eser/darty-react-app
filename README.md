@@ -66,10 +66,10 @@ Use `npm run <task>` command in project folder to execute tasks defined in `pack
 | `bundle`                 | Builds the project, generates required files                                           |
 | `bundle:prod`            | Builds the project, generates required files (production)                              |
 | `start`                  | Starts SSR-enabled express server                                                      |
-| `dev`                    | Enables live development environment powered by hot module reloading          |
+| `dev`                    | Enables live development environment powered by hot module reloading                   |
 | `lint`                   | Executes linter to check codebase against linting errors                               |
 | `test`                   | Runs tests to check codebase against unit testing scenerios                            |
-| `containerize`           | Build and runs container image for docker                                              |
+| `containerize`           | Creates containerization files and gives instructions for docker                       |
 
 
 ## Directory Structure
