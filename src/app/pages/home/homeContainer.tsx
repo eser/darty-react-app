@@ -15,11 +15,11 @@ class HomeContainer extends React.Component<HomeContainerProps, HomeContainerSta
 
     render(): JSX.Element {
         return (
-            <div>
+            <React.Fragment>
                 <h1 className={styles.title}>Home</h1>
 
                 ...and there is a dummy content
-            </div>
+            </React.Fragment>
         );
     }
 }

@@ -1,5 +1,7 @@
 # [Dart App](https://github.com/eserozvataf/dart-app)
 
+Dart is a front-end development system to allow developers to start their projects immediately. By Dart's convention over configuration mindset, webpack and typescript compiler configurations are handled by dart's itself.
+
 Dart App is a front-end development template for [Dart](https://github.com/eserozvataf/dart).
 
 * Source: [https://github.com/eserozvataf/dart-app](https://github.com/eserozvataf/dart-app)
@@ -39,10 +41,10 @@ Dart App is a front-end development template for [Dart](https://github.com/esero
 Ensure that `node.js` is installed on your system first.
 
 ### Alternative 1
-Use the following command:
+Use the following command to create app with [create-dart-app](https://github.com/eserozvataf/create-dart-app):
 
 ```sh
-npx dart create app
+npx create-dart-app app
 cd app
 npm run dev
 ```
@@ -51,7 +53,7 @@ npm run dev
 Clone the git repo and execute install dependencies from npm to get ready:
 
 ```sh
-git clone https://github.com/eserozvataf/dart-app.git app
+git clone --branch=master https://github.com/eserozvataf/dart-app.git app
 cd app
 npm install
 npm run dev

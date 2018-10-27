@@ -13,7 +13,9 @@ class LoadingView extends React.Component<LoadingViewProps, LoadingViewState> {
 
     render(): JSX.Element {
         return (
-            <div>Loading...</div>
+            <React.Fragment>
+                Loading...
+            </React.Fragment>
         );
     }
 }

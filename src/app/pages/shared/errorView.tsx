@@ -14,7 +14,9 @@ class ErrorView extends React.Component<ErrorViewProps, ErrorViewState> {
 
     render(): JSX.Element {
         return (
-            <div>Error: {this.props.message}</div>
+            <React.Fragment>
+                Error: {this.props.message}
+            </React.Fragment>
         );
     }
 }

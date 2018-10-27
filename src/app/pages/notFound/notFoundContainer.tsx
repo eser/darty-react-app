@@ -13,11 +13,11 @@ class NotFoundContainer extends React.Component<NotFoundContainerProps, NotFound
 
     render(): JSX.Element {
         return (
-            <div>
+            <React.Fragment>
                 <h1 className="title">Not Found</h1>
 
                 Page not found
-            </div>
+            </React.Fragment>
         );
     }
 }
