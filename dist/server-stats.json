@@ -5,9 +5,9 @@
     "./node_modules/encoding/lib/iconv-loader.js 6:12-34\nCritical dependency: the request of a dependency is an expression\n    at CommonJsRequireContextDependency.getWarnings (/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/webpack/lib/dependencies/ContextDependency.js:40:18)\n    at Compilation.reportDependencyErrorsAndWarnings (/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/webpack/lib/Compilation.js:1343:24)\n    at Compilation.finish (/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/webpack/lib/Compilation.js:1154:9)\n    at hooks.make.callAsync.err (/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/webpack/lib/Compiler.js:544:17)\n    at _err0 (eval at create (/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/tapable/lib/HookCodeFactory.js:32:10), <anonymous>:11:1)\n    at _addModuleChain (/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/webpack/lib/Compilation.js:1082:12)\n    at processModuleDependencies.err (/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/webpack/lib/Compilation.js:998:9)\n    at process._tickCallback (internal/process/next_tick.js:61:11)\n @ ./node_modules/encoding/lib/encoding.js\n @ ./node_modules/node-fetch/lib/index.js\n @ ./node_modules/dart/core/src/index.server.tsx\n @ multi ./node_modules/dart/core/src/index.server.tsx"
   ],
   "version": "4.23.1",
-  "hash": "649a4bb86a89dfa88020",
-  "time": 10265,
-  "builtAt": 1540778814036,
+  "hash": "b356b19a889203805930",
+  "time": 10950,
+  "builtAt": 1540782288545,
   "publicPath": "/",
   "outputPath": "/Users/eserozvataf/Projects/open-source/dart-react-app/dist",
   "assetsByChunkName": {
@@ -19,7 +19,7 @@
   "assets": [
     {
       "name": "server.js",
-      "size": 389436,
+      "size": 387905,
       "chunks": [
         0
       ],
@@ -30,7 +30,7 @@
     },
     {
       "name": "server.js.map",
-      "size": 850115,
+      "size": 849000,
       "chunks": [
         0
       ],
@@ -77,7 +77,7 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 616861,
+      "size": 613854,
       "names": [
         "server"
       ],
@@ -85,7 +85,7 @@
         "server.js",
         "server.js.map"
       ],
-      "hash": "6c36b5af9563dc2a5437",
+      "hash": "d42419c392194f61da0d",
       "siblings": [
       ],
       "parents": [
@@ -1687,7 +1687,7 @@
               "moduleName": "./src/startup.ts",
               "type": "cjs require",
               "userRequest": "history",
-              "loc": "28:16-34"
+              "loc": "21:16-34"
             }
           ],
           "usedExports": true,
@@ -4575,9 +4575,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Prompt.js",
-          "issuerId": "./node_modules/react-router/Prompt.js",
-          "issuerName": "./node_modules/react-router/Prompt.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+          "issuerId": "./node_modules/react-router/Redirect.js",
+          "issuerName": "./node_modules/react-router/Redirect.js",
           "issuerPath": [
             {
               "id": 0,
@@ -4605,9 +4605,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/Prompt.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Prompt.js",
-              "name": "./node_modules/react-router/Prompt.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             }
           ],
           "failed": false,
@@ -4873,9 +4873,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/matchPath.js",
-          "issuerId": "./node_modules/react-router/matchPath.js",
-          "issuerName": "./node_modules/react-router/matchPath.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/generatePath.js",
+          "issuerId": "./node_modules/react-router/generatePath.js",
+          "issuerName": "./node_modules/react-router/generatePath.js",
           "issuerPath": [
             {
               "id": 0,
@@ -4903,9 +4903,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/matchPath.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/matchPath.js",
-              "name": "./node_modules/react-router/matchPath.js"
+              "id": "./node_modules/react-router/generatePath.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/generatePath.js",
+              "name": "./node_modules/react-router/generatePath.js"
             }
           ],
           "failed": false,
@@ -4985,9 +4985,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/prop-types/index.js",
@@ -5033,9 +5033,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-          "issuerId": "./node_modules/react-router/MemoryRouter.js",
-          "issuerName": "./node_modules/react-router/MemoryRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+          "issuerId": "./node_modules/react-router/Redirect.js",
+          "issuerName": "./node_modules/react-router/Redirect.js",
           "issuerPath": [
             {
               "id": 0,
@@ -5063,9 +5063,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             }
           ],
           "failed": false,
@@ -5253,9 +5253,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             },
             {
               "id": "./node_modules/prop-types/index.js",
@@ -5485,7 +5485,7 @@
               "moduleName": "./src/startup.ts",
               "type": "cjs require",
               "userRequest": "react-dom",
-              "loc": "25:28-48"
+              "loc": "18:34-54"
             }
           ],
           "usedExports": true,
@@ -5548,7 +5548,7 @@
               "moduleName": "./src/startup.ts",
               "type": "cjs require",
               "userRequest": "react-dom/server",
-              "loc": "26:34-61"
+              "loc": "19:31-58"
             }
           ],
           "usedExports": true,
@@ -6569,7 +6569,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "react-redux",
-              "loc": "63:20-42"
+              "loc": "21:20-42"
             },
             {
               "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -8142,7 +8142,7 @@
               "moduleName": "./src/app/layouts/default/layoutContainer.tsx",
               "type": "cjs require",
               "userRequest": "react-router-dom",
-              "loc": "24:25-52"
+              "loc": "20:25-52"
             }
           ],
           "usedExports": true,
@@ -9013,7 +9013,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "react-router",
-              "loc": "62:21-44"
+              "loc": "20:21-44"
             },
             {
               "moduleId": "./src/startup.ts",
@@ -9022,7 +9022,7 @@
               "moduleName": "./src/startup.ts",
               "type": "cjs require",
               "userRequest": "react-router",
-              "loc": "27:21-44"
+              "loc": "20:21-44"
             }
           ],
           "usedExports": true,
@@ -9478,7 +9478,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "61:25-41"
+              "loc": "19:30-46"
             },
             {
               "moduleId": "./src/app/layouts/default/layoutContainer.tsx",
@@ -9487,7 +9487,7 @@
               "moduleName": "./src/app/layouts/default/layoutContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "23:25-41"
+              "loc": "19:30-46"
             },
             {
               "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -9496,7 +9496,7 @@
               "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "26:25-41"
+              "loc": "26:30-46"
             },
             {
               "moduleId": "./src/app/pages/dummy/summaryResultView.tsx",
@@ -9505,7 +9505,7 @@
               "moduleName": "./src/app/pages/dummy/summaryResultView.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "23:25-41"
+              "loc": "19:30-46"
             },
             {
               "moduleId": "./src/app/pages/home/homeContainer.tsx",
@@ -9514,7 +9514,7 @@
               "moduleName": "./src/app/pages/home/homeContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "23:25-41"
+              "loc": "26:30-46"
             },
             {
               "moduleId": "./src/app/pages/notFound/notFoundContainer.tsx",
@@ -9523,7 +9523,7 @@
               "moduleName": "./src/app/pages/notFound/notFoundContainer.tsx",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "23:25-41"
+              "loc": "26:30-46"
             },
             {
               "moduleId": "./src/startup.ts",
@@ -9532,7 +9532,7 @@
               "moduleName": "./src/startup.ts",
               "type": "cjs require",
               "userRequest": "react",
-              "loc": "24:25-41"
+              "loc": "17:30-46"
             }
           ],
           "usedExports": true,
@@ -10365,9 +10365,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-          "issuerId": "./node_modules/react-router/MemoryRouter.js",
-          "issuerName": "./node_modules/react-router/MemoryRouter.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+          "issuerId": "./node_modules/react-router/Redirect.js",
+          "issuerName": "./node_modules/react-router/Redirect.js",
           "issuerPath": [
             {
               "id": 0,
@@ -10395,9 +10395,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/MemoryRouter.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-              "name": "./node_modules/react-router/MemoryRouter.js"
+              "id": "./node_modules/react-router/Redirect.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+              "name": "./node_modules/react-router/Redirect.js"
             }
           ],
           "failed": false,
@@ -10668,7 +10668,7 @@
               "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
               "type": "cjs require",
               "userRequest": "../../actions/dummyRequest",
-              "loc": "30:37-74"
+              "loc": "31:37-74"
             }
           ],
           "usedExports": true,
@@ -10685,7 +10685,7 @@
           "name": "./src/app/appContainer.tsx",
           "index": 77,
           "index2": 126,
-          "size": 5867,
+          "size": 2765,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -10731,7 +10731,7 @@
               "moduleName": "./src/startup.ts",
               "type": "cjs require",
               "userRequest": "./app/appContainer",
-              "loc": "29:37-66"
+              "loc": "22:37-66"
             }
           ],
           "usedExports": true,
@@ -10740,7 +10740,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 4,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_1 = require(\"react-router\");\nvar react_redux_1 = require(\"react-redux\");\nvar appStore_1 = __importDefault(require(\"./appStore\"));\nvar layoutContainer_1 = __importDefault(require(\"./layouts/default/layoutContainer\"));\nvar homeContainer_1 = __importDefault(require(\"./pages/home/homeContainer\"));\nvar dummyContainer_1 = __importDefault(require(\"./pages/dummy/dummyContainer\"));\nvar notFoundContainer_1 = __importDefault(require(\"./pages/notFound/notFoundContainer\"));\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        var initialState = {};\n        return (React.createElement(react_redux_1.Provider, { store: appStore_1.default(initialState) },\n            React.createElement(react_router_1.Switch, null,\n                React.createElement(react_router_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                        React.createElement(homeContainer_1.default, null)); } }),\n                React.createElement(react_router_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                        React.createElement(dummyContainer_1.default, null)); } }),\n                React.createElement(react_router_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } }))));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar react_router_1 = require(\"react-router\");\nvar react_redux_1 = require(\"react-redux\");\nvar appStore_1 = __importDefault(require(\"./appStore\"));\nvar layoutContainer_1 = __importDefault(require(\"./layouts/default/layoutContainer\"));\nvar homeContainer_1 = __importDefault(require(\"./pages/home/homeContainer\"));\nvar dummyContainer_1 = __importDefault(require(\"./pages/dummy/dummyContainer\"));\nvar notFoundContainer_1 = __importDefault(require(\"./pages/notFound/notFoundContainer\"));\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    AppContainer.prototype.render = function () {\n        var initialState = {};\n        return (react_1.default.createElement(react_redux_1.Provider, { store: appStore_1.default(initialState) },\n            react_1.default.createElement(react_router_1.Switch, null,\n                react_1.default.createElement(react_router_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return react_1.default.createElement(layoutContainer_1.default, null,\n                        react_1.default.createElement(homeContainer_1.default, null)); } }),\n                react_1.default.createElement(react_router_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return react_1.default.createElement(layoutContainer_1.default, null,\n                        react_1.default.createElement(dummyContainer_1.default, null)); } }),\n                react_1.default.createElement(react_router_1.Route, { render: function () { return react_1.default.createElement(notFoundContainer_1.default, null); } }))));\n    };\n    return AppContainer;\n}(react_1.default.Component));\nexports.default = AppContainer;\n"
         },
         {
           "id": "./src/app/appStore.ts",
@@ -10799,7 +10799,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./appStore",
-              "loc": "64:33-54"
+              "loc": "22:33-54"
             }
           ],
           "usedExports": true,
@@ -10867,7 +10867,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./assets/fonts.scss",
-              "loc": "70:0-30"
+              "loc": "28:0-30"
             }
           ],
           "usedExports": true,
@@ -10935,7 +10935,16 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./assets/styles.scss",
-              "loc": "69:0-31"
+              "loc": "27:0-31"
+            },
+            {
+              "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
+              "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/src/app/pages/dummy/dummyContainer.tsx",
+              "module": "./src/app/pages/dummy/dummyContainer.tsx",
+              "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
+              "type": "cjs require",
+              "userRequest": "../../assets/styles.scss",
+              "loc": "29:26-61"
             },
             {
               "moduleId": "./src/app/pages/home/homeContainer.tsx",
@@ -10944,7 +10953,16 @@
               "moduleName": "./src/app/pages/home/homeContainer.tsx",
               "type": "cjs require",
               "userRequest": "../../assets/styles.scss",
-              "loc": "24:26-61"
+              "loc": "27:26-61"
+            },
+            {
+              "moduleId": "./src/app/pages/notFound/notFoundContainer.tsx",
+              "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/src/app/pages/notFound/notFoundContainer.tsx",
+              "module": "./src/app/pages/notFound/notFoundContainer.tsx",
+              "moduleName": "./src/app/pages/notFound/notFoundContainer.tsx",
+              "type": "cjs require",
+              "userRequest": "../../assets/styles.scss",
+              "loc": "27:26-61"
             }
           ],
           "usedExports": true,
@@ -10961,7 +10979,7 @@
           "name": "./src/app/layouts/default/layoutContainer.tsx",
           "index": 108,
           "index2": 118,
-          "size": 4545,
+          "size": 4389,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -11012,7 +11030,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./layouts/default/layoutContainer",
-              "loc": "65:40-84"
+              "loc": "23:40-84"
             }
           ],
           "usedExports": true,
@@ -11021,7 +11039,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 5,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar LayoutContainer = (function (_super) {\n    __extends(LayoutContainer, _super);\n    function LayoutContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    LayoutContainer.prototype.clickHandler = function (ev) {\n        var target = ev.target;\n        if (target.tagName === 'A') {\n            var url = target.getAttribute('href');\n            if (url !== null) {\n            }\n        }\n    };\n    LayoutContainer.prototype.render = function () {\n        return (React.createElement(\"div\", { className: \"hero is-fullheight\" },\n            React.createElement(\"header\", { className: \"header hero-head\" },\n                React.createElement(\"nav\", { className: \"navbar is-transparent\", role: \"navigation\", \"aria-label\": \"main navigation\" },\n                    React.createElement(\"div\", { className: \"container\" },\n                        React.createElement(\"div\", { className: \"navbar-brand\" },\n                            React.createElement(\"span\", { className: \"navbar-burger burger\", role: \"button\", \"aria-label\": \"menu\", \"aria-expanded\": \"false\", \"data-target\": \"navbarMenu\" },\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }))),\n                        React.createElement(\"div\", { id: \"navbarMenu\", className: \"navbar-menu\" },\n                            React.createElement(\"div\", { className: \"navbar-start\" },\n                                React.createElement(react_router_dom_1.NavLink, { exact: true, to: \"/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Home\"),\n                                React.createElement(react_router_dom_1.NavLink, { to: \"/dummy/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Dummy\")),\n                            React.createElement(\"div\", { className: \"navbar-end\" },\n                                React.createElement(\"a\", { className: \"navbar-item\", href: \"https://github.com/eserozvataf/dart-react-app\" },\n                                    React.createElement(\"span\", { className: \"icon\" },\n                                        React.createElement(\"i\", { className: \"fa fa-code-fork fa-fw\", \"aria-hidden\": \"true\" })),\n                                    \"GitHub\")))))),\n            React.createElement(\"main\", { className: \"section hero-body\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content\", onClick: this.clickHandler.bind(this) }, this.props.children))),\n            React.createElement(\"footer\", { className: \"footer hero-foot\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content has-text-centered\" },\n                        \"Dart App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.\",\n                        React.createElement(\"br\", null),\n                        \"Visit \",\n                        React.createElement(\"a\", { href: \"https://github.com/eserozvataf/dart-react-app\" }, \"GitHub page\"),\n                        \" for details. Apache License, Version 2.0\")))));\n    };\n    return LayoutContainer;\n}(React.Component));\nexports.default = LayoutContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar LayoutContainer = (function (_super) {\n    __extends(LayoutContainer, _super);\n    function LayoutContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    LayoutContainer.prototype.render = function () {\n        return (react_1.default.createElement(\"div\", { className: \"hero is-fullheight\" },\n            react_1.default.createElement(\"header\", { className: \"header hero-head\" },\n                react_1.default.createElement(\"nav\", { className: \"navbar is-transparent\", role: \"navigation\", \"aria-label\": \"main navigation\" },\n                    react_1.default.createElement(\"div\", { className: \"container\" },\n                        react_1.default.createElement(\"div\", { className: \"navbar-brand\" },\n                            react_1.default.createElement(\"span\", { className: \"navbar-burger burger\", role: \"button\", \"aria-label\": \"menu\", \"aria-expanded\": \"false\", \"data-target\": \"navbarMenu\" },\n                                react_1.default.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                react_1.default.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                react_1.default.createElement(\"span\", { \"aria-hidden\": \"true\" }))),\n                        react_1.default.createElement(\"div\", { id: \"navbarMenu\", className: \"navbar-menu\" },\n                            react_1.default.createElement(\"div\", { className: \"navbar-start\" },\n                                react_1.default.createElement(react_router_dom_1.NavLink, { exact: true, to: \"/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Home\"),\n                                react_1.default.createElement(react_router_dom_1.NavLink, { to: \"/dummy/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Dummy\")),\n                            react_1.default.createElement(\"div\", { className: \"navbar-end\" },\n                                react_1.default.createElement(\"a\", { className: \"navbar-item\", href: \"https://github.com/eserozvataf/dart-react-app\" },\n                                    react_1.default.createElement(\"span\", { className: \"icon\" },\n                                        react_1.default.createElement(\"i\", { className: \"fa fa-code-fork fa-fw\", \"aria-hidden\": \"true\" })),\n                                    \"GitHub\")))))),\n            react_1.default.createElement(\"main\", { className: \"section hero-body\" },\n                react_1.default.createElement(\"div\", { className: \"container\" },\n                    react_1.default.createElement(\"div\", { className: \"content\" }, this.props.children))),\n            react_1.default.createElement(\"footer\", { className: \"footer hero-foot\" },\n                react_1.default.createElement(\"div\", { className: \"container\" },\n                    react_1.default.createElement(\"div\", { className: \"content has-text-centered\" },\n                        \"Dart React App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.\",\n                        react_1.default.createElement(\"br\", null),\n                        \"Visit \",\n                        react_1.default.createElement(\"a\", { href: \"https://github.com/eserozvataf/dart-react-app\" }, \"GitHub page\"),\n                        \" for details. Apache License, Version 2.0\")))));\n    };\n    return LayoutContainer;\n}(react_1.default.Component));\nexports.default = LayoutContainer;\n"
         },
         {
           "id": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -11029,7 +11047,7 @@
           "name": "./src/app/pages/dummy/dummyContainer.tsx",
           "index": 126,
           "index2": 123,
-          "size": 2898,
+          "size": 3031,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -11080,7 +11098,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./pages/dummy/dummyContainer",
-              "loc": "67:39-78"
+              "loc": "25:39-78"
             }
           ],
           "usedExports": true,
@@ -11089,7 +11107,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 5,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar redux_1 = require(\"redux\");\nvar react_redux_1 = require(\"react-redux\");\nvar summaryResultView_1 = __importDefault(require(\"./summaryResultView\"));\nvar dummyRequest_1 = __importDefault(require(\"../../actions/dummyRequest\"));\nvar DummyContainer = (function (_super) {\n    __extends(DummyContainer, _super);\n    function DummyContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            firstNumber: 4,\n            secondNumber: 7,\n        };\n        return _this;\n    }\n    DummyContainer.prototype.componentDidMount = function () {\n        this.update();\n    };\n    DummyContainer.prototype.update = function () {\n        this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);\n    };\n    DummyContainer.prototype.render = function () {\n        var summary;\n        if (this.props.dummy.loading) {\n            summary = 'Calculating...';\n        }\n        else {\n            summary = this.props.dummy.result;\n        }\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Dummy\"),\n            React.createElement(summaryResultView_1.default, { firstNumber: this.state.firstNumber, secondNumber: this.state.secondNumber, summary: summary })));\n    };\n    return DummyContainer;\n}(React.Component));\nexports.DummyContainer = DummyContainer;\nvar mapStateToProps = function (state) { return ({\n    dummy: state.dummy,\n}); };\nvar mapDispatchToProps = function (dispatch) { return redux_1.bindActionCreators({\n    dummyRequestAction: dummyRequest_1.default,\n}, dispatch); };\nvar DummyContainerConnected = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(DummyContainer);\nexports.default = DummyContainerConnected;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar redux_1 = require(\"redux\");\nvar react_redux_1 = require(\"react-redux\");\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar summaryResultView_1 = __importDefault(require(\"./summaryResultView\"));\nvar dummyRequest_1 = __importDefault(require(\"../../actions/dummyRequest\"));\nvar DummyContainer = (function (_super) {\n    __extends(DummyContainer, _super);\n    function DummyContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            firstNumber: 4,\n            secondNumber: 7,\n        };\n        return _this;\n    }\n    DummyContainer.prototype.componentDidMount = function () {\n        this.update();\n    };\n    DummyContainer.prototype.update = function () {\n        this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);\n    };\n    DummyContainer.prototype.render = function () {\n        var summary;\n        if (this.props.dummy.loading) {\n            summary = 'Calculating...';\n        }\n        else {\n            summary = this.props.dummy.result;\n        }\n        return (react_1.default.createElement(react_1.default.Fragment, null,\n            react_1.default.createElement(\"h1\", { className: styles.title }, \"Dummy\"),\n            react_1.default.createElement(summaryResultView_1.default, { firstNumber: this.state.firstNumber, secondNumber: this.state.secondNumber, summary: summary })));\n    };\n    return DummyContainer;\n}(react_1.default.Component));\nexports.DummyContainer = DummyContainer;\nvar mapStateToProps = function (state) { return ({\n    dummy: state.dummy,\n}); };\nvar mapDispatchToProps = function (dispatch) { return redux_1.bindActionCreators({\n    dummyRequestAction: dummyRequest_1.default,\n}, dispatch); };\nvar DummyContainerConnected = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(DummyContainer);\nexports.default = DummyContainerConnected;\n"
         },
         {
           "id": "./src/app/pages/dummy/summaryResultView.tsx",
@@ -11097,7 +11115,7 @@
           "name": "./src/app/pages/dummy/summaryResultView.tsx",
           "index": 127,
           "index2": 121,
-          "size": 1536,
+          "size": 1437,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -11153,7 +11171,7 @@
               "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
               "type": "cjs require",
               "userRequest": "./summaryResultView",
-              "loc": "29:42-72"
+              "loc": "30:42-72"
             }
           ],
           "usedExports": true,
@@ -11162,7 +11180,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 6,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar SummaryResultView = (function (_super) {\n    __extends(SummaryResultView, _super);\n    function SummaryResultView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    SummaryResultView.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            this.props.firstNumber,\n            \" + \",\n            this.props.secondNumber,\n            \" = \",\n            this.props.summary));\n    };\n    return SummaryResultView;\n}(React.PureComponent));\nexports.default = SummaryResultView;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar SummaryResultView = (function (_super) {\n    __extends(SummaryResultView, _super);\n    function SummaryResultView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    SummaryResultView.prototype.render = function () {\n        return (react_1.default.createElement(react_1.default.Fragment, null,\n            this.props.firstNumber,\n            \" + \",\n            this.props.secondNumber,\n            \" = \",\n            this.props.summary));\n    };\n    return SummaryResultView;\n}(react_1.default.PureComponent));\nexports.default = SummaryResultView;\n"
         },
         {
           "id": "./src/app/pages/home/homeContainer.tsx",
@@ -11170,7 +11188,7 @@
           "name": "./src/app/pages/home/homeContainer.tsx",
           "index": 124,
           "index2": 120,
-          "size": 1552,
+          "size": 1736,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -11221,7 +11239,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./pages/home/homeContainer",
-              "loc": "66:38-75"
+              "loc": "24:38-75"
             }
           ],
           "usedExports": true,
@@ -11230,7 +11248,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 5,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(React.Fragment, null,\n            React.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (react_1.default.createElement(react_1.default.Fragment, null,\n            react_1.default.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(react_1.default.Component));\nexports.default = HomeContainer;\n"
         },
         {
           "id": "./src/app/pages/notFound/notFoundContainer.tsx",
@@ -11238,7 +11256,7 @@
           "name": "./src/app/pages/notFound/notFoundContainer.tsx",
           "index": 129,
           "index2": 124,
-          "size": 1504,
+          "size": 1757,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -11289,7 +11307,7 @@
               "moduleName": "./src/app/appContainer.tsx",
               "type": "cjs require",
               "userRequest": "./pages/notFound/notFoundContainer",
-              "loc": "68:42-87"
+              "loc": "26:42-87"
             }
           ],
           "usedExports": true,
@@ -11298,7 +11316,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 5,
-          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (React.createElement(React.Fragment, null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(React.Component));\nexports.default = NotFoundContainer;\n"
+          "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (react_1.default.createElement(react_1.default.Fragment, null,\n            react_1.default.createElement(\"h1\", { className: styles.title }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(react_1.default.Component));\nexports.default = NotFoundContainer;\n"
         },
         {
           "id": "./src/app/reducers/dummy.ts",
@@ -11379,7 +11397,7 @@
           "name": "./src/startup.ts",
           "index": 36,
           "index2": 127,
-          "size": 2399,
+          "size": 2179,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -11429,7 +11447,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 3,
-          "source": "\"use strict\";\nvar __assign = (this && this.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar ReactDOM = __importStar(require(\"react-dom\"));\nvar ReactDOMServer = __importStar(require(\"react-dom/server\"));\nvar react_router_1 = require(\"react-router\");\nvar history_1 = require(\"history\");\nvar appContainer_1 = __importDefault(require(\"./app/appContainer\"));\nvar Startup = (function () {\n    function Startup(startupArgs) {\n        var isBrowser = (startupArgs.platform === 'browser');\n        this.vars = __assign({}, startupArgs, { history: isBrowser ? history_1.createBrowserHistory() : null });\n    }\n    Startup.prototype.getRoot = function () {\n        return React.createElement(appContainer_1.default, {});\n    };\n    Startup.prototype.clientRender = function (targetElement, isUpdate) {\n        var root = this.getRoot();\n        var rootWithRouter = React.createElement(react_router_1.Router, {\n            history: this.vars.history,\n        }, root);\n        if (isUpdate) {\n            ReactDOM.hydrate(rootWithRouter, targetElement);\n        }\n        else {\n            ReactDOM.render(rootWithRouter, targetElement);\n        }\n    };\n    Startup.prototype.serverRender = function (url) {\n        var context = {};\n        var root = this.getRoot();\n        var rootWithRouter = React.createElement(react_router_1.StaticRouter, {\n            location: url,\n            context: context,\n        }, root);\n        var html = ReactDOMServer.renderToString(rootWithRouter);\n        return html;\n    };\n    return Startup;\n}());\nexports.default = Startup;\n"
+          "source": "\"use strict\";\nvar __assign = (this && this.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar react_dom_1 = __importDefault(require(\"react-dom\"));\nvar server_1 = __importDefault(require(\"react-dom/server\"));\nvar react_router_1 = require(\"react-router\");\nvar history_1 = require(\"history\");\nvar appContainer_1 = __importDefault(require(\"./app/appContainer\"));\nvar Startup = (function () {\n    function Startup(startupArgs) {\n        var isBrowser = (startupArgs.platform === 'browser');\n        this.vars = __assign({}, startupArgs, { history: isBrowser ? history_1.createBrowserHistory() : null });\n    }\n    Startup.prototype.getRoot = function () {\n        return react_1.default.createElement(appContainer_1.default, {});\n    };\n    Startup.prototype.clientRender = function (targetElement, isUpdate) {\n        var root = this.getRoot();\n        var rootWithRouter = react_1.default.createElement(react_router_1.Router, {\n            history: this.vars.history,\n        }, root);\n        if (isUpdate) {\n            react_dom_1.default.hydrate(rootWithRouter, targetElement);\n        }\n        else {\n            react_dom_1.default.render(rootWithRouter, targetElement);\n        }\n    };\n    Startup.prototype.serverRender = function (url) {\n        var context = {};\n        var root = this.getRoot();\n        var rootWithRouter = react_1.default.createElement(react_router_1.StaticRouter, {\n            location: url,\n            context: context,\n        }, root);\n        var html = server_1.default.renderToString(rootWithRouter);\n        return html;\n    };\n    return Startup;\n}());\nexports.default = Startup;\n"
         },
         {
           "id": "buffer",
@@ -13538,7 +13556,7 @@
           "moduleName": "./src/startup.ts",
           "type": "cjs require",
           "userRequest": "history",
-          "loc": "28:16-34"
+          "loc": "21:16-34"
         }
       ],
       "usedExports": true,
@@ -16426,9 +16444,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Prompt.js",
-      "issuerId": "./node_modules/react-router/Prompt.js",
-      "issuerName": "./node_modules/react-router/Prompt.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+      "issuerId": "./node_modules/react-router/Redirect.js",
+      "issuerName": "./node_modules/react-router/Redirect.js",
       "issuerPath": [
         {
           "id": 0,
@@ -16456,9 +16474,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/Prompt.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Prompt.js",
-          "name": "./node_modules/react-router/Prompt.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         }
       ],
       "failed": false,
@@ -16724,9 +16742,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/matchPath.js",
-      "issuerId": "./node_modules/react-router/matchPath.js",
-      "issuerName": "./node_modules/react-router/matchPath.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/generatePath.js",
+      "issuerId": "./node_modules/react-router/generatePath.js",
+      "issuerName": "./node_modules/react-router/generatePath.js",
       "issuerPath": [
         {
           "id": 0,
@@ -16754,9 +16772,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/matchPath.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/matchPath.js",
-          "name": "./node_modules/react-router/matchPath.js"
+          "id": "./node_modules/react-router/generatePath.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/generatePath.js",
+          "name": "./node_modules/react-router/generatePath.js"
         }
       ],
       "failed": false,
@@ -16836,9 +16854,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/prop-types/index.js",
@@ -16884,9 +16902,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-      "issuerId": "./node_modules/react-router/MemoryRouter.js",
-      "issuerName": "./node_modules/react-router/MemoryRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+      "issuerId": "./node_modules/react-router/Redirect.js",
+      "issuerName": "./node_modules/react-router/Redirect.js",
       "issuerPath": [
         {
           "id": 0,
@@ -16914,9 +16932,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         }
       ],
       "failed": false,
@@ -17104,9 +17122,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         },
         {
           "id": "./node_modules/prop-types/index.js",
@@ -17336,7 +17354,7 @@
           "moduleName": "./src/startup.ts",
           "type": "cjs require",
           "userRequest": "react-dom",
-          "loc": "25:28-48"
+          "loc": "18:34-54"
         }
       ],
       "usedExports": true,
@@ -17399,7 +17417,7 @@
           "moduleName": "./src/startup.ts",
           "type": "cjs require",
           "userRequest": "react-dom/server",
-          "loc": "26:34-61"
+          "loc": "19:31-58"
         }
       ],
       "usedExports": true,
@@ -18420,7 +18438,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "react-redux",
-          "loc": "63:20-42"
+          "loc": "21:20-42"
         },
         {
           "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -19993,7 +20011,7 @@
           "moduleName": "./src/app/layouts/default/layoutContainer.tsx",
           "type": "cjs require",
           "userRequest": "react-router-dom",
-          "loc": "24:25-52"
+          "loc": "20:25-52"
         }
       ],
       "usedExports": true,
@@ -20864,7 +20882,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "react-router",
-          "loc": "62:21-44"
+          "loc": "20:21-44"
         },
         {
           "moduleId": "./src/startup.ts",
@@ -20873,7 +20891,7 @@
           "moduleName": "./src/startup.ts",
           "type": "cjs require",
           "userRequest": "react-router",
-          "loc": "27:21-44"
+          "loc": "20:21-44"
         }
       ],
       "usedExports": true,
@@ -21329,7 +21347,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "61:25-41"
+          "loc": "19:30-46"
         },
         {
           "moduleId": "./src/app/layouts/default/layoutContainer.tsx",
@@ -21338,7 +21356,7 @@
           "moduleName": "./src/app/layouts/default/layoutContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "23:25-41"
+          "loc": "19:30-46"
         },
         {
           "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -21347,7 +21365,7 @@
           "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "26:25-41"
+          "loc": "26:30-46"
         },
         {
           "moduleId": "./src/app/pages/dummy/summaryResultView.tsx",
@@ -21356,7 +21374,7 @@
           "moduleName": "./src/app/pages/dummy/summaryResultView.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "23:25-41"
+          "loc": "19:30-46"
         },
         {
           "moduleId": "./src/app/pages/home/homeContainer.tsx",
@@ -21365,7 +21383,7 @@
           "moduleName": "./src/app/pages/home/homeContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "23:25-41"
+          "loc": "26:30-46"
         },
         {
           "moduleId": "./src/app/pages/notFound/notFoundContainer.tsx",
@@ -21374,7 +21392,7 @@
           "moduleName": "./src/app/pages/notFound/notFoundContainer.tsx",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "23:25-41"
+          "loc": "26:30-46"
         },
         {
           "moduleId": "./src/startup.ts",
@@ -21383,7 +21401,7 @@
           "moduleName": "./src/startup.ts",
           "type": "cjs require",
           "userRequest": "react",
-          "loc": "24:25-41"
+          "loc": "17:30-46"
         }
       ],
       "usedExports": true,
@@ -22216,9 +22234,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-      "issuerId": "./node_modules/react-router/MemoryRouter.js",
-      "issuerName": "./node_modules/react-router/MemoryRouter.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+      "issuerId": "./node_modules/react-router/Redirect.js",
+      "issuerName": "./node_modules/react-router/Redirect.js",
       "issuerPath": [
         {
           "id": 0,
@@ -22246,9 +22264,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/MemoryRouter.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/MemoryRouter.js",
-          "name": "./node_modules/react-router/MemoryRouter.js"
+          "id": "./node_modules/react-router/Redirect.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/Redirect.js",
+          "name": "./node_modules/react-router/Redirect.js"
         }
       ],
       "failed": false,
@@ -22519,7 +22537,7 @@
           "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
           "type": "cjs require",
           "userRequest": "../../actions/dummyRequest",
-          "loc": "30:37-74"
+          "loc": "31:37-74"
         }
       ],
       "usedExports": true,
@@ -22536,7 +22554,7 @@
       "name": "./src/app/appContainer.tsx",
       "index": 77,
       "index2": 126,
-      "size": 5867,
+      "size": 2765,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -22582,7 +22600,7 @@
           "moduleName": "./src/startup.ts",
           "type": "cjs require",
           "userRequest": "./app/appContainer",
-          "loc": "29:37-66"
+          "loc": "22:37-66"
         }
       ],
       "usedExports": true,
@@ -22591,7 +22609,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 4,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nvar __generator = (this && this.__generator) || function (thisArg, body) {\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\n    function verb(n) { return function (v) { return step([n, v]); }; }\n    function step(op) {\n        if (f) throw new TypeError(\"Generator is already executing.\");\n        while (_) try {\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\n            if (y = 0, t) op = [op[0] & 2, t.value];\n            switch (op[0]) {\n                case 0: case 1: t = op; break;\n                case 4: _.label++; return { value: op[1], done: false };\n                case 5: _.label++; y = op[1]; op = [0]; continue;\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\n                default:\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\n                    if (t[2]) _.ops.pop();\n                    _.trys.pop(); continue;\n            }\n            op = body.call(thisArg, _);\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\n    }\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_1 = require(\"react-router\");\nvar react_redux_1 = require(\"react-redux\");\nvar appStore_1 = __importDefault(require(\"./appStore\"));\nvar layoutContainer_1 = __importDefault(require(\"./layouts/default/layoutContainer\"));\nvar homeContainer_1 = __importDefault(require(\"./pages/home/homeContainer\"));\nvar dummyContainer_1 = __importDefault(require(\"./pages/dummy/dummyContainer\"));\nvar notFoundContainer_1 = __importDefault(require(\"./pages/notFound/notFoundContainer\"));\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            initialized: false,\n        };\n        return _this;\n    }\n    AppContainer.prototype.init = function () {\n        return __awaiter(this, void 0, Promise, function () {\n            return __generator(this, function (_a) {\n                if (this.state.initialized) {\n                    return [2];\n                }\n                this.setState({\n                    initialized: true,\n                });\n                return [2];\n            });\n        });\n    };\n    AppContainer.prototype.componentDidMount = function () {\n        this.init();\n    };\n    AppContainer.prototype.render = function () {\n        var initialState = {};\n        return (React.createElement(react_redux_1.Provider, { store: appStore_1.default(initialState) },\n            React.createElement(react_router_1.Switch, null,\n                React.createElement(react_router_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                        React.createElement(homeContainer_1.default, null)); } }),\n                React.createElement(react_router_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return React.createElement(layoutContainer_1.default, null,\n                        React.createElement(dummyContainer_1.default, null)); } }),\n                React.createElement(react_router_1.Route, { render: function () { return React.createElement(notFoundContainer_1.default, null); } }))));\n    };\n    return AppContainer;\n}(React.Component));\nexports.default = AppContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar react_router_1 = require(\"react-router\");\nvar react_redux_1 = require(\"react-redux\");\nvar appStore_1 = __importDefault(require(\"./appStore\"));\nvar layoutContainer_1 = __importDefault(require(\"./layouts/default/layoutContainer\"));\nvar homeContainer_1 = __importDefault(require(\"./pages/home/homeContainer\"));\nvar dummyContainer_1 = __importDefault(require(\"./pages/dummy/dummyContainer\"));\nvar notFoundContainer_1 = __importDefault(require(\"./pages/notFound/notFoundContainer\"));\nrequire(\"./assets/styles.scss\");\nrequire(\"./assets/fonts.scss\");\nvar AppContainer = (function (_super) {\n    __extends(AppContainer, _super);\n    function AppContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    AppContainer.prototype.render = function () {\n        var initialState = {};\n        return (react_1.default.createElement(react_redux_1.Provider, { store: appStore_1.default(initialState) },\n            react_1.default.createElement(react_router_1.Switch, null,\n                react_1.default.createElement(react_router_1.Route, { path: \"/\", exact: true, strict: true, render: function () { return react_1.default.createElement(layoutContainer_1.default, null,\n                        react_1.default.createElement(homeContainer_1.default, null)); } }),\n                react_1.default.createElement(react_router_1.Route, { path: \"/dummy/\", exact: true, strict: true, render: function () { return react_1.default.createElement(layoutContainer_1.default, null,\n                        react_1.default.createElement(dummyContainer_1.default, null)); } }),\n                react_1.default.createElement(react_router_1.Route, { render: function () { return react_1.default.createElement(notFoundContainer_1.default, null); } }))));\n    };\n    return AppContainer;\n}(react_1.default.Component));\nexports.default = AppContainer;\n"
     },
     {
       "id": "./src/app/appStore.ts",
@@ -22650,7 +22668,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./appStore",
-          "loc": "64:33-54"
+          "loc": "22:33-54"
         }
       ],
       "usedExports": true,
@@ -22718,7 +22736,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./assets/fonts.scss",
-          "loc": "70:0-30"
+          "loc": "28:0-30"
         }
       ],
       "usedExports": true,
@@ -22786,7 +22804,16 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./assets/styles.scss",
-          "loc": "69:0-31"
+          "loc": "27:0-31"
+        },
+        {
+          "moduleId": "./src/app/pages/dummy/dummyContainer.tsx",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/src/app/pages/dummy/dummyContainer.tsx",
+          "module": "./src/app/pages/dummy/dummyContainer.tsx",
+          "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
+          "type": "cjs require",
+          "userRequest": "../../assets/styles.scss",
+          "loc": "29:26-61"
         },
         {
           "moduleId": "./src/app/pages/home/homeContainer.tsx",
@@ -22795,7 +22822,16 @@
           "moduleName": "./src/app/pages/home/homeContainer.tsx",
           "type": "cjs require",
           "userRequest": "../../assets/styles.scss",
-          "loc": "24:26-61"
+          "loc": "27:26-61"
+        },
+        {
+          "moduleId": "./src/app/pages/notFound/notFoundContainer.tsx",
+          "moduleIdentifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/src/app/pages/notFound/notFoundContainer.tsx",
+          "module": "./src/app/pages/notFound/notFoundContainer.tsx",
+          "moduleName": "./src/app/pages/notFound/notFoundContainer.tsx",
+          "type": "cjs require",
+          "userRequest": "../../assets/styles.scss",
+          "loc": "27:26-61"
         }
       ],
       "usedExports": true,
@@ -22812,7 +22848,7 @@
       "name": "./src/app/layouts/default/layoutContainer.tsx",
       "index": 108,
       "index2": 118,
-      "size": 4545,
+      "size": 4389,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -22863,7 +22899,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./layouts/default/layoutContainer",
-          "loc": "65:40-84"
+          "loc": "23:40-84"
         }
       ],
       "usedExports": true,
@@ -22872,7 +22908,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 5,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar LayoutContainer = (function (_super) {\n    __extends(LayoutContainer, _super);\n    function LayoutContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    LayoutContainer.prototype.clickHandler = function (ev) {\n        var target = ev.target;\n        if (target.tagName === 'A') {\n            var url = target.getAttribute('href');\n            if (url !== null) {\n            }\n        }\n    };\n    LayoutContainer.prototype.render = function () {\n        return (React.createElement(\"div\", { className: \"hero is-fullheight\" },\n            React.createElement(\"header\", { className: \"header hero-head\" },\n                React.createElement(\"nav\", { className: \"navbar is-transparent\", role: \"navigation\", \"aria-label\": \"main navigation\" },\n                    React.createElement(\"div\", { className: \"container\" },\n                        React.createElement(\"div\", { className: \"navbar-brand\" },\n                            React.createElement(\"span\", { className: \"navbar-burger burger\", role: \"button\", \"aria-label\": \"menu\", \"aria-expanded\": \"false\", \"data-target\": \"navbarMenu\" },\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                React.createElement(\"span\", { \"aria-hidden\": \"true\" }))),\n                        React.createElement(\"div\", { id: \"navbarMenu\", className: \"navbar-menu\" },\n                            React.createElement(\"div\", { className: \"navbar-start\" },\n                                React.createElement(react_router_dom_1.NavLink, { exact: true, to: \"/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Home\"),\n                                React.createElement(react_router_dom_1.NavLink, { to: \"/dummy/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Dummy\")),\n                            React.createElement(\"div\", { className: \"navbar-end\" },\n                                React.createElement(\"a\", { className: \"navbar-item\", href: \"https://github.com/eserozvataf/dart-react-app\" },\n                                    React.createElement(\"span\", { className: \"icon\" },\n                                        React.createElement(\"i\", { className: \"fa fa-code-fork fa-fw\", \"aria-hidden\": \"true\" })),\n                                    \"GitHub\")))))),\n            React.createElement(\"main\", { className: \"section hero-body\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content\", onClick: this.clickHandler.bind(this) }, this.props.children))),\n            React.createElement(\"footer\", { className: \"footer hero-foot\" },\n                React.createElement(\"div\", { className: \"container\" },\n                    React.createElement(\"div\", { className: \"content has-text-centered\" },\n                        \"Dart App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.\",\n                        React.createElement(\"br\", null),\n                        \"Visit \",\n                        React.createElement(\"a\", { href: \"https://github.com/eserozvataf/dart-react-app\" }, \"GitHub page\"),\n                        \" for details. Apache License, Version 2.0\")))));\n    };\n    return LayoutContainer;\n}(React.Component));\nexports.default = LayoutContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar react_router_dom_1 = require(\"react-router-dom\");\nvar LayoutContainer = (function (_super) {\n    __extends(LayoutContainer, _super);\n    function LayoutContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {};\n        return _this;\n    }\n    LayoutContainer.prototype.render = function () {\n        return (react_1.default.createElement(\"div\", { className: \"hero is-fullheight\" },\n            react_1.default.createElement(\"header\", { className: \"header hero-head\" },\n                react_1.default.createElement(\"nav\", { className: \"navbar is-transparent\", role: \"navigation\", \"aria-label\": \"main navigation\" },\n                    react_1.default.createElement(\"div\", { className: \"container\" },\n                        react_1.default.createElement(\"div\", { className: \"navbar-brand\" },\n                            react_1.default.createElement(\"span\", { className: \"navbar-burger burger\", role: \"button\", \"aria-label\": \"menu\", \"aria-expanded\": \"false\", \"data-target\": \"navbarMenu\" },\n                                react_1.default.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                react_1.default.createElement(\"span\", { \"aria-hidden\": \"true\" }),\n                                react_1.default.createElement(\"span\", { \"aria-hidden\": \"true\" }))),\n                        react_1.default.createElement(\"div\", { id: \"navbarMenu\", className: \"navbar-menu\" },\n                            react_1.default.createElement(\"div\", { className: \"navbar-start\" },\n                                react_1.default.createElement(react_router_dom_1.NavLink, { exact: true, to: \"/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Home\"),\n                                react_1.default.createElement(react_router_dom_1.NavLink, { to: \"/dummy/\", className: \"navbar-item\", activeClassName: \"is-active\" }, \"Dummy\")),\n                            react_1.default.createElement(\"div\", { className: \"navbar-end\" },\n                                react_1.default.createElement(\"a\", { className: \"navbar-item\", href: \"https://github.com/eserozvataf/dart-react-app\" },\n                                    react_1.default.createElement(\"span\", { className: \"icon\" },\n                                        react_1.default.createElement(\"i\", { className: \"fa fa-code-fork fa-fw\", \"aria-hidden\": \"true\" })),\n                                    \"GitHub\")))))),\n            react_1.default.createElement(\"main\", { className: \"section hero-body\" },\n                react_1.default.createElement(\"div\", { className: \"container\" },\n                    react_1.default.createElement(\"div\", { className: \"content\" }, this.props.children))),\n            react_1.default.createElement(\"footer\", { className: \"footer hero-foot\" },\n                react_1.default.createElement(\"div\", { className: \"container\" },\n                    react_1.default.createElement(\"div\", { className: \"content has-text-centered\" },\n                        \"Dart React App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.\",\n                        react_1.default.createElement(\"br\", null),\n                        \"Visit \",\n                        react_1.default.createElement(\"a\", { href: \"https://github.com/eserozvataf/dart-react-app\" }, \"GitHub page\"),\n                        \" for details. Apache License, Version 2.0\")))));\n    };\n    return LayoutContainer;\n}(react_1.default.Component));\nexports.default = LayoutContainer;\n"
     },
     {
       "id": "./src/app/pages/dummy/dummyContainer.tsx",
@@ -22880,7 +22916,7 @@
       "name": "./src/app/pages/dummy/dummyContainer.tsx",
       "index": 126,
       "index2": 123,
-      "size": 2898,
+      "size": 3031,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -22931,7 +22967,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./pages/dummy/dummyContainer",
-          "loc": "67:39-78"
+          "loc": "25:39-78"
         }
       ],
       "usedExports": true,
@@ -22940,7 +22976,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 5,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar redux_1 = require(\"redux\");\nvar react_redux_1 = require(\"react-redux\");\nvar summaryResultView_1 = __importDefault(require(\"./summaryResultView\"));\nvar dummyRequest_1 = __importDefault(require(\"../../actions/dummyRequest\"));\nvar DummyContainer = (function (_super) {\n    __extends(DummyContainer, _super);\n    function DummyContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            firstNumber: 4,\n            secondNumber: 7,\n        };\n        return _this;\n    }\n    DummyContainer.prototype.componentDidMount = function () {\n        this.update();\n    };\n    DummyContainer.prototype.update = function () {\n        this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);\n    };\n    DummyContainer.prototype.render = function () {\n        var summary;\n        if (this.props.dummy.loading) {\n            summary = 'Calculating...';\n        }\n        else {\n            summary = this.props.dummy.result;\n        }\n        return (React.createElement(\"div\", null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Dummy\"),\n            React.createElement(summaryResultView_1.default, { firstNumber: this.state.firstNumber, secondNumber: this.state.secondNumber, summary: summary })));\n    };\n    return DummyContainer;\n}(React.Component));\nexports.DummyContainer = DummyContainer;\nvar mapStateToProps = function (state) { return ({\n    dummy: state.dummy,\n}); };\nvar mapDispatchToProps = function (dispatch) { return redux_1.bindActionCreators({\n    dummyRequestAction: dummyRequest_1.default,\n}, dispatch); };\nvar DummyContainerConnected = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(DummyContainer);\nexports.default = DummyContainerConnected;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar redux_1 = require(\"redux\");\nvar react_redux_1 = require(\"react-redux\");\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar summaryResultView_1 = __importDefault(require(\"./summaryResultView\"));\nvar dummyRequest_1 = __importDefault(require(\"../../actions/dummyRequest\"));\nvar DummyContainer = (function (_super) {\n    __extends(DummyContainer, _super);\n    function DummyContainer(props, context) {\n        var _this = _super.call(this, props, context) || this;\n        _this.state = {\n            firstNumber: 4,\n            secondNumber: 7,\n        };\n        return _this;\n    }\n    DummyContainer.prototype.componentDidMount = function () {\n        this.update();\n    };\n    DummyContainer.prototype.update = function () {\n        this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);\n    };\n    DummyContainer.prototype.render = function () {\n        var summary;\n        if (this.props.dummy.loading) {\n            summary = 'Calculating...';\n        }\n        else {\n            summary = this.props.dummy.result;\n        }\n        return (react_1.default.createElement(react_1.default.Fragment, null,\n            react_1.default.createElement(\"h1\", { className: styles.title }, \"Dummy\"),\n            react_1.default.createElement(summaryResultView_1.default, { firstNumber: this.state.firstNumber, secondNumber: this.state.secondNumber, summary: summary })));\n    };\n    return DummyContainer;\n}(react_1.default.Component));\nexports.DummyContainer = DummyContainer;\nvar mapStateToProps = function (state) { return ({\n    dummy: state.dummy,\n}); };\nvar mapDispatchToProps = function (dispatch) { return redux_1.bindActionCreators({\n    dummyRequestAction: dummyRequest_1.default,\n}, dispatch); };\nvar DummyContainerConnected = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(DummyContainer);\nexports.default = DummyContainerConnected;\n"
     },
     {
       "id": "./src/app/pages/dummy/summaryResultView.tsx",
@@ -22948,7 +22984,7 @@
       "name": "./src/app/pages/dummy/summaryResultView.tsx",
       "index": 127,
       "index2": 121,
-      "size": 1536,
+      "size": 1437,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -23004,7 +23040,7 @@
           "moduleName": "./src/app/pages/dummy/dummyContainer.tsx",
           "type": "cjs require",
           "userRequest": "./summaryResultView",
-          "loc": "29:42-72"
+          "loc": "30:42-72"
         }
       ],
       "usedExports": true,
@@ -23013,7 +23049,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 6,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar SummaryResultView = (function (_super) {\n    __extends(SummaryResultView, _super);\n    function SummaryResultView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    SummaryResultView.prototype.render = function () {\n        return (React.createElement(\"div\", null,\n            this.props.firstNumber,\n            \" + \",\n            this.props.secondNumber,\n            \" = \",\n            this.props.summary));\n    };\n    return SummaryResultView;\n}(React.PureComponent));\nexports.default = SummaryResultView;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar SummaryResultView = (function (_super) {\n    __extends(SummaryResultView, _super);\n    function SummaryResultView(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    SummaryResultView.prototype.render = function () {\n        return (react_1.default.createElement(react_1.default.Fragment, null,\n            this.props.firstNumber,\n            \" + \",\n            this.props.secondNumber,\n            \" = \",\n            this.props.summary));\n    };\n    return SummaryResultView;\n}(react_1.default.PureComponent));\nexports.default = SummaryResultView;\n"
     },
     {
       "id": "./src/app/pages/home/homeContainer.tsx",
@@ -23021,7 +23057,7 @@
       "name": "./src/app/pages/home/homeContainer.tsx",
       "index": 124,
       "index2": 120,
-      "size": 1552,
+      "size": 1736,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -23072,7 +23108,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./pages/home/homeContainer",
-          "loc": "66:38-75"
+          "loc": "24:38-75"
         }
       ],
       "usedExports": true,
@@ -23081,7 +23117,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 5,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (React.createElement(React.Fragment, null,\n            React.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(React.Component));\nexports.default = HomeContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar HomeContainer = (function (_super) {\n    __extends(HomeContainer, _super);\n    function HomeContainer(props, context) {\n        return _super.call(this, props) || this;\n    }\n    HomeContainer.prototype.render = function () {\n        return (react_1.default.createElement(react_1.default.Fragment, null,\n            react_1.default.createElement(\"h1\", { className: styles.title }, \"Home\"),\n            \"...and there is a dummy content\"));\n    };\n    return HomeContainer;\n}(react_1.default.Component));\nexports.default = HomeContainer;\n"
     },
     {
       "id": "./src/app/pages/notFound/notFoundContainer.tsx",
@@ -23089,7 +23125,7 @@
       "name": "./src/app/pages/notFound/notFoundContainer.tsx",
       "index": 129,
       "index2": 124,
-      "size": 1504,
+      "size": 1757,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -23140,7 +23176,7 @@
           "moduleName": "./src/app/appContainer.tsx",
           "type": "cjs require",
           "userRequest": "./pages/notFound/notFoundContainer",
-          "loc": "68:42-87"
+          "loc": "26:42-87"
         }
       ],
       "usedExports": true,
@@ -23149,7 +23185,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 5,
-      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (React.createElement(React.Fragment, null,\n            React.createElement(\"h1\", { className: \"title\" }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(React.Component));\nexports.default = NotFoundContainer;\n"
+      "source": "\"use strict\";\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar styles = __importStar(require(\"../../assets/styles.scss\"));\nvar NotFoundContainer = (function (_super) {\n    __extends(NotFoundContainer, _super);\n    function NotFoundContainer(props, context) {\n        return _super.call(this, props, context) || this;\n    }\n    NotFoundContainer.prototype.render = function () {\n        return (react_1.default.createElement(react_1.default.Fragment, null,\n            react_1.default.createElement(\"h1\", { className: styles.title }, \"Not Found\"),\n            \"Page not found\"));\n    };\n    return NotFoundContainer;\n}(react_1.default.Component));\nexports.default = NotFoundContainer;\n"
     },
     {
       "id": "./src/app/reducers/dummy.ts",
@@ -23230,7 +23266,7 @@
       "name": "./src/startup.ts",
       "index": 36,
       "index2": 127,
-      "size": 2399,
+      "size": 2179,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -23280,7 +23316,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 3,
-      "source": "\"use strict\";\nvar __assign = (this && this.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __importStar(require(\"react\"));\nvar ReactDOM = __importStar(require(\"react-dom\"));\nvar ReactDOMServer = __importStar(require(\"react-dom/server\"));\nvar react_router_1 = require(\"react-router\");\nvar history_1 = require(\"history\");\nvar appContainer_1 = __importDefault(require(\"./app/appContainer\"));\nvar Startup = (function () {\n    function Startup(startupArgs) {\n        var isBrowser = (startupArgs.platform === 'browser');\n        this.vars = __assign({}, startupArgs, { history: isBrowser ? history_1.createBrowserHistory() : null });\n    }\n    Startup.prototype.getRoot = function () {\n        return React.createElement(appContainer_1.default, {});\n    };\n    Startup.prototype.clientRender = function (targetElement, isUpdate) {\n        var root = this.getRoot();\n        var rootWithRouter = React.createElement(react_router_1.Router, {\n            history: this.vars.history,\n        }, root);\n        if (isUpdate) {\n            ReactDOM.hydrate(rootWithRouter, targetElement);\n        }\n        else {\n            ReactDOM.render(rootWithRouter, targetElement);\n        }\n    };\n    Startup.prototype.serverRender = function (url) {\n        var context = {};\n        var root = this.getRoot();\n        var rootWithRouter = React.createElement(react_router_1.StaticRouter, {\n            location: url,\n            context: context,\n        }, root);\n        var html = ReactDOMServer.renderToString(rootWithRouter);\n        return html;\n    };\n    return Startup;\n}());\nexports.default = Startup;\n"
+      "source": "\"use strict\";\nvar __assign = (this && this.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(require(\"react\"));\nvar react_dom_1 = __importDefault(require(\"react-dom\"));\nvar server_1 = __importDefault(require(\"react-dom/server\"));\nvar react_router_1 = require(\"react-router\");\nvar history_1 = require(\"history\");\nvar appContainer_1 = __importDefault(require(\"./app/appContainer\"));\nvar Startup = (function () {\n    function Startup(startupArgs) {\n        var isBrowser = (startupArgs.platform === 'browser');\n        this.vars = __assign({}, startupArgs, { history: isBrowser ? history_1.createBrowserHistory() : null });\n    }\n    Startup.prototype.getRoot = function () {\n        return react_1.default.createElement(appContainer_1.default, {});\n    };\n    Startup.prototype.clientRender = function (targetElement, isUpdate) {\n        var root = this.getRoot();\n        var rootWithRouter = react_1.default.createElement(react_router_1.Router, {\n            history: this.vars.history,\n        }, root);\n        if (isUpdate) {\n            react_dom_1.default.hydrate(rootWithRouter, targetElement);\n        }\n        else {\n            react_dom_1.default.render(rootWithRouter, targetElement);\n        }\n    };\n    Startup.prototype.serverRender = function (url) {\n        var context = {};\n        var root = this.getRoot();\n        var rootWithRouter = react_1.default.createElement(react_router_1.StaticRouter, {\n            location: url,\n            context: context,\n        }, root);\n        var html = server_1.default.renderToString(rootWithRouter);\n        return html;\n    };\n    return Startup;\n}());\nexports.default = Startup;\n"
     },
     {
       "id": "buffer",

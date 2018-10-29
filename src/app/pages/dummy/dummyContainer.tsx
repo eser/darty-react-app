@@ -1,6 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+
+import * as styles from '../../assets/styles.scss';
 
 import SummaryResultView from './summaryResultView';
 
@@ -43,11 +45,11 @@ class DummyContainer extends React.Component<DummyContainerProps, DummyContainer
         }
 
         return (
-            <div>
-                <h1 className="title">Dummy</h1>
+            <>
+                <h1 className={styles.title}>Dummy</h1>
 
                 <SummaryResultView firstNumber={this.state.firstNumber} secondNumber={this.state.secondNumber} summary={summary} />
-            </div>
+            </>
         );
     }
 }

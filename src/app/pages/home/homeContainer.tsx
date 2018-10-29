@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import * as styles from '../../assets/styles.scss';
 
@@ -15,11 +15,11 @@ class HomeContainer extends React.Component<HomeContainerProps, HomeContainerSta
 
     render(): JSX.Element {
         return (
-            <React.Fragment>
+            <>
                 <h1 className={styles.title}>Home</h1>
 
                 ...and there is a dummy content
-            </React.Fragment>
+            </>
         );
     }
 }

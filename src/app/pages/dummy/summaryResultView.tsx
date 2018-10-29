@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 interface SummaryResultViewProps {
     firstNumber: number;
@@ -16,9 +16,9 @@ class SummaryResultView extends React.PureComponent<SummaryResultViewProps, Summ
 
     render(): JSX.Element {
         return (
-            <div>
+            <>
                 {this.props.firstNumber} + {this.props.secondNumber} = {this.props.summary}
-            </div>
+            </>
         );
     }
 }

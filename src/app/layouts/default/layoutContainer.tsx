@@ -1,6 +1,4 @@
-declare var global: any;
-
-import * as React from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 interface LayoutContainerProps {
@@ -16,24 +14,6 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
         this.state = {};
     }
 
-    clickHandler(ev): void {
-        const target: Element = ev.target;
-
-        if (target.tagName === 'A') {
-            const url = target.getAttribute('href');
-
-            if (url !== null) {
-                // const navigationItem = app.navigationManager.identify(url);
-
-                // if (navigationItem !== null) {
-                //     app.history.push(navigationItem.getUrl());
-
-                //     ev.preventDefault();
-                // }
-            }
-        }
-    }
-
     // the JSX syntax is quite intuitive but check out
     // https://facebook.github.io/react/docs/jsx-in-depth.html
     // if you need additional help
@@ -45,7 +25,7 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
                         <div className="container">
                             <div className="navbar-brand">
                                 {/* <div className="navbar-item">
-                                    Dart App
+                                    Dart React App
                                 </div> */}
                                 <span className="navbar-burger burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                                     <span aria-hidden="true"></span>
@@ -70,7 +50,7 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
                 </header>
                 <main className="section hero-body">
                     <div className="container">
-                        <div className="content" onClick={this.clickHandler.bind(this)}>
+                        <div className="content">
                             {this.props.children}
                         </div>
                     </div>
@@ -78,7 +58,7 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
                 <footer className="footer hero-foot">
                     <div className="container">
                         <div className="content has-text-centered">
-                            Dart App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.<br />
+                            Dart React App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.<br />
                             Visit <a href="https://github.com/eserozvataf/dart-react-app">GitHub page</a> for details. Apache License, Version 2.0
                         </div>
                     </div>

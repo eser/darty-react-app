@@ -1,4 +1,6 @@
-import * as React from 'react';
+import React from 'react';
+
+import * as styles from '../../assets/styles.scss';
 
 interface NotFoundContainerProps {
 }
@@ -13,11 +15,11 @@ class NotFoundContainer extends React.Component<NotFoundContainerProps, NotFound
 
     render(): JSX.Element {
         return (
-            <React.Fragment>
-                <h1 className="title">Not Found</h1>
+            <>
+                <h1 className={styles.title}>Not Found</h1>
 
                 Page not found
-            </React.Fragment>
+            </>
         );
     }
 }
