@@ -1,6 +1,6 @@
 {
-  "name": "dart-app",
-  "description": "Dart App",
+  "name": "dart-react-app",
+  "description": "Dart React App",
   "keywords": [
     "typescript",
     "react",
@@ -9,7 +9,7 @@
     "starter"
   ],
   "version": "0.10.0",
-  "homepage": "http://dart-app.s3-website-eu-west-1.amazonaws.com",
+  "homepage": "http://dart-react-app.s3-website-eu-west-1.amazonaws.com",
   "author": "Eser Ozvataf <eser@ozvataf.com>",
   "contributors": [
     {
@@ -20,10 +20,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/eserozvataf/dart-app.git"
+    "url": "https://github.com/eserozvataf/dart-react-app.git"
   },
   "bugs": {
-    "url": "https://github.com/eserozvataf/dart-app/issues"
+    "url": "https://github.com/eserozvataf/dart-react-app/issues"
   },
   "license": "Apache-2.0",
   "main": "./dist/index.js",
@@ -38,23 +38,28 @@
     "bundle": "dart bundle",
     "bundle:prod": "dart bundle:prod",
     "containerize": "dart containerize",
-    "aws:copy": "aws s3 sync ./dist s3://dart-app",
-    "aws:open": "start http://dart-app.s3-website-eu-west-1.amazonaws.com"
+    "aws:copy": "aws s3 sync ./dist s3://dart-react-app",
+    "aws:open": "start http://dart-react-app.s3-website-eu-west-1.amazonaws.com"
   },
   "dependencies": {
-    "dart": "^0.29.0",
+    "dart": "^0.46.0",
     "express": "^4.16.4"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.14",
     "@types/jest": "^23.3.8",
     "@types/react": "^16.4.18",
-    "@types/react-router-dom": "^4.3.1",
+    "@types/react-router": "^4.0.32",
     "bulma": "^0.7.2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "font-awesome": "^4.7.0",
+    "history": "^4.7.2",
     "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-native-web": "^0.9.4",
+    "react-redux": "^5.1.0",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",

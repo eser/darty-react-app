@@ -59,7 +59,7 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
                                     <NavLink to="/dummy/" className="navbar-item" activeClassName="is-active">Dummy</NavLink>
                                 </div>
                                 <div className="navbar-end">
-                                    <a className="navbar-item" href="https://github.com/eserozvataf/dart-app">
+                                    <a className="navbar-item" href="https://github.com/eserozvataf/dart-react-app">
                                         <span className="icon"><i className="fa fa-code-fork fa-fw" aria-hidden="true"></i></span>
                                         GitHub
                                     </a>
@@ -79,7 +79,7 @@ class LayoutContainer extends React.Component<LayoutContainerProps, LayoutContai
                     <div className="container">
                         <div className="content has-text-centered">
                             Dart App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.<br />
-                            Visit <a href="https://github.com/eserozvataf/dart-app">GitHub page</a> for details. Apache License, Version 2.0
+                            Visit <a href="https://github.com/eserozvataf/dart-react-app">GitHub page</a> for details. Apache License, Version 2.0
                         </div>
                     </div>
                 </footer>

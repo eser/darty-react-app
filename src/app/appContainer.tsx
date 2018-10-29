@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
+import { Provider } from 'react-redux';
+
+import appStore from './appStore';
 
 import AuthorizationFilter from './pages/shared/authorizationFilter';
 
@@ -45,17 +48,21 @@ class AppContainer extends React.Component<AppContainerProps, AppContainerState>
     }
 
     render(): JSX.Element {
+        const initialState = {};
+
         return (
-            <Switch>
-                <Route path="/" exact={true} strict={true} render={() => <LayoutContainer><HomeContainer /></LayoutContainer>} />
+            <Provider store={appStore(initialState)}>
+                <Switch>
+                    <Route path="/" exact={true} strict={true} render={() => <LayoutContainer><HomeContainer /></LayoutContainer>} />
 
-                <Route path="/dummy/" exact={true} strict={true} render={() => <LayoutContainer><DummyContainer /></LayoutContainer>} />
+                    <Route path="/dummy/" exact={true} strict={true} render={() => <LayoutContainer><DummyContainer /></LayoutContainer>} />
 
-                {/* <Route path="/login" exact={true} strict={true} render={() => <LoginContainer />} />
-                <Route path="/settings" exact={true} strict={true} render={() => <AuthorizationFilter><LayoutContainer><SettingsContainer /></LayoutContainer></AuthorizationFilter>} /> */}
+                    {/* <Route path="/login" exact={true} strict={true} render={() => <LoginContainer />} />
+                    <Route path="/settings" exact={true} strict={true} render={() => <AuthorizationFilter><LayoutContainer><SettingsContainer /></LayoutContainer></AuthorizationFilter>} /> */}
 
-                <Route render={() => <NotFoundContainer />} />
-            </Switch>
+                    <Route render={() => <NotFoundContainer />} />
+                </Switch>
+            </Provider>
         );
     }
 }

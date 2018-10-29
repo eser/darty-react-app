@@ -1,38 +1,39 @@
-# [Dart App](https://github.com/eserozvataf/dart-app)
+# [Dart React App](https://github.com/eserozvataf/dart-react-app)
 
 Dart is a front-end development system to allow developers to start their projects immediately. By Dart's convention over configuration mindset, webpack and typescript compiler configurations are handled by dart's itself.
 
-Dart App is a front-end development template for [Dart](https://github.com/eserozvataf/dart).
+Dart React App is a front-end development template for [Dart](https://github.com/eserozvataf/dart).
 
-* Source: [https://github.com/eserozvataf/dart-app](https://github.com/eserozvataf/dart-app)
-* Preview: [http://dart-app.s3-website-eu-west-1.amazonaws.com](http://dart-app.s3-website-eu-west-1.amazonaws.com)
+* Source: [https://github.com/eserozvataf/dart-react-app](https://github.com/eserozvataf/dart-react-app)
+* Preview: [http://dart-react-app.s3-website-eu-west-1.amazonaws.com](http://dart-react-app.s3-website-eu-west-1.amazonaws.com)
 
 
 ## Features (inherited from Dart)
 
 * Transforms ES2015+Typescript files with .ts/.tsx extension into browser-compatible JavaScript code.
-* Module bundling with webpack to pack everything into modules.
+* Module bundling for packing everything into modules with their sourcemaps.
+* Dynamic code splitting.
 * SASS compilation of .scss files.
 * CSS Modules.
 * Minification for stylesheets and scripts.
 * Hot module reloading and continuous development environment.
 * Isomorphic/Universal codebase between server and client.
+* Server-side rendering.
 * IntelliSense support on TypeScript.
-* React DevTools support.
-* Redux-enabled with thunk and logger middlewares.
-* Unit-testing-ready environment.
+* Unit-testing setup and TDD-ready environment.
 * JavaScript and TypeScript linting.
+* Autoprefixed CSS to avoid adding vendor prefixes.
 * Containerization-ready for continuous integration/deployment environments.
 
 
 ## Architecture and Libraries
 
-* React for rendering components.
+* React for rendering UI components, with DevTools support.
 * React Router for SPA routing.
-* Redux for state management.
+* Redux for state management, with thunk and logger middlewares.
 * bulma and Font-Awesome are included.
 * Jest and Enzyme for tests, ESLint for linting.
-* Webpack bundling with code splitting enabled.
+* Webpack module bundling.
 * express for server-side rendering.
 
 
@@ -44,7 +45,7 @@ Ensure that `node.js` is installed on your system first.
 Use the following command to create app with [create-dart-app](https://github.com/eserozvataf/create-dart-app):
 
 ```sh
-npx create-dart-app app
+npx create-dart-app react app
 cd app
 npm run dev
 ```
@@ -53,7 +54,7 @@ npm run dev
 Clone the git repo and execute install dependencies from npm to get ready:
 
 ```sh
-git clone --branch=master https://github.com/eserozvataf/dart-app.git app
+git clone --branch=master https://github.com/eserozvataf/dart-react-app.git app
 cd app
 npm install
 npm run dev
@@ -94,7 +95,7 @@ Use `npm run <task>` command in project folder to execute tasks defined in `pack
 
 ## Todo List
 
-See [GitHub Projects](https://github.com/eserozvataf/dart-app/projects) for more.
+See [GitHub Projects](https://github.com/eserozvataf/dart-react-app/projects) for more.
 
 
 ## Requirements
@@ -119,7 +120,7 @@ See [contributors.md](contributors.md)
 It is publicly open for any contribution. Bugfixes, new features and extra modules are welcome.
 
 * To contribute to code: Fork the repo, push your changes to your fork, and submit a pull request.
-* To report a bug: If something does not work, please report it using [GitHub Issues](https://github.com/eserozvataf/dart-app/issues).
+* To report a bug: If something does not work, please report it using [GitHub Issues](https://github.com/eserozvataf/dart-react-app/issues).
 
 
 ## To Support
