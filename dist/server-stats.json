@@ -6,8 +6,8 @@
   ],
   "version": "4.23.1",
   "hash": "649a4bb86a89dfa88020",
-  "time": 14361,
-  "builtAt": 1540775634319,
+  "time": 10265,
+  "builtAt": 1540778814036,
   "publicPath": "/",
   "outputPath": "/Users/eserozvataf/Projects/open-source/dart-react-app/dist",
   "assetsByChunkName": {
@@ -4873,9 +4873,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/generatePath.js",
-          "issuerId": "./node_modules/react-router/generatePath.js",
-          "issuerName": "./node_modules/react-router/generatePath.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/matchPath.js",
+          "issuerId": "./node_modules/react-router/matchPath.js",
+          "issuerName": "./node_modules/react-router/matchPath.js",
           "issuerPath": [
             {
               "id": 0,
@@ -4903,9 +4903,9 @@
               "name": "./node_modules/react-router/index.js"
             },
             {
-              "id": "./node_modules/react-router/generatePath.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/generatePath.js",
-              "name": "./node_modules/react-router/generatePath.js"
+              "id": "./node_modules/react-router/matchPath.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/matchPath.js",
+              "name": "./node_modules/react-router/matchPath.js"
             }
           ],
           "failed": false,
@@ -6434,9 +6434,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-redux/lib/connect/mapDispatchToProps.js",
-          "issuerId": "./node_modules/react-redux/lib/connect/mapDispatchToProps.js",
-          "issuerName": "./node_modules/react-redux/lib/connect/mapDispatchToProps.js",
+          "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-redux/lib/connect/mapStateToProps.js",
+          "issuerId": "./node_modules/react-redux/lib/connect/mapStateToProps.js",
+          "issuerName": "./node_modules/react-redux/lib/connect/mapStateToProps.js",
           "issuerPath": [
             {
               "id": 0,
@@ -6474,9 +6474,9 @@
               "name": "./node_modules/react-redux/lib/connect/connect.js"
             },
             {
-              "id": "./node_modules/react-redux/lib/connect/mapDispatchToProps.js",
-              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-redux/lib/connect/mapDispatchToProps.js",
-              "name": "./node_modules/react-redux/lib/connect/mapDispatchToProps.js"
+              "id": "./node_modules/react-redux/lib/connect/mapStateToProps.js",
+              "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-redux/lib/connect/mapStateToProps.js",
+              "name": "./node_modules/react-redux/lib/connect/mapStateToProps.js"
             }
           ],
           "failed": false,
@@ -16724,9 +16724,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/generatePath.js",
-      "issuerId": "./node_modules/react-router/generatePath.js",
-      "issuerName": "./node_modules/react-router/generatePath.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/matchPath.js",
+      "issuerId": "./node_modules/react-router/matchPath.js",
+      "issuerName": "./node_modules/react-router/matchPath.js",
       "issuerPath": [
         {
           "id": 0,
@@ -16754,9 +16754,9 @@
           "name": "./node_modules/react-router/index.js"
         },
         {
-          "id": "./node_modules/react-router/generatePath.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/generatePath.js",
-          "name": "./node_modules/react-router/generatePath.js"
+          "id": "./node_modules/react-router/matchPath.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-router/matchPath.js",
+          "name": "./node_modules/react-router/matchPath.js"
         }
       ],
       "failed": false,
@@ -18285,9 +18285,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-redux/lib/connect/mapDispatchToProps.js",
-      "issuerId": "./node_modules/react-redux/lib/connect/mapDispatchToProps.js",
-      "issuerName": "./node_modules/react-redux/lib/connect/mapDispatchToProps.js",
+      "issuer": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-redux/lib/connect/mapStateToProps.js",
+      "issuerId": "./node_modules/react-redux/lib/connect/mapStateToProps.js",
+      "issuerName": "./node_modules/react-redux/lib/connect/mapStateToProps.js",
       "issuerPath": [
         {
           "id": 0,
@@ -18325,9 +18325,9 @@
           "name": "./node_modules/react-redux/lib/connect/connect.js"
         },
         {
-          "id": "./node_modules/react-redux/lib/connect/mapDispatchToProps.js",
-          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-redux/lib/connect/mapDispatchToProps.js",
-          "name": "./node_modules/react-redux/lib/connect/mapDispatchToProps.js"
+          "id": "./node_modules/react-redux/lib/connect/mapStateToProps.js",
+          "identifier": "/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/ts-loader/index.js??ref--5-0!/Users/eserozvataf/Projects/open-source/dart-react-app/node_modules/react-redux/lib/connect/mapStateToProps.js",
+          "name": "./node_modules/react-redux/lib/connect/mapStateToProps.js"
         }
       ],
       "failed": false,
