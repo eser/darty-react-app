@@ -1,14 +1,14 @@
-# [Dart React App](https://github.com/eserozvataf/dart-react-app)
+# 🎯 [Darty React App](https://github.com/eserozvataf/darty-react-app)
 
-Dart is a front-end development system to allow developers to start their projects immediately. By Dart's convention over configuration mindset, webpack and typescript compiler configurations are handled by dart's itself.
+Darty is a front-end development system to allow developers to start their projects immediately. By Darty's convention over configuration mindset, webpack and typescript compiler configurations are handled by darty's itself.
 
-Dart React App is a front-end development template for [Dart](https://github.com/eserozvataf/dart).
+Darty React App is a front-end development template for [Darty](https://github.com/eserozvataf/darty).
 
-* Source: [https://github.com/eserozvataf/dart-react-app](https://github.com/eserozvataf/dart-react-app)
-* Preview: [http://dart-react-app.s3-website-eu-west-1.amazonaws.com](http://dart-react-app.s3-website-eu-west-1.amazonaws.com)
+* Source: [https://github.com/eserozvataf/darty-react-app](https://github.com/eserozvataf/darty-react-app)
+* Preview: [http://darty-react-app.s3-website-eu-west-1.amazonaws.com](http://darty-react-app.s3-website-eu-west-1.amazonaws.com)
 
 
-## Features (inherited from Dart)
+## Features (inherited from Darty)
 
 * Transforms ES2015+Typescript files with .ts/.tsx extension into browser-compatible JavaScript code.
 * Module bundling for packing everything into modules with their sourcemaps.
@@ -42,10 +42,10 @@ Dart React App is a front-end development template for [Dart](https://github.com
 Ensure that `node.js` is installed on your system first.
 
 ### Alternative 1
-Use the following command to create app with [create-dart-app](https://github.com/eserozvataf/create-dart-app):
+Use the following command to create app with [create-darty-app](https://github.com/eserozvataf/create-darty-app):
 
 ```sh
-npx create-dart-app react app
+npx create-darty-app react app
 cd app
 npm run dev
 ```
@@ -54,7 +54,7 @@ npm run dev
 Clone the git repo and execute install dependencies from npm to get ready:
 
 ```sh
-git clone --branch=master https://github.com/eserozvataf/dart-react-app.git app
+git clone --branch=master https://github.com/eserozvataf/darty-react-app.git app
 cd app
 npm install
 npm run dev
@@ -82,20 +82,20 @@ Use `npm run <task>` command in project folder to execute tasks defined in `pack
 | `/src/`                                            | The folder for your source files                             |
 | `/src/app/`                                        | Main Application                                             |
 | `/src/app/actions/`                                | - Actions (coded UI actions for redux)                       |
-| `/src/app/assets/`                                 | - Assets (images, fonts, stylesheets, etc.)              |
+| `/src/app/assets/`                                 | - Assets (images, fonts, stylesheets, etc.)                  |
 | `/src/app/layouts/`                                | - Layouts / Templates                                        |
 | `/src/app/pages/`                                  | - Pages                                                      |
 | `/src/app/reducers/`                               | - Reducers (coded state logic for redux)                     |
 | `/src/app/appContainer.tsx`                        | - Main application router                                    |
-| `/src/app/appStore.tsx`                            | - Main application store for redux state management         |
+| `/src/app/appStore.tsx`                            | - Main application store for redux state management          |
 | `/src/startup.ts`                                  | The list and configuration of your mapped applications       |
 | `/src/index.html`                                  | The index file                                               |
-| `/public/`                                         | The folder for your static files will be on your webroot    |
+| `/public/`                                         | The folder for your static files will be on your webroot     |
 
 
 ## Todo List
 
-See [GitHub Projects](https://github.com/eserozvataf/dart-react-app/projects) for more.
+See [GitHub Projects](https://github.com/eserozvataf/darty-react-app/projects) for more.
 
 
 ## Requirements
@@ -120,7 +120,7 @@ See [contributors.md](contributors.md)
 It is publicly open for any contribution. Bugfixes, new features and extra modules are welcome.
 
 * To contribute to code: Fork the repo, push your changes to your fork, and submit a pull request.
-* To report a bug: If something does not work, please report it using [GitHub Issues](https://github.com/eserozvataf/dart-react-app/issues).
+* To report a bug: If something does not work, please report it using [GitHub Issues](https://github.com/eserozvataf/darty-react-app/issues).
 
 
 ## To Support

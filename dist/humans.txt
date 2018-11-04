@@ -12,7 +12,7 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5, JavaScript
-    TypeScript, Dart
+    TypeScript, Darty
     React, Redux, Bulma
 
-Dart: https://github.com/eserozvataf/dart
+Darty: https://github.com/eserozvataf/darty

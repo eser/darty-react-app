@@ -5,7 +5,7 @@ import { StaticRouter, Router } from 'react-router';
 
 import { createBrowserHistory } from 'history';
 
-import AppContainer from './app/appContainer';
+import App from './app/app';
 
 class Startup {
     vars: any;
@@ -21,7 +21,7 @@ class Startup {
 
     getRoot(): JSX.Element {
         return React.createElement(
-            AppContainer,
+            App,
             {}
         );
     }
