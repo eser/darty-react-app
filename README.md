@@ -28,9 +28,8 @@ Darty React App is a front-end development template for [Darty](https://github.c
 
 ## Architecture and Libraries
 
-* React for rendering UI components, with DevTools support.
+* React with Hooks for rendering UI components, with DevTools support.
 * React Router for SPA routing.
-* Redux for state management, with thunk and logger middlewares.
 * bulma and Font-Awesome are included.
 * Jest and Enzyme for tests, ESLint for linting.
 * Webpack module bundling.
@@ -77,20 +76,17 @@ Use `npm run <task>` command in project folder to execute tasks defined in `pack
 
 ## Directory Structure
 
-| Path.                                              | Description                                                  |
-|----------------------------------------------------|--------------------------------------------------------------|
-| `/src/`                                            | The folder for your source files                             |
-| `/src/app/`                                        | Main Application                                             |
-| `/src/app/actions/`                                | - Actions (coded UI actions for redux)                       |
-| `/src/app/assets/`                                 | - Assets (images, fonts, stylesheets, etc.)                  |
-| `/src/app/layouts/`                                | - Layouts / Templates                                        |
-| `/src/app/pages/`                                  | - Pages                                                      |
-| `/src/app/reducers/`                               | - Reducers (coded state logic for redux)                     |
-| `/src/app/appContainer.tsx`                        | - Main application router                                    |
-| `/src/app/appStore.tsx`                            | - Main application store for redux state management          |
-| `/src/startup.ts`                                  | The list and configuration of your mapped applications       |
-| `/src/index.html`                                  | The index file                                               |
-| `/public/`                                         | The folder for your static files will be on your webroot     |
+| Path.                                           | Description                                                     |
+|-------------------------------------------------|-----------------------------------------------------------------|
+| `/src/`                                         | The folder for your source files                                |
+| `/src/app/`                                     | Main Application                                                |
+| `/src/app/assets/`                              | - Assets (images, fonts, stylesheets, etc.)                     |
+| `/src/app/layouts/`                             | - Layouts / Templates                                           |
+| `/src/app/pages/`                               | - Pages                                                         |
+| `/src/app/appContainer.tsx`                     | - Main application router                                       |
+| `/src/startup.ts`                               | The list and configuration of your mapped applications          |
+| `/src/index.html`                               | The index file                                                  |
+| `/public/`                                      | The folder for your static files will be on your webroot        |
 
 
 ## Todo List

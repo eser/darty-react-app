@@ -1,62 +1,46 @@
-import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-
-import dummyRequestAction from '../../actions/dummyRequest';
+import React, { useState, useEffect } from 'react';
 
 import SummaryResult from './summaryResult';
 
 import * as bulmaStyles from 'bulma';
 
-class Dummy extends React.Component {
-    constructor(props, context) {
-        super(props, context);
+function Dummy() {
+    const [ state, setState ] = useState({
+        firstNumber: 4,
+        secondNumber: 7,
+        result: null,
+    });
 
-        this.state = {
-            firstNumber: 4,
-            secondNumber: 7,
-        };
-    }
-
-    componentDidMount(): void {
-        this.update();
-    }
-
-    update(): void {
-        this.props.dummyRequestAction(this.state.firstNumber, this.state.secondNumber);
-    }
-
-    render(): JSX.Element {
-        let summary;
-
-        if (this.props.dummy.loading) {
-            summary = 'Calculating...';
-        }
-        else {
-            summary = this.props.dummy.result;
-        }
-
-        return (
-            <>
-                <h1 className={bulmaStyles.title}>Dummy</h1>
-
-                <SummaryResult firstNumber={this.state.firstNumber} secondNumber={this.state.secondNumber} summary={summary} />
-            </>
+    useEffect(() => {
+        const timer = setTimeout(
+            () => setState({
+                ...state,
+                result: state.firstNumber + state.secondNumber,
+            }),
+            1000,
         );
+
+        return () => clearTimeout(timer);
+    });
+
+    let summary;
+
+    if (state.result === null) {
+        summary = 'Calculating...';
     }
+    else {
+        summary = state.result;
+    }
+
+    return (
+        <>
+            <h1 className={bulmaStyles.title}>Dummy</h1>
+
+            <SummaryResult firstNumber={state.firstNumber} secondNumber={state.secondNumber} summary={summary} />
+        </>
+    );
 }
 
-const mapStateToProps = (state) => ({
-    dummy: state.dummy,
-});
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-    dummyRequestAction,
-}, dispatch);
-
-const DummyConnected = connect(mapStateToProps, mapDispatchToProps)(Dummy);
-
 export {
-    DummyConnected as default,
-    Dummy,
+    Dummy as default,
 };

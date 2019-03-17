@@ -10,4 +10,4 @@ function SummaryResult(props) {
 
 export {
     SummaryResult as default,
-}
+};
