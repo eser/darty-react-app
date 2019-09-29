@@ -2234,10 +2234,10 @@ damerau-levenshtein@^1.0.4:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.5.tgz#780cf7144eb2e8dbd1c3bb83ae31100ccc31a414"
   integrity sha512-CBCRqFnpu715iPmw1KrdOrzRqbdFwQTwAWyyyYS42+iAgHCuXZ+/TdMgQkUENPomxEz9z1BEzuQU2Xw0kUuAgA==
 
-darty@^0.51.0:
-  version "0.51.0"
-  resolved "https://registry.yarnpkg.com/darty/-/darty-0.51.0.tgz#1287ea6ebd651030afbd739a9c3682564c82ca89"
-  integrity sha512-uf/fTjJwPuNXHHQqNcevwa9Yhs/xEyui8fLtOLLj3uKihIH5SydUc72tKv4m6KzT/kTveovqpTODSMzMeiB9hA==
+darty@^0.51.1:
+  version "0.51.1"
+  resolved "https://registry.yarnpkg.com/darty/-/darty-0.51.1.tgz#5028b1dcb41ef214978c0478624036e631e29119"
+  integrity sha512-LgYqef3UL9a+Dr2rodOkXti8Hw3jC3fkK5Z9T646ij4PpUwUrrPQl3mvF1hERsCbxjmt6eShFxClDClvxH/fiw==
   dependencies:
     "@typescript-eslint/parser" "^2.3.1"
     autoprefixer "^9.6.1"
@@ -2649,9 +2649,9 @@ ejs@^2.6.1:
   integrity sha512-kS/gEPzZs3Y1rRsbGX4UOSjtP/CeJP0CxSNZHYxGfVM/VgLcv0ZqM7C45YyTj2DI2g7+P9Dd24C+IMIg6D0nYQ==
 
 electron-to-chromium@^1.3.247:
-  version "1.3.267"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.267.tgz#7745ff9d447fd2a9802e1c6dfa518631e0cf5357"
-  integrity sha512-9Q2ixAJC+oHjWNtJV0MQ4vJMCWSowIrC6V6vcr+bwPddTDHj2ddv9xxXCzf4jT/fy6HP7maPoW0gifXkRxCttQ==
+  version "1.3.268"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.268.tgz#d18f10b064dd0fce39098704896309a8249cb62f"
+  integrity sha512-QkPEya233zGh+1erw/N/GNgLjs+t65wkGX4Yw0X/ZuO75r+4Ropk7toXSUqP3TQ7EIwBDotTks3rbNZ1Kwz8hA==
 
 elliptic@^6.0.0:
   version "6.5.1"
