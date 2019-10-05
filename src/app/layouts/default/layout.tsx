@@ -1,9 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faTelegram, faDiscord, faSlack, faGithub } from '@fortawesome/free-brands-svg-icons';
+
+import { Container, Grid, Header, List, Segment } from 'semantic-ui-react';
+
+import ResponsiveContainer from './responsiveContainer';
+
+import 'semantic-ui-css/semantic.css';
 import './assets/fonts/arbutus-slab.scss';
-import fontAwesomeStyles from 'font-awesome/scss/font-awesome.scss';
-import bulmaStyles from 'bulma';
 import layoutStyles from './assets/styles.scss';
 
 function Layout(props) {
@@ -12,51 +18,44 @@ function Layout(props) {
     // if you need additional help
 
     return (
-        <div className={`${bulmaStyles.hero} ${bulmaStyles.isFullheight} ${layoutStyles.isFullheight}`}>
-            <header className={`${bulmaStyles.heroHead} ${layoutStyles.heroHead}`}>
-                <nav className={`${bulmaStyles.navbar} ${bulmaStyles.isTransparent}`} role="navigation" aria-label="main navigation">
-                    <div className={bulmaStyles.container}>
-                        <div className={bulmaStyles.navbarBrand}>
-                            {/* <div className={bulmaStyles.navbarItem}>
-                                Darty React Hooks App
-                            </div> */}
-                            <span className={bulmaStyles.navbarBurger} role="button" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-                                <span aria-hidden="true"></span>
-                                <span aria-hidden="true"></span>
-                                <span aria-hidden="true"></span>
-                            </span>
-                        </div>
-                        <div className={bulmaStyles.navbarMenu}>
-                            <div className={bulmaStyles.navbarStart}>
-                                <NavLink exact={true} to="/" className={bulmaStyles.navbarItem} activeClassName={bulmaStyles.isActive}>Home</NavLink>
-                                <NavLink to="/dummy/" className={bulmaStyles.navbarItem} activeClassName={bulmaStyles.isActive}>Dummy</NavLink>
-                            </div>
-                            <div className={bulmaStyles.navbarEnd}>
-                                <a className={bulmaStyles.navbarItem} href="https://github.com/eserozvataf/darty-react-hooks-app">
-                                    <span className={bulmaStyles.icon}><i className={`${fontAwesomeStyles.fa} ${fontAwesomeStyles.faCodeFork} ${fontAwesomeStyles.faFw}`} aria-hidden="true"></i></span>
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            <main className={`${bulmaStyles.section} ${bulmaStyles.heroBody} ${layoutStyles.heroBody}`}>
-                <div className={bulmaStyles.container}>
-                    <div className={bulmaStyles.content}>
-                        {props.children}
-                    </div>
-                </div>
-            </main>
-            <footer className={`${bulmaStyles.footer} ${bulmaStyles.heroFoot} ${layoutStyles.heroFoot}`}>
-                <div className={bulmaStyles.container}>
-                    <div className={`${bulmaStyles.content} ${bulmaStyles.hasTextCentered}`}>
-                        Darty React Hooks App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.<br />
-                        Visit <a href="https://github.com/eserozvataf/darty-react-hooks-app">GitHub page</a> for details. Apache License, Version 2.0
-                    </div>
-                </div>
-            </footer>
-        </div>
+        <ResponsiveContainer>
+            {props.children}
+
+            <Segment inverted vertical style={{ padding: '5em 0em' }}>
+                <Container>
+                    <Grid divided inverted stackable>
+                        <Grid.Row>
+                            <Grid.Column width={3}>
+                                <Header inverted as="h4" content="About" />
+                                <List link inverted>
+                                    <List.Item as="a">Sitemap</List.Item>
+                                    <List.Item as="a">Contact Us</List.Item>
+                                    <List.Item as="a">Religious Ceremonies</List.Item>
+                                    <List.Item as="a">Gazebo Plans</List.Item>
+                                </List>
+                            </Grid.Column>
+                            <Grid.Column width={3}>
+                                <Header inverted as="h4" content="Services" />
+                                <List link inverted>
+                                    <List.Item as="a">Banana Pre-Order</List.Item>
+                                    <List.Item as="a">DNA FAQ</List.Item>
+                                    <List.Item as="a">How To Access</List.Item>
+                                    <List.Item as="a">Favorite X-Men</List.Item>
+                                </List>
+                            </Grid.Column>
+                            <Grid.Column width={7}>
+                                <Header as="h4" inverted>
+                                    Footer Header
+                                </Header>
+                                <p>
+                                    Extra space for a call to action inside the footer that could help re-engage users.
+                                </p>
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Container>
+            </Segment>
+        </ResponsiveContainer>
     );
 }
 

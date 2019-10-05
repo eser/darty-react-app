@@ -1,11 +1,11 @@
 import React from 'react';
 
-import * as bulmaStyles from 'bulma';
+import { Header } from 'semantic-ui-react';
 
 function NotFound() {
     return (
         <>
-            <h1 className={bulmaStyles.title}>Not Found</h1>
+            <Header as="h1">Not Found</Header>
 
             Page not found
         </>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import SummaryResult from './summaryResult';
+import { Header } from 'semantic-ui-react';
 
-import * as bulmaStyles from 'bulma';
+import SummaryResult from './summaryResult';
 
 function Dummy() {
     const [ state, setState ] = useState({
@@ -34,7 +34,7 @@ function Dummy() {
 
     return (
         <>
-            <h1 className={bulmaStyles.title}>Dummy</h1>
+            <Header as="h1">Dummy</Header>
 
             <SummaryResult firstNumber={state.firstNumber} secondNumber={state.secondNumber} summary={summary} />
         </>

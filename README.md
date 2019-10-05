@@ -13,7 +13,7 @@ Darty React App is a front-end development template for [Darty](https://github.c
 * Transforms ES2015+Typescript files with .ts/.tsx extension into browser-compatible JavaScript code.
 * Module bundling for packing everything into modules with their sourcemaps.
 * Dynamic code splitting.
-* SASS compilation of .scss files.
+* SASS/LESS compilation of .scss, .sass and .less files.
 * CSS Modules.
 * Minification for stylesheets and scripts.
 * Hot module reloading and continuous development environment.
@@ -30,7 +30,7 @@ Darty React App is a front-end development template for [Darty](https://github.c
 
 * React with Hooks for rendering UI components, with DevTools support.
 * React Router for SPA routing.
-* bulma and Font-Awesome are included.
+* Semantic UI and Font-Awesome are included.
 * Jest and Enzyme for tests, ESLint for linting.
 * Webpack module bundling.
 * express for server-side rendering.
@@ -44,9 +44,9 @@ Ensure that `node.js` is installed on your system first.
 Use the following command to create app with [create-darty-app](https://github.com/eserozvataf/create-darty-app):
 
 ```sh
-npx create-darty-app react app
+yarn create darty-app react app
 cd app
-npm run dev
+yarn dev
 ```
 
 ### Alternative 2
@@ -55,13 +55,13 @@ Clone the git repo and execute install dependencies from npm to get ready:
 ```sh
 git clone --branch=master https://github.com/eserozvataf/darty-react-app.git app
 cd app
-npm install
-npm run dev
+yarn install
+yarn dev
 ```
 
 ## NPM Tasks
 
-Use `npm run <task>` command in project folder to execute tasks defined in `package.json`.
+Use `yarn <task>` command in project folder to execute tasks defined in `package.json`.
 
 | Task                     | Description                                                                            |
 |--------------------------|----------------------------------------------------------------------------------------|
@@ -71,6 +71,7 @@ Use `npm run <task>` command in project folder to execute tasks defined in `pack
 | `dev`                    | Enables live development environment powered by hot module reloading                   |
 | `lint`                   | Executes linter to check codebase against linting errors                               |
 | `test`                   | Runs tests to check codebase against unit testing scenerios                            |
+| `test:coverage`          | Runs tests with calculating coverage stats                                             |
 | `containerize`           | Creates containerization files and gives instructions for docker                       |
 
 
