@@ -1,8 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faTelegram, faDiscord, faSlack, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { Container, Grid, Header, List, Segment } from 'semantic-ui-react';
 
@@ -21,7 +17,7 @@ function Layout(props) {
         <ResponsiveContainer>
             {props.children}
 
-            <Segment inverted vertical style={{ padding: '5em 0em' }}>
+            <Segment inverted vertical className={layoutStyles.footer}>
                 <Container>
                     <Grid divided inverted stackable>
                         <Grid.Row>
@@ -45,10 +41,11 @@ function Layout(props) {
                             </Grid.Column>
                             <Grid.Column width={7}>
                                 <Header as="h4" inverted>
-                                    Footer Header
+                                    Darty React Hooks App
                                 </Header>
                                 <p>
-                                    Extra space for a call to action inside the footer that could help re-engage users.
+                                    Darty React Hooks App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.
+                                    Visit <a href="https://github.com/eserozvataf/darty-react-hooks-app">GitHub page</a> for details. Apache License, Version 2.0
                                 </p>
                             </Grid.Column>
                         </Grid.Row>
