@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 
 import Layout from './layouts/default/layout';
-import Home from './pages/home/home';
-import Dummy from './pages/dummy/dummy';
-import NotFound from './pages/notFound/notFound';
+import Home from './pages/home/index';
+import Dummy from './pages/dummy/index';
+import NotFound from './pages/notFound/index';
 
 function App() {
     return (
