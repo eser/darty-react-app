@@ -7,7 +7,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import getWidth from './getWidth';
 
-import layoutStyles from './assets/styles.scss';
+import layoutStyles from './assets/styles.less';
 
 function DesktopContainer(props) {
     const [ fixed, setFixed ] = useState(false);

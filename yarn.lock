@@ -2285,10 +2285,10 @@ damerau-levenshtein@^1.0.4:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.5.tgz#780cf7144eb2e8dbd1c3bb83ae31100ccc31a414"
   integrity sha512-CBCRqFnpu715iPmw1KrdOrzRqbdFwQTwAWyyyYS42+iAgHCuXZ+/TdMgQkUENPomxEz9z1BEzuQU2Xw0kUuAgA==
 
-darty@^0.51.9:
-  version "0.51.9"
-  resolved "https://registry.yarnpkg.com/darty/-/darty-0.51.9.tgz#cd7085bef2fdad9cabc94b5461af19128632a0cb"
-  integrity sha512-Tcg761l/M3/KrmrvdXLyRukWbU3QSGPr1yIgTx02jAGOdVloN0Zp3qVcRfbOrR6nhEETJwMu8aaF2Xwlnzz9MA==
+darty@^0.51.10:
+  version "0.51.10"
+  resolved "https://registry.yarnpkg.com/darty/-/darty-0.51.10.tgz#68d3f9a8cbd746414d35efae57f1a7f36bd7bdbb"
+  integrity sha512-s5wkMEH/8AssBqRmac6vRhNpgICRTZzZ/tMs+WbwoWYPanglkH9WqI+XS5vS2OeoLbyG0/KEypnpl7tmjnbWpw==
   dependencies:
     "@typescript-eslint/parser" "^2.3.3"
     autoprefixer "^9.6.4"
@@ -2324,9 +2324,9 @@ darty@^0.51.9:
     ts-loader "^6.2.0"
     tsconfig-paths-webpack-plugin "^3.2.0"
     tslib "^1.10.0"
-    typescript "^3.6.3"
+    typescript "^3.6.4"
     url-loader "^2.2.0"
-    webpack "^4.41.0"
+    webpack "^4.41.1"
     webpack-async-chunk-names-plugin "^0.1.1"
     webpack-bundle-analyzer "^3.5.2"
     webpack-cli "^3.3.9"
@@ -3592,9 +3592,9 @@ fsevents@^1.2.7:
     node-pre-gyp "^0.12.0"
 
 fsevents@~2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.1.0.tgz#ce1a5f9ac71c6d75278b0c5bd236d7dfece4cbaa"
-  integrity sha512-+iXhW3LuDQsno8dOIrCIT/CBjeBWuP7PXe8w9shnj9Lebny/Gx1ZjVBYwexLz36Ri2jKuXMNpV6CYNh8lHHgrQ==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.1.1.tgz#74c64e21df71721845d0c44fe54b7f56b82995a9"
+  integrity sha512-4FRPXWETxtigtJW/gxzEDsX1LVbPAM93VleB83kZB+ellqbHMkyt2aJfuzNLRvFPnGi6bcE5SvfxgbXPeKteJw==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -7661,10 +7661,10 @@ selfsigned@^1.10.7:
   dependencies:
     node-forge "0.9.0"
 
-semantic-ui-css@^2.4.1:
+semantic-ui-less@^2.4.1:
   version "2.4.1"
-  resolved "https://registry.yarnpkg.com/semantic-ui-css/-/semantic-ui-css-2.4.1.tgz#f5aea39fafb787cbd905ec724272a3f9cba9004a"
-  integrity sha512-Pkp0p9oWOxlH0kODx7qFpIRYpK1T4WJOO4lNnpNPOoWKCrYsfHqYSKgk5fHfQtnWnsAKy7nLJMW02bgDWWFZFg==
+  resolved "https://registry.yarnpkg.com/semantic-ui-less/-/semantic-ui-less-2.4.1.tgz#f5fe6d9160b6655a2f552e7ea553c5b896c2f1aa"
+  integrity sha512-/+nhPV6If2ydCz89/SSWzYD8ualDtjh4Tk3F6cqRj2luZj1DRjJ2nM9NKqmeyLlQFNFM94wpnpKXcjxRzZh5GA==
   dependencies:
     jquery x.*
 
@@ -8577,7 +8577,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.6.3:
+typescript@^3.6.4:
   version "3.6.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
   integrity sha512-unoCll1+l+YK4i4F8f22TaNVPRHcD9PA3yCuZ8g5e0qGqlVlJ/8FSateOLLSagn+Yg5+ZwuPkL8LFUc0Jcvksg==
@@ -8967,7 +8967,7 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.41.0:
+webpack@^4.41.1:
   version "4.41.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.1.tgz#5388dd3047d680d5d382a84249fd4750e87372fd"
   integrity sha512-ak7u4tUu/U63sCVxA571IuPZO/Q0pZ9cEXKg+R/woxkDzVovq57uB6L2Hlg/pC8LCU+TWpvtcYwsstivQwMJmw==

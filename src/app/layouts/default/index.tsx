@@ -4,9 +4,7 @@ import { Container, Grid, Header, List, Segment } from 'semantic-ui-react';
 
 import ResponsiveContainer from './responsiveContainer';
 
-import 'semantic-ui-css/semantic.css';
-import './assets/fonts/arbutus-slab.scss';
-import layoutStyles from './assets/styles.scss';
+import layoutStyles from './assets/styles.less';
 
 function Layout(props) {
     // the JSX syntax is quite intuitive but check out

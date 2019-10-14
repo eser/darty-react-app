@@ -45,7 +45,7 @@
     "aws:open": "start http://darty-react-app.s3-website-eu-west-1.amazonaws.com"
   },
   "dependencies": {
-    "darty": "^0.51.9"
+    "darty": "^0.51.10"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
@@ -68,7 +68,7 @@
     "react-native-web": "^0.11.7",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
-    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-less": "^2.4.1",
     "semantic-ui-react": "^0.88.1"
   }
 }

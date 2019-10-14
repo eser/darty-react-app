@@ -7,7 +7,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import getWidth from './getWidth';
 
-import layoutStyles from './assets/styles.scss';
+import layoutStyles from './assets/styles.less';
 
 function MobileContainer(props) {
     const [ sidebarOpened, setSidebarOpened ] = useState(false);
