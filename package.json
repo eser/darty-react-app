@@ -9,7 +9,7 @@
     "boilerplate",
     "starter"
   ],
-  "version": "0.10.4",
+  "version": "0.10.5",
   "homepage": "http://darty-react-app.s3-website-eu-west-1.amazonaws.com",
   "author": "Eser Ozvataf <eser@ozvataf.com> (https://twitter.com/eser)",
   "contributors": [
@@ -35,7 +35,9 @@
     "cleanup": "rm -rf yarn.lock node_modules/ dist/",
     "start": "darty start",
     "dev": "darty dev",
+    "extract": "darty extract",
     "lint": "darty lint",
+    "lint:fix": "darty lint:fix",
     "test": "darty test",
     "test:coverage": "darty test:coverage",
     "bundle": "darty bundle",
@@ -45,7 +47,7 @@
     "aws:open": "start http://darty-react-app.s3-website-eu-west-1.amazonaws.com"
   },
   "dependencies": {
-    "darty": "^0.51.10"
+    "darty": "^0.51.11"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
@@ -53,9 +55,9 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.6",
     "@types/enzyme": "^3.10.3",
-    "@types/jest": "^24.0.18",
-    "@types/react": "^16.9.5",
-    "@types/react-router": "^5.1.1",
+    "@types/jest": "^24.0.19",
+    "@types/react": "^16.9.9",
+    "@types/react-router": "^5.1.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint-config-eser-react": "^2.1.2",
