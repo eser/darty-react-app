@@ -34,6 +34,8 @@ jobs:
       uses: actions/setup-node@master
       with:
         node-version: 12.x
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile --non-interactive
     - name: Module bundling
       run: yarn run bundle:prod
     - name: Upload artifacts
