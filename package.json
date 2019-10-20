@@ -47,7 +47,7 @@
     "aws:open": "start http://darty-react-app.s3-website-eu-west-1.amazonaws.com"
   },
   "dependencies": {
-    "darty": "^0.51.11"
+    "darty": "^0.51.12"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
