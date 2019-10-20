@@ -1,0 +1,47 @@
+name: CI
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+    name: Test on node ${{ matrix.node-version }} and ${{ matrix.operating-system }}
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ ubuntu-latest, windows-latest, macOS-latest ]
+        node-version: [ 12.x, 10.x ]
+    steps:
+    - name: Checkout from repository
+      uses: actions/checkout@master
+    - name: Setup Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile --audit --non-interactive
+    - name: Run tests
+      run: yarn test
+
+  deploy:
+    needs: [ build ]
+    name: Deployment
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+    - name: Checkout from repository
+      uses: actions/checkout@master
+    - name: Setup Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: 12.x
+    - name: Module bundling
+      run: yarn run bundle:prod
+    - name: Upload artifacts
+      uses: actions/upload-artifact@master
+      with:
+        name: latest
+        path: dist/
+    - name: Heroku Deployment
+      uses: actions/heroku@master
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_AUTH_TOKEN }}

@@ -1,11 +1,18 @@
 # 🎯 [Darty React App](https://github.com/eserozvataf/darty-react-app)
 
+[![build status][build-image]][build-url]
+[![dependencies][dep-image]][dep-url]
+[![coverage status][coverage-image]][coverage-url]
+[![license][license-image]][license-url]
+
+## README
+
 Darty is a front-end development system to allow developers to start their projects immediately. By Darty's convention over configuration mindset, webpack and typescript compiler configurations are handled by darty's itself.
 
 Darty React App is a front-end development template for [Darty](https://github.com/eserozvataf/darty).
 
 * Source: [https://github.com/eserozvataf/darty-react-app](https://github.com/eserozvataf/darty-react-app)
-* Preview: [http://darty-react-app.s3-website-eu-west-1.amazonaws.com](http://darty-react-app.s3-website-eu-west-1.amazonaws.com)
+* Preview: [https://dartyreactapp.herokuapp.com/](https://dartyreactapp.herokuapp.com/)
 
 
 ## Features (inherited from Darty)
@@ -41,6 +48,16 @@ Darty React App is a front-end development template for [Darty](https://github.c
 Ensure that `node.js` is installed on your system first.
 
 ### Alternative 1
+- Use the GitHub template on [https://github.com/eserozvataf/darty-react-app/generate](https://github.com/eserozvataf/darty-react-app/generate).
+- Clone your generated repository afterwards.
+- Finally, use the following commands:
+
+```sh
+yarn install
+yarn dev
+```
+
+### Alternative 2
 Use the following command to create app with [create-darty-app](https://github.com/eserozvataf/create-darty-app):
 
 ```sh
@@ -49,7 +66,7 @@ cd app
 yarn dev
 ```
 
-### Alternative 2
+### Alternative 3
 Clone the git repo and execute install dependencies from npm to get ready:
 
 ```sh
@@ -70,6 +87,7 @@ Use `yarn <task>` command in project folder to execute tasks defined in `package
 | `start`                  | Starts SSR-enabled express server                                                      |
 | `dev`                    | Enables live development environment powered by hot module reloading                   |
 | `lint`                   | Executes linter to check codebase against linting errors                               |
+| `lint:fix`               | Executes linter to check and *FIX* codebase against linting errors                     |
 | `test`                   | Runs tests to check codebase against unit testing scenerios                            |
 | `test:coverage`          | Runs tests with calculating coverage stats                                             |
 | `containerize`           | Creates containerization files and gives instructions for docker                       |
@@ -123,3 +141,13 @@ It is publicly open for any contribution. Bugfixes, new features and extra modul
 ## To Support
 
 [Visit my patreon profile at patreon.com/eserozvataf](https://www.patreon.com/eserozvataf)
+
+
+[build-image]: https://github.com/eserozvataf/darty-react-app/workflows/CI/badge.svg
+[build-url]: https://github.com/eserozvataf/darty-react-app/actions?workflow=CI
+[dep-image]: https://img.shields.io/david/eserozvataf/darty-react-app.svg?style=flat-square
+[dep-url]: https://github.com/eserozvataf/darty-react-app
+[coverage-image]: https://img.shields.io/codecov/c/gh/eserozvataf/darty-react-app/master.svg?style=flat-square
+[coverage-url]: https://codecov.io/gh/eserozvataf/darty-react-app
+[license-image]: https://img.shields.io/github/license/eserozvataf/darty-react-app.svg?style=flat-square
+[license-url]: https://github.com/eserozvataf/darty-react-app/blob/master/LICENSE
