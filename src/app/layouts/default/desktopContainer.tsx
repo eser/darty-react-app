@@ -14,7 +14,11 @@ function DesktopContainer(props) {
 
     return (
         <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-            <Visibility once={false} onBottomPassed={() => setFixed(true)} onBottomPassedReverse={() => setFixed(false)}>
+            <Visibility
+                once={false}
+                onBottomPassed={() => setFixed(true)}
+                onBottomPassedReverse={() => setFixed(false)}
+            >
                 <Segment inverted textAlign="center" vertical className={layoutStyles.header}>
                     <Menu fixed={fixed ? 'top' : null} inverted={!fixed} pointing={!fixed} secondary={!fixed} size="large">
                         <Container>

@@ -13,7 +13,11 @@ function MobileContainer(props) {
     const [ sidebarOpened, setSidebarOpened ] = useState(false);
 
     return (
-        <Responsive as={Sidebar.Pushable} getWidth={getWidth} maxWidth={Responsive.onlyMobile.maxWidth}>
+        <Responsive
+            as={Sidebar.Pushable}
+            getWidth={getWidth}
+            maxWidth={Responsive.onlyMobile.maxWidth}
+        >
             <Sidebar as={Menu} animation="push" inverted onHide={() => setSidebarOpened(false)} vertical visible={sidebarOpened}>
                 <Menu.Item as={NavLink} to="/" exact>Home</Menu.Item>
                 <Menu.Item as={NavLink} to="/dummy/">Dummy</Menu.Item>

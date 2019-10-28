@@ -47,7 +47,7 @@
     "aws:open": "start http://darty-react-app.s3-website-eu-west-1.amazonaws.com"
   },
   "dependencies": {
-    "darty": "^0.51.12"
+    "darty": "^0.51.14"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
@@ -55,12 +55,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "@types/enzyme": "^3.10.3",
-    "@types/jest": "^24.0.19",
-    "@types/react": "^16.9.9",
+    "@types/jest": "^24.0.20",
+    "@types/react": "^16.9.11",
     "@types/react-router": "^5.1.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
-    "eslint-config-eser-react": "^2.1.2",
+    "eslint-config-eser-react": "^2.1.8",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",

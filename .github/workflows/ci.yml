@@ -21,6 +21,8 @@ jobs:
       run: yarn install --frozen-lockfile --audit --non-interactive
     - name: Run tests
       run: yarn test
+    - name: Lint
+      run: yarn lint
 
   deploy:
     needs: [ build ]

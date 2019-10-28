@@ -42,8 +42,13 @@ function Layout(props) {
                                     Darty React Hooks App
                                 </Header>
                                 <p>
-                                    Darty React Hooks App is a front-end development stack for starting with a structured, scaleable and adaptable basecode.
-                                    Visit <a href="https://github.com/eserozvataf/darty-react-hooks-app">GitHub page</a> for details. Apache License, Version 2.0
+                                    Darty React Hooks App is a front-end development stack
+                                    for starting with a structured, scaleable and adaptable
+                                    basecode. Visit
+                                    {' '}
+                                    <a href="https://github.com/eserozvataf/darty-react-hooks-app">GitHub page</a>
+                                    {' '}
+                                    for details. Apache License, Version 2.0
                                 </p>
                             </Grid.Column>
                         </Grid.Row>

@@ -36,7 +36,11 @@ function Dummy() {
         <>
             <Header as="h1">Dummy</Header>
 
-            <SummaryResult firstNumber={state.firstNumber} secondNumber={state.secondNumber} summary={summary} />
+            <SummaryResult
+                firstNumber={state.firstNumber}
+                secondNumber={state.secondNumber}
+                summary={summary}
+            />
         </>
     );
 }
