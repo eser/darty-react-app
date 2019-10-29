@@ -32,20 +32,48 @@ jobs:
     steps:
     - name: Checkout from repository
       uses: actions/checkout@master
+
     - name: Setup Node.js
       uses: actions/setup-node@master
       with:
         node-version: 12.x
+
     - name: Install dependencies
       run: yarn install --frozen-lockfile --non-interactive
+
     - name: Module bundling
       run: yarn run bundle:prod
-    - name: Upload artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: latest
-        path: dist/
-    - name: Heroku Deployment
+
+    # - name: Upload artifacts
+    #   uses: actions/upload-artifact@master
+    #   with:
+    #     name: latest
+    #     path: dist/
+
+    - name: Login to Docker Hub
+      run: docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD docker.io
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Login to Heroku Container Registry
+      run: docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD registry.heroku.com
+      env:
+        DOCKER_USERNAME: _
+        DOCKER_PASSWORD: ${{ secrets.HEROKU_API_KEY }}
+
+    - name: Build container
+      run: docker build -t eserozvataf/darty-react-app:latest -t registry.heroku.com/dartyreactapp/web:latest .
+
+    - name: Push to Docker Hub
+      run: docker push eserozvataf/darty-react-app:latest
+
+    - name: Push to Heroku
+      run: docker push registry.heroku.com/dartyreactapp/web:latest
+
+    - name: Heroku Release
       uses: actions/heroku@master
       env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_AUTH_TOKEN }}
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      with:
+        args: container:release web --app dartyreactapp

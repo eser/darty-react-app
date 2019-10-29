@@ -9,8 +9,8 @@
     "boilerplate",
     "starter"
   ],
-  "version": "0.10.5",
-  "homepage": "http://darty-react-app.s3-website-eu-west-1.amazonaws.com",
+  "version": "0.10.6",
+  "homepage": "https://dartyreactapp.herokuapp.com/",
   "author": "Eser Ozvataf <eser@ozvataf.com> (https://twitter.com/eser)",
   "contributors": [
     {
@@ -42,9 +42,7 @@
     "test:coverage": "darty test:coverage",
     "bundle": "darty bundle",
     "bundle:prod": "darty bundle:prod",
-    "containerize": "darty containerize",
-    "aws:copy": "aws s3 sync ./dist s3://darty-react-app",
-    "aws:open": "start http://darty-react-app.s3-website-eu-west-1.amazonaws.com"
+    "containerize": "darty containerize"
   },
   "dependencies": {
     "darty": "^0.51.14"
