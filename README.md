@@ -4,6 +4,24 @@
 [![coverage status][coverage-image]][coverage-url]
 [![license][license-image]][license-url]
 
+## Update (July 2022)
+
+When I started coding this project, I was strongly feeling that webpack isn't a
+suffient tool for building a modern, production-ready frontend applications.
+
+With Darty, I tried to make frontend development easy and more straight-forward
+with single declarative manifest file. Even though I used webpack under the
+hood, Darty was an opinionated frontend development environment and so many
+complicated configurations are hidden from codebase.
+
+Today I cannot maintain this project anymore as a single contributor. It needs
+to be rewritten to compete with its current alternatives but it's impossible for
+me at the moment. However abandoning projects are sad, I'm glad to see my idea
+is somehow proved with the releases of Snowpack and Vite.
+
+Please check out Vite for a community-supported, well-maintained webpack
+alternative.
+
 ## README
 
 Darty is a front-end development system to allow developers to start their
