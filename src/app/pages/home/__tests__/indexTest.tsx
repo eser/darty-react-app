@@ -1,20 +1,20 @@
-import React from 'react';
-import { shallow, render } from '@testing-library/react';
+import React from "react";
+import { render, shallow } from "@testing-library/react";
 
-import Home from '../index';
+import Home from "../index";
 
-describe('Layout', () => {
-    it('should exist', () => {
-        expect(Home).toBeDefined();
-    });
+describe("Layout", () => {
+  it("should exist", () => {
+    expect(Home).toBeDefined();
+  });
 
-    it('should render', () => {
-        shallow(<Home />);
-    });
+  it("should render", () => {
+    shallow(<Home />);
+  });
 
-    it('should be properly rendered', () => {
-        const wrapper = render(<Home />);
+  it("should be properly rendered", () => {
+    const wrapper = render(<Home />);
 
-        expect(wrapper.find('h1').contains('Darty React App')).toEqual(true);
-    });
+    expect(wrapper.find("h1").contains("Darty React App")).toEqual(true);
+  });
 });
