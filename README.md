@@ -38,7 +38,7 @@ Darty React App is a front-end development template for [Darty](https://github.c
 * React with Hooks for rendering UI components, with DevTools support.
 * React Router for SPA routing.
 * Semantic UI and Font-Awesome are included.
-* Jest and Enzyme for tests, ESLint for linting.
+* Jest and React Testing Library for tests.
 * Webpack module bundling.
 * express for server-side rendering.
 

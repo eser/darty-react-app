@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOMClient from 'react-dom/client';
 import ReactDOMServer from 'react-dom/server';
-import { StaticRouter, Router } from 'react-router';
-
-import { createBrowserHistory } from 'history';
+import { BrowserRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom/server';
 
 import App from './app/app';
 
@@ -11,15 +10,9 @@ class Startup {
     vars: any;
 
     constructor(startupArgs: any) {
-        const isBrowser = (startupArgs.platform === 'browser');
-
-        this.vars = {
-            ...startupArgs,
-            history: isBrowser ? createBrowserHistory() : null,
-        };
+        this.vars = startupArgs;
     }
 
-    // eslint-disable-next-line class-methods-use-this
     getRoot(): JSX.Element {
         return React.createElement(
             App,
@@ -31,18 +24,18 @@ class Startup {
         const root = this.getRoot();
 
         const rootWithRouter = React.createElement(
-            Router,
+            BrowserRouter,
             {
-                history: this.vars.history,
             },
             root,
         );
 
         if (isUpdate) {
-            ReactDOM.hydrate(rootWithRouter, targetElement);
+            ReactDOMClient.hydrateRoot(targetElement, rootWithRouter);
         }
         else {
-            ReactDOM.render(rootWithRouter, targetElement);
+            const reactRoot = ReactDOMClient.createRoot(targetElement);
+            reactRoot.render(rootWithRouter);
         }
     }
 

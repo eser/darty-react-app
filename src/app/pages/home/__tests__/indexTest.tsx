@@ -1,11 +1,7 @@
 import React from 'react';
-
-import * as Enzyme from 'enzyme';
-import ReactSixteenAdapter from 'enzyme-adapter-react-16';
+import { shallow, render } from '@testing-library/react';
 
 import Home from '../index';
-
-Enzyme.configure({ adapter: new ReactSixteenAdapter() });
 
 describe('Layout', () => {
     it('should exist', () => {
@@ -13,11 +9,11 @@ describe('Layout', () => {
     });
 
     it('should render', () => {
-        Enzyme.shallow(<Home />);
+        shallow(<Home />);
     });
 
     it('should be properly rendered', () => {
-        const wrapper = Enzyme.mount(<Home />);
+        const wrapper = render(<Home />);
 
         expect(wrapper.find('h1').contains('Darty React App')).toEqual(true);
     });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Route, Routes } from 'react-router-dom';
 
 import Layout from './layouts/default/index';
 import Home from './pages/home/index';
@@ -8,13 +8,11 @@ import NotFound from './pages/notFound/index';
 
 function App() {
     return (
-        <Switch>
-            <Route path="/" exact={true} strict={true} render={() => <Layout><Home /></Layout>} />
-
-            <Route path="/dummy/" exact={true} strict={true} render={() => <Layout><Dummy /></Layout>} />
-
-            <Route render={() => <NotFound />} />
-        </Switch>
+        <Routes>
+            <Route path="/" element={<Layout><Home /></Layout>} />
+            <Route path="/dummy/" element={<Layout><Dummy /></Layout>} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
     );
 }
 
